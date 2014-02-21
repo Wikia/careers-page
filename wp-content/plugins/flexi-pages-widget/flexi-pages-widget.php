@@ -41,10 +41,7 @@ function flexipages_init()
 		'title' => __('Pages', 'flexipages'), 
 		'sort_column' => 'menu_order', 
 		'sort_order' => 'ASC', 
-		'exclude' => '',
-		'include' => '',
-		'exinclude' => 'exclude', 
-		'hierarchy' => 'on', 
+		'hierarchy' => 'on',
 		'depth' => 0, 
 		'show_subpages_check' => 'on', 
 		'show_subpages' => -2, 
@@ -157,7 +154,7 @@ function flexipages_init()
 
 		$parent = ($depth == -1)?"-1":$child_of;
 
-		$pages = get_pages("child_of={$child_of}&parent={$parent}&exclude={$exclude}&include={$include}&sort_column={$sort_column}&sort_order={$sort_order}");
+		$pages = get_pages("child_of={$child_of}&parent={$parent}&sort_column={$sort_column}&sort_order={$sort_order}");
 
 //		echo "<pre>";print_r($pages);echo "</pre>";
 
@@ -177,9 +174,8 @@ function flexipages_init()
 				$children = array();
 
 				if( !($depth == -1 || $depth == $level)  &&
-					!($show_subpages == 2 && !in_array($page->ID, $currpage_hierarchy)) &&
-					!$include)
-					$children = flexipages_get_pages("child_of={$page->ID}&parent={$page->ID}&sort_column={$sort_column}&sort_order={$sort_order}&exclude={$exclude}&include={$include}&show_subpages={$show_subpages}&depth={$depth}&show_date={$show_date}&date_format={$date_format}", $level+1);
+					!($show_subpages == 2 && !in_array($page->ID, $currpage_hierarchy)))
+					$children = flexipages_get_pages("child_of={$page->ID}&parent={$page->ID}&sort_column={$sort_column}&sort_order={$sort_order}&show_subpages={$show_subpages}&depth={$depth}&show_date={$show_date}&date_format={$date_format}", $level+1);
 				
 				$date = '';
 				if($show_date) {
@@ -241,20 +237,8 @@ function flexipages_init()
 		
 		if($show_subpages == 0)
 			$depth = 1;
-			
-		if($include && ($hierarchy == '1' || $hierarchy == 'on')) {
-			$inc_array = explode(',', $include);
-			if($exclude) $exc_array = explode(',', $exclude); else $exc_array = array();
-			$page_ids = flexipages_pageids();
-			foreach($page_ids as $page_id) {
-				if(!in_array($page_id, $inc_array) && !in_array($page_id, $exc_array))
-					$exc_array[] = $page_id;
-			}
-			$exclude = implode(',', $exc_array);
-			$include = '';		
-		}
-		
-		$page_array = flexipages_get_pages("sort_column={$sort_column}&sort_order={$sort_order}&exclude={$exclude}&include={$include}&show_subpages={$show_subpages}&hierarchy={$hierarchy}&depth={$depth}&show_home={$show_home}&child_of={$child_of}&parent={$child_of}&show_date={$show_date}&date_format={$date_format}");
+
+		$page_array = flexipages_get_pages("sort_column={$sort_column}&sort_order={$sort_order}&show_subpages={$show_subpages}&hierarchy={$hierarchy}&depth={$depth}&show_home={$show_home}&child_of={$child_of}&parent={$child_of}&show_date={$show_date}&date_format={$date_format}");
 		
 //		echo "<pre>"; print_r($page_array); echo "</pre>";
 
@@ -301,16 +285,10 @@ function flexipages_init()
 		
 		$title = apply_filters('widget_title', $options[$number]['title']);
 		
-		$include = $exclude = $child_of = 0;
-		if(isset($exinclude) && isset($exinclude_values)) {
-			if($exinclude == 'include')
-				$include = $exinclude_values;
-			elseif($exinclude == 'single')
-				$child_of = $exinclude_values;
-			else
-				$exclude  = $exinclude_values;
+		if(isset($child_of_value)) {
+			$child_of = $child_of_value;
 		}
-		
+
 		if($show_subpages_check == 'off' || !$show_subpages_check) {
 			$depth = 1;
 			$show_subpages = '';
@@ -330,7 +308,7 @@ function flexipages_init()
 			$show_home = __('Home');
 			
 		
-		if($pagelist = flexipages("echo=0&sort_column={$sort_column}&sort_order={$sort_order}&exclude={$exclude}&include={$include}&show_subpages={$show_subpages}&hierarchy={$hierarchy}&depth={$depth}&show_home={$show_home}&show_date={$show_date}&date_format={$date_format}&dropdown={$dropdown}&child_of={$child_of}")){
+		if($pagelist = flexipages("echo=0&sort_column={$sort_column}&sort_order={$sort_order}&show_subpages={$show_subpages}&hierarchy={$hierarchy}&depth={$depth}&show_home={$show_home}&show_date={$show_date}&date_format={$date_format}&dropdown={$dropdown}&child_of={$child_of}")){
 
 			echo $before_widget;
 
@@ -350,7 +328,7 @@ function flexipages_init()
 		}
 	}
 	
-	function flexipages_exinclude_options(
+	function flexipages_pageslist_options(
 		$sort_column = "menu_order",
 		$sort_order = "ASC",
 		$selected = array(),
@@ -368,7 +346,7 @@ function flexipages_init()
 					$current = '';
 		
 				echo "\n\t<option value='$item->ID'$current>$pad $item->post_title</option>";
-				flexipages_exinclude_options( $sort_column, $sort_order, $selected, $item->ID,  $level +1 );
+				flexipages_pageslist_options( $sort_column, $sort_order, $selected, $item->ID,  $level +1 );
 			}
 		} else {
 			return false;
@@ -414,8 +392,7 @@ function flexipages_init()
 				$title = strip_tags(stripslashes($flexipages_widget['title']));
 				$sort_column = strip_tags(stripslashes($flexipages_widget['sort_column']));
 				$sort_order = strip_tags(stripslashes($flexipages_widget['sort_order']));
-				$exinclude = strip_tags(stripslashes($flexipages_widget['exinclude']));
-				$exinclude_values = $flexipages_widget['exinclude_values']?implode(',', $flexipages_widget['exinclude_values']):'';
+				$child_of_value = $flexipages_widget['child_of_value']?implode(',', $flexipages_widget['child_of_value']):'';
 				$show_subpages_check = strip_tags(stripslashes($flexipages_widget['show_subpages_check']));
 				$show_subpages = strip_tags(stripslashes($flexipages_widget['show_subpages']));
 				$hierarchy = strip_tags(stripslashes($flexipages_widget['hierarchy']));
@@ -426,7 +403,7 @@ function flexipages_init()
 				$date_format = strip_tags(stripslashes($flexipages_widget['date_format']));
 				$dropdown = strip_tags(stripslashes($flexipages_widget['dropdown']));
 				
-				$options[$widget_number] = compact('title', 'sort_column', 'sort_order', 'exinclude', 'exinclude_values', 'show_subpages_check', 'show_subpages', 'hierarchy', 'depth', 'show_home_check', 'show_home', 'show_date', 'date_format', 'dropdown');
+				$options[$widget_number] = compact('title', 'sort_column', 'sort_order', 'child_of_value', 'show_subpages_check', 'show_subpages', 'hierarchy', 'depth', 'show_home_check', 'show_home', 'show_date', 'date_format', 'dropdown');
 			}
 
 			update_option('flexipages_widget', $options);
@@ -441,7 +418,6 @@ function flexipages_init()
 		$title = esc_attr($options[$number]['title']);
 		$sort_column_select[$options[$number]['sort_column']] = " selected=\"selected\"";
 		$sort_order_select[$options[$number]['sort_order']] = " selected=\"selected\"";
-		$exinclude_select[$options[$number]['exinclude']] = ' selected="selected"';
 		$show_subpages_check_check = ($options[$number]['show_subpages_check'] == 'on')?' checked="checked"':'';
 		if($options[$number]['depth'] == -2)
 			$show_subpages_select[-2] = ' selected="selected"';
@@ -489,15 +465,11 @@ function flexipages_init()
 				</select></td>
 			</tr>
 			<tr>			
-				<td valign="top"><select class="widefat" style="display:inline;width:auto;" name="flexipages_widget[<?php echo $number; ?>][exinclude]" id="flexipages-exinclude-<?php echo $number; ?>">
-					<option value="exclude"<?php echo $exinclude_select['exclude']; ?>><?php _e('Exclude', 'flexipages'); ?></option>
-					<option value="include"<?php echo $exinclude_select['include']; ?>><?php _e('Include', 'flexipages'); ?></option>
-					<option value="single"<?php echo $exinclude_select['single']; ?>><?php _e('Include single parent', 'flexipages'); ?></option>
-				</select><?php _e('pages', 'flexipages'); ?></td>
-				<td><select name="flexipages_widget[<?php echo $number; ?>][exinclude_values][]" id="flexipages-exinclude_values-<?php echo $number; ?>" class="widefat" style="height:auto;max-height:6em" multiple="multiple" size="4">
-					<?php flexipages_exinclude_options($options[$number]['sort_column'], $options[$number]['sort_order'], explode(',', $options[$number]['exinclude_values']),0,0) ?>
+				<td valign="top"><?php _e('Single parent page', 'flexipages'); ?></td>
+				<td><select name="flexipages_widget[<?php echo $number; ?>][child_of_value][]" id="flexipages-child_of_value-<?php echo $number; ?>"class="widefat" style="height:auto;max-height:6em">
+					<option value=""></option>
+					<?php flexipages_pageslist_options($options[$number]['sort_column'], $options[$number]['sort_order'], explode(',', $options[$number]['child_of_value']),0,0) ?>
 				</select><br />
-				<small class="setting-description"><?php _e('use &lt;Ctrl&gt; key to select multiple pages', 'flexipages'); ?></small>
 				</td>
 			</tr>
 			<tr>
