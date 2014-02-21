@@ -155,10 +155,10 @@ function flexipages_init()
 		if(isset($hierarchy) && ($hierarchy == '0' || $hierarchy == 'off'))
 			$depth = -1;
 
-		$parent = ($depth == -1)?"-1":$child_of;		
-		
+		$parent = ($depth == -1)?"-1":$child_of;
+
 		$pages = get_pages("child_of={$child_of}&parent={$parent}&exclude={$exclude}&include={$include}&sort_column={$sort_column}&sort_order={$sort_order}");
-		
+
 //		echo "<pre>";print_r($pages);echo "</pre>";
 
 		$currpage_hierarchy = flexipages_get_currpage_hierarchy();
@@ -220,7 +220,7 @@ function flexipages_init()
 	
 	function flexipages($args='', $level = 0)
 	{
-		
+
 //		echo $args;
 		
 		$key_value = explode('&', $args);
@@ -301,12 +301,14 @@ function flexipages_init()
 		
 		$title = apply_filters('widget_title', $options[$number]['title']);
 		
-		$include = $exclude = '';
+		$include = $exclude = $child_of = 0;
 		if(isset($exinclude) && isset($exinclude_values)) {
 			if($exinclude == 'include')
 				$include = $exinclude_values;
+			elseif($exinclude == 'single')
+				$child_of = $exinclude_values;
 			else
-				$exclude = $exinclude_values;
+				$exclude  = $exinclude_values;
 		}
 		
 		if($show_subpages_check == 'off' || !$show_subpages_check) {
@@ -328,8 +330,8 @@ function flexipages_init()
 			$show_home = __('Home');
 			
 		
-		if($pagelist = flexipages("echo=0&sort_column={$sort_column}&sort_order={$sort_order}&exclude={$exclude}&include={$include}&show_subpages={$show_subpages}&hierarchy={$hierarchy}&depth={$depth}&show_home={$show_home}&show_date={$show_date}&date_format={$date_format}&dropdown={$dropdown}")){
-		
+		if($pagelist = flexipages("echo=0&sort_column={$sort_column}&sort_order={$sort_order}&exclude={$exclude}&include={$include}&show_subpages={$show_subpages}&hierarchy={$hierarchy}&depth={$depth}&show_home={$show_home}&show_date={$show_date}&date_format={$date_format}&dropdown={$dropdown}&child_of={$child_of}")){
+
 			echo $before_widget;
 
 			if($title && $pagelist)
@@ -374,7 +376,7 @@ function flexipages_init()
 	}
 	
 
-	
+
 	function flexipages_widget_control($widget_args)
 	{
 		global $wp_registered_widgets;
@@ -462,7 +464,7 @@ function flexipages_init()
 		$date_format_select[$options[$number]['date_format']] = ' selected="selected"';
 		$date_format_options = array('j F Y', 'F j, Y', 'Y/m/d', 'd/m/Y', 'm/d/Y');
 		$dropdown_check = ($options[$number]['dropdown'] == 'on')?' checked="checked"':'';
-		
+
 				?>
 		<table cellpadding="10px" cellspacing="10px">
 			<tr>
@@ -490,6 +492,7 @@ function flexipages_init()
 				<td valign="top"><select class="widefat" style="display:inline;width:auto;" name="flexipages_widget[<?php echo $number; ?>][exinclude]" id="flexipages-exinclude-<?php echo $number; ?>">
 					<option value="exclude"<?php echo $exinclude_select['exclude']; ?>><?php _e('Exclude', 'flexipages'); ?></option>
 					<option value="include"<?php echo $exinclude_select['include']; ?>><?php _e('Include', 'flexipages'); ?></option>
+					<option value="single"<?php echo $exinclude_select['single']; ?>><?php _e('Include single parent', 'flexipages'); ?></option>
 				</select><?php _e('pages', 'flexipages'); ?></td>
 				<td><select name="flexipages_widget[<?php echo $number; ?>][exinclude_values][]" id="flexipages-exinclude_values-<?php echo $number; ?>" class="widefat" style="height:auto;max-height:6em" multiple="multiple" size="4">
 					<?php flexipages_exinclude_options($options[$number]['sort_column'], $options[$number]['sort_order'], explode(',', $options[$number]['exinclude_values']),0,0) ?>
