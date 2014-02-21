@@ -467,7 +467,7 @@ function flexipages_init()
 			<tr>			
 				<td valign="top"><?php _e('Single parent page', 'flexipages'); ?></td>
 				<td><select name="flexipages_widget[<?php echo $number; ?>][child_of_value][]" id="flexipages-child_of_value-<?php echo $number; ?>"class="widefat" style="height:auto;max-height:6em">
-					<option value=""></option>
+					<option value="-1"></option>
 					<?php flexipages_pageslist_options($options[$number]['sort_column'], $options[$number]['sort_order'], explode(',', $options[$number]['child_of_value']),0,0) ?>
 				</select><br />
 				</td>
