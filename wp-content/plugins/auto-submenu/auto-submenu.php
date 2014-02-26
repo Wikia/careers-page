@@ -27,69 +27,116 @@ License: GPL2
 */
 
 class AutoSubmenu {
-	
+
 	/**
 	 * Constructor
 	 */
 	function __construct() {
-		add_action( 'publish_page', array( &$this, 'on_publish_page' ) );
+		add_action( 'save_post', array( &$this, 'on_publish_page' ) );
 	}
-	
+
 	/**
 	 * When publishing a new child page, add it to the appropriate custom menu.
 	 */
 	function on_publish_page( $post_id ) {
-		
+		$options = get_option('auto_submenu_options');
+
+		$menus_auto_enabled = array();
+		if( isset( $options['menus_auto_enabled'] ) ) {
+			$menus_auto_enabled = $options['menus_auto_enabled'];
+		}
+
 		// Theme supports custom menus?
 		if ( ! current_theme_supports( 'menus' ) ) {
 			return;
 		}
-		
+
 		// Published page has parent?
 		$post = get_post( $post_id );
+		if ( $post->post_type != 'page' ) {
+			return;
+		}
 		if ( ! $post->post_parent ) {
 			return;
 		}
-		
-		// Get menus with auto_add enabled
-		$auto_add = get_option( 'nav_menu_options' );
-		if ( empty( $auto_add ) || ! is_array( $auto_add ) || ! isset( $auto_add['auto_add'] ) ) {
+		if ( $post->post_status != 'publish' ) {
 			return;
 		}
-		$auto_add = $auto_add['auto_add'];
-		if ( empty( $auto_add ) || ! is_array( $auto_add ) ) {
-			return;
-		}
-		
+
 		// Loop through the menus to find page parent
-		foreach ( $auto_add as $menu_id ) {
+		foreach ( $menus_auto_enabled as $menu_id ) {
 			$menu_parent = NULL;
-			$menu_items = wp_get_nav_menu_items( $menu_id, array( 'post_status' => 'publish,draft' ) );
-			if ( ! is_array( $menu_items ) ) {
-				continue;
-			}
-			foreach ( $menu_items as $menu_item ) {
-				// Item already in menu?
-				if ( $menu_item->object_id == $post->ID ) {
-					continue 2;
+			$menu_items = wp_get_nav_menu_items( $menu_id, array( 'post_status' => 'publish' ) );
+			if ( is_array( $menu_items ) ) {
+				$postFound = false;
+				$parentFound = false;
+				foreach ( $menu_items as $menu_item ) {
+
+					if ( $menu_item->object_id == $post->ID ) {
+						//already on list
+						$postFound = true;
+					}
+					if ( $menu_item->object_id == $post->post_parent ) {
+						//parent found
+						$parentFound = true;
+						$parentID = $menu_item->ID;
+					}
 				}
-				if ( $menu_item->object_id == $post->post_parent ) {
-					$menu_parent = $menu_item;
+
+				// Add new item
+				if ( !$postFound && $parentFound ) {
+					wp_update_nav_menu_item( $menu_id, 0, array(
+						'menu-item-object-id' => $post->ID,
+						'menu-item-object' => $post->post_type,
+						'menu-item-parent-id' => $parentID,
+						'menu-item-type' => 'post_type',
+						'menu-item-status' => $post->post_status
+					) );
 				}
-			}
-			// Add new item
-			if ( $menu_parent ) {
-				wp_update_nav_menu_item( $menu_id, 0, array(
-					'menu-item-object-id' => $post->ID,
-					'menu-item-object' => $post->post_type,
-					'menu-item-parent-id' => $menu_parent->ID,
-					'menu-item-type' => 'post_type',
-					'menu-item-status' => 'publish'
-				) );
+
 			}
 		}
 	}
-	
+
 }
 
 $auto_submenu = new AutoSubmenu();
+
+/* Plugin settings */
+function auto_submenu_admin_init() {
+	include __DIR__ . "/basic-settings.php";
+}
+
+function auto_submenu_create_settings_menu() {
+	add_options_page(
+		'Auto submenu',
+		'Auto submenu',
+		'manage_options',
+		'auto-submenu',
+		'auto_submenu_plugin_options'
+	);
+}
+
+function auto_submenu_plugin_options() {
+
+	?>
+	<div class="wrap">
+		<h2><?php _e( 'Auto submenu', 'auto_submenu' ); ?></h2>
+		<div class="wrap-left">
+			<form method="post" action="options.php">
+				<?php settings_fields( 'auto_submenu_options' ); ?>
+				<?php do_settings_sections( 'auto_submenu_options' ); ?>
+				<br />
+				<input name="Submit" type="submit" class="button-primary" value="<?php esc_attr_e( 'Save Options', 'auto_submenu' ); ?>" />
+			</form>
+		</div>
+	</div>
+
+<?php
+}
+
+if ( is_admin() ) {
+	add_action('admin_menu', 'auto_submenu_create_settings_menu');
+	add_action('admin_init', 'auto_submenu_admin_init');
+}
+
