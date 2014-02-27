@@ -135,8 +135,23 @@ function auto_submenu_plugin_options() {
 <?php
 }
 
+/**
+ * Add link to plugin settings on plugin page
+ */
+function auto_submenu_plugin_settings_link($links) {
+	$settings_link = '<a href="options-general.php?page=auto-submenu">'. esc_html( __( 'Settings', 'auto_submenu' ) ) .'</a>';
+	array_unshift($links, $settings_link);
+	return $links;
+}
+
+
 if ( is_admin() ) {
+	// Add link to plugin settings in Settings menu in admin panel
 	add_action('admin_menu', 'auto_submenu_create_settings_menu');
+	// Add plugin settings panel
 	add_action('admin_init', 'auto_submenu_admin_init');
+	// Add link to plugin settings on plugin page
+	$plugin = plugin_basename(__FILE__);
+	add_filter("plugin_action_links_$plugin", 'auto_submenu_plugin_settings_link' );
 }
 
