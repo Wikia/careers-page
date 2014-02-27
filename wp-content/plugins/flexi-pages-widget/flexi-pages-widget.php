@@ -44,7 +44,8 @@ function flexipages_init()
 		'hierarchy' => 'on',
 		'depth' => 0, 
 		'show_subpages_check' => 'on', 
-		'show_subpages' => -2, 
+		'show_subpages' => -2,
+		'limit' => 0,
 		'show_home_check' => 'on',
 		'show_home' => __('Home', 'flexipages'), 
 		'show_date' => 'off',
@@ -130,9 +131,9 @@ function flexipages_init()
 		}
 		
 		extract($options);
-		
+
 		$page_array = array();
-		
+
 		if($show_home && $show_home != 'off') {
 			$class = "home_page";
 			$class .= is_home()?" current_page_item":"";			
@@ -154,7 +155,7 @@ function flexipages_init()
 
 		$parent = ($depth == -1)?"-1":$child_of;
 
-		$pages = get_pages("child_of={$child_of}&parent={$parent}&sort_column={$sort_column}&sort_order={$sort_order}");
+		$pages = get_pages("child_of={$child_of}&parent={$parent}&sort_column={$sort_column}&sort_order={$sort_order}&number={$limit}");
 
 //		echo "<pre>";print_r($pages);echo "</pre>";
 
@@ -175,7 +176,7 @@ function flexipages_init()
 
 				if( !($depth == -1 || $depth == $level)  &&
 					!($show_subpages == 2 && !in_array($page->ID, $currpage_hierarchy)))
-					$children = flexipages_get_pages("child_of={$page->ID}&parent={$page->ID}&sort_column={$sort_column}&sort_order={$sort_order}&show_subpages={$show_subpages}&depth={$depth}&show_date={$show_date}&date_format={$date_format}", $level+1);
+					$children = flexipages_get_pages("child_of={$page->ID}&parent={$page->ID}&sort_column={$sort_column}&sort_order={$sort_order}&show_subpages={$show_subpages}&depth={$depth}&show_date={$show_date}&date_format={$date_format}&limit={$limit}", $level+1);
 				
 				$date = '';
 				if($show_date) {
@@ -225,7 +226,7 @@ function flexipages_init()
 			$x = explode('=', $value);
 			$options[$x[0]] = $x[1]; // $options['key'] = 'value';
 		}
-		
+
 		extract($options);
 		
 		if(!isset($child_of) || !is_numeric($child_of))
@@ -238,7 +239,7 @@ function flexipages_init()
 		if($show_subpages == 0)
 			$depth = 1;
 
-		$page_array = flexipages_get_pages("sort_column={$sort_column}&sort_order={$sort_order}&show_subpages={$show_subpages}&hierarchy={$hierarchy}&depth={$depth}&show_home={$show_home}&child_of={$child_of}&parent={$child_of}&show_date={$show_date}&date_format={$date_format}");
+		$page_array = flexipages_get_pages("sort_column={$sort_column}&sort_order={$sort_order}&show_subpages={$show_subpages}&hierarchy={$hierarchy}&depth={$depth}&show_home={$show_home}&child_of={$child_of}&parent={$child_of}&show_date={$show_date}&date_format={$date_format}&limit={$limit}");
 		
 //		echo "<pre>"; print_r($page_array); echo "</pre>";
 
@@ -276,13 +277,16 @@ function flexipages_init()
 		extract( $widget_args, EXTR_SKIP );
 		
 		$options = get_option('flexipages_widget');
-		if ( !isset($options[$number]) )
+		if ( !isset($options[$number]) ) {
 			$options[$number] = flexipages_options_default();
-		
+		} else {
+			$options[$number] = array_merge( flexipages_options_default(), $options[$number]);
+		}
+
 //		echo "<pre>"; print_r ($options[$number]); echo "</pre>";
 			
 		extract($options[$number]);
-		
+
 		$title = apply_filters('widget_title', $options[$number]['title']);
 		
 		if(isset($child_of_value)) {
@@ -308,7 +312,7 @@ function flexipages_init()
 			$show_home = __('Home');
 			
 		
-		if($pagelist = flexipages("echo=0&sort_column={$sort_column}&sort_order={$sort_order}&show_subpages={$show_subpages}&hierarchy={$hierarchy}&depth={$depth}&show_home={$show_home}&show_date={$show_date}&date_format={$date_format}&dropdown={$dropdown}&child_of={$child_of}")){
+		if($pagelist = flexipages("echo=0&sort_column={$sort_column}&sort_order={$sort_order}&show_subpages={$show_subpages}&hierarchy={$hierarchy}&depth={$depth}&show_home={$show_home}&show_date={$show_date}&date_format={$date_format}&dropdown={$dropdown}&child_of={$child_of}&limit={$limit}")){
 
 			echo $before_widget;
 
@@ -397,13 +401,14 @@ function flexipages_init()
 				$show_subpages = strip_tags(stripslashes($flexipages_widget['show_subpages']));
 				$hierarchy = strip_tags(stripslashes($flexipages_widget['hierarchy']));
 				$depth = strip_tags(stripslashes($flexipages_widget['depth']));
+				$limit = strip_tags(stripslashes($flexipages_widget['limit']));
 				$show_home_check = strip_tags(stripslashes($flexipages_widget['show_home_check']));
 				$show_home = strip_tags(stripslashes($flexipages_widget['show_home']));
 				$show_date = strip_tags(stripslashes($flexipages_widget['show_date']));
 				$date_format = strip_tags(stripslashes($flexipages_widget['date_format']));
 				$dropdown = strip_tags(stripslashes($flexipages_widget['dropdown']));
 				
-				$options[$widget_number] = compact('title', 'sort_column', 'sort_order', 'child_of_value', 'show_subpages_check', 'show_subpages', 'hierarchy', 'depth', 'show_home_check', 'show_home', 'show_date', 'date_format', 'dropdown');
+				$options[$widget_number] = compact('title', 'sort_column', 'sort_order', 'child_of_value', 'show_subpages_check', 'show_subpages', 'hierarchy', 'depth', 'limit', 'show_home_check', 'show_home', 'show_date', 'date_format', 'dropdown');
 			}
 
 			update_option('flexipages_widget', $options);
@@ -432,6 +437,7 @@ function flexipages_init()
 		else
 			$depth_select[0] = ' selected="selected"';
 		$depth_display = $hierarchy_check?'':' style="display:none;"';
+		$limit = esc_attr($options[$number]['limit']);
 		$show_home_check_check = ((isset($options[$number]['home_link']) && $options[$number]['home_link']) || $options[$number]['show_home_check'] == 'on')?' checked="checked"':'';
 		$show_home_display = $show_home_check_check?'':' style="display:none;"';
 		$show_home = isset($options[$number]['home_link'])?esc_attr($options[$number]['home_link']):esc_attr($options[$number]['show_home']);
@@ -492,6 +498,10 @@ function flexipages_init()
 					<option value="0"<?php echo $depth_select[0]; ?>><?php _e('Unlimited depth', 'flexipages'); ?></option>
 					</select>
 				</td>
+			</tr>
+			<tr>
+				<td><label for="flexipages-limit-<?php echo $number; ?>"><?php _e('Number of visible items', 'flexipages'); ?></label></td>
+				<td><input class="widefat" id="flexipages-limit-<?php echo $number; ?>" name="flexipages_widget[<?php echo $number; ?>][limit]" type="text" value="<?php echo $limit; ?>" /></td>
 			</tr>
 			<tr>
 				<td style="padding:5px 0;"><label for="flexipages-show_home_check-<?php echo $number; ?>"><input type="checkbox" class="checkbox" id="flexipages-show_home_check-<?php echo $number; ?>" name="flexipages_widget[<?php echo $number; ?>][show_home_check]" onchange="if(this.checked) { getElementById('flexipages-show_home-<?php echo $number; ?>').style.display='block'; } else { getElementById('flexipages-show_home-<?php echo $number; ?>').style.display='none'; }"<?php echo $show_home_check_check; ?> /> <?php _e('Show home page', 'flexipages'); ?></label></td>
