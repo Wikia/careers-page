@@ -27,7 +27,7 @@ $defaults = array(
 	'flex-height'            => false,
 	'flex-width'             => false,
 	'default-text-color'     => '',
-	'header-text'            => true,
+	'header-text'            => false,
 	'uploads'                => true,
 	'wp-head-callback'       => '',
 	'admin-head-callback'    => '',
@@ -49,6 +49,19 @@ function themeslug_theme_customizer( $wp_customize ) {
 		'section'  => 'themeslug_logo_section',
 		'settings' => 'themeslug_logo',
 	) ) );
+
+	//header description
+	$wp_customize->add_section( 'themeslug_header_desc_section' , array(
+		'title'       => __( 'Header message', 'themeslug' ),
+		'priority'    => 31,
+		'description' => 'Upload a logo to replace the default site name and description in the header',
+	) );
+	$wp_customize->add_setting( 'themeslug_header_desc' );
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'themeslug_header_desc', array(
+		'label'    => __( 'Header message', 'themeslug' ),
+		'section'  => 'themeslug_header_desc_section',
+		'settings' => 'themeslug_header_desc',
+	) ) );
 }
 add_action('customize_register', 'themeslug_theme_customizer');
 
@@ -69,3 +82,8 @@ function arphabet_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
+
+add_action( 'init', 'my_add_excerpts_to_pages' );
+function my_add_excerpts_to_pages() {
+	add_post_type_support( 'page', 'excerpt' );
+}
