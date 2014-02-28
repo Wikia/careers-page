@@ -34,7 +34,7 @@
 		<?php if ( get_theme_mod( 'wikia_careers_header_desc' ) ) : ?>
 			<!-- header background message -->
 			<p class="site-header-message"><?php echo get_theme_mod( 'wikia_careers_header_desc' ); ?></p>
-			<div class="scroll-down">v</div>
 		<?php endif; ?>
+		<div class="scroll-down">v</div>
 	</div>
 <?php endif; ?>
