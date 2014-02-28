@@ -20,5 +20,6 @@ wp-content/backups/
 sitemap.xml
 sitemap.xml.gz
 wp-content/plugins/wp-developer-assistant/
+.htaccess
 .idea
 kint
