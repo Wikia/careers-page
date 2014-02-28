@@ -448,7 +448,7 @@ function flexipages_init()
 		$show_home_check_check = ((isset($options[$number]['home_link']) && $options[$number]['home_link']) || $options[$number]['show_home_check'] == 'on')?' checked="checked"':'';
 		$show_home_display = $show_home_check_check?'':' style="display:none;"';
 		$show_home = isset($options[$number]['home_link'])?esc_attr($options[$number]['home_link']):esc_attr($options[$number]['show_home']);
-		$show_parent_link_check = $options[$number]['show_parent_link'] ?' checked="checked"':'';
+		$show_parent_link_check = ($options[$number]['show_parent_link']== 'on') ?' checked="checked"':'';
 		$show_date_check = ($options[$number]['show_date'] == 'on')?' checked="checked"':'';
 		$date_format_display = $show_date_check?'':' style="display:none;"';
 		$date_format_select[$options[$number]['date_format']] = ' selected="selected"';
