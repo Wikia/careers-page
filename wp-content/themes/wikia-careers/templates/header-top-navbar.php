@@ -8,8 +8,8 @@
         <span class="icon-bar"></span>
       </button>
 		<!-- logo -->
-		  <?php if ( get_theme_mod( 'themeslug_logo' ) ) : ?>
-				  <a class="navbar-brand image-logo" href="<?php echo home_url(); ?>/" rel='home'><img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+		  <?php if ( get_theme_mod( 'wikia_careers_logo' ) ) : ?>
+				  <a class="navbar-brand image-logo" href="<?php echo home_url(); ?>/" rel='home'><img src='<?php echo esc_url( get_theme_mod( 'wikia_careers_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
 		  <?php else : ?>
 			  <hgroup>
 				  <a class="navbar-brand" href="<?php echo home_url(); ?>/" title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a>
@@ -31,9 +31,9 @@
 <?php if ( get_header_image() ) : ?>
 	<!-- header background image -->
 	<div id="site-header" style="background-image:url('<?php header_image(); ?>')" class="container site-header">
-		<?php if ( get_theme_mod( 'themeslug_header_desc' ) ) : ?>
+		<?php if ( get_theme_mod( 'wikia_careers_header_desc' ) ) : ?>
 			<!-- header background message -->
-			<p class="site-header-message"><?php echo get_theme_mod( 'themeslug_header_desc' ); ?></p>
+			<p class="site-header-message"><?php echo get_theme_mod( 'wikia_careers_header_desc' ); ?></p>
 			<div class="scroll-down">v</div>
 		<?php endif; ?>
 	</div>
