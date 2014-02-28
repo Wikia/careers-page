@@ -36,34 +36,33 @@ $defaults = array(
 add_theme_support( 'custom-header', $defaults );
 
 
-function themeslug_theme_customizer( $wp_customize ) {
-	// Fun code will go here
-	$wp_customize->add_section( 'themeslug_logo_section' , array(
-		'title'       => __( 'Logo', 'themeslug' ),
+function wikia_careers_theme_customizer( $wp_customize ) {
+	$wp_customize->add_section( 'wikia_careers_logo_section' , array(
+		'title'       => __( 'Logo', 'wikia_careers' ),
 		'priority'    => 30,
 		'description' => 'Upload a logo to replace the default site name and description in the header',
 	) );
-	$wp_customize->add_setting( 'themeslug_logo' );
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_logo', array(
-		'label'    => __( 'Logo', 'themeslug' ),
-		'section'  => 'themeslug_logo_section',
-		'settings' => 'themeslug_logo',
+	$wp_customize->add_setting( 'wikia_careers_logo' );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wikia_careers_logo', array(
+		'label'    => __( 'Logo', 'wikia_careers' ),
+		'section'  => 'wikia_careers_logo_section',
+		'settings' => 'wikia_careers_logo',
 	) ) );
 
 	//header description
-	$wp_customize->add_section( 'themeslug_header_desc_section' , array(
-		'title'       => __( 'Header message', 'themeslug' ),
+	$wp_customize->add_section( 'wikia_careers_header_desc_section' , array(
+		'title'       => __( 'Header message', 'wikia_careers' ),
 		'priority'    => 31,
 		'description' => 'Upload a logo to replace the default site name and description in the header',
 	) );
-	$wp_customize->add_setting( 'themeslug_header_desc' );
-	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'themeslug_header_desc', array(
-		'label'    => __( 'Header message', 'themeslug' ),
-		'section'  => 'themeslug_header_desc_section',
-		'settings' => 'themeslug_header_desc',
+	$wp_customize->add_setting( 'wikia_careers_header_desc' );
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wikia_careers_header_desc', array(
+		'label'    => __( 'Header message', 'wikia_careers' ),
+		'section'  => 'wikia_careers_header_desc_section',
+		'settings' => 'wikia_careers_header_desc',
 	) ) );
 }
-add_action('customize_register', 'themeslug_theme_customizer');
+add_action('customize_register', 'wikia_careers_theme_customizer');
 
 
 /**
@@ -71,10 +70,9 @@ add_action('customize_register', 'themeslug_theme_customizer');
  *
  */
 function arphabet_widgets_init() {
-
 	register_sidebar( array(
 		'name' => 'Home main area',
-		'id' => 'home_right_1',
+		'id' => 'home_main_widget',
 		'before_widget' => '<div>',
 		'after_widget' => '</div>',
 		'before_title' => '<h2 class="rounded">',

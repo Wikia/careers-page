@@ -1,1 +1,1 @@
-<?php if ( dynamic_sidebar('home_right_1') ) : else : endif; ?>
+<?php if ( dynamic_sidebar('home_main_widget') ) : else : endif; ?>
