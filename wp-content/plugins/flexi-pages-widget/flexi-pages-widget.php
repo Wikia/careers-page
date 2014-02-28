@@ -47,7 +47,8 @@ function flexipages_init()
 		'show_subpages' => -2,
 		'limit' => 0,
 		'show_home_check' => 'on',
-		'show_home' => __('Home', 'flexipages'), 
+		'show_home' => __('Home', 'flexipages'),
+		'show_parent_link' => 'off',
 		'show_date' => 'off',
 		'date_format' => '',
 		'dropdown' => 'off'		);
@@ -252,7 +253,7 @@ function flexipages_init()
 		}
 		else
 			$pages = flexipages_list($page_array);
-		
+
 		if(isset($echo) && $echo == 0)
 			return $pages;
 		
@@ -327,6 +328,11 @@ function flexipages_init()
 			if(isset($before_pagelist) && isset($after_pagelist)) 
 				echo $before_pagelist . $pagelist . $after_pagelist . "\n";
 			else echo $pagelist . "\n";
+
+			if($show_parent_link == 'on' || $show_parent_link == 1) {
+				$parent_page = get_post($child_of);
+				echo '<a href="'.post_permalink($child_of).'">'.$parent_page->post_title.'</a>';
+			}
 
 			echo $after_widget;
 		}
@@ -404,11 +410,12 @@ function flexipages_init()
 				$limit = strip_tags(stripslashes($flexipages_widget['limit']));
 				$show_home_check = strip_tags(stripslashes($flexipages_widget['show_home_check']));
 				$show_home = strip_tags(stripslashes($flexipages_widget['show_home']));
+				$show_parent_link = strip_tags(stripslashes($flexipages_widget['show_parent_link']));
 				$show_date = strip_tags(stripslashes($flexipages_widget['show_date']));
 				$date_format = strip_tags(stripslashes($flexipages_widget['date_format']));
 				$dropdown = strip_tags(stripslashes($flexipages_widget['dropdown']));
 				
-				$options[$widget_number] = compact('title', 'sort_column', 'sort_order', 'child_of_value', 'show_subpages_check', 'show_subpages', 'hierarchy', 'depth', 'limit', 'show_home_check', 'show_home', 'show_date', 'date_format', 'dropdown');
+				$options[$widget_number] = compact('title', 'sort_column', 'sort_order', 'child_of_value', 'show_subpages_check', 'show_subpages', 'hierarchy', 'depth', 'limit', 'show_home_check', 'show_home', 'show_parent_link', 'show_date', 'date_format', 'dropdown');
 			}
 
 			update_option('flexipages_widget', $options);
@@ -441,6 +448,7 @@ function flexipages_init()
 		$show_home_check_check = ((isset($options[$number]['home_link']) && $options[$number]['home_link']) || $options[$number]['show_home_check'] == 'on')?' checked="checked"':'';
 		$show_home_display = $show_home_check_check?'':' style="display:none;"';
 		$show_home = isset($options[$number]['home_link'])?esc_attr($options[$number]['home_link']):esc_attr($options[$number]['show_home']);
+		$show_parent_link_check = $options[$number]['show_parent_link'] ?' checked="checked"':'';
 		$show_date_check = ($options[$number]['show_date'] == 'on')?' checked="checked"':'';
 		$date_format_display = $show_date_check?'':' style="display:none;"';
 		$date_format_select[$options[$number]['date_format']] = ' selected="selected"';
@@ -506,6 +514,12 @@ function flexipages_init()
 			<tr>
 				<td style="padding:5px 0;"><label for="flexipages-show_home_check-<?php echo $number; ?>"><input type="checkbox" class="checkbox" id="flexipages-show_home_check-<?php echo $number; ?>" name="flexipages_widget[<?php echo $number; ?>][show_home_check]" onchange="if(this.checked) { getElementById('flexipages-show_home-<?php echo $number; ?>').style.display='block'; } else { getElementById('flexipages-show_home-<?php echo $number; ?>').style.display='none'; }"<?php echo $show_home_check_check; ?> /> <?php _e('Show home page', 'flexipages'); ?></label></td>
 				<td><input<?php echo $show_home_display; ?> class="widefat" type="text" name="flexipages_widget[<?php echo $number; ?>][show_home]" id ="flexipages-show_home-<?php echo $number; ?>" value="<?php echo htmlspecialchars($show_home, ENT_QUOTES); ?>" /></td>	
+			</tr>
+			<tr>
+				<td colspan="2" style="padding:5px 0;">
+				<input name="flexipages_widget[<?php echo $number; ?>][show_parent_link]" id="flexipages-show_parent_link-<?php echo $number; ?>" type="checkbox"<?php echo $show_parent_link_check; ?>" />
+				<label for="flexipages-parent_link-<?php echo $number; ?>"><?php _e('Show link to parent page', 'flexipages'); ?></label>
+				</td>
 			</tr>
 			<tr>
 			<td style="padding:5px 0;"><label for="flexipages-show_date-<?php echo $number; ?>"><input type="checkbox" class="checkbox" id="flexipages-show_date-<?php echo $number; ?>" name="flexipages_widget[<?php echo $number; ?>][show_date]" onchange="if(this.checked) { getElementById('flexipages-date_format-<?php echo $number; ?>').style.display='block'; } else { getElementById('flexipages-date_format-<?php echo $number; ?>').style.display='none'; }"<?php echo $show_date_check; ?> /> <?php _e('Show date', 'flexipages'); ?></label></td>
