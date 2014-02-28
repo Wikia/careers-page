@@ -7,6 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+		<!-- logo -->
 		  <?php if ( get_theme_mod( 'themeslug_logo' ) ) : ?>
 				  <a class="navbar-brand image-logo" href="<?php echo home_url(); ?>/" rel='home'><img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
 		  <?php else : ?>
@@ -28,9 +29,12 @@
 
 </header>
 <?php if ( get_header_image() ) : ?>
+	<!-- header background image -->
 	<div id="site-header" style="background-image:url('<?php header_image(); ?>')" class="container site-header">
-		<!--			<a href="--><?php //echo esc_url( home_url( '/' ) ); ?><!--" rel="home">-->
-		<!--				<img src="--><?php //header_image(); ?><!--" width="--><?php //echo get_custom_header()->width; ?><!--" height="--><?php //echo get_custom_header()->height; ?><!--" alt="">-->
-		<!--			</a>-->
+		<?php if ( get_theme_mod( 'themeslug_header_desc' ) ) : ?>
+			<!-- header background message -->
+			<p class="site-header-message"><?php echo get_theme_mod( 'themeslug_header_desc' ); ?></p>
+			<div class="scroll-down">v</div>
+		<?php endif; ?>
 	</div>
 <?php endif; ?>

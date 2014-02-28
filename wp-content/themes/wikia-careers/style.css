@@ -21,3 +21,15 @@ License URI:        http://opensource.org/licenses/MIT
 	height:0px;
 	padding-bottom:15%
 }
+
+.site-header-message,
+.scroll-down {
+	color:#fff;
+	font-size:3em;
+	text-align:center;
+}
+
+.scroll-down:hover {
+	color:#002e54;
+	cursor:pointer;
+}
