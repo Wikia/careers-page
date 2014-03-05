@@ -116,8 +116,6 @@ function get_excerpt_by_id( $post_id ) {
 		$the_excerpt = implode(' ', $words);
 	}
 
-	$the_excerpt = '<p>' . $the_excerpt . '</p>';
-
 	return $the_excerpt;
 
 }
