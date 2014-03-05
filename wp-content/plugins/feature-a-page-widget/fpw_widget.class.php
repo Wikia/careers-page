@@ -56,10 +56,8 @@ class FPW_Widget extends WP_Widget {
 				<?php foreach( $page_select_list as $page_id => $page_title ) {
 					// We'll give people a hint if the excerpt and image are set
 					$featured_image = null; $excerpt = null;
-					if( has_post_thumbnail( $page_id ) ){
-						d('has_post_thumbnail');
+					if( has_post_thumbnail( $page_id ) )
 						$featured_image = 'featured-image';
-					}
 					if( has_excerpt( $page_id) )
 						$excerpt = 'excerpt';
 					printf( '<option class="%4$s %5$s" value="%1$s" data-edit-link="%6$s" %3$s>%2$s</option>',
@@ -217,8 +215,6 @@ class FPW_Widget extends WP_Widget {
 
 		// see if there is a post_thumbnail grab it and filter it
 		if ( has_post_thumbnail( $featured_page_id ) ) {
-			d('has_post_thumbnail');
-			d($featured_page_id);
 			$featured_image = get_the_post_thumbnail( $featured_page_id, $image_size );
 			$featured_image = apply_filters( 'fpw_featured_image', $featured_image, $featured_page_id );
 		} else {
