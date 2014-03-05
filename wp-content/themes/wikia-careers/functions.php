@@ -85,3 +85,39 @@ add_action( 'init', 'my_add_excerpts_to_pages' );
 function my_add_excerpts_to_pages() {
 	add_post_type_support( 'page', 'excerpt' );
 }
+
+
+/**
+ * Custom excerpt function
+ * Gets post excerpt by post ID.
+ * If post doesn't have excerpt, prepares own excerpt using 35 first words
+ *
+ * @param Int $post_id Post ID
+ * @return String
+ */
+function get_excerpt_by_id( $post_id ) {
+
+	$the_post = get_post($post_id); //Gets post ID
+
+	// Try to get excerpt defined for post
+	$the_excerpt = $the_post->post_excerpt;
+	if ( !empty( $the_excerpt ) ) {
+		return $the_excerpt;
+	}
+
+	// Prepare auto excerpt
+	$the_excerpt = $the_post->post_content; // Gets post_content to be used as a basis for the excerpt
+	$excerpt_length = 35; // Sets excerpt length by word count
+	$the_excerpt = strip_tags(strip_shortcodes($the_excerpt)); // Strips tags and images
+	$words = explode(' ', $the_excerpt, $excerpt_length + 1);
+	if(count($words) > $excerpt_length) {
+		array_pop($words);
+		array_push($words, '…');
+		$the_excerpt = implode(' ', $words);
+	}
+
+	$the_excerpt = '<p>' . $the_excerpt . '</p>';
+
+	return $the_excerpt;
+
+}
