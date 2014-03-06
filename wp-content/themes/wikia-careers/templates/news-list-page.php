@@ -3,7 +3,11 @@
 Template Name: News list template
 */
 
+wp_list_categories( $args );
+
 ?>
+
+
 <section id="news-list">
 <?php
 
