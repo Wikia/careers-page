@@ -791,16 +791,57 @@
   .col(1); // kickstart it
 }
 
-.float-grid-columns(@class) {
+.make-grid-column(@size-abbr, @columns, @gutter-width) {
+
+  // Common styles for all sizes of grid columns, widths 1-12
+  .col-spec(@index) when (@index = 1) { // initial
+    @item: ~".col-@{size-abbr}-@{index}";
+    .col-spec((@index + 1), @item);
+  }
+  .col-spec(@index, @list) when (@index =< @columns) { // general; "=<" isn't a typo
+    @item: ~".col-@{size-abbr}-@{index}";
+    .col-spec((@index + 1), ~"@{list}, @{item}");
+  }
+  .col-spec(@index, @list) when (@index > @columns) { // terminal
+    .meda-condition(@size-abbr); // set @screen-min-current (breakpoint width) based on size abbreviation
+    @media (min-width: @screen-min-current ) {
+      @{list} {
+        position: relative;
+        // Prevent columns from collapsing when empty
+        min-height: 1px;
+        // Inner gutter via padding
+        padding-left:  (@gutter-width / 2);
+        padding-right: (@gutter-width / 2);
+      }
+    }
+  }
+  .col-spec(1); // kickstart it
+ }
+
+  .meda-condition(@size-abbr) when(@size-abbr = xs) {
+    @screen-min-current: @screen-xs-min;
+  }
+  .meda-condition(@size-abbr) when(@size-abbr = sm) {
+    @screen-min-current: @screen-sm-min;
+  }
+  .meda-condition(@size-abbr) when(@size-abbr = md) {
+    @screen-min-current: @screen-md-min;
+  }
+  .meda-condition(@size-abbr) when(@size-abbr = lg) {
+    @screen-min-current: @screen-lg-min;
+  }
+
+
+.float-grid-columns(@class, @columns) {
   .col(@index) when (@index = 1) { // initial
     @item: ~".col-@{class}-@{index}";
     .col((@index + 1), @item);
   }
-  .col(@index, @list) when (@index =< @grid-columns) { // general
+  .col(@index, @list) when (@index =< @columns) { // general
     @item: ~".col-@{class}-@{index}";
     .col((@index + 1), ~"@{list}, @{item}");
   }
-  .col(@index, @list) when (@index > @grid-columns) { // terminal
+  .col(@index, @list) when (@index > @columns) { // terminal
     @{list} {
       float: left;
     }
@@ -808,41 +849,41 @@
   .col(1); // kickstart it
 }
 
-.calc-grid-column(@index, @class, @type) when (@type = width) and (@index > 0) {
+.calc-grid-column(@index, @class, @type, @columns) when (@type = width) and (@index > 0) {
   .col-@{class}-@{index} {
-    width: percentage((@index / @grid-columns));
+    width: percentage((@index / @columns));
   }
 }
-.calc-grid-column(@index, @class, @type) when (@type = push) {
+.calc-grid-column(@index, @class, @type, @columns) when (@type = push) {
   .col-@{class}-push-@{index} {
-    left: percentage((@index / @grid-columns));
+    left: percentage((@index / @columns));
   }
 }
-.calc-grid-column(@index, @class, @type) when (@type = pull) {
+.calc-grid-column(@index, @class, @type, @columns) when (@type = pull) {
   .col-@{class}-pull-@{index} {
-    right: percentage((@index / @grid-columns));
+    right: percentage((@index / @columns));
   }
 }
-.calc-grid-column(@index, @class, @type) when (@type = offset) {
+.calc-grid-column(@index, @class, @type, @columns) when (@type = offset) {
   .col-@{class}-offset-@{index} {
-    margin-left: percentage((@index / @grid-columns));
+    margin-left: percentage((@index / @columns));
   }
 }
 
 // Basic looping in LESS
-.loop-grid-columns(@index, @class, @type) when (@index >= 0) {
-  .calc-grid-column(@index, @class, @type);
+.loop-grid-columns(@index, @class, @type, @columns) when (@index >= 0) {
+  .calc-grid-column(@index, @class, @type, @columns);
   // next iteration
-  .loop-grid-columns((@index - 1), @class, @type);
+  .loop-grid-columns((@index - 1), @class, @type, @columns);
 }
 
 // Create grid for specific class
-.make-grid(@class) {
-  .float-grid-columns(@class);
-  .loop-grid-columns(@grid-columns, @class, width);
-  .loop-grid-columns(@grid-columns, @class, pull);
-  .loop-grid-columns(@grid-columns, @class, push);
-  .loop-grid-columns(@grid-columns, @class, offset);
+.make-grid(@class, @columns: @grid-columns) {
+  .float-grid-columns(@class, @columns);
+  .loop-grid-columns(@columns, @class, width, @columns);
+  .loop-grid-columns(@columns, @class, pull, @columns);
+  .loop-grid-columns(@columns, @class, push, @columns);
+  .loop-grid-columns(@columns, @class, offset, @columns);
 }
 
 // Form validation states
