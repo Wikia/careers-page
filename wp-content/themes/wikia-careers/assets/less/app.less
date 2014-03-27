@@ -73,8 +73,38 @@ body { }
    ========================================================================== */
 
 .aligncenter { display: block; margin: 0 auto; }
-.alignleft { float: left; }
-.alignright { float: right; }
+.alignleft {
+  float: left;
+  margin-right: @grid-xxs-gutter-width;
+  @media (min-width: @screen-xs-min) {
+    margin-right: @grid-xs-gutter-width;
+  }
+  @media (min-width: @screen-sm-min) {
+    margin-right: @grid-sm-gutter-width;
+  }
+  @media (min-width: @screen-md-min) {
+    margin-right: @grid-md-gutter-width;
+  }
+  @media (min-width: @screen-lg-min) {
+    margin-right: @grid-lg-gutter-width;
+  }
+}
+.alignright {
+  float: right;
+  margin-left: @grid-xxs-gutter-width;
+  @media (min-width: @screen-xs-min) {
+    margin-left: @grid-xs-gutter-width;
+  }
+  @media (min-width: @screen-sm-min) {
+    margin-left: @grid-sm-gutter-width;
+  }
+  @media (min-width: @screen-md-min) {
+    margin-left: @grid-md-gutter-width;
+  }
+  @media (min-width: @screen-lg-min) {
+    margin-left: @grid-lg-gutter-width;
+  }
+}
 figure.alignnone { margin-left: 0; margin-right: 0; }
 
 
