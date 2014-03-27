@@ -638,15 +638,43 @@
 .container-fixed() {
   margin-right: auto;
   margin-left: auto;
-  padding-left:  (@grid-gutter-width / 2);
-  padding-right: (@grid-gutter-width / 2);
+  @media (min-width: @screen-xs-min ) {
+    padding-left:  (@grid-xs-gutter-width / 2);
+    padding-right: (@grid-xs-gutter-width / 2);
+  }
+  @media (min-width: @screen-sm-min ) {
+    padding-left:  (@grid-sm-gutter-width / 2);
+    padding-right: (@grid-sm-gutter-width / 2);
+  }
+  @media (min-width: @screen-md-min ) {
+    padding-left:  (@grid-md-gutter-width / 2);
+    padding-right: (@grid-md-gutter-width / 2);
+  }
+  @media (min-width: @screen-lg-min ) {
+    padding-left:  (@grid-lg-gutter-width / 2);
+    padding-right: (@grid-lg-gutter-width / 2);
+  }
   &:extend(.clearfix all);
 }
 
 // Creates a wrapper for a series of columns
 .make-row(@gutter: @grid-gutter-width) {
-  margin-left:  (@gutter / -2);
-  margin-right: (@gutter / -2);
+  @media (min-width: @screen-xs-min ) {
+    margin-left:  (@grid-xs-gutter-width / -2);
+    margin-right: (@grid-xs-gutter-width / -2);
+  }
+  @media (min-width: @screen-sm-min ) {
+    margin-left:  (@grid-sm-gutter-width / -2);
+    margin-right: (@grid-sm-gutter-width / -2);
+  }
+  @media (min-width: @screen-md-min ) {
+    margin-left:  (@grid-md-gutter-width / -2);
+    margin-right: (@grid-md-gutter-width / -2);
+  }
+  @media (min-width: @screen-lg-min ) {
+    margin-left:  (@grid-lg-gutter-width / -2);
+    margin-right: (@grid-lg-gutter-width / -2);
+  }
   &:extend(.clearfix all);
 }
 
@@ -884,6 +912,35 @@
   .loop-grid-columns(@columns, @class, pull, @columns);
   .loop-grid-columns(@columns, @class, push, @columns);
   .loop-grid-columns(@columns, @class, offset, @columns);
+}
+
+// Page margins
+.make-spaced-container() {
+  @page-class-fulid: ~".container-fluid.spaced-container";
+  @media (min-width: @screen-xs-min ) {
+    @{page-class-fulid} {
+      padding-left: @page-xs-side-margins;
+      padding-right: @page-xs-side-margins;
+    }
+  }
+  @media (min-width: @screen-sm-min ) {
+    @{page-class-fulid} {
+      padding-left: @page-sm-side-margins;
+      padding-right: @page-sm-side-margins;
+    }
+  }
+  @media (min-width: @screen-md-min ) {
+    @{page-class-fulid} {
+      padding-left: @page-md-side-margins;
+      padding-right: @page-md-side-margins;
+    }
+  }
+  @media (min-width: @screen-lg-min ) {
+    @{page-class-fulid} {
+      padding-left: @page-lg-side-margins;
+      padding-right: @page-lg-side-margins;
+    }
+  }
 }
 
 // Form validation states
