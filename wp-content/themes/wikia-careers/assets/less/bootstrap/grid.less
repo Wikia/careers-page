@@ -10,6 +10,9 @@
 .container {
   .container-fixed();
 
+  @media (min-width: @screen-xs-min) {
+    width: @container-xs;
+  }
   @media (min-width: @screen-sm-min) {
     width: @container-sm;
   }
@@ -45,6 +48,7 @@
 //
 // Common styles (mainly applying specific gutters as paddings) for xs, small, medium and large grid columns
 
+.make-grid-column(xxs,@grid-xxs-columns,@grid-xxs-gutter-width);
 .make-grid-column(xs,@grid-xs-columns,@grid-xs-gutter-width);
 .make-grid-column(sm,@grid-sm-columns,@grid-sm-gutter-width);
 .make-grid-column(md,@grid-md-columns,@grid-md-gutter-width);
@@ -56,8 +60,17 @@
 // Columns, offsets, pushes, and pulls for extra small devices like
 // smartphones.
 
-.make-grid(xs, @grid-xs-columns);
+.make-grid(xxs, @grid-xxs-columns);
 
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from small phones
+// to phones.
+
+@media (min-width: @screen-xs-min) {
+  .make-grid(xs, @grid-xs-columns);
+}
 
 // Small grid
 //

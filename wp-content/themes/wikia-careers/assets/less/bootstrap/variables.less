@@ -292,14 +292,15 @@
 
 //** Number of columns in the grid.
 @grid-columns:              12;
-@grid-xs-columns:            4;
-@grid-sm-columns:            6;
-@grid-md-columns:            @grid-columns;
-@grid-lg-columns:            @grid-columns;
+@grid-xxs-columns:          4;
+@grid-xs-columns:           @grid-xxs-columns;
+@grid-sm-columns:           6;
+@grid-md-columns:           @grid-columns;
+@grid-lg-columns:           @grid-columns;
 //** Padding between columns. Gets divided in half for the left and right.
 @grid-gutter-width:         22px;
-@grid-xxs-gutter-width:     10px;
-@grid-xs-gutter-width:      16px;//phone?
+@grid-xxs-gutter-width:     10px;//small phone
+@grid-xs-gutter-width:      16px;//phone
 @grid-sm-gutter-width:      22px;//tablet
 @grid-md-gutter-width:      36px;//desktop
 @grid-lg-gutter-width:      40px;//large desktop
@@ -313,6 +314,11 @@
 //== Container sizes
 //
 //## Define the maximum width of `.container` for different screen sizes.
+
+// Extra Small screen / phone
+@container-phone:             @screen-xs-min;
+//** For `@screen-xs-min` and up.
+@container-xs:                 @container-phone;
 
 // Small screen / tablet
 @container-tablet:             @screen-sm-min;
@@ -334,6 +340,7 @@
 //
 //##
 
+@page-xxs-side-margins: 20px;
 @page-xs-side-margins: 20px;
 @page-sm-side-margins: 50px;
 @page-md-side-margins: 50px;
