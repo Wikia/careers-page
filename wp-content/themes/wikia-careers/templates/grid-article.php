@@ -3,8 +3,7 @@
 Template Name: Grid article
 */
 ?>
-
-<div class="container-fluid">
+<div class="container-fluid spaced-container">
 	<div class="row">
 		<div class="col-xs-4 col-sm-3 col-md-7 col-lg-6 col-lg-offset-2 ">
 			<?php
