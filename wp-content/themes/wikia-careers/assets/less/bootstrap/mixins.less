@@ -916,7 +916,7 @@
 
 // Page margins
 .make-spaced-container() {
-  @page-class-fulid: ~".container-fluid.spaced-container";
+  @page-class-fulid: ~".container.spaced-container, .container-fluid.spaced-container";
   @media (min-width: @screen-xs-min ) {
     @{page-class-fulid} {
       padding-left: @page-xs-side-margins;
