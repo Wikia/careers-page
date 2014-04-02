@@ -172,3 +172,10 @@ function show_paging_nav() {
 	<?php
 	endif;
 }
+
+// Allow uploads of svg files
+function cc_mime_types( $mimes ){
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter( 'upload_mimes', 'cc_mime_types' );
