@@ -1,5 +1,13 @@
 <section class="navigation container-fluid">
 	<div class="row">
+		<div class="menu-button search">
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 width="30px" height="24px" viewBox="0 0 30 24" enable-background="new 0 0 30 24" xml:space="preserve">
+				<path d="M29.948,4H-0.076V0h30.024V4z"/>
+				<path d="M29.948,14H-0.076v-4h30.024V14z"/>
+				<path d="M29.948,24H-0.076v-4h30.024V24z"/>
+			</svg>
+		</div>
 			<!-- logo -->
 		<!--
 			<?php if ( get_theme_mod( 'wikia_careers_logo' ) ) : ?>

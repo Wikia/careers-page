@@ -33,7 +33,7 @@ body { }
   float: left;
   height: (@line-height-computed * 2);
   line-height: (@line-height-computed * 2);
-  padding: 0 0 0 25px;
+  padding: 0 0 0 19px;
 }
 
 .navigation .logo img {
@@ -48,7 +48,6 @@ body { }
   float: right;
   min-height: @line-height-computed * 2;
 }
-
 
 .navigation nav a {
   line-height: (@line-height-computed * 2);
@@ -74,16 +73,18 @@ body { }
   background: @brand-secondary;
 }
 
-.navigation .search .magnifier-path {
+.navigation .search path {
   fill: @brand-secondary;
 }
 
-.navigation .search:hover .magnifier-path{
+.navigation .search:hover path{
   fill: #fff;
 }
 
 .navigation .search svg {
-  vertical-align: middle;
+  height: 28px;
+  margin-top: 22px;
+  vertical-align: top;
 }
 
 .navigation .wikiacom {
@@ -202,10 +203,77 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Media Queries
    ========================================================================== */
 
+@media (max-width: @screen-md-min) {
+
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+  .navigation {
+    min-height: @line-height-computed-sm * 2;
+  }
+
+  .navigation .logo {
+    height: (@line-height-computed-sm * 2);
+    line-height: (@line-height-computed-sm * 2);
+  }
+
+  .navigation .logo img {
+    height: 28px;
+    margin-top: 11px;
+  }
+
+  .navigation nav {
+    min-height: @line-height-computed-sm * 2;
+  }
+
+  .navigation nav a {
+    line-height: (@line-height-computed-sm * 2);
+    height: (@line-height-computed-sm * 2);
+  }
+
+  .navigation nav a:hover {
+    height: (@line-height-computed-sm * 2);
+  }
+
+  .navigation .search {
+    line-height: (@line-height-computed-sm * 2);
+    height: (@line-height-computed-sm * 2);
+    width: (@line-height-computed-sm * 2);
+  }
+
+  .navigation .search svg {
+    height: 20px;
+    margin-top: 16px;
+  }
+
+  .navigation .menu-button svg {
+    height: 24px;
+    margin-top: 14px;
+    vertical-align: top;
+  }
+
+  .navigation .wikiacom {
+    display: none;
+  }
+
+  .navigation nav, .navbar-collapse.collapse {
+    display: none;
+  }
+
+}
+
 @media (min-width: @screen-xs-min) { }
 
 @media (min-width: @screen-sm-min) { }
 
-@media (min-width: @screen-md-min) { }
+@media (min-width: @screen-md-min) {
+
+  .navigation .menu-button {
+    display: none;
+  }
+
+}
 
 @media (min-width: @screen-lg-min) { }
