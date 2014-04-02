@@ -21,5 +21,5 @@
     </div>
   </div>
 </footer>
-
+<div id="preloadedImages"></div>
 <?php wp_footer(); ?>

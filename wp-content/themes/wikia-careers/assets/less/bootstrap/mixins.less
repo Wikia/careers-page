@@ -113,6 +113,14 @@
      border-top-left-radius: @radius;
 }
 
+// Border radius
+.border-radius(@radius) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -khtml-border-radius: @radius;
+  border-radius: @radius;
+}
+
 // Drop shadows
 //
 // Note: Deprecated `.box-shadow()` as of v3.1.0 since all of Bootstrap's
@@ -525,6 +533,44 @@
     &.active {
       background-color: @background;
           border-color: @border;
+    }
+  }
+
+  .badge {
+    color: @background;
+    background-color: @color;
+  }
+}
+
+.button-wikia(@color; @colorhover; @background; @backgroundhover; @border; @borderhover; @borderwidth) {
+  color: @color;
+  background-color: @background;
+  border-width: @borderwidth;
+  border-color: @border;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    color: @colorhover;
+    background-color: @backgroundhover;
+    border-color: @borderhover;
+  }
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: @background;
     }
   }
 

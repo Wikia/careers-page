@@ -13,6 +13,6 @@ Template Name: Grid article
 			echo $content;
 			?>
 		</div>
-		<div class="col-xs-4 col-sm-3 col-md-5 col-lg-4">right rail</div>
+		<div class="col-xs-4 col-sm-3 col-md-5 col-lg-4" style="background: #efefef"><h2>This is right rail</h2></div>
 	</div>
 </div>
