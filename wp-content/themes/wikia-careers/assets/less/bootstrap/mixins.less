@@ -352,6 +352,13 @@
     background-image: -webkit-linear-gradient(@angle, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
     background-image: linear-gradient(@angle, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
   }
+  .hard-two-colors(@start-color: @brand-secondary; @end-color: rgba(0,0,0,0); @color-begin: 50%; @color-stop: 0px){
+    background-image: -webkit-linear-gradient(bottom, @start-color @color-begin, @end-color @color-stop);
+    background-image: -moz-linear-gradient(bottom, @start-color @color-begin, @end-color @color-stop);
+    background-image: -o-linear-gradient(bottom, @start-color @color-begin, @end-color @color-stop);
+    background-image: -ms-linear-gradient(bottom, @start-color @color-begin, @end-color @color-stop);
+    background-image: linear-gradient(bottom, @start-color @color-begin, @end-color @color-stop);
+  }
 }
 
 // Reset filters for IE

@@ -8,7 +8,9 @@
    Base
    ========================================================================== */
 
-body { }
+html, body {
+  height: 100%;
+}
 
 
 
@@ -26,6 +28,28 @@ body { }
 
 .navigation {
   min-height: @line-height-computed * 2;
+  position: relative;
+  display: table;
+  height: @line-height-computed;
+  width: 100%;
+  table-layout: fixed;
+  z-index: @zindex-navbar;
+}
+
+.navigation .left-nav-col {
+  display: table-cell;
+  overflow: visible;
+}
+
+.navigation .right-nav-col {
+  display: table-cell;
+  vertical-align: top;
+  width: (@line-height-computed * 2);
+}
+
+.navigation .nav-wrapper {
+  float: right;
+  height: (@line-height-computed * 2);
 }
 
 .navigation .logo {
@@ -33,8 +57,8 @@ body { }
   float: left;
   height: (@line-height-computed * 2);
   line-height: (@line-height-computed * 2);
-  padding: 0 15px;
   margin-left: 4px;
+  padding: 0 15px;
 }
 
 .navigation .logo img {
@@ -45,9 +69,13 @@ body { }
 
 .navigation nav {
   clear: none;
-  font-size: 1.063em;
   float: right;
+  font-size: 1.063em;
   min-height: @line-height-computed * 2;
+}
+
+.navigation nav ul {
+  margin-right: 20px;
 }
 
 .navigation nav a {
@@ -58,27 +86,35 @@ body { }
 }
 
 .navigation nav a:hover {
-  border-bottom: 5px solid #0a5fa3 ;
-  height: (@line-height-computed * 2);
-  background: none;
+  border-bottom: 5px solid @brand-secondary ;
+  background-color: transparent;
 }
 
-.navigation .search {
+.navigation .menu-button {
   line-height: (@line-height-computed * 2);
   height: (@line-height-computed * 2);
   width: (@line-height-computed * 2);
   text-align: center;
   float: right;
 }
-.navigation .search:hover {
-  background: @brand-secondary;
-}
 
 .navigation .search path {
-  fill: @brand-secondary;
+  fill: @btn-wikia-light-color;
 }
 
 .navigation .search:hover path{
+  fill: @brand-secondary;
+}
+
+.navigation .menu-icon path {
+  fill: @brand-secondary;
+}
+
+.navigation .menu-icon:hover{
+  background: @brand-secondary;
+}
+
+.navigation .menu-icon:hover path{
   fill: #fff;
 }
 
@@ -91,24 +127,45 @@ body { }
 .navigation .wikiacom {
   margin-top:13px;
   margin-right: 13px;
-  padding: 4px 30px 4px 15px;
-  background-repeat: no-repeat;
-  background-position: 100% 50%;
-  background-image: url(../img/chevron-gray.svg);
+  padding: 0;
   float: right;
+  line-height: @line-height-computed;
+  height: auto;
+  text-transform: none;
+  #gradient.hard-two-colors(@brand-secondary,rgba(0,0,0,0),50%,0px);
+  background-repeat: repeat;
+  -webkit-background-size: 100% 200%;
+  -moz-background-size: 100% 200%;
+  background-size: 100% 200%;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
 .navigation .wikiacom:hover {
-  background-image: url(../img/chevron-blue.svg);
+  border-bottom-width: 1px;
+  background-position: 0 100%;
+  color: #fff;
 }
 
-#preloadedImages
-{
+.navigation .wikiacom span {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-image: url(../img/chevron-gray.svg);
+  padding: 4px 30px 4px 15px;
+}
+
+.navigation .wikiacom span:hover {
+  background-image: url(../img/chevron-white.svg);
+}
+
+#preloadedImages {
   width: 0px;
   height: 0px;
   display: inline;
   background-image: url(../img/chevron-blue.svg);
-
 }
 
 /* ==========================================================================
@@ -204,6 +261,12 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Media Queries
    ========================================================================== */
 
+
+
+
+/* ==========================================================================
+   Media @screen-md-min
+   ========================================================================== */
 @media (max-width: @screen-md-min) {
 
 
@@ -213,6 +276,15 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
   .navigation {
     min-height: @line-height-computed-sm * 2;
+  }
+
+  .navigation .right-nav-col {
+    width: (@line-height-computed-sm * 2);
+  }
+
+  .navigation .nav-wrapper {
+    float: left;
+    height: (@line-height-computed-sm * 2);
   }
 
   .navigation .logo {
@@ -225,20 +297,54 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     margin-top: 11px;
   }
 
-  .navigation nav {
-    min-height: @line-height-computed-sm * 2;
+  .navigation nav, .navbar-collapse.collapse {
+    display: block;
+    float:left;
+    padding-top:5px;
+    overflow: hidden;
+    width: 284px;
+    z-index: @zindex-navbar;
+  }
+
+  .navigation .nav-animation-wrapper {
+    background: #fff;
+    box-shadow: inset -14px 0 17px -4px #d9d9d9;
+    overflow: hidden;
+    transition-duration: 0.2s;
+    transition-property: width;
+    width: 0;
+  }
+
+  .navigation .nav-animation-wrapper.active {
+    width: 284px;
+  }
+
+  .navigation nav ul {
+    float: none;
+    margin: 0;
+  }
+
+  .navigation nav li {
+    margin-top: @line-height-computed;
+    display: block;
+    float: none;
   }
 
   .navigation nav a {
-    line-height: (@line-height-computed-sm * 2);
+    background: url(../img/chevron-gray.svg) no-repeat 248px 50%;
+    border-left: 5px solid #fff;
+    display: block;
     height: (@line-height-computed-sm * 2);
+    line-height: (@line-height-computed-sm * 2);
   }
 
   .navigation nav a:hover {
-    height: (@line-height-computed-sm * 2);
+    border-left: 5px solid @brand-secondary;
+    border-bottom: 0;
+    font-family: open_sansbold;
   }
 
-  .navigation .search {
+  .navigation .menu-button {
     line-height: (@line-height-computed-sm * 2);
     height: (@line-height-computed-sm * 2);
     width: (@line-height-computed-sm * 2);
@@ -249,24 +355,45 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     margin-top: 16px;
   }
 
-  .navigation .menu-button {
+  .navigation .menu-icon {
     border-right: 1px solid @btn-wikia-light-border;
     float: left;
     width: 57px;
   }
 
-  .navigation .menu-button svg {
+  .navigation .menu-icon svg {
     height: 24px;
     margin-top: 14px;
     vertical-align: top;
   }
 
   .navigation .wikiacom {
-    display: none;
+    background-color: transparent;
+    background: url(../img/chevron-gray.svg) no-repeat 248px 50%;
+    border: 0;
+    border-radius: 0;
+    border-left: 5px solid #FFFFFF;
+    color: @brand-primary;
+    display: block;
+    font-size: 1em;
+    float: none;
+    height: auto;
+    line-height: @line-height-computed-sm;
+    margin-top: 35px;
+    padding: 0 20px;
+    text-align: left;
+    text-transform: uppercase;
+    transition: none;
   }
 
-  .navigation nav, .navbar-collapse.collapse {
-    display: none;
+  .navigation .wikiacom:hover {
+    color: @brand-primary;
+    background-position: 248px 50%;
+  }
+
+  .navigation .wikiacom span, .navigation .wikiacom span:hover{
+    background:transparent;
+    padding: 0;
   }
 
 }
@@ -277,7 +404,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 @media (min-width: @screen-md-min) {
 
-  .navigation .menu-button {
+  .navigation .menu-icon {
     display: none;
   }
 
