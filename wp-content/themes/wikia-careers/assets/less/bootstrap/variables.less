@@ -31,9 +31,9 @@
 @text-color:            @gray-dark;
 
 //** Global textual link color.
-@link-color:            @brand-primary;
-//** Link hover color set via `darken()` function.
-@link-hover-color:      darken(@link-color, 15%);
+@link-color:            @brand-secondary;
+//** Link hover color can be set via `darken()` function.
+@link-hover-color:      @link-color;
 
 
 //== Typography
@@ -168,9 +168,9 @@
 @btn-wikia-light-color:          #9c9c9c;
 @btn-wikia-light-colorhover:     #fff;
 @btn-wikia-light-bg:             transparent;
-@btn-wikia-light-bghover:        @brand-secondary;
+@btn-wikia-light-bghover:        @btn-wikia-light-color;
 @btn-wikia-light-border:         @btn-wikia-light-color;
-@btn-wikia-light-borderhover:    @btn-wikia-light-bghover;
+@btn-wikia-light-borderhover:    @btn-wikia-light-color;
 @btn-wikia-light-border-width:   1px;
 
 @btn-link-disabled-color:        @gray-light;
