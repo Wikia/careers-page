@@ -73,5 +73,4 @@
 			</div>
 		</div>
 	</div>
-	<a href="" class="btn-wikia">Test button</a>
 <?php endif; ?>

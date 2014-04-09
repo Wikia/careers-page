@@ -282,6 +282,63 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 
 /* ==========================================================================
+   Job offers section
+   ========================================================================== */
+.job-offers {
+  padding-bottom: 44px;
+  padding-top: 44px;
+  text-align: center;
+}
+
+.job-offers .row {
+  display: flex;
+}
+
+.job-offers [class*="col-"] {
+  display: flex;
+  flex-flow: column;
+}
+
+.btn-container {
+  margin-top: auto;
+}
+
+
+/* ==========================================================================
+   Stats section
+   ========================================================================== */
+.stats {
+  background: @brand-secondary;
+  color: #fff;
+  padding-top: 0;
+  text-align: center;
+}
+
+.stats h2 {
+  margin-bottom: 36px;
+}
+
+.stats h3 {
+  border-bottom: 1px solid #fff;
+  display: inline-block;
+  font-size: floor(@font-size-base * 0.9);
+  margin-bottom: 1.9em;
+  margin-top: 1em;
+  padding-bottom: 1em;
+  text-transform: uppercase;
+}
+
+.stats .number {
+  display: block;
+  font-family: open_sanslight;
+  font-size: @font-size-h2;
+}
+
+
+
+
+
+/* ==========================================================================
    Media Queries
    ========================================================================== */
 
@@ -293,6 +350,9 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    ========================================================================== */
 @media (max-width: @screen-md-min) {
 
+  .job-offers .row {
+    flex-flow: wrap;
+  }
 
 /* ==========================================================================
    Navigation
