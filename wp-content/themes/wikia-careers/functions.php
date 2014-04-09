@@ -61,6 +61,18 @@ function wikia_careers_theme_customizer( $wp_customize ) {
 		'section'  => 'wikia_careers_header_desc_section',
 		'settings' => 'wikia_careers_header_desc',
 	) ) );
+	$wp_customize->add_setting( 'wikia_careers_header_desc_sub' );
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wikia_careers_header_desc_sub', array(
+		'label'    => __( 'Header sub message', 'wikia_careers' ),
+		'section'  => 'wikia_careers_header_desc_section',
+		'settings' => 'wikia_careers_header_desc_sub',
+	) ) );
+	$wp_customize->add_setting( 'wikia_careers_header_button' );
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wikia_careers_header_button', array(
+		'label'    => __( 'Header button text', 'wikia_careers' ),
+		'section'  => 'wikia_careers_header_desc_section',
+		'settings' => 'wikia_careers_header_button',
+	) ) );
 }
 add_action('customize_register', 'wikia_careers_theme_customizer');
 

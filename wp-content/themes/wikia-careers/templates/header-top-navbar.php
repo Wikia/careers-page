@@ -21,7 +21,7 @@
 							//endif;
 							//wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
 							?>
-							<a href="http://wikia.com/" class="wikiacom btn btn-wikia-light"><span>Zobacz wikia.com</span></a>
+							<a href="http://wikia.com/" class="btn-wikia-light btn-arrow"><span>Zobacz wikia.com</span></a>
 						</nav>
 					</div>
 				</div>
@@ -70,10 +70,25 @@
 <?php if ( get_header_image() ) : ?>
 	<!-- header background image -->
 	<div id="site-header" style="background-image:url('<?php header_image(); ?>')" class="container-fluid site-header">
-		<?php if ( get_theme_mod( 'wikia_careers_header_desc' ) ) : ?>
-			<!-- header background message -->
-			<p class="site-header-message"><?php echo get_theme_mod( 'wikia_careers_header_desc' ); ?></p>
-		<?php endif; ?>
-		<div class="scroll-down">v</div>
+<!--	<div id="site-header" style="background-image:url('http://kariera.wikia.com/wp-content/uploads/2014/04/wikia-team1.jpg')" class="container-fluid site-header">-->
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="middled">
+			<?php if ( get_theme_mod( 'wikia_careers_header_desc' ) ) : ?>
+				<!-- header background message -->
+				<h1 class="site-header-message"><?php echo get_theme_mod( 'wikia_careers_header_desc' ); ?></h1>
+			<?php endif; ?>
+			<?php if ( get_theme_mod( 'wikia_careers_header_desc_sub' ) ) : ?>
+				<!-- header background message -->
+				<p class="site-header-sub-message"><?php echo get_theme_mod( 'wikia_careers_header_desc_sub' ); ?></p>
+			<?php endif; ?>
+			<?php if ( get_theme_mod( 'wikia_careers_header_button' ) ) : ?>
+				<!-- header background message -->
+			<?php endif; ?>
+				<div class="btn-wikia-white btn-arrow"><span><?php echo get_theme_mod( 'wikia_careers_header_button' ); ?></span></div>
+				</div>
+			</div>
+		</div>
 	</div>
+	<a href="" class="btn-wikia">Test button</a>
 <?php endif; ?>
