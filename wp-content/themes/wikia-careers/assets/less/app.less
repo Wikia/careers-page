@@ -27,7 +27,7 @@ html, body {
    ========================================================================== */
 
 .navigation {
-  min-height: @line-height-computed * 2;
+  min-height: @line-height-computed * 3;
   position: relative;
   display: table;
   height: @line-height-computed;
@@ -36,27 +36,16 @@ html, body {
   z-index: @zindex-navbar;
 }
 
-.navigation .left-nav-col {
-  display: table-cell;
-  overflow: visible;
-}
-
-.navigation .right-nav-col {
-  display: table-cell;
-  vertical-align: top;
-  width: (@line-height-computed * 2);
-}
-
 .navigation .nav-wrapper {
   float: right;
-  height: (@line-height-computed * 2);
+  height: (@line-height-computed * 3);
 }
 
 .navigation .logo {
   display: block;
   float: left;
-  height: (@line-height-computed * 2);
-  line-height: (@line-height-computed * 2);
+  height: (@line-height-computed * 3);
+  line-height: (@line-height-computed * 3);
   margin-left: 4px;
   padding: 0 15px;
 }
@@ -71,7 +60,7 @@ html, body {
   clear: none;
   float: right;
   font-size: 1.063em;
-  min-height: @line-height-computed * 2;
+  min-height: @line-height-computed * 3;
 }
 
 .navigation nav ul {
@@ -79,8 +68,8 @@ html, body {
 }
 
 .navigation nav a {
-  line-height: (@line-height-computed * 2);
-  height: (@line-height-computed * 2);
+  line-height: (@line-height-computed * 3);
+  height: (@line-height-computed * 3);
   padding: 0 20px;
   text-transform: uppercase;
 }
@@ -91,19 +80,11 @@ html, body {
 }
 
 .navigation .menu-button {
-  line-height: (@line-height-computed * 2);
-  height: (@line-height-computed * 2);
-  width: (@line-height-computed * 2);
+  line-height: (@line-height-computed * 3);
+  height: (@line-height-computed * 3);
+  width: (@line-height-computed * 3);
   text-align: center;
   float: right;
-}
-
-.navigation .search path {
-  fill: @btn-wikia-light-color;
-}
-
-.navigation .search:hover path{
-  fill: @brand-secondary;
 }
 
 .navigation .menu-icon path {
@@ -116,12 +97,6 @@ html, body {
 
 .navigation .menu-icon:hover path{
   fill: #fff;
-}
-
-.navigation .search svg {
-  height: 28px;
-  margin-top: 22px;
-  vertical-align: top;
 }
 
 .navigation a.btn-wikia-light {
@@ -404,11 +379,6 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     line-height: (@line-height-computed-sm * 2);
     height: (@line-height-computed-sm * 2);
     width: (@line-height-computed-sm * 2);
-  }
-
-  .navigation .search svg {
-    height: 20px;
-    margin-top: 16px;
   }
 
   .navigation .menu-icon {
