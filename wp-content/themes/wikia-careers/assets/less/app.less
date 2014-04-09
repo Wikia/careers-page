@@ -20,20 +20,28 @@ html, body {
 
 .banner { }
 
-
+.site-header {
+  margin-top: @line-height-computed * 3;
+}
 
 /* ==========================================================================
    Navigation
    ========================================================================== */
 
-.navigation {
+.navigation-top-container {
+  margin-top: -@line-height-computed * 3;
   min-height: @line-height-computed * 3;
-  position: relative;
+  position: fixed;
+  z-index: @zindex-navbar-fixed;
+}
+
+.navigation {
+  background-color: #fff;
   display: table;
   height: @line-height-computed;
-  width: 100%;
+  position: relative;
   table-layout: fixed;
-  z-index: @zindex-navbar;
+  width: 100%;
 }
 
 .navigation .nav-wrapper {
@@ -74,7 +82,8 @@ html, body {
   text-transform: uppercase;
 }
 
-.navigation nav ul a:hover {
+.navigation nav ul a:hover,
+.navigation nav ul a.active {
   border-bottom: 5px solid @brand-secondary ;
   background-color: transparent;
 }
@@ -354,16 +363,17 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     flex-flow: wrap;
   }
 
+  .site-header {
+    margin-top: @line-height-computed-sm;
+  }
+
 /* ==========================================================================
    Navigation
    ========================================================================== */
 
-  .navigation {
-    min-height: @line-height-computed-sm * 2;
-  }
-
-  .navigation .right-nav-col {
-    width: (@line-height-computed-sm * 2);
+  .navigation-top-container {
+    height: @line-height-computed-sm;
+    margin-top: -@line-height-computed-sm;
   }
 
   .navigation .nav-wrapper {
@@ -431,7 +441,8 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     font-family: open_sansbold;
   }
 
-  .navigation nav ul a:hover {
+  .navigation nav ul a:hover,
+  .navigation nav ul a.active {
     #navigation-nav-ul-a-hover;
   }
 

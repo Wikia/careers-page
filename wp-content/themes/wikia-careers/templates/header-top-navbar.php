@@ -6,7 +6,7 @@
 						<nav class="collapse navbar-collapse" role="navigation">
 							<ul id="menu-primary-navigation" class="nav navbar-nav">
 								<li>
-									<a href="#home">Witaj</a>
+									<a href="#home" class="active">Witaj</a>
 								</li>
 								<li>
 									<a href="#zycie-w-wikia">Życie w Wikia</a>
