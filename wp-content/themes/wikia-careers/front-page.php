@@ -105,3 +105,13 @@
 	</div>
 </section>
 
+<section class="container-fluid benefits-banner">
+	<div class="row">
+		<div class="col-sm-6 col-lg-12">
+		<div class="middled">
+			<h1 class="site-header-message">Benefits of working in Wikia</h1>
+		</div>
+		</div>
+	</div>
+</section>
+
