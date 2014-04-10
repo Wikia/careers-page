@@ -115,6 +115,31 @@
 	</div>
 </section>
 
+<section class="container-fluid benefits-description">
+	<div class="row">
+		<div class="col-lg-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
+			<span class="feature-icon-01"></span>
+			<h3>Feature 01</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
+		</div>
+		<div class="col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
+			<span class="feature-icon-02"></span>
+			<h3>Feature 02</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
+		</div>
+		<div class="col-lg-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
+			<span class="feature-icon-03"></span>
+			<h3>Feature 03</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
+		</div>
+		<div class="col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
+			<span class="feature-icon-04"></span>
+			<h3>Feature 04</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
+		</div>
+	</div>
+</section>
+
 <section class="container-fluid join-us">
 	<div class="row">
 		<div class="col-sm-6 col-lg-12">
