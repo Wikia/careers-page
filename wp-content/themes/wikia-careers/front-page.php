@@ -115,3 +115,14 @@
 	</div>
 </section>
 
+<section class="container-fluid join-us">
+	<div class="row">
+		<div class="col-sm-6 col-lg-12">
+		<div class="middled">
+			<h1 class="site-header-message">Are you ready to join?</h1>
+			<div class="btn-wikia-white btn-arrow"><span>View our current openings</span></div>
+		</div>
+		</div>
+	</div>
+</section>
+
