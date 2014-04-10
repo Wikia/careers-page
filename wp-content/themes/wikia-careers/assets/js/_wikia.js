@@ -6,7 +6,7 @@ var stats = {};
 	menu.initClickEvent = function() {
 		$('.navigation .menu-button').click(
 			function() {
-				$('.navigation .nav-animation-wrapper').toggleClass('active').height($( document ).height());
+				$('.navigation .nav-animation-wrapper').toggleClass('active').height($( window ).height());
 			}
 		);
 //		$( window ).resize(function() {

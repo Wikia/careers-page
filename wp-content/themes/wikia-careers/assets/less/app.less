@@ -345,6 +345,60 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 
 
+/* ==========================================================================
+   Career-paths section
+   ========================================================================== */
+.career-paths {
+  padding-bottom: @line-height-computed * 2;
+  padding-top: @line-height-computed * 2;
+}
+
+.avatars-map-container {
+  text-align: center;
+}
+
+.avatars-map-container svg {
+  max-height: 420px;
+  max-width: 420px;
+}
+
+.avatars-map a {
+  text-decoration: none;
+}
+
+.avatars-map a circle {
+  transition: all .2s linear;
+}
+
+.avatars-map a .hover-color {
+	fill: rgba(red(@brand-secondary), green(@brand-secondary), blue(@brand-secondary), 0);
+}
+.avatars-map a:hover .hover-color {
+	fill: rgba(red(@brand-secondary), green(@brand-secondary), blue(@brand-secondary), 1);
+}
+
+.avatars-map .name-container {
+  position: relative;
+  display: none;
+}
+
+.avatars-map a:hover .name-container {
+  display: block;
+}
+
+.avatars-map .name {
+  .h5;
+  color: #fff;
+  display: table-cell;
+  height: 200px;
+  padding: 10px;
+  width: 200px;
+  vertical-align: middle;
+}
+
+.avatars-map p {
+  margin: 0;
+}
 
 
 /* ==========================================================================
@@ -365,6 +419,12 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
   .site-header {
     margin-top: @line-height-computed-sm;
+  }
+
+
+  .avatars-map-container svg {
+    max-height: 320px;
+    max-width: 320px;
   }
 
 /* ==========================================================================
@@ -402,7 +462,9 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   .navigation .nav-animation-wrapper {
     background: #fff;
     box-shadow: inset -14px 0 17px -4px #d9d9d9;
-    overflow: hidden;
+    overflow: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
     transition-duration: 0.2s;
     transition-property: width;
     width: 0;

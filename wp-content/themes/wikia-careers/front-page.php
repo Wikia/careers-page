@@ -43,3 +43,65 @@
 	</div>
 </section>
 
+<section class="container-fluid career-paths">
+	<div class="row">
+
+		<div class="col-lg-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4 avatars-map-container">
+
+			<svg viewBox="0 0 420 420" version="1.1" xmlns="http://www.w3.org/2000/svg" class="avatars-map">
+				<defs>
+					<pattern id="avatar1" patternUnits="userSpaceOnUse" width="420" height="420">
+						<image xlink:href="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>nandy-avatar.jpg" x="0" y="0" width="200" height="200"></image>
+					</pattern>
+					<pattern id="avatar2" patternUnits="userSpaceOnUse" width="420" height="420">
+						<image xlink:href="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>andrzej-avatar.jpg" x="220" y="60" width="200" height="200"></image>
+					</pattern>
+					<pattern id="avatar3" patternUnits="userSpaceOnUse" width="420" height="420">
+						<image xlink:href="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>michal-avatar.jpg" x="60" y="220" width="200" height="200"></image>
+					</pattern>
+				</defs>
+				'''<a xlink:href="">
+					<circle cx="100" cy="100" r="100" fill="url(#avatar1)"></circle>
+					<circle cx="100" cy="100" r="100" class="hover-color"></circle>
+					<foreignObject width="200px" height="200px" class="name-container">
+						<!-- HTML begin -->
+						<div class="name">
+							<p>nAndy</p>
+						</div>
+						<!-- HTML end -->
+					</foreignObject>
+				</a>'''
+				'''<a xlink:href="">
+					<circle cx="320" cy="160" r="100" fill="url(#avatar2)"></circle>
+					<circle cx="320" cy="160" r="100" class="hover-color"></circle>
+					<foreignObject width="200px" height="200px" x="220" y="60" class="name-container">
+						<!-- HTML begin -->
+						<div class="name">
+							<p>Andrzej</p>
+						</div>
+						<!-- HTML end -->
+					</foreignObject>
+				</a>'''
+				'''<a xlink:href="">
+					<circle cx="160" cy="320" r="100" fill="url(#avatar3)"></circle>
+					<circle cx="160" cy="320" r="100" class="hover-color"></circle>
+					<foreignObject width="200px" height="200px" x="60" y="220" class="name-container">
+						<!-- HTML begin -->
+						<div class="name">
+							<p>Michał</p>
+						</div>
+						<!-- HTML end -->
+					</foreignObject>
+				</a>'''
+			</svg>
+
+		</div>
+
+		<div class="col-lg-5 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
+			<h2>Meet our coworkers and&nbsp;their work</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
+		</div>
+
+	</div>
+</section>
+
