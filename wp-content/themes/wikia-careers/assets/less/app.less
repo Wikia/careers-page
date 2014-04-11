@@ -132,7 +132,7 @@ html, body {
   display: block;
   background-repeat: no-repeat;
   background-position: 100% 50%;
-  background-image: url(../img/chevron-gray.svg);
+  background-image: url(../img/chevron-gray-light.svg);
   padding: 0 30px 0 15px;
 }
 
@@ -144,11 +144,19 @@ html, body {
   background-image: url(../img/chevron-white.svg);
 }
 
-.btn-wikia-light.btn-arrow span {
+.btn-wikia-regular.btn-arrow span {
   background-image: url(../img/chevron-gray.svg);
 }
 
-.btn-wikia-light.btn-arrow span:hover {
+.btn-wikia-regular.btn-arrow:hover span {
+  background-image: url(../img/chevron-white.svg);
+}
+
+.btn-wikia-light.btn-arrow span {
+  background-image: url(../img/chevron-gray-light.svg);
+}
+
+.btn-wikia-light.btn-arrow:hover span {
   background-image: url(../img/chevron-white.svg);
 }
 
@@ -258,6 +266,7 @@ html, body {
   background-position: 0 -53px;
 }
 
+
 /* Join us section */
 
 .join-us {
@@ -280,6 +289,19 @@ html, body {
   display: table-cell;
   height: 100%;
   vertical-align: middle;
+}
+
+
+/* Quick form section */
+
+.quick-contact {
+  background: #f2f2f2;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.quick-contact form {
+  margin-top: 2em;
 }
 
 
@@ -484,6 +506,26 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 
 /* ==========================================================================
+   Quick Form
+   ========================================================================== */
+
+.submit-group  {
+  margin-top: 13px;
+}
+.submit-group button[type="submit"] {
+  float: right;
+}
+
+.submit-group .help-block {
+  color: @brand-teritary;
+  font-size: @font-size-small;
+}
+
+
+
+
+
+/* ==========================================================================
    Media Queries
    ========================================================================== */
 
@@ -568,7 +610,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   }
 
   #navigation-nav-ul-a {
-    background: url(../img/chevron-gray.svg) no-repeat 248px 50%;
+    background: url(../img/chevron-gray-light.svg) no-repeat 248px 50%;
     border-left: 5px solid #fff;
     display: block;
     height: (@line-height-computed-sm * 2);
@@ -636,7 +678,13 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 @media (min-width: @screen-xs-min) { }
 
-@media (min-width: @screen-sm-min) { }
+@media (min-width: @screen-sm-min) {
+
+  .quick-contact form {
+    margin-top: 0;
+  }
+
+}
 
 @media (min-width: @screen-md-min) {
 

@@ -15,6 +15,7 @@
 
 @brand-primary:         #002e54;
 @brand-secondary:       #0a5fa3;
+@brand-teritary:        #f66812;
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
@@ -48,7 +49,7 @@
 
 @font-size-base:          18px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
-@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+@font-size-small:         floor((@font-size-base * 0.78)); // 14px
 
 @font-size-h1:            floor((@font-size-base * 3.34)); // 60px
 @font-size-h2:            floor((@font-size-base * 2)); // 36px
@@ -181,14 +182,14 @@
 //##
 
 //** `<input>` background color
-@input-bg:                       #fff;
+@input-bg:                       transparent;
 //** `<input disabled>` background color
 @input-bg-disabled:              @gray-lighter;
 
 //** Text color for `<input>`s
 @input-color:                    @gray;
 //** `<input>` border color
-@input-border:                   #ccc;
+@input-border:                   @btn-wikia-light-color;
 //** `<input>` border radius
 @input-border-radius:            @border-radius-base;
 //** Border color for inputs on focus
@@ -198,7 +199,7 @@
 @input-color-placeholder:        @gray-light;
 
 //** Default `.form-control` height
-@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+@input-height-base:              @btn-default-height;
 //** Large `.form-control` height
 @input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
 //** Small `.form-control` height

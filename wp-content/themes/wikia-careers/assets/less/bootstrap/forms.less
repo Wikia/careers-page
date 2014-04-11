@@ -30,9 +30,9 @@ legend {
 }
 
 label {
-  display: inline-block;
-  margin-bottom: 5px;
-  font-weight: bold;
+  display: block;
+  margin-bottom: 2px;
+  min-height: floor((@font-size-base * 1.67));
 }
 
 
@@ -147,7 +147,11 @@ output {
 
   // Reset height for `textarea`s
   textarea& {
+    font-size: @font-size-small;
     height: auto;
+    min-height: 11em;
+    padding-bottom: 0.8em;
+    padding-top: 0.8em;
   }
 }
 
@@ -180,7 +184,7 @@ input[type="date"] {
 // horizontal forms, use the predefined grid classes.
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 7px;
 }
 
 

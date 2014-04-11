@@ -117,7 +117,7 @@
 
 <section class="container-fluid benefits-description">
 	<div class="row">
-		<div class="col-lg-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
+		<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
 			<span class="feature-icon-01"></span>
 			<h3>Feature 01</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
@@ -127,7 +127,7 @@
 			<h3>Feature 02</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
 		</div>
-		<div class="col-lg-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
+		<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
 			<span class="feature-icon-03"></span>
 			<h3>Feature 03</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
@@ -151,3 +151,37 @@
 	</div>
 </section>
 
+<section class="container-fluid quick-contact">
+	<div class="row">
+		<div class="col-xxs-4 col-xs-4 col-sm-2 col-md-4 col-lg-3 col-lg-offset-1">
+			<h2>Quick form for sending your CV</h2>
+			<p>Apply using your</p>
+			<div class="btn-wikia-regular btn-arrow"><span><strong>LinkedIn</strong> account</span></div>
+		</div>
+		<div class="col-xxs-4 col-xs-4 col-sm-4 col-md-8 col-lg-7">
+
+			<form role="form">
+				<div class="form-group col-sm-3 col-md-3 col-lg-5">
+					<label for="qcSenderName">Tell us Your name</label>
+					<input type="text" class="form-control" id="qcSenderName" name="qcSenderName">
+				</div>
+				<div class="form-group col-sm-3 col-lg-7">
+					<label for="qcEmail">Provide an e-mail</label>
+					<input type="email" class="form-control" id="qcEmail" name="qcEmail">
+				</div>
+				<div class="form-group col-sm-6 col-lg-12">
+					<label for="qcCv">Link to Your CV</label>
+					<input type="url" class="form-control" id="qcCv" name="qcCv">
+				</div>
+				<div class="form-group col-sm-6 col-lg-12">
+					<label for="qcMessage"></label>
+					<textarea class="form-control" id="qcMessage" name="qcMessage" placeholder="Tell us what opportunities you're interested in"></textarea>
+				</div>
+				<div class="form-group col-sm-6 col-lg-12 submit-group">
+					<button type="submit" class="btn-wikia-regular btn-arrow"><span>Send</span></button><span class="help-block">* These fields are required</span>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</section>
