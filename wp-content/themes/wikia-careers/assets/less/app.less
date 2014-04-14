@@ -37,6 +37,7 @@ html, body {
 
 .navigation {
   background-color: #fff;
+  box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.15);
   display: table;
   height: @line-height-computed;
   position: relative;
@@ -144,6 +145,38 @@ html, body {
   background-image: url(../img/chevron-white.svg);
 }
 
+.btn-envelope {
+  background-image: url(../img/icon-envelope.svg);
+  background-position: 10px 50%;
+  background-repeat: no-repeat;
+  margin-bottom: @line-height-computed;
+  margin-left: 60px;
+  margin-top: @line-height-computed;
+  padding:0;
+  vertical-align: top;
+}
+
+.btn-envelope span {
+  border-left: 1px solid #fff;
+  display: block;
+  margin-left: 42px;
+  padding: 0 15px 0 15px;
+}
+
+.btn-envelope:hover {
+  border-color: #fff;
+}
+
+.btn-envelope:hover span {
+  background-color: #fff;
+  color: @brand-secondary;
+  transition: all .2s linear;
+}
+
+.btn-arrow.btn-wikia-white span {
+  background-image: url(../img/chevron-white.svg);
+}
+
 .btn-wikia-regular.btn-arrow span {
   background-image: url(../img/chevron-gray.svg);
 }
@@ -160,12 +193,80 @@ html, body {
   background-image: url(../img/chevron-white.svg);
 }
 
+
 #preloadedImages {
   width: 0px;
   height: 0px;
   display: inline;
   background-image: url(../img/chevron-blue.svg);
 }
+
+
+.footer {
+  background-color: @brand-primary;
+  padding: 32px 0;
+}
+
+.footer .logo svg * {
+  fill:#fff;
+}
+
+.footer-nav {
+  margin-top: 0.5em;
+  text-align: right;
+}
+
+.footer-nav .text-links {
+  float: right;
+  margin-top: 0.35em;
+}
+
+.footer-nav li {
+  display: inline-block;
+  list-style: none;
+
+}
+
+.footer-nav a {
+  border-right: 1px solid #fff;
+  color: #fff;
+  line-height: 1em;
+  padding: 0 21px 0 18px;
+}
+
+.footer-nav li:last-child a {
+  border: 0;
+  padding-right: 0;
+}
+
+.footer .social-icons a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  text-align: center;
+  width: 40px;
+}
+
+.footer .social-icons a:hover {
+  background-color: @brand-secondary;
+}
+
+.footer .social-icons {
+  float: right;
+  border: 1px solid #fff;
+  margin-left: 32px;
+  padding: 0;
+
+}
+.footer .social-icons ul {
+  display: table;
+}
+.footer .social-icons li {
+  display: table-cell;
+}
+
+
 
 /* ==========================================================================
    Mainpage sections
@@ -179,6 +280,10 @@ html, body {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.site-header .row {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .site-header>.row {
@@ -292,6 +397,118 @@ html, body {
 }
 
 
+
+/* ==========================================================================
+   Job offers section
+   ========================================================================== */
+.job-offers {
+  padding-bottom: 44px;
+  padding-top: 44px;
+  text-align: center;
+}
+
+.job-offers .row {
+  display: flex;
+}
+
+.job-offers [class*="col-"] {
+  display: flex;
+  flex-flow: column;
+}
+
+.btn-container {
+  margin-top: auto;
+}
+
+
+/* ==========================================================================
+   Stats section
+   ========================================================================== */
+.stats {
+  background: @brand-secondary;
+  color: #fff;
+  padding-top: 0;
+  text-align: center;
+}
+
+.stats h2 {
+  margin-bottom: 36px;
+}
+
+.stats h3 {
+  border-bottom: 1px solid #fff;
+  display: inline-block;
+  font-size: floor(@font-size-base * 0.9);
+  margin-bottom: 1.9em;
+  margin-top: 1em;
+  padding-bottom: 1em;
+  text-transform: uppercase;
+}
+
+.stats .number {
+  display: block;
+  font-family: open_sanslight;
+  font-size: @font-size-h2;
+}
+
+
+
+/* ==========================================================================
+   Career-paths section
+   ========================================================================== */
+.career-paths {
+  padding-bottom: @line-height-computed * 2;
+  padding-top: @line-height-computed * 2;
+}
+
+.avatars-map-container {
+  text-align: center;
+}
+
+.avatars-map-container svg {
+  max-height: 420px;
+  max-width: 420px;
+}
+
+.avatars-map a {
+  text-decoration: none;
+}
+
+.avatars-map a circle {
+  transition: all .2s linear;
+}
+
+.avatars-map a .hover-color {
+  fill: rgba(red(@brand-secondary), green(@brand-secondary), blue(@brand-secondary), 0);
+}
+.avatars-map a:hover .hover-color {
+  fill: rgba(red(@brand-secondary), green(@brand-secondary), blue(@brand-secondary), 1);
+}
+
+.avatars-map .name-container {
+  position: relative;
+  display: none;
+}
+
+.avatars-map a:hover .name-container {
+  display: block;
+}
+
+.avatars-map .name {
+  .h5;
+  color: #fff;
+  display: table-cell;
+  height: 200px;
+  padding: 10px;
+  width: 200px;
+  vertical-align: middle;
+}
+
+.avatars-map p {
+  margin: 0;
+}
+
+
 /* Quick form section */
 
 .quick-contact {
@@ -303,6 +520,75 @@ html, body {
 .quick-contact form {
   margin-top: 2em;
 }
+
+.submit-group  {
+  margin-top: 13px;
+}
+.submit-group button[type="submit"] {
+  float: right;
+}
+
+.submit-group .help-block {
+  color: @brand-teritary;
+  font-size: @font-size-small;
+}
+
+
+/* news section */
+
+.news-feed {
+  background: #000;
+  color: #fff;
+  font-size: 0.7em;
+  line-height: @line-height-computed-sm;
+  padding-bottom: 70px;
+  padding-top: 35px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.news-feed h3 {
+  font-size: @font-size-h3 * 0.7;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.news-feed .post-date {
+  display: block;
+}
+
+.news-feed .date {
+  font-weight: bold;
+}
+
+.news-feed .post-author img {
+  height: 1.5em;
+  vertical-align: middle;
+}
+
+.news-feed .news-item {
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: auto;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  overflow: hidden;
+  width:100%;
+}
+
+
+/* Contact for help section */
+
+.contact-for-help {
+  padding-bottom: 14px;
+  padding-top: 14px;
+}
+
+.contact-for-help h2 {
+  display: inline-block;
+  margin-bottom: @line-height-computed;
+  margin-top: @line-height-computed;
+}
+
 
 
 /* ==========================================================================
@@ -392,134 +678,6 @@ html, body {
 }
 figure.alignnone { margin-left: 0; margin-right: 0; }
 
-
-
-/* ==========================================================================
-   Job offers section
-   ========================================================================== */
-.job-offers {
-  padding-bottom: 44px;
-  padding-top: 44px;
-  text-align: center;
-}
-
-.job-offers .row {
-  display: flex;
-}
-
-.job-offers [class*="col-"] {
-  display: flex;
-  flex-flow: column;
-}
-
-.btn-container {
-  margin-top: auto;
-}
-
-
-/* ==========================================================================
-   Stats section
-   ========================================================================== */
-.stats {
-  background: @brand-secondary;
-  color: #fff;
-  padding-top: 0;
-  text-align: center;
-}
-
-.stats h2 {
-  margin-bottom: 36px;
-}
-
-.stats h3 {
-  border-bottom: 1px solid #fff;
-  display: inline-block;
-  font-size: floor(@font-size-base * 0.9);
-  margin-bottom: 1.9em;
-  margin-top: 1em;
-  padding-bottom: 1em;
-  text-transform: uppercase;
-}
-
-.stats .number {
-  display: block;
-  font-family: open_sanslight;
-  font-size: @font-size-h2;
-}
-
-
-
-/* ==========================================================================
-   Career-paths section
-   ========================================================================== */
-.career-paths {
-  padding-bottom: @line-height-computed * 2;
-  padding-top: @line-height-computed * 2;
-}
-
-.avatars-map-container {
-  text-align: center;
-}
-
-.avatars-map-container svg {
-  max-height: 420px;
-  max-width: 420px;
-}
-
-.avatars-map a {
-  text-decoration: none;
-}
-
-.avatars-map a circle {
-  transition: all .2s linear;
-}
-
-.avatars-map a .hover-color {
-	fill: rgba(red(@brand-secondary), green(@brand-secondary), blue(@brand-secondary), 0);
-}
-.avatars-map a:hover .hover-color {
-	fill: rgba(red(@brand-secondary), green(@brand-secondary), blue(@brand-secondary), 1);
-}
-
-.avatars-map .name-container {
-  position: relative;
-  display: none;
-}
-
-.avatars-map a:hover .name-container {
-  display: block;
-}
-
-.avatars-map .name {
-  .h5;
-  color: #fff;
-  display: table-cell;
-  height: 200px;
-  padding: 10px;
-  width: 200px;
-  vertical-align: middle;
-}
-
-.avatars-map p {
-  margin: 0;
-}
-
-
-/* ==========================================================================
-   Quick Form
-   ========================================================================== */
-
-.submit-group  {
-  margin-top: 13px;
-}
-.submit-group button[type="submit"] {
-  float: right;
-}
-
-.submit-group .help-block {
-  color: @brand-teritary;
-  font-size: @font-size-small;
-}
 
 
 
@@ -676,13 +834,44 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 }
 
-@media (min-width: @screen-xs-min) { }
+@media (min-width: @screen-xs-min) {
+
+  .news-feed {
+    font-size: 0.8em;
+  }
+
+  .news-feed h3 {
+    margin-top: 1em;
+    font-size: @font-size-h3 * 0.8;
+  }
+
+  .news-feed .news-item {
+    background-size:100%;
+    height:0;
+    padding-bottom:40%;
+  }
+
+}
 
 @media (min-width: @screen-sm-min) {
 
   .quick-contact form {
     margin-top: 0;
   }
+
+  .news-feed {
+    font-size: 0.8em;
+  }
+
+  .news-feed .news-item {
+    margin-bottom: 0;
+  }
+
+  .news-feed h3 {
+    font-size: @font-size-h3 * 0.8;
+    margin-bottom: 0.5em;
+  }
+
 
 }
 
@@ -692,6 +881,26 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     display: none;
   }
 
+  .news-feed {
+    font-size: 0.9em;
+    line-height: @line-height-computed;
+  }
+
+  .news-feed h3 {
+    font-size: @font-size-h3 * 0.9;
+    margin-top: 1.1em;
+  }
+
 }
 
-@media (min-width: @screen-lg-min) { }
+@media (min-width: @screen-lg-min) {
+
+  .news-feed {
+    font-size: 1em;
+  }
+
+  .news-feed h3 {
+    font-size: @font-size-h3;
+  }
+
+}
