@@ -24,6 +24,24 @@
   }
 }
 
+// reduce width of container while placed within spaced container
+.spaced-container .container,
+.spaced-container.container {
+
+  @media (min-width: @screen-xs-min) {
+    width: @screen-xs-min - @browser-scrollbar-width - @page-xs-side-margins * 2;
+  }
+  @media (min-width: @screen-sm-min) {
+    width: @screen-sm-min - @browser-scrollbar-width - @page-sm-side-margins * 2;
+  }
+  @media (min-width: @screen-md-min) {
+    width: @screen-md-min - @browser-scrollbar-width - @page-md-side-margins * 2;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @screen-lg-min - @browser-scrollbar-width - @page-lg-side-margins * 2;
+  }
+}
+
 
 // Fluid container
 //
