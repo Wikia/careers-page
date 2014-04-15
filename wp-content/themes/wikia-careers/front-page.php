@@ -161,23 +161,23 @@
 		<div class="col-xxs-4 col-xs-4 col-sm-4 col-md-8 col-lg-7">
 
 			<form role="form">
-				<div class="form-group col-sm-3 col-md-3 col-lg-5">
+				<div class="form-group col-xxs-4 col-xs-2 col-sm-3 col-md-5 col-lg-5">
 					<label for="qcSenderName">Tell us Your name</label>
 					<input type="text" class="form-control" id="qcSenderName" name="qcSenderName">
 				</div>
-				<div class="form-group col-sm-3 col-lg-7">
+				<div class="form-group col-xxs-4 col-xs-2 col-sm-3 col-md-7 col-lg-7">
 					<label for="qcEmail">Provide an e-mail</label>
 					<input type="email" class="form-control" id="qcEmail" name="qcEmail">
 				</div>
-				<div class="form-group col-sm-6 col-lg-12">
+				<div class="form-group col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-12">
 					<label for="qcCv">Link to Your CV</label>
 					<input type="url" class="form-control" id="qcCv" name="qcCv">
 				</div>
-				<div class="form-group col-sm-6 col-lg-12">
+				<div class="form-group col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-12">
 					<label for="qcMessage"></label>
 					<textarea class="form-control" id="qcMessage" name="qcMessage" placeholder="Tell us what opportunities you're interested in"></textarea>
 				</div>
-				<div class="form-group col-sm-6 col-lg-12 submit-group">
+				<div class="form-group col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-12 submit-group">
 					<button type="submit" class="btn-wikia-regular btn-arrow"><span>Send</span></button><span class="help-block">* These fields are required</span>
 				</div>
 			</form>
@@ -197,19 +197,23 @@
 	<div class="row">
 		<div class="col-xxs-4 col-xs-4 col-sm-3 col-md-6 col-lg-5 col-lg-offset-1">
 			<div class="news-item" style="background-image: url('<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>news1.jpg')">
-				<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-10 col-lg-offset-1">
-					<h3>I'm a good eye catchy title for news and artiles</h3>
-					<span class="post-date">Posted: <span class="date">9 March 2014</span></span>
-					<span class="post-author">Writen by: <img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>nandy-avatar.jpg" alt="" class="img-circle" /></span>
+				<div class="dim-xs-min">
+					<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-10 col-lg-offset-1">
+						<h3>I'm a good eye catchy title for news and artiles</h3>
+						<span class="post-date">Posted: <span class="date">9 March 2014</span></span>
+						<span class="post-author">Written by: <img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>nandy-avatar.jpg" alt="" class="img-circle" /></span>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-xxs-4 col-xs-4 col-sm-3 col-md-6 col-lg-5">
 			<div class="news-item" style="background-image: url('<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>news2.jpg')">
-				<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-10 col-lg-offset-1">
-					<h3>I'm a good eye catchy title for news and artiles</h3>
-					<span class="post-date">Posted: <span class="date">9 March 2014</span></span>
-					<span class="post-author">Writen by: <img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>andrzej-avatar.jpg" alt="" class="img-circle" /></span>
+				<div class="dim-xs-min">
+					<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-10 col-lg-offset-1">
+						<h3>I'm a good eye catchy title for news and artiles</h3>
+						<span class="post-date">Posted: <span class="date">9 March 2014</span></span>
+						<span class="post-author">Written by: <img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>andrzej-avatar.jpg" alt="" class="img-circle" /></span>
+					</div>
 				</div>
 			</div>
 		</div>

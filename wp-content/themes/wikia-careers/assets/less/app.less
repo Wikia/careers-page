@@ -50,6 +50,7 @@ html, body {
   height: (@line-height-computed * 3);
 }
 
+
 .navigation .logo {
   display: block;
   float: left;
@@ -272,21 +273,22 @@ html, body {
    Mainpage sections
    ========================================================================== */
 
+.dim {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 /* Main header section */
 
 .site-header {
-  height: 550px;
+  height: 575px;
   text-align: center;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.site-header .row {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
 .site-header>.row {
+  .dim;
   height: 100%;
 }
 
@@ -322,7 +324,7 @@ html, body {
 .benefits-banner {
   background: url("../img/wikia-benefits.jpg") no-repeat 0 50%;
   background-size: cover;
-  height: 240px;
+  height: 260px;
 }
 
 .benefits-banner .row {
@@ -402,8 +404,8 @@ html, body {
    Job offers section
    ========================================================================== */
 .job-offers {
-  padding-bottom: 44px;
-  padding-top: 44px;
+  padding-bottom: 70px;
+  padding-top: 50px;
   text-align: center;
 }
 
@@ -414,6 +416,11 @@ html, body {
 .job-offers [class*="col-"] {
   display: flex;
   flex-flow: column;
+}
+
+
+.job-offers h2 {
+  font-family: @font-family-base;
 }
 
 .btn-container {
@@ -439,9 +446,9 @@ html, body {
   border-bottom: 1px solid #fff;
   display: inline-block;
   font-size: floor(@font-size-base * 0.9);
-  margin-bottom: 1.9em;
-  margin-top: 1em;
-  padding-bottom: 1em;
+  margin-bottom: 3em;
+  margin-top: 1.6em;
+  padding-bottom: 1.25em;
   text-transform: uppercase;
 }
 
@@ -457,8 +464,8 @@ html, body {
    Career-paths section
    ========================================================================== */
 .career-paths {
-  padding-bottom: @line-height-computed * 2;
-  padding-top: @line-height-computed * 2;
+  padding-bottom: @line-height-computed * 3;
+  padding-top: @line-height-computed * 3;
 }
 
 .avatars-map-container {
@@ -476,6 +483,11 @@ html, body {
 
 .avatars-map a circle {
   transition: all .2s linear;
+}
+
+.avatars-map a circle {
+  box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.15);
+
 }
 
 .avatars-map a .hover-color {
@@ -570,11 +582,15 @@ html, body {
   background-repeat: no-repeat;
   height: auto;
   margin-bottom: 2em;
-  padding-bottom: 1em;
+  padding-bottom: 0;
   overflow: hidden;
   width:100%;
 }
 
+.news-feed .dim-xs-min>div {
+  .dim;
+  padding-bottom: 1em;
+}
 
 /* Contact for help section */
 
@@ -693,7 +709,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 /* ==========================================================================
    Media @screen-md-min
    ========================================================================== */
-@media (max-width: @screen-md-min) {
+@media (max-width: @screen-md-max) {
 
   .job-offers .row {
     flex-flow: wrap;
@@ -744,6 +760,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   .navigation .nav-animation-wrapper {
     background: #fff;
     box-shadow: inset -14px 0 17px -4px #d9d9d9;
+    height: auto;
     overflow: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
@@ -851,6 +868,18 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     padding-bottom:40%;
   }
 
+  .news-feed .dim-xs-min {
+    .dim;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .news-feed .dim-xs-min>div {
+    background: transparent;
+  }
+
+
 }
 
 @media (min-width: @screen-sm-min) {
@@ -865,11 +894,13 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
   .news-feed .news-item {
     margin-bottom: 0;
+    line-height: 1.6em;
   }
 
   .news-feed h3 {
     font-size: @font-size-h3 * 0.8;
     margin-bottom: 0.5em;
+    margin-top: 0.7em;
   }
 
 
@@ -901,6 +932,10 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
   .news-feed h3 {
     font-size: @font-size-h3;
+  }
+
+  .navigation .nav-animation-wrapper {
+    height: auto!important;
   }
 
 }
