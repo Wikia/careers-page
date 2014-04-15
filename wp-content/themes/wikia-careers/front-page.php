@@ -187,36 +187,38 @@
 </section>
 
 <section class="container-fluid news-feed">
-	<div class="container">
 	<div class="row">
-		<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-11 col-lg-offset-1">
-			<h2>Wikia news</h2>
-		</div>
-	</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-11 col-lg-offset-1">
+					<h2>Wikia news</h2>
+				</div>
+			</div>
 
-	<div class="row">
-		<div class="col-xxs-4 col-xs-4 col-sm-3 col-md-6 col-lg-5 col-lg-offset-1">
-			<div class="news-item" style="background-image: url('<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>news1.jpg')">
-				<div class="dim-xs-min">
-					<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-10 col-lg-offset-1">
-						<h3>I'm a good eye catchy title for news and artiles</h3>
-						<span class="post-date">Posted: <span class="date">9 March 2014</span></span>
-						<span class="post-author">Written by: <img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>nandy-avatar.jpg" alt="" class="img-circle" /></span>
+			<div class="row">
+				<div class="col-xxs-4 col-xs-4 col-sm-3 col-md-6 col-lg-5 col-lg-offset-1">
+					<div class="news-item" style="background-image: url('<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>news1.jpg')">
+						<div class="dim-xs-min">
+							<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-10 col-lg-offset-1">
+								<h3>I'm a good eye catchy title for news and artiles</h3>
+								<span class="post-date">Posted: <span class="date">9 March 2014</span></span>
+								<span class="post-author">Written by: <img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>nandy-avatar.jpg" alt="" class="img-circle" /></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xxs-4 col-xs-4 col-sm-3 col-md-6 col-lg-5">
+					<div class="news-item" style="background-image: url('<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>news2.jpg')">
+						<div class="dim-xs-min">
+							<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-10 col-lg-offset-1">
+								<h3>I'm a good eye catchy title for news and artiles</h3>
+								<span class="post-date">Posted: <span class="date">9 March 2014</span></span>
+								<span class="post-author">Written by: <img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>andrzej-avatar.jpg" alt="" class="img-circle" /></span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-xxs-4 col-xs-4 col-sm-3 col-md-6 col-lg-5">
-			<div class="news-item" style="background-image: url('<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>news2.jpg')">
-				<div class="dim-xs-min">
-					<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-10 col-lg-offset-1">
-						<h3>I'm a good eye catchy title for news and artiles</h3>
-						<span class="post-date">Posted: <span class="date">9 March 2014</span></span>
-						<span class="post-author">Written by: <img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>andrzej-avatar.jpg" alt="" class="img-circle" /></span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	</div>
 </section>
