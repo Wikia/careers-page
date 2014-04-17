@@ -203,70 +203,6 @@ html, body {
 }
 
 
-.footer {
-  background-color: @brand-primary;
-  padding: 32px 0;
-}
-
-.footer .logo svg * {
-  fill:#fff;
-}
-
-.footer-nav {
-  margin-top: 0.5em;
-  text-align: right;
-}
-
-.footer-nav .text-links {
-  float: right;
-  margin-top: 0.35em;
-}
-
-.footer-nav li {
-  display: inline-block;
-  list-style: none;
-
-}
-
-.footer-nav a {
-  border-right: 1px solid #fff;
-  color: #fff;
-  line-height: 1em;
-  padding: 0 21px 0 18px;
-}
-
-.footer-nav li:last-child a {
-  border: 0;
-  padding-right: 0;
-}
-
-.footer .social-icons a {
-  display: block;
-  height: 40px;
-  line-height: 40px;
-  padding: 0;
-  text-align: center;
-  width: 40px;
-}
-
-.footer .social-icons a:hover {
-  background-color: @brand-secondary;
-}
-
-.footer .social-icons {
-  float: right;
-  border: 1px solid #fff;
-  margin-left: 32px;
-  padding: 0;
-
-}
-.footer .social-icons ul {
-  display: table;
-}
-.footer .social-icons li {
-  display: table-cell;
-}
-
 
 
 /* ==========================================================================
@@ -652,7 +588,71 @@ html, body {
    Footer
    ========================================================================== */
 
-.content-info { }
+
+.footer {
+  background-color: @brand-primary;
+  padding: 32px 0;
+}
+
+.footer .logo svg * {
+  fill:#fff;
+}
+
+.footer-nav {
+  text-align: right;
+}
+
+.footer-nav .text-links {
+  float: right;
+  margin-top: 0.35em;
+}
+
+.footer-nav li {
+  display: inline-block;
+  list-style: none;
+
+}
+
+.footer-nav a {
+  border-right: 1px solid #fff;
+  color: #fff;
+  line-height: 1em;
+  padding: 0 21px 0 18px;
+}
+
+.footer-nav li:last-child a {
+  border: 0;
+  padding-right: 0;
+}
+
+.social-icons a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  text-align: center;
+  width: 40px;
+}
+
+.social-icons a:hover {
+  background-color: @brand-secondary;
+}
+
+.social-icons {
+  float: right;
+  border: 1px solid #fff;
+  margin-left: 32px;
+  padding: 0;
+}
+
+.social-icons ul {
+  display: table;
+}
+
+.social-icons li {
+  display: table-cell;
+}
+
 
 
 
@@ -852,6 +852,37 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   }
 
 }
+
+@media (max-width: @screen-sm-max) {
+
+  .footer-nav {
+    margin-top: 0.5em;
+  }
+
+  footer, .footer-nav {
+    text-align: center;
+  }
+
+  .footer .text-links {
+    float: none;
+  }
+
+  .footer .text-links {
+    padding: 0;
+  }
+
+  .footer-nav .text-links li:last-child a {
+    padding-right: 21px;
+  }
+
+  .social-icons {
+    display: inline-block;
+    float: none;
+    margin: 0;
+  }
+
+}
+
 
 @media (min-width: @screen-xs-min) {
 
