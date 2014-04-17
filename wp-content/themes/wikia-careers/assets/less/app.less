@@ -20,9 +20,7 @@ html, body {
 
 .banner { }
 
-.site-header {
-  margin-top: @line-height-computed * 3;
-}
+
 
 /* ==========================================================================
    Navigation
@@ -215,17 +213,24 @@ html, body {
 
 /* Main header section */
 
+
 .site-header {
-  height: 575px;
-  text-align: center;
+  @site-header-lineheight: @line-height-computed * 3;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: @site-header-lineheight;
+  min-height: calc(~"100% - @{site-header-lineheight}");
+  min-height: -webkit-calc(~"100% - @{site-header-lineheight}");
+  position: relative;
+  text-align: center;
 }
 
 .site-header>.row {
   .dim;
   height: 100%;
+  position: absolute;
+  width: 100%;
 }
 
 .site-header>.row>div {
@@ -719,8 +724,9 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
   .site-header {
     margin-top: @line-height-computed-sm;
+    min-height: calc(~"100% - @{line-height-computed-sm}");
+    min-height: -webkit-calc(~"100% - @{line-height-computed-sm}");
   }
-
 
   .avatars-map-container svg {
     max-height: 320px;
