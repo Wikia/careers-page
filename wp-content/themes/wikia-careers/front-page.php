@@ -23,22 +23,26 @@
 
 <section class="container-fluid stats">
 	<div class="row">
-		<h2>For Fans, by Fans</h2>
-		<div class="col-md-3 col-lg-3">
-			<span class="number">108,718,176</span>
-			<h3>Monthly visitors</h3>
-		</div>
-		<div class="col-md-3 col-lg-3">
-			<span class="number">33,052,302</span>
-			<h3>Total pages</h3>
-		</div>
-		<div class="col-md-3 col-lg-3">
-			<span class="number">411,620</span>
-			<h3>Total communities</h3>
-		</div>
-		<div class="col-md-3 col-lg-3">
-			<span class="number">371,351</span>
-			<h3>Changes today</h3>
+		<div class="container">
+			<div class="row">
+				<h2>For Fans, by Fans</h2>
+				<div class="col-md-3 col-lg-3">
+					<span class="number">108,718,176</span>
+					<h3>Monthly visitors</h3>
+				</div>
+				<div class="col-md-3 col-lg-3">
+					<span class="number">33,052,302</span>
+					<h3>Total pages</h3>
+				</div>
+				<div class="col-md-3 col-lg-3">
+					<span class="number">411,620</span>
+					<h3>Total communities</h3>
+				</div>
+				<div class="col-md-3 col-lg-3">
+					<span class="number">371,351</span>
+					<h3>Changes today</h3>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
