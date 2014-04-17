@@ -155,16 +155,16 @@
 	</div>
 </section>
 
-<section class="container-fluid quick-contact">
+<section class="container-fluid spaced-container quick-contact">
 	<div class="row">
 		<div class="container">
 			<div class="row">
-				<div class="col-xxs-4 col-xs-4 col-sm-2 col-md-4 col-lg-3 col-lg-offset-1">
+				<div class="col-xxs-4 col-xs-4 col-sm-2 col-md-4 col-lg-4">
 					<h2>Quick form for sending your CV</h2>
 					<p>Apply using your</p>
 					<div class="btn-wikia-regular btn-arrow"><span><strong>LinkedIn</strong> account</span></div>
 				</div>
-				<div class="col-xxs-4 col-xs-4 col-sm-4 col-md-8 col-lg-7">
+				<div class="col-xxs-4 col-xs-4 col-sm-4 col-md-8 col-lg-8">
 
 					<form role="form">
 						<div class="form-group col-xxs-4 col-xs-2 col-sm-3 col-md-5 col-lg-5">
@@ -194,7 +194,7 @@
 	</div>
 </section>
 
-<section class="container-fluid news-feed">
+<section class="container-fluid spaced-container news-feed">
 	<div class="row">
 		<div class="container">
 			<div class="row">
@@ -204,10 +204,10 @@
 			</div>
 
 			<div class="row">
-				<div class="col-xxs-4 col-xs-4 col-sm-3 col-md-6 col-lg-5 col-lg-offset-1">
+				<div class="col-xxs-4 col-xs-4 col-sm-3 col-md-6 col-lg-6">
 					<div class="news-item" style="background-image: url('<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>news1.jpg')">
 						<div class="dim-xs-min">
-							<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-10 col-lg-offset-1">
+							<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-12">
 								<h3>I'm a good eye catchy title for news and artiles</h3>
 								<span class="post-date">Posted: <span class="date">9 March 2014</span></span>
 								<span class="post-author">Written by: <img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>nandy-avatar.jpg" alt="" class="img-circle" /></span>
@@ -215,10 +215,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xxs-4 col-xs-4 col-sm-3 col-md-6 col-lg-5">
+				<div class="col-xxs-4 col-xs-4 col-sm-3 col-md-6 col-lg-6">
 					<div class="news-item" style="background-image: url('<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>news2.jpg')">
 						<div class="dim-xs-min">
-							<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-10 col-lg-offset-1">
+							<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-12">
 								<h3>I'm a good eye catchy title for news and artiles</h3>
 								<span class="post-date">Posted: <span class="date">9 March 2014</span></span>
 								<span class="post-author">Written by: <img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>andrzej-avatar.jpg" alt="" class="img-circle" /></span>
