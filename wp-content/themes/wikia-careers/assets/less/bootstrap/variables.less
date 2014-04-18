@@ -46,10 +46,12 @@
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
+@font-family-bold:        open_sansbold, @font-family-sans-serif;
 
 @font-size-base:          18px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
-@font-size-small:         floor((@font-size-base * 0.78)); // 14px
+@font-size-small:         floor((@font-size-base * 0.89)); // 16px
+@font-size-xsmall:        floor((@font-size-base * 0.78)); // 14px
 
 @font-size-h1:            floor((@font-size-base * 3.34)); // 60px
 @font-size-h2:            floor((@font-size-base * 2)); // 36px
@@ -66,7 +68,7 @@
 @line-height-computed-sm:    floor((@font-size-base * @line-height-base-sm)); // 25px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family: open_sansbold, @font-family-sans-serif;
+@headings-font-family: open_sansregular, @font-family-sans-serif;
 @headings-font-weight:    normal;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
@@ -435,18 +437,22 @@
 @nav-link-padding:                          10px 15px;
 @nav-link-hover-bg:                         @gray-lighter;
 
+@nav-link-color:                            @btn-wikia-light-color;
+@nav-link-hover-color:                      @brand-secondary;
+
 @nav-disabled-link-color:                   @gray-light;
 @nav-disabled-link-hover-color:             @gray-light;
 
 @nav-open-link-hover-color:                 #fff;
 
 //== Tabs
-@nav-tabs-border-color:                     #ddd;
+@nav-tabs-border-color:                     #cad2d4;
 
 @nav-tabs-link-hover-border-color:          @gray-lighter;
 
 @nav-tabs-active-link-hover-bg:             @body-bg;
-@nav-tabs-active-link-hover-color:          @gray;
+@nav-tabs-active-link-border-color:         @brand-secondary;
+@nav-tabs-active-link-hover-color:          @brand-secondary;
 @nav-tabs-active-link-hover-border-color:   #ddd;
 
 @nav-tabs-justified-link-border-color:            #ddd;

@@ -6,13 +6,13 @@
 						<nav class="collapse navbar-collapse" role="navigation">
 							<ul id="menu-primary-navigation" class="nav navbar-nav">
 								<li>
-									<a href="#home" class="active">Witaj</a>
+									<a href="<?php echo home_url(); ?>" class="active">Witaj</a>
 								</li>
 								<li>
 									<a href="#zycie-w-wikia">Życie w Wikia</a>
 								</li>
 								<li>
-									<a href="http://kariera.wikia.com/?p=6">Kariera</a>
+									<a href="kariera">Kariera</a>
 								</li>
 							</ul>
 							<?php
@@ -47,30 +47,46 @@
 
 
 
-
-
 </section>
-<?php if ( get_header_image() ) : ?>
-	<!-- header background image -->
-	<div id="site-header" style="background-image:url('<?php header_image(); ?>')" class="container-fluid site-header">
-<!--	<div id="site-header" style="background-image:url('http://kariera.wikia.com/wp-content/uploads/2014/04/wikia-team1.jpg')" class="container-fluid site-header">-->
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<div class="middled">
-			<?php if ( get_theme_mod( 'wikia_careers_header_desc' ) ) : ?>
-				<!-- header background message -->
-				<h1 class="site-header-message"><?php echo get_theme_mod( 'wikia_careers_header_desc' ); ?></h1>
-			<?php endif; ?>
-			<?php if ( get_theme_mod( 'wikia_careers_header_desc_sub' ) ) : ?>
-				<!-- header background message -->
-				<p class="site-header-sub-message"><?php echo get_theme_mod( 'wikia_careers_header_desc_sub' ); ?></p>
-			<?php endif; ?>
-			<?php if ( get_theme_mod( 'wikia_careers_header_button' ) ) : ?>
-				<!-- header background message -->
-			<?php endif; ?>
-				<div class="btn-wikia-white btn-arrow"><span><?php echo get_theme_mod( 'wikia_careers_header_button' ); ?></span></div>
+<?php if ( is_front_page() ) : ?>
+
+	<?php if ( get_header_image() ) : ?>
+		<!-- header background image -->
+		<div id="site-header" style="background-image:url('<?php header_image(); ?>')" class="container-fluid site-header">
+	<!--	<div id="site-header" style="background-image:url('http://kariera.wikia.com/wp-content/uploads/2014/04/wikia-team1.jpg')" class="container-fluid site-header">-->
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="middled">
+				<?php if ( get_theme_mod( 'wikia_careers_header_desc' ) ) : ?>
+					<!-- header background message -->
+					<h1 class="site-header-message"><?php echo get_theme_mod( 'wikia_careers_header_desc' ); ?></h1>
+				<?php endif; ?>
+				<?php if ( get_theme_mod( 'wikia_careers_header_desc_sub' ) ) : ?>
+					<!-- header background message -->
+					<p class="site-header-sub-message"><?php echo get_theme_mod( 'wikia_careers_header_desc_sub' ); ?></p>
+				<?php endif; ?>
+				<?php if ( get_theme_mod( 'wikia_careers_header_button' ) ) : ?>
+					<!-- header background message -->
+				<?php endif; ?>
+					<div class="btn-wikia-white btn-arrow"><span><?php echo get_theme_mod( 'wikia_careers_header_button' ); ?></span></div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	<?php endif; ?>
+
+<?php else : ?>
+
+		<!-- header background image -->
+		<div id="site-header" style="background-image:url('<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>recruitment-banner.jpg')" class="container-fluid site-header fixed-height">
+			<div class="row">
+				<div class="col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
+					<div class="middled">
+					<!-- header background message -->
+					<h1 class="site-header-message">All we need is empathy</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
 <?php endif; ?>

@@ -208,7 +208,7 @@ html, body {
    ========================================================================== */
 
 .dim {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* Main header section */
@@ -258,6 +258,10 @@ html, body {
 
 .site-header .scroll-down {
   color:#fff
+}
+
+.site-header.fixed-height {
+  min-height: 300px;
 }
 
 
@@ -462,6 +466,14 @@ html, body {
   margin: 0;
 }
 
+/* career paths short - on subpages */
+.career-paths-short {
+  margin-bottom: 77px;
+  .avatar img {
+    width: 202px;
+  }
+}
+
 
 /* Quick form section */
 
@@ -484,7 +496,7 @@ html, body {
 
 .submit-group .help-block {
   color: @brand-teritary;
-  font-size: @font-size-small;
+  font-size: @font-size-xsmall;
 }
 
 
@@ -500,7 +512,13 @@ html, body {
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
+.news-feed h2 {
+  .h3;
+  .strong;
+}
+
 .news-feed h3 {
+  .strong;
   font-size: @font-size-h3 * 0.7;
   margin-bottom: 0.5em;
   margin-top: 1em;
@@ -556,6 +574,11 @@ html, body {
 
 .content { }
 
+.strong,
+strong {
+  font-family: @font-family-bold;
+  font-weight: normal;
+}
 
 
 /* ==========================================================================
@@ -575,6 +598,45 @@ html, body {
 
 .sidebar { }
 
+
+
+/* ==========================================================================
+   Parent page styles
+   ========================================================================== */
+.page-parent .content {
+
+  h1 {
+    font-size: floor(@font-size-base * 2.45);
+    text-align: center;
+  }
+
+  h2 {
+    .h4;
+    color: @brand-secondary;
+    margin-bottom: 6px;
+  }
+
+  .news-feed h2 {
+    .strong;
+    color: #fff;
+  }
+}
+
+.short-descr {
+  color: @btn-wikia-light-color;
+  font-size: @font-size-small;
+}
+
+.offer-item {
+  background: url('../img/cross.svg') no-repeat 100% 50%;
+  border-bottom: 1px solid @nav-tabs-border-color;
+  padding-top: 13px;
+  padding-bottom: 9px;
+}
+
+h1+.offer-item {
+  margin-top: 30px;
+}
 
 
 /* ==========================================================================
@@ -667,8 +729,24 @@ html, body {
    ========================================================================== */
 
 .aligncenter { display: block; margin: 0 auto; }
-.alignleft {
-  float: left;
+
+.gutter-right {
+  padding-right: @grid-xxs-gutter-width;
+  @media (min-width: @screen-xs-min) {
+    padding-right: @grid-xs-gutter-width;
+  }
+  @media (min-width: @screen-sm-min) {
+    padding-right: @grid-sm-gutter-width;
+  }
+  @media (min-width: @screen-md-min) {
+    padding-right: @grid-md-gutter-width;
+  }
+  @media (min-width: @screen-lg-min) {
+    padding-right: @grid-lg-gutter-width;
+  }
+}
+
+.margin-right {
   margin-right: @grid-xxs-gutter-width;
   @media (min-width: @screen-xs-min) {
     margin-right: @grid-xs-gutter-width;
@@ -683,8 +761,24 @@ html, body {
     margin-right: @grid-lg-gutter-width;
   }
 }
-.alignright {
-  float: right;
+
+.gutter-left {
+  padding-left: @grid-xxs-gutter-width;
+  @media (min-width: @screen-xs-min) {
+    padding-left: @grid-xs-gutter-width;
+  }
+  @media (min-width: @screen-sm-min) {
+    padding-left: @grid-sm-gutter-width;
+  }
+  @media (min-width: @screen-md-min) {
+    padding-left: @grid-md-gutter-width;
+  }
+  @media (min-width: @screen-lg-min) {
+    padding-left: @grid-lg-gutter-width;
+  }
+}
+
+.margin-left {
   margin-left: @grid-xxs-gutter-width;
   @media (min-width: @screen-xs-min) {
     margin-left: @grid-xs-gutter-width;
@@ -699,6 +793,17 @@ html, body {
     margin-left: @grid-lg-gutter-width;
   }
 }
+
+.alignleft {
+  .margin-right;
+  float: left;
+}
+
+.alignright {
+  .margin-left;
+  float: right;
+}
+
 figure.alignnone { margin-left: 0; margin-right: 0; }
 
 
@@ -716,7 +821,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 /* ==========================================================================
    Media @screen-md-min
    ========================================================================== */
-@media (max-width: @screen-md-max) {
+@media (max-width: @screen-sm-max) {
 
   .job-offers .row {
     flex-flow: wrap;
@@ -942,6 +1047,19 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     margin-top: 0.7em;
   }
 
+  /* career paths short - on subpages */
+  .career-paths-short {
+    display: table;
+
+    .description, .avatar {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    .avatar {
+      .gutter-right;
+    }
+  }
 
 }
 
