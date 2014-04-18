@@ -50,6 +50,7 @@ html, body {
 
 
 .navigation .logo {
+  .user-select(none);
   display: block;
   float: left;
   height: (@line-height-computed * 3);
@@ -89,6 +90,7 @@ html, body {
 }
 
 .navigation .menu-button {
+  .user-select(none);
   line-height: (@line-height-computed * 3);
   height: (@line-height-computed * 3);
   width: (@line-height-computed * 3);
@@ -96,16 +98,23 @@ html, body {
   float: right;
 }
 
-.navigation .menu-icon path {
-  fill: @brand-secondary;
-}
+.navigation .menu-icon {
+  path {
+    fill: @brand-secondary;
+  }
 
-.navigation .menu-icon:hover{
-  background: @brand-secondary;
-}
+  &.active {
+    background: @brand-primary;
+  }
 
-.navigation .menu-icon:hover path{
-  fill: #fff;
+  &:hover {
+    background: @brand-secondary;
+  }
+
+  &:hover path,
+  &.active path {
+    fill: #fff;
+  }
 }
 
 .navigation a.btn-wikia-light {
@@ -848,8 +857,9 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   }
 
   .navigation .nav-wrapper {
-    float: left;
     height: (@line-height-computed-sm * 2);
+    margin-top: (@line-height-computed-sm * 2);
+    position: fixed;
   }
 
   .navigation .logo {

@@ -3,15 +3,18 @@ var menu = {};
 var stats = {};
 (function($) {
 
+	/**
+	 * Mobile menu toggle show
+	 */
 	menu.initClickEvent = function() {
 		$('.navigation .menu-button').click(
 			function() {
-				$('.navigation .nav-animation-wrapper').toggleClass('active').height($( window ).height());
+				var menuHeight;
+				menuHeight = $( window ).height() - $('.navigation').height();
+				$('.navigation .nav-animation-wrapper').toggleClass('active').height( menuHeight );
+				$(this).toggleClass('active');
 			}
 		);
-//		$( window ).resize(function() {
-//			$('.navigation .nav-animation-wrapper').height($( document ).height());
-//		});
 	};
 
 
