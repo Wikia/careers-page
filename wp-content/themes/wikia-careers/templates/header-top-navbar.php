@@ -4,21 +4,10 @@
 				<div class="nav-wrapper">
 					<div class="nav-animation-wrapper">
 						<nav class="collapse navbar-collapse" role="navigation">
-							<ul id="menu-primary-navigation" class="nav navbar-nav">
-								<li>
-									<a href="<?php echo home_url(); ?>" class="active">Witaj</a>
-								</li>
-								<li>
-									<a href="#zycie-w-wikia">Życie w Wikia</a>
-								</li>
-								<li>
-									<a href="kariera">Kariera</a>
-								</li>
-							</ul>
 							<?php
-							//if (has_nav_menu('primary_navigation')) :
-							//endif;
-							//wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
+							if (has_nav_menu('primary_navigation')) :
+								wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
+							endif;
 							?>
 							<a href="http://wikia.com/" class="btn-wikia-light btn-arrow"><span>Zobacz wikia.com</span></a>
 						</nav>
