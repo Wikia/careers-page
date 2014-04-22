@@ -4,14 +4,10 @@
 
 @font-face {
     font-family: 'open_sansregular';
-    src: url('opensans-regular-webfont.eot');
-    src: url('opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('opensans-regular-webfont.woff') format('woff'),
     font-weight: normal;
     font-style: normal;
-
 }
-
 
 
 @font-face {
@@ -19,29 +15,20 @@
     src: url('opensans-light-webfont.woff') format('woff'),
     font-weight: normal;
     font-style: normal;
-
 }
 
 
 @font-face {
     font-family: 'open_sansbold';
-    src: url('opensans-bold-webfont.eot');
-    src: url('opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
          url('opensans-bold-webfont.woff') format('woff'),
     font-weight: normal;
     font-style: normal;
-
 }
-
-
 
 
 @font-face {
     font-family: 'open_sansextrabold';
-    src: url('opensans-extrabold-webfont.eot');
-    src: url('opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
          url('opensans-extrabold-webfont.woff') format('woff'),
     font-weight: normal;
     font-style: normal;
-
 }
