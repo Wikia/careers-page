@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'open_sansregular';
-         url('opensans-regular-webfont.woff') format('woff'),
+    src: url('opensans-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: 'open_sanslight';
-    src: url('opensans-light-webfont.woff') format('woff'),
+    src: url('opensans-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -20,7 +20,7 @@
 
 @font-face {
     font-family: 'open_sansbold';
-         url('opensans-bold-webfont.woff') format('woff'),
+    src: url('opensans-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -28,7 +28,7 @@
 
 @font-face {
     font-family: 'open_sansextrabold';
-         url('opensans-extrabold-webfont.woff') format('woff'),
+    src: url('opensans-extrabold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
