@@ -37,7 +37,7 @@ Template Name: Parent page template
 					</div>
 
 					<!-- Modal -->
-					<div class="modal job-offer-modal" id="jobModal{$page->ID}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal fade job-offer-modal" id="jobModal{$page->ID}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
 															<button type="button" class="go-back" data-dismiss="modal" aria-hidden="true">Powrót</button>
