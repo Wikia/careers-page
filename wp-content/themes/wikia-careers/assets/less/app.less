@@ -274,62 +274,60 @@ html, body {
   min-height: 300px;
 }
 
-
 /* Benefits section */
 
-.benefits-banner {
-  .bold-titles;
-  background: url("../img/wikia-benefits.jpg") no-repeat 0 50%;
-  background-size: cover;
-  height: 260px;
-}
+@benefits-icon-height: 118px;
+@benefits-icon-width: 98px;
+@space-for-image: @benefits-icon-width + @grid-gutter-width;
 
-.benefits-banner .row {
-  height: 100%;
-}
-
-.benefits-banner>.row>div {
-  display: table;
-  height: 100%;
-}
-
-.benefits-banner .middled {
-  display: table-cell;
-  height: 100%;
-  vertical-align: middle;
+.benefit-header {
+  padding-left: @space-for-image;
+  padding-top: 4em;
+  position: relative;
 }
 
 .benefits-description {
+  border-top: 1px solid @nav-tabs-border-color;
   padding-bottom: 64px;
   padding-top: 44px;
-  text-align: center;
-}
 
-.benefits-description h3 {
-  color: @brand-secondary;
-  margin-top: 0;
-}
+  p {
+    margin-left: @space-for-image;
+  }
 
-.benefits-description [class*="feature-icon-"] {
-  background: url('../img/features-icons.jpg') no-repeat;
-  display: inline-block;
-  height: 53px;
-  margin-top: 1em;
-  width: 43px;
-}
+  h2 {
+    text-align: center;
+  }
 
-.benefits-description .feature-icon-02 {
-  background-position: -43px 0;
-}
+  h3 {
+    color: @brand-secondary;
+    margin-bottom: 1em;
+  }
 
-.benefits-description .feature-icon-03 {
-  background-position: -43px -53px;
-}
+  [class*="feature-icon-"] {
+	.alignleft;
+    background: url('../img/features-icons.jpg') no-repeat;
+    display: inline-block;
+    height: @benefits-icon-height;
+    left: 0;
+    margin-bottom: auto;
+    position: absolute;
+    top: 3em;
+    width: @benefits-icon-width;
+  }
 
-.benefits-description .feature-icon-04 {
-  background-position: 0 -53px;
-}
+  .feature-icon-02 {
+    background-position: -98px 0;
+  }
 
+  .feature-icon-03 {
+    background-position: 0 -118px;
+  }
+
+  .feature-icon-04 {
+    background-position: -98px -118px;
+  }
+}
 
 /* Join us section */
 
