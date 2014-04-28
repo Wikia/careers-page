@@ -620,14 +620,8 @@ strong {
 .page-parent .content {
 
   h1 {
-    font-size: floor(@font-size-base * 2.45);
+    font-size: @font-size-h4;
     text-align: center;
-  }
-
-  h2 {
-    .h4;
-    color: @brand-secondary;
-    margin-bottom: 0px;
   }
 
   .news-feed h2 {
@@ -639,21 +633,41 @@ strong {
 .short-descr {
   color: @btn-wikia-light-color;
   font-size: @font-size-small;
+  margin-bottom: 0;
+}
+
+h1+.offer-item{
+  border-top: 1px solid @nav-tabs-border-color;
+  margin-top: 30px;
 }
 
 .offer-item {
-  background: url('../img/arrow-right-offer.svg') no-repeat 100% 50%;
   border-bottom: 1px solid @nav-tabs-border-color;
-  padding-top: 13px;
-  padding-bottom: 9px;
-}
+  cursor: pointer;
+  padding-top: 55px;
+  padding-bottom: 40px;
+  transition: all .5s linear;
 
-.offer-item:hover {
-  background-color: @gray-superlight;
-}
+  &:hover {
+    background-color: @brand-secondary;
+  }
 
-h1+.offer-item {
-  margin-top: 30px;
+  &:hover h2 {
+    color: #fff;
+  }
+
+  .container {
+    background: url('../img/arrow-right-offer.svg') no-repeat 100% 50%;
+    background-size: 22px;
+  }
+
+  h2 {
+    color: @brand-secondary;
+    font-size: @font-size-h3;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    transition: all .5s linear;
+  }
 }
 
 .modal-tab {
@@ -773,7 +787,6 @@ h1+.offer-item {
 .footer-nav li {
   display: inline-block;
   list-style: none;
-
 }
 
 .footer-nav a {

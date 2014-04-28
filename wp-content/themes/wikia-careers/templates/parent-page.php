@@ -5,7 +5,7 @@ Template Name: Parent page template
 
 ?>
 
-<ul class="nav nav-tabs container-fluid spaced-container">
+<ul class="nav nav-tabs container spaced-container">
 	<li class="active"><a href="#job-offers" data-toggle="tab">Job offers</a></li>
 	<li><a href="#recruitment-process" data-toggle="tab">Recruitment process</a></li>
 </ul>
@@ -15,11 +15,9 @@ Template Name: Parent page template
 <div class="tab-content">
 
 
-	<section class="tab-pane active job-offers-list container-fluid spaced-container" id="job-offers">
-		<div class="row">
-			<div class="col-lg-12">
+	<section class="tab-pane active job-offers-list" id="job-offers">
 
-				<h1>Open positions</h1>
+				<h1>Otwarte stanowiska</h1>
 
 				<?php
 				//show list of all subpages
@@ -32,8 +30,10 @@ Template Name: Parent page template
 
 					$HTML =<<<HTML
 					<div class="offer-item" data-target="#jobModal{$page->ID}" data-toggle="modal">
-						<h2>$post_title</h2>
-						<p class="short-descr">Lokalizacja lub nazwa zespołu</p>
+						<div class="container spaced-container">
+							<h2>$post_title</h2>
+							<p class="short-descr">Lokalizacja lub nazwa zespołu</p>
+						</div>
 					</div>
 
 					<!-- Modal -->
@@ -58,13 +58,10 @@ HTML;
 				}
 				?>
 
-
-			</div>
-		</div>
 	</section>
 
 
-	<div class="tab-pane" id="recruitment-process">off2</div>
+	<div class="tab-pane container spaced-container" id="recruitment-process">off2</div>
 
 
 </div>
