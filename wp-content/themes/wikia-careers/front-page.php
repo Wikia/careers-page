@@ -1,6 +1,6 @@
 <?php //if ( dynamic_sidebar('home_main_widget') ) : else : endif; ?>
 
-<section class="container-fluid job-offers">
+<section class="container job-offers">
 	<div class="row">
 		<div class="col-xs-4 col-sm-6 col-md-4 col-lg-4 page-item-47">
 			<h2>Knowledge Engineer</h2>
@@ -47,7 +47,7 @@
 	</div>
 </section>
 
-<section class="container-fluid career-paths">
+<section class="container career-paths">
 	<div class="row">
 
 		<div class="col-lg-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4 avatars-map-container">

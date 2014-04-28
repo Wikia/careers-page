@@ -224,16 +224,22 @@ html, body {
 
 
 .site-header {
-  @site-header-lineheight: @line-height-computed * 3;
+  @nav-height: @line-height-computed * 3;
   .bold-titles;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: @site-header-lineheight;
-  min-height: calc(~"100% - @{site-header-lineheight}");
-  min-height: -webkit-calc(~"100% - @{site-header-lineheight}");
+  margin-top: @nav-height;
+  min-height: calc(~"100% - @{nav-height}");
+  min-height: -webkit-calc(~"100% - @{nav-height}");
   position: relative;
   text-align: center;
+
+  &.fixed-height {
+    @nav-and-tab-height: @nav-height + 70;
+    min-height: calc(~"100% - @{nav-and-tab-height}");
+    min-height: -webkit-calc(~"100% - @{nav-and-tab-height}");
+  }
 }
 
 .site-header>.row {
@@ -270,9 +276,6 @@ html, body {
   color:#fff
 }
 
-.site-header.fixed-height {
-  min-height: 300px;
-}
 
 /* Benefits section */
 

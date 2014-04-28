@@ -73,6 +73,7 @@
 					<div class="middled">
 					<!-- header background message -->
 					<h1 class="site-header-message">All we need is empathy</h1>
+					<p class="site-header-sub-message">Kariera w Wikia</p>
 					</div>
 				</div>
 			</div>
