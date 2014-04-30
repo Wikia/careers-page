@@ -61,25 +61,25 @@ var stats = {};
 
 	};
 
-
+// Commented out due to conflict with hand nav on job offers page
 	// Watch for appearance of .stats
-	$(window).scroll(function(event) {
-
-		$(".stats").each(function(i, el) {
-			el = $(el);
-			if (el.visible(true)) {
-
-				$(window).unbind( "scroll" );
-
-				// Run number animation
-				$( ".stats .number" ).each(function() {
-					stats.animateNumber( $( this ) );
-				});
-
-			}
-		});
-
-	});
+//	$(window).scroll(function(event) {
+//
+//		$(".stats").each(function(i, el) {
+//			el = $(el);
+//			if (el.visible(true)) {
+//
+//				$(window).unbind( "scroll" );
+//
+//				// Run number animation
+//				$( ".stats .number" ).each(function() {
+//					stats.animateNumber( $( this ) );
+//				});
+//
+//			}
+//		});
+//
+//	});
 
 
 })(jQuery); // Fully reference jQuery after this point.
