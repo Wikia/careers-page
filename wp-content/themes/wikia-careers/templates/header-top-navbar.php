@@ -64,8 +64,7 @@
 		</div>
 	<?php endif; ?>
 
-<?php else : ?>
-
+<?php elseif ( get_post_meta( $wp_query->post->ID, '_wp_page_template', true ) == 'templates/parent-page.php' ): ?>
 		<!-- header background image -->
 		<div id="site-header" style="background-image:url('<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>recruitment-banner.jpg')" class="container-fluid site-header fixed-height">
 			<div class="row">
@@ -74,6 +73,21 @@
 					<!-- header background message -->
 					<h1 class="site-header-message">All we need is empathy</h1>
 					<p class="site-header-sub-message">Kariera w Wikia</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<?php else: ?>
+
+		<!-- header background image -->
+		<div id="site-header" class="no-image-header container-fluid site-header fixed-height">
+			<div class="row">
+				<div class="col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
+					<div class="middled">
+					<!-- header background message -->
+						<h1 class="site-header-message"><?php the_title() ?></h1>
+					<p class="site-header-sub-message">Poznań, Polska</p>
 					</div>
 				</div>
 			</div>

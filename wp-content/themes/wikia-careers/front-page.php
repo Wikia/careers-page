@@ -3,19 +3,19 @@
 <section class="container job-offers">
 	<div class="row">
 		<div class="col-xs-4 col-sm-6 col-md-4 col-lg-4 page-item-47">
-			<h2>Knowledge Engineer</h2>
+			<h2>Advertising Software Engineer</h2>
 			<p>We're striving to understand not only this world, but also every fictional world, game setting and movie universe. That's a lot of data to handle. </p>
-			<div class="btn-container"><div href="" class="btn-wikia">And we need your help!</div></div>
+			<div class="btn-container"><a href="advertising-software-engineer" class="btn-wikia">Poczytaj więcej</a></div>
 		</div>
 		<div class="col-xs-4 col-sm-6 col-md-4 col-lg-4 page-item-19">
-			<h2>Lead Systems Administrator</h2>
+			<h2>Technical Operations Team Leader</h2>
 			<p>Wikia is running one of the most visited websites in the US, the go-to destination for information about anything you're passionate about.</p>
-			<div class="btn-container"><div href="" class="btn-wikia">Pick me!</div></div>
+			<div class="btn-container"><a href="technical-operations-team-leader" class="btn-wikia">Poczytaj więcej</a></div>
 		</div>
 		<div class="col-xs-4 col-sm-6 col-md-4 col-lg-4 page-item-13">
 			<h2>Mobile Web Developer</h2>
 			<p>As the mobile web grows, Wikia grows with it, and with an ever-growing portion of our users going mobile we push.</p>
-			<div class="btn-container"><div href="" class="btn-wikia">No, pick me!</div></div>
+			<div class="btn-container"><a href="" class="btn-wikia">Poczytaj więcej</a></div>
 		</div>
 	</div>
 </section>

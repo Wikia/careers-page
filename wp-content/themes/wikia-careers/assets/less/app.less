@@ -236,9 +236,13 @@ html, body {
   text-align: center;
 
   &.fixed-height {
-    @nav-and-tab-height: @nav-height + 70;
-    min-height: calc(~"100% - @{nav-and-tab-height}");
-    min-height: -webkit-calc(~"100% - @{nav-and-tab-height}");
+    // 100% height excluding height of main nav and tab nav
+//    @nav-and-tab-height: @nav-height + 70;
+//    min-height: calc(~"100% - @{nav-and-tab-height}");
+//    min-height: -webkit-calc(~"100% - @{nav-and-tab-height}");
+    // fixed height
+    min-height: 300px;
+    height: 300px;
   }
 }
 
@@ -263,9 +267,12 @@ html, body {
 .site-header-message,
 .site-header-sub-message {
   color: #fff;
-  font-weight: bold;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
   text-align: center;
+}
+
+.site-header-message {
+  font-weight: bold;
 }
 
 .site-header-sub-message {
@@ -589,6 +596,10 @@ html, body {
 
 .content { }
 
+.no-image-header {
+  background-color: @brand-secondary;
+}
+
 .strong,
 strong {
   font-weight: bold;
@@ -745,6 +756,87 @@ h1+.offer-item{
   &:hover {
     background-position: 0 -30px;
     color: @gray;
+  }
+}
+
+
+/* ==========================================================================
+   Single Job Offer
+   ========================================================================== */
+
+.apply-bar {
+  border-bottom: 1px solid @nav-tabs-border-color;
+  line-height: 70px;
+  text-align: center;
+}
+
+.prev-next-nav {
+  height: 38px;
+  text-align: right;
+
+  &+section {
+    clear: both;
+  }
+
+  button {
+    background: #fff;
+    border: 0;
+    border-right: 1px solid @nav-tabs-border-color;
+    display: block;
+    float: right;
+    height: 38px;
+    width: 38px;
+
+    &:first-child {
+      border-right: 0;
+    }
+  }
+
+  .prev-next-buttons {
+    border: 1px solid @nav-tabs-border-color;
+    border-top: 0;
+    display: inline-block;
+    margin-left: -3 * 38px - 2;
+    z-index: @zindex-subnavbar-fixed;
+
+    &.affix {
+      float: none;
+      top: @line-height-computed * 3 - 1;
+
+      button {
+        border-top-width: 1px;
+        display: block;
+        float: right;
+      }
+      @media(max-width: @screen-sm-max) {
+        top: @line-height-computed-sm * 2 - 1;
+      }
+    }
+    &.affix-bottom {
+      position: absolute;
+    }
+  }
+}
+
+.tags {
+  margin-bottom: 2em;
+  padding: 0;
+
+  a {
+    color: @gray-light;
+  }
+  a:hover {
+    color: @brand-secondary;
+    text-decoration: none;
+  }
+  li {
+    display: inline-block;
+    padding-right: @grid-gutter-width;
+
+    &:before {
+      content: "• ";
+      color: @brand-secondary;
+    }
   }
 }
 
