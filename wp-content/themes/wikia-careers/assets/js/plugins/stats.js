@@ -7,12 +7,14 @@ var statsAnimation = (function($) {
 
 	// Init stats watcher
 	var initWatcher = function() {
-		$(window).bind("scroll.watchStatsAppearance",watchStatsAppearance);
+		var throttledWatch = $.throttle(50, watchStatsAppearance);
+		$(window).bind("scroll.watchStatsAppearance", throttledWatch);
 	};
 
 
 	// Watch for appearance of stats section
 	var watchStatsAppearance = function(event) {
+
 		$(".stats").each(function(i, el) {
 			el = $(el);
 			if (visible(el, true)) {
