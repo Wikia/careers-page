@@ -23,13 +23,14 @@ var Roots = {
   common: {
     init: function() {
       // JavaScript to be fired on all pages
-		menu.initClickEvent();
+      menu.initClickEvent();
     }
   },
   // Home page
   home: {
     init: function() {
       // JavaScript to be fired on the home page
+      stats.initWatcher();
     }
   },
   // About us page, note the change from about-us to about_us.
