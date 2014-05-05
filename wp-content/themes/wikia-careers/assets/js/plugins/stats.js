@@ -1,29 +1,27 @@
-'use strict';
-
 /**
- * Holder for stats functions
- * @type {object}
+ * Watches for stats section appearance and runs numbers animations
+ * @module statsAnimation
  */
-var stats = {};
+var statsAnimation = (function($) {
+	'use strict';
 
-(function($) {
-
-	/** Init stats watcher */
-	stats.initWatcher = function() {
-		$(window).bind("scroll.stats.watchStatsAppearance",stats.watchStatsAppearance);
+	// Init stats watcher
+	var initWatcher = function() {
+		$(window).bind("scroll.watchStatsAppearance",watchStatsAppearance);
 	};
 
-	/** Watch for appearance of .stats */
-	stats.watchStatsAppearance = function(event) {
+
+	// Watch for appearance of stats section
+	var watchStatsAppearance = function(event) {
 		$(".stats").each(function(i, el) {
 			el = $(el);
-			if (el.visible(true)) {
+			if (visible(el, true)) {
 
-				$(window).unbind( ".stats.watchStatsAppearance" );
+				$(window).unbind( ".watchStatsAppearance" );
 
 				// Run number animation
 				$( ".stats .number" ).each(function() {
-					stats.animateNumber( $( this ) );
+					animateNumber( $( this ) );
 				});
 
 			}
@@ -35,7 +33,7 @@ var stats = {};
 	 * Animate the element's value from 0 to number hold by element
 	 * @param {number} numberEl - End value of number.
 	 */
-	stats.animateNumber = function( numberEl ) {
+	var animateNumber = function( numberEl ) {
 		var number = numberEl.text();
 		number = number.replace(/,/g, ""); // remove all occurrences of comma
 		$({someValue: 0}).animate({someValue: number}, {
@@ -43,7 +41,7 @@ var stats = {};
 			easing:'swing', // can be anything
 			step: function() { // called on every step
 				// Update the element's text with rounded-up value:
-				numberEl.text(stats.commaSeparateNumber(Math.round(this.someValue)));
+				numberEl.text(commaSeparateNumber(Math.round(this.someValue)));
 			}
 		});
 	};
@@ -54,11 +52,10 @@ var stats = {};
 	 * @param {number} val
 	 * @returns {string}
 	 */
-	stats.commaSeparateNumber = function(val) {
-		var
-			/** @desc test if has more than 3 digits together */
-			pattTest = new RegExp("(\\d+)(\\d{3})"),
-			/** @desc match every thousand digit eg. 12345678900 will match 8, 5 and 2 */
+	var commaSeparateNumber = function(val) {
+		// Test if has more than 3 digits together
+		var pattTest = new RegExp("(\\d+)(\\d{3})"),
+			// Match every thousand digit eg. 12345678900 will match 8, 5 and 2
 			pattReplace = new RegExp("(\\d)(?=(\\d\\d\\d)+(?!\\d))", "g");
 		val = val.toString();
 		if (pattTest.test(val)) {
@@ -70,22 +67,27 @@ var stats = {};
 
 	/**
 	 * Check if element is visible on the screen
+	 * @param {object} jQuery object that visibility is being checked
 	 * @param {boolean} partial Make functions to check if element is partially visible on the screen
 	 * @returns {boolean}
 	 */
-	$.fn.visible = function(partial) {
+	var visible = function($el, partial) {
 
-		var $t            = $(this),
-			$w            = $(window),
+		var $w            = $(window),
 			viewTop       = $w.scrollTop(),
 			viewBottom    = viewTop + $w.height(),
-			_top          = $t.offset().top,
-			_bottom       = _top + $t.height(),
+			_top          = $el.offset().top,
+			_bottom       = _top + $el.height(),
 			compareTop    = partial === true ? _bottom : _top,
 			compareBottom = partial === true ? _top : _bottom;
 
 		return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
 
+	};
+
+
+	return {
+		initWatcher : initWatcher
 	};
 
 
