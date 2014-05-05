@@ -28,7 +28,7 @@ html, body {
 
 .navigation-top-container {
   margin-top: -@line-height-computed * 3;
-  min-height: @line-height-computed * 3;
+  height: @line-height-computed * 3;
   position: fixed;
   z-index: @zindex-navbar-fixed;
 }
@@ -723,9 +723,10 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   }
 
   .site-header {
-    margin-top: @line-height-computed-sm;
-    min-height: calc(~"100% - @{line-height-computed-sm}");
-    min-height: -webkit-calc(~"100% - @{line-height-computed-sm}");
+    @site-header-lineheight-sm: @line-height-computed-sm * 2;
+    margin-top: @site-header-lineheight-sm;
+    min-height: calc(~"100% - @{site-header-lineheight-sm}");
+    min-height: -webkit-calc(~"100% - @{site-header-lineheight-sm}");
   }
 
   .avatars-map-container svg {
@@ -738,8 +739,8 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    ========================================================================== */
 
   .navigation-top-container {
-    height: @line-height-computed-sm;
-    margin-top: -@line-height-computed-sm;
+    height: (@line-height-computed-sm * 2);
+    margin-top: -(@line-height-computed-sm * 2);
   }
 
   .navigation .nav-wrapper {
