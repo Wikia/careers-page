@@ -3,6 +3,7 @@
  */
 
 @import "bootstrap/bootstrap.less";
+@import "../img/svg/output/icons.data.svg.less";
 
 /* ==========================================================================
    Base
@@ -49,103 +50,103 @@ html, body {
 }
 
 
-.navigation .logo {
-  display: block;
-  float: left;
-  height: (@line-height-computed * 3);
-  line-height: (@line-height-computed * 3);
-  margin-left: 4px;
-  padding: 0 15px;
-}
+.navigation{
 
-.navigation .logo img {
-  display: block;
-  height: 40px;
-  margin-top: 25px;
-}
+  .logo {
+    .icon-wikia-logo;
+    background-position: 50% 50%;
+    background-size: contain;
+    display: block;
+    float: left;
+    height: (@line-height-computed * 3);
+    line-height: (@line-height-computed * 3);
+    margin-left: 19px;
+    margin-right: 15px;
+    width: 143px;
+  }
 
-.navigation nav {
-  clear: none;
-  float: right;
-  font-size: 1.063em;
-  min-height: @line-height-computed * 3;
-}
+  .menu-button {
+    line-height: (@line-height-computed * 3);
+    height: (@line-height-computed * 3);
+    width: (@line-height-computed * 3);
+    text-align: center;
+    float: right;
+  }
 
-.navigation nav ul {
-  margin-right: 20px;
-}
+  .menu-icon {
+    .icon-menu-icon;
 
-.navigation nav a {
-  line-height: (@line-height-computed * 3);
-  height: (@line-height-computed * 3);
-  padding: 0 20px;
-  text-transform: uppercase;
-}
+    &:hover {
+      .icon-menu-icon-white;
+	  background-color: @brand-secondary;
+    }
 
-.navigation nav ul a:hover,
-.navigation nav ul a.active {
-  border-bottom: 5px solid @brand-secondary ;
-  background-color: transparent;
-}
+    fill: @brand-secondary;
+  }
 
-.navigation .menu-button {
-  line-height: (@line-height-computed * 3);
-  height: (@line-height-computed * 3);
-  width: (@line-height-computed * 3);
-  text-align: center;
-  float: right;
-}
+  .btn-wikia-light {
+    margin-top:23px;
+    margin-right: 13px;
+    float: right;
+    height: auto;
+    padding: 0;
+    text-transform: none;
 
-.navigation .menu-icon path {
-  fill: @brand-secondary;
-}
+    &:hover {
+	  border-bottom-width: 1px;
+    }
+  }
 
-.navigation .menu-icon:hover{
-  background: @brand-secondary;
-}
+  nav {
+	clear: none;
+	float: right;
+	font-size: 1.063em;
+	min-height: @line-height-computed * 3;
 
-.navigation .menu-icon:hover path{
-  fill: #fff;
-}
+	ul {
+	  margin-right: 20px;
+	}
 
-.navigation a.btn-wikia-light {
-  line-height: @btn-default-height;
-}
+    a {
+      line-height: (@line-height-computed * 3);
+      height: (@line-height-computed * 3);
+      padding: 0 20px;
+      text-transform: uppercase;
 
-.navigation .btn-wikia-light {
-  margin-top:23px;
-  margin-right: 13px;
-  float: right;
-  height: auto;
-  padding: 0;
-  text-transform: none;
-}
+      &:hover,
+      &.active {
+        border-bottom: 5px solid @brand-secondary ;
+        background-color: transparent;
+      }
 
-.navigation .btn-wikia-light:hover {
-  border-bottom-width: 1px;
+      &.btn-wikia-light {
+        line-height: @btn-default-height;
+      }
+    }
+  }
 }
 
 .btn-arrow {
   padding:0;
 }
 .btn-arrow span {
+  .icon-chevron-gray;
   display: block;
-  background-repeat: no-repeat;
   background-position: 100% 50%;
-  background-image: url(../img/chevron-gray-light.svg);
+  background-size: 24px;
   padding: 0 30px 0 15px;
 }
 
 .btn-arrow span:hover {
-  background-image: url(../img/chevron-white.svg);
+  .icon-chevron-white;
 }
 
 .btn-arrow.btn-wikia-white span {
-  background-image: url(../img/chevron-white.svg);
+  .icon-chevron-white;
 }
 
 .btn-envelope {
-  background-image: url(../img/icon-envelope.svg);
+  .icon-icon-envelope-white;
   background-position: 10px 50%;
   background-repeat: no-repeat;
   margin-bottom: @line-height-computed;
@@ -173,33 +174,24 @@ html, body {
 }
 
 .btn-arrow.btn-wikia-white span {
-  background-image: url(../img/chevron-white.svg);
+  .icon-chevron-white;
 }
 
 .btn-wikia-regular.btn-arrow span {
-  background-image: url(../img/chevron-gray.svg);
+  .icon-chevron-gray;
 }
 
 .btn-wikia-regular.btn-arrow:hover span {
-  background-image: url(../img/chevron-white.svg);
+  .icon-chevron-white;
 }
 
 .btn-wikia-light.btn-arrow span {
-  background-image: url(../img/chevron-gray-light.svg);
+  .icon-chevron-gray_light;
 }
 
 .btn-wikia-light.btn-arrow:hover span {
-  background-image: url(../img/chevron-white.svg);
+  .icon-chevron-white;
 }
-
-
-#preloadedImages {
-  width: 0px;
-  height: 0px;
-  display: inline;
-  background-image: url(../img/chevron-blue.svg);
-}
-
 
 
 
@@ -599,8 +591,12 @@ html, body {
   padding: 32px 0;
 }
 
-.footer .logo svg * {
-  fill:#fff;
+.footer .logo {
+  .icon-wikia-logo-white;
+  width: 143px;
+  height: 40px;
+  background-size: contain;
+  display: inline-block;
 }
 
 .footer-nav {
@@ -637,6 +633,7 @@ html, body {
   padding: 0;
   text-align: center;
   width: 40px;
+  background-position: 50% 50%;
 }
 
 .social-icons a:hover {
@@ -748,9 +745,12 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     height: (@line-height-computed-sm * 2);
   }
 
-  .navigation .logo {
-    height: (@line-height-computed-sm * 2);
-    line-height: (@line-height-computed-sm * 2);
+  .navigation {
+    .logo {
+      height: (@line-height-computed-sm * 2);
+      line-height: (@line-height-computed-sm * 2);
+      width: 100px;
+    }
   }
 
   .navigation .logo img {
@@ -794,7 +794,9 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   }
 
   #navigation-nav-ul-a {
-    background: url(../img/chevron-gray-light.svg) no-repeat 248px 50%;
+    .icon-chevron-gray;
+    background-position:248px 50%;
+    background-size: 24px;
     border-left: 5px solid #fff;
     display: block;
     height: (@line-height-computed-sm * 2);
@@ -823,15 +825,10 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   }
 
   .navigation .menu-icon {
+    background-position: 50% 50%;
     border-right: 1px solid @btn-wikia-light-border;
     float: left;
     width: 57px;
-  }
-
-  .navigation .menu-icon svg {
-    height: 24px;
-    margin-top: 16px;
-    vertical-align: top;
   }
 
   .navigation a.btn-wikia-light {
