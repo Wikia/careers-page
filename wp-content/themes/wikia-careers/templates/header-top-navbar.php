@@ -14,12 +14,6 @@
 					</div>
 				</div>
 				<div class="menu-button menu-icon">
-					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						 width="30px" height="24px" viewBox="0 0 30 24" enable-background="new 0 0 30 24" xml:space="preserve">
-						<path d="M29.948,4H-0.076V0h30.024V4z"/>
-						<path d="M29.948,14H-0.076v-4h30.024V14z"/>
-						<path d="M29.948,24H-0.076v-4h30.024V24z"/>
-					</svg>
 				</div>
 				<!-- logo -->
 				<!--
@@ -29,7 +23,7 @@
 						<a class="logo" href="<?php echo home_url(); ?>/" title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a>
 					<?php endif; ?>
 					-->
-				<a class="logo image-logo" href="<?php echo home_url(); ?>/" rel='home'><img src='<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/wikia-logo.svg'></a>
+				<a class="logo image-logo" href="<?php echo home_url(); ?>/" rel='home'></a>
 
 		</div>
 	</div>

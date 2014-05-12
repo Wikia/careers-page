@@ -2,6 +2,49 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
+    rename: {
+      moveThis: {
+          src: 'assets/img/svg/output/icons.data.svg.css',
+          dest: 'assets/img/svg/output/icons.data.svg.less'
+      }
+    },
+    pkg: grunt.file.readJSON('package.json'),
+    svgmin: { //minimize SVG files
+      options: {
+          plugins: [
+              { removeViewBox: false },
+              { removeUselessStrokeAndFill: false }
+          ]
+      },
+      dist: {
+          expand: true,
+          cwd: 'assets/img/svg/raw',
+          src: ['*.svg'],
+          dest: 'assets/img/svg/compressed',
+          ext: '.colors-light-danger-success-white-gray-gray_light.svg'
+      }
+    },
+    grunticon: { //makes SVG icons into a CSS file
+      myIcons: {
+          files: [{
+              expand: true,
+              cwd: 'assets/img/svg/compressed',
+              src: ['*.svg'],
+              dest: 'assets/img/svg/output'
+          }],
+          options: {
+              cssprefix: '.icon-',
+              colors: {
+                  light: '#ccc',
+                  danger: '#ed3921',
+                  success: '#8DC63F',
+                  white: '#fff',
+                  gray: '#555',
+                  gray_light: '#9b9b9b'
+              }
+          }
+      }
+    },
     jshint: {
       options: {
         jshintrc: '.jshintrc'
@@ -96,8 +139,9 @@ module.exports = function(grunt) {
     clean: {
       dist: [
         'assets/css/main.min.css',
-        'assets/js/scripts.min.js'
-      ]
+        'assets/js/scripts.min.js',
+        'assets/img/svg/compressed',
+        'assets/img/svg/output']
     }
   });
 
@@ -108,10 +152,20 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-wp-version');
+  grunt.loadNpmTasks('grunt-rename');
+  grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-grunticon');
 
   // Register tasks
+  grunt.registerTask('icons', [
+    'clean',
+    'svgmin',
+    'grunticon']);
   grunt.registerTask('default', [
     'clean',
+	'svgmin',
+	'grunticon',
+	'rename',
     'less',
     'uglify',
     'version'
