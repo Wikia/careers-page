@@ -3,6 +3,7 @@
  */
 
 @import "bootstrap/bootstrap.less";
+@import "../img/svg/output/icons.data.svg.less";
 
 /* ==========================================================================
    Base
@@ -35,7 +36,7 @@ html, body {
 
 .navigation {
   background-color: #fff;
-  box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.15);
+  box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.08);
   display: table;
   height: @line-height-computed;
   position: relative;
@@ -94,13 +95,13 @@ html, body {
 
     &:hover {
 	  border-bottom-width: 1px;
+      border-bottom-color: @btn-wikia-light-bghover;
     }
   }
 
   nav {
 	clear: none;
 	float: right;
-	font-size: 1.063em;
 	min-height: @line-height-computed * 3;
 
 	ul {
@@ -111,12 +112,10 @@ html, body {
       line-height: (@line-height-computed * 3);
       height: (@line-height-computed * 3);
       padding: 0 20px;
-      text-transform: uppercase;
 
       &:hover,
       &.active {
         border-bottom: 5px solid @brand-secondary ;
-        background-color: transparent;
       }
 
       &.btn-wikia-light {
@@ -132,9 +131,9 @@ html, body {
 .btn-arrow span {
   .icon-chevron-gray;
   display: block;
-  background-position: 100% 50%;
-  background-size: 24px;
-  padding: 0 30px 0 15px;
+  background-position: calc(~"100% - 12px") 50%;
+  background-size: 9px;
+  padding: 0 33px 0 15px;
 }
 
 .btn-arrow span:hover {
@@ -173,6 +172,10 @@ html, body {
   transition: all .2s linear;
 }
 
+.btn-arrow.btn-wikia span {
+  .icon-chevron-brand_prim;
+}
+
 .btn-arrow.btn-wikia-white span {
   .icon-chevron-white;
 }
@@ -181,6 +184,8 @@ html, body {
   .icon-chevron-gray;
 }
 
+.btn-wikia.btn-arrow:hover span,
+.btn-wikia-light.btn-arrow:hover span,
 .btn-wikia-regular.btn-arrow:hover span {
   .icon-chevron-white;
 }
@@ -189,9 +194,6 @@ html, body {
   .icon-chevron-gray_light;
 }
 
-.btn-wikia-light.btn-arrow:hover span {
-  .icon-chevron-white;
-}
 
 
 
@@ -200,7 +202,7 @@ html, body {
    ========================================================================== */
 
 .dim {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.45);
 }
 
 /* Main header section */
@@ -239,12 +241,15 @@ html, body {
 .site-header-message,
 .site-header-sub-message {
   color: #fff;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
   text-align: center;
 }
 
+.site-header-message {
+  font-weight: bold;
+}
+
 .site-header-sub-message {
-  font-size: @font-size-h3;
+  font-size: @font-size-h4;
   margin-bottom: 35px;
 }
 
@@ -275,6 +280,7 @@ html, body {
   }
 
   h2 {
+    font-weight: bold;
     text-align: center;
   }
 
@@ -319,6 +325,7 @@ html, body {
 }
 
 .join-us .row {
+  .dim;
   height: 100%;
 }
 
@@ -356,6 +363,8 @@ html, body {
 
 .job-offers h2 {
   font-family: @font-family-base;
+  font-size: @font-size-h3;
+  line-height: @line-height-computed-h3;
 }
 
 .btn-container {
@@ -369,28 +378,33 @@ html, body {
 .stats {
   background: @brand-secondary;
   color: #fff;
-  padding-top: 0;
+  padding-top: 1.11em;
+  padding-bottom: 3.6em;
   text-align: center;
 }
 
 .stats h2 {
+  font-size: @font-size-h1;
+  font-weight: bold;
   margin-bottom: 36px;
 }
 
 .stats h3 {
-  border-bottom: 1px solid #fff;
   display: inline-block;
   font-size: floor(@font-size-base * 0.9);
-  margin-bottom: 3em;
-  margin-top: 1.6em;
-  padding-bottom: 1.25em;
+  line-height: 1em;
+  margin-top: 1em;
+  margin-bottom: 0;
   text-transform: uppercase;
 }
 
 .stats .number {
   display: block;
-  font-size: @font-size-h2;
+  font-size: @font-size-h3;
 }
+
+.stats div:after{content:""; background: #fff; position: absolute; bottom: 0; right: 0; height: 80%; width: 1px;}
+.stats div:last-child:after{width: 0px;}
 
 
 
@@ -550,6 +564,7 @@ html, body {
 
 .contact-for-help h2 {
   display: inline-block;
+  font-size: @font-size-h3;
   margin-bottom: @line-height-computed;
   margin-top: @line-height-computed;
 }
