@@ -4,6 +4,8 @@
 
 @import "bootstrap/bootstrap.less";
 @import "../img/svg/output/icons.data.svg.less";
+@import "../css/flexslider/flexslider.css";
+@import "../css/flexslider/flexslider-wikia-custom.less";
 
 /* ==========================================================================
    Base
@@ -79,7 +81,7 @@ html, body {
 
     &:hover {
       .icon-menu-icon-white;
-	  background-color: @brand-secondary;
+      background-color: @brand-secondary;
     }
 
     fill: @brand-secondary;
@@ -94,19 +96,19 @@ html, body {
     text-transform: none;
 
     &:hover {
-	  border-bottom-width: 1px;
+      border-bottom-width: 1px;
       border-bottom-color: @btn-wikia-light-bghover;
     }
   }
 
   nav {
-	clear: none;
-	float: right;
-	min-height: @line-height-computed * 3;
+    clear: none;
+    float: right;
+    min-height: @line-height-computed * 3;
 
-	ul {
-	  margin-right: 20px;
-	}
+    ul {
+      margin-right: 20px;
+    }
 
     a {
       line-height: (@line-height-computed * 3);
@@ -180,11 +182,13 @@ html, body {
   .icon-chevron-white;
 }
 
+.btn-wikia-gray-blue.btn-arrow span,
 .btn-wikia-regular.btn-arrow span {
   .icon-chevron-gray;
 }
 
 .btn-wikia.btn-arrow:hover span,
+.btn-wikia-gray-blue.btn-arrow:hover span,
 .btn-wikia-light.btn-arrow:hover span,
 .btn-wikia-regular.btn-arrow:hover span {
   .icon-chevron-white;
@@ -220,14 +224,14 @@ html, body {
   text-align: center;
 }
 
-.site-header>.row {
+.site-header > .row {
   .dim;
   height: 100%;
   position: absolute;
   width: 100%;
 }
 
-.site-header>.row>div {
+.site-header > .row > div {
   display: table;
   height: 100%;
 }
@@ -271,7 +275,7 @@ html, body {
 }
 
 .benefits-description {
-  border-top: 1px solid @nav-tabs-border-color;
+  background-color: @gray-superlight;
   padding-bottom: 64px;
   padding-top: 44px;
 
@@ -290,7 +294,7 @@ html, body {
   }
 
   [class*="feature-icon-"] {
-	.alignleft;
+    .alignleft;
     background: url('../img/features-icons.jpg') no-repeat;
     display: inline-block;
     height: @benefits-icon-height;
@@ -320,26 +324,30 @@ html, body {
 .join-us {
   background: url("../img/qaga.jpg") no-repeat 50% 50%;
   background-size: cover;
-  height: 345px;
+  height: 400px;
   text-align: center;
-}
 
-.join-us .row {
-  .dim;
-  height: 100%;
-}
+  h2 {
+    .h1;
+    .site-header-message;
+    margin-bottom: 30px;
+  }
 
-.join-us>.row>div {
-  display: table;
-  height: 100%;
-}
+  & > .row {
+    .dim;
+    height: 100%;
+    & > div {
+      display: table;
+      height: 100%;
+    }
+  }
 
-.join-us .middled {
-  display: table-cell;
-  height: 100%;
-  vertical-align: middle;
+  .middled {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+  }
 }
-
 
 
 /* ==========================================================================
@@ -381,6 +389,28 @@ html, body {
   padding-top: 1.11em;
   padding-bottom: 3.6em;
   text-align: center;
+
+  .number-col {
+
+    &:after{
+      background: #fff;
+      bottom: 0;
+      content:"";
+      height: 80%;
+      position: absolute;
+      right: 0;
+      width: 1px;
+    }
+
+    &:last-child:after{
+      width: 0px;
+    }
+  }
+
+  .number {
+    display: block;
+    font-size: @font-size-h3;
+  }
 }
 
 .stats h2 {
@@ -398,75 +428,28 @@ html, body {
   text-transform: uppercase;
 }
 
-.stats .number {
-  display: block;
-  font-size: @font-size-h3;
-}
-
-.stats div:after{content:""; background: #fff; position: absolute; bottom: 0; right: 0; height: 80%; width: 1px;}
-.stats div:last-child:after{width: 0px;}
-
-
 
 /* ==========================================================================
    Career-paths section
    ========================================================================== */
 .career-paths {
-  padding-bottom: @line-height-computed * 3;
+  padding-bottom: 0;
   padding-top: @line-height-computed * 3;
+
+  h2 {
+    .h1;
+    font-weight: bold;
+    margin-bottom: 1.2em;
+    text-align: center;
+  }
+
+  h3 {
+    .h1;
+    color: @brand-secondary;
+    font-weight: bold;
+  }
 }
 
-.avatars-map-container {
-  text-align: center;
-}
-
-.avatars-map-container svg {
-  max-height: 420px;
-  max-width: 420px;
-}
-
-.avatars-map a {
-  text-decoration: none;
-}
-
-.avatars-map a circle {
-  transition: all .2s linear;
-}
-
-.avatars-map a circle {
-  box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.15);
-
-}
-
-.avatars-map a .hover-color {
-  fill: rgba(red(@brand-secondary), green(@brand-secondary), blue(@brand-secondary), 0);
-}
-.avatars-map a:hover .hover-color {
-  fill: rgba(red(@brand-secondary), green(@brand-secondary), blue(@brand-secondary), 1);
-}
-
-.avatars-map .name-container {
-  position: relative;
-  display: none;
-}
-
-.avatars-map a:hover .name-container {
-  display: block;
-}
-
-.avatars-map .name {
-  .h5;
-  color: #fff;
-  display: table-cell;
-  height: 200px;
-  padding: 10px;
-  width: 200px;
-  vertical-align: middle;
-}
-
-.avatars-map p {
-  margin: 0;
-}
 
 /* career paths short - on subpages */
 .career-paths-short {
@@ -550,7 +533,7 @@ html, body {
   width:100%;
 }
 
-.news-feed .dim-xs-min>div {
+.news-feed .dim-xs-min > div {
   .dim;
   padding-bottom: 1em;
 }
@@ -1021,11 +1004,6 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     min-height: -webkit-calc(~"100% - @{site-header-lineheight-sm}");
   }
 
-  .avatars-map-container svg {
-    max-height: 320px;
-    max-width: 320px;
-  }
-
 /* ==========================================================================
    Navigation
    ========================================================================== */
@@ -1092,7 +1070,6 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   #navigation-nav-ul-a {
     .icon-chevron-gray;
     background-position:248px 50%;
-    background-size: 24px;
     border-left: 5px solid #fff;
     display: block;
     height: (@line-height-computed-sm * 2);
@@ -1127,7 +1104,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     width: 57px;
   }
 
-  .navigation a.btn-wikia-light {
+  .navigation nav a.btn-wikia-light {
     border: 0;
     #navigation-nav-ul-a;
     background-color: transparent;
@@ -1138,7 +1115,6 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     margin-top: 35px;
     padding: 0 20px;
     text-align: left;
-    text-transform: uppercase;
     transition: none;
   }
 
@@ -1189,6 +1165,15 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 }
 
+@media (max-width: @screen-xs-max) {
+
+  .career-paths {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+
+}
+
 
 @media (min-width: @screen-xs-min) {
 
@@ -1214,10 +1199,9 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     height: 100%;
   }
 
-  .news-feed .dim-xs-min>div {
+  .news-feed .dim-xs-min > div {
     background: transparent;
   }
-
 
 }
 

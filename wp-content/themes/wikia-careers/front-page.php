@@ -26,19 +26,19 @@
 		<div class="container">
 			<div class="row">
 				<h2>For Fans, by Fans</h2>
-				<div class="col-md-3 col-lg-3">
+				<div class="col-md-3 col-lg-3 number-col">
 					<span class="number">108,718,176</span>
 					<h3>Monthly visitors</h3>
 				</div>
-				<div class="col-md-3 col-lg-3">
+				<div class="col-md-3 col-lg-3 number-col">
 					<span class="number">33,052,302</span>
 					<h3>Total pages</h3>
 				</div>
-				<div class="col-md-3 col-lg-3">
+				<div class="col-md-3 col-lg-3 number-col">
 					<span class="number">411,620</span>
 					<h3>Total communities</h3>
 				</div>
-				<div class="col-md-3 col-lg-3">
+				<div class="col-md-3 col-lg-3 number-col">
 					<span class="number">371,351</span>
 					<h3>Changes today</h3>
 				</div>
@@ -50,96 +50,89 @@
 <section class="container career-paths">
 	<div class="row">
 
-		<div class="col-lg-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4 avatars-map-container">
-
-			<svg viewBox="0 0 420 420" version="1.1" xmlns="http://www.w3.org/2000/svg" class="avatars-map">
-				<defs>
-					<pattern id="avatar1" patternUnits="userSpaceOnUse" width="420" height="420">
-						<image xlink:href="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>nandy-avatar.jpg" x="0" y="0" width="200" height="200"></image>
-					</pattern>
-					<pattern id="avatar2" patternUnits="userSpaceOnUse" width="420" height="420">
-						<image xlink:href="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>andrzej-avatar.jpg" x="220" y="60" width="200" height="200"></image>
-					</pattern>
-					<pattern id="avatar3" patternUnits="userSpaceOnUse" width="420" height="420">
-						<image xlink:href="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>michal-avatar.jpg" x="60" y="220" width="200" height="200"></image>
-					</pattern>
-				</defs>
-				'''<a xlink:href="">
-					<circle cx="100" cy="100" r="100" fill="url(#avatar1)"></circle>
-					<circle cx="100" cy="100" r="100" class="hover-color"></circle>
-					<foreignObject width="200px" height="200px" class="name-container">
-						<!-- HTML begin -->
-						<div class="name">
-							<p>nAndy</p>
-						</div>
-						<!-- HTML end -->
-					</foreignObject>
-				</a>'''
-				'''<a xlink:href="">
-					<circle cx="320" cy="160" r="100" fill="url(#avatar2)"></circle>
-					<circle cx="320" cy="160" r="100" class="hover-color"></circle>
-					<foreignObject width="200px" height="200px" x="220" y="60" class="name-container">
-						<!-- HTML begin -->
-						<div class="name">
-							<p>Andrzej</p>
-						</div>
-						<!-- HTML end -->
-					</foreignObject>
-				</a>'''
-				'''<a xlink:href="">
-					<circle cx="160" cy="320" r="100" fill="url(#avatar3)"></circle>
-					<circle cx="160" cy="320" r="100" class="hover-color"></circle>
-					<foreignObject width="200px" height="200px" x="60" y="220" class="name-container">
-						<!-- HTML begin -->
-						<div class="name">
-							<p>Michał</p>
-						</div>
-						<!-- HTML end -->
-					</foreignObject>
-				</a>'''
-			</svg>
-
+		<h2>Meet our coworkers</h2>
+		<div class="flexslider">
+			<ul class="slides">
+				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakub.png">
+					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4"><img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakub.png" alt="jakub" class="person-picture" /></div>
+					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
+						<h3>Jakub</h3>
+						<p>Knows how to get along with people. Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do dolores eos qui ratione voluptatem.</p>
+						<a href="" class="btn-wikia-gray-blue btn-arrow"><span>See his path</span></a>
+					</div>
+				</li>
+				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakub.png">
+					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4"><img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakub.png" alt="jakub" class="person-picture" /></div>
+					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
+						<h3>Jakub</h3>
+						<p>Knows how to get along with people. Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do dolores eos qui ratione voluptatem.</p>
+						<a href="" class="btn-wikia-gray-blue btn-arrow"><span>See his path</span></a>
+					</div>
+				</li>
+				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakub.png">
+					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4"><img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakub.png" alt="jakub" class="person-picture" /></div>
+					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
+						<h3>Jakub</h3>
+						<p>Knows how to get along with people. Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do dolores eos qui ratione voluptatem.</p>
+						<a href="" class="btn-wikia-gray-blue btn-arrow"><span>See his path</span></a>
+					</div>
+				</li>
+			</ul>
 		</div>
 
-		<div class="col-lg-5 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
-			<h2>Meet our coworkers and&nbsp;their work</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
-		</div>
+		<script>
+			$(document).ready(function(){
+				$('.flexslider').flexslider({
+					animation: "slide",
+					controlNav: "thumbnails",
+					nextText: '',
+					prevText: '',
+					slideshow: false,
+					start: function(slider){
+						$('body').removeClass('loading');
+					}
+				});
+			});
+		</script>
+
+
 
 	</div>
 </section>
 
 
-<section class="container benefits-description">
-	<div class="row">
-		<h2>Korzyści z pracy w Wikia</h2>
-		<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
-			<div class="benefit-header">
-				<span class="feature-icon-01"></span>
-				<h3>Rozwój z Wikia</h3>
+<section class="benefits-description">
+	<div class="container">
+		<div class="row">
+			<h2>Korzyści z pracy w Wikia</h2>
+			<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
+				<div class="benefit-header">
+					<span class="feature-icon-01"></span>
+					<h3>Rozwój z Wikia</h3>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
 			</div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
-		</div>
-		<div class="col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
-			<div class="benefit-header">
-				<span class="feature-icon-02"></span>
-				<h3>Wyjazd do San Francisco</h3>
+			<div class="col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
+				<div class="benefit-header">
+					<span class="feature-icon-02"></span>
+					<h3>Wyjazd do San Francisco</h3>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
 			</div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
-		</div>
-		<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
-			<div class="benefit-header">
-				<span class="feature-icon-03"></span>
-				<h3>Rodzina</h3>
+			<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
+				<div class="benefit-header">
+					<span class="feature-icon-03"></span>
+					<h3>Rodzina</h3>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
 			</div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
-		</div>
-		<div class="col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
-			<div class="benefit-header">
-				<span class="feature-icon-04"></span>
-				<h3>Dbamy o Ciebie</h3>
+			<div class="col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
+				<div class="benefit-header">
+					<span class="feature-icon-04"></span>
+					<h3>Dbamy o Ciebie</h3>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
 			</div>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
 		</div>
 	</div>
 </section>
@@ -148,7 +141,7 @@
 	<div class="row">
 		<div class="col-sm-6 col-lg-12">
 		<div class="middled">
-			<h1 class="site-header-message">Are you ready to join?</h1>
+			<h2 class="site-header-message">Are you ready to join?</h2>
 			<div class="btn-wikia-white btn-arrow"><span>View our current openings</span></div>
 		</div>
 		</div>
