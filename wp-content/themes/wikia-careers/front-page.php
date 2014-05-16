@@ -105,33 +105,25 @@
 	<div class="container">
 		<div class="row">
 			<h2>Korzyści z pracy w Wikia</h2>
-			<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
-				<div class="benefit-header">
-					<span class="feature-icon-01"></span>
-					<h3>Rozwój z Wikia</h3>
-				</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
+			<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4 benefit-item">
+				<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>benefits1.jpg" alt="Rozwój" />
+				<h3>Rozwój w Wikia</h3>
+				<p>	Wikia dba o Twój rozwój - wybierz dwie konferencje w ciągu roku, a firma sfinansuje Twoje w niej uczestnictwo, przejazd i zakwaterowanie.</p>
 			</div>
-			<div class="col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
-				<div class="benefit-header">
-					<span class="feature-icon-02"></span>
-					<h3>Wyjazd do San Francisco</h3>
-				</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
+			<div class="col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4 benefit-item">
+				<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>benefits2.jpg" alt="Rozwój" />
+				<h3>Wyjazd do San Francisco</h3>
+				<p>Raz w roku wybierzesz się z nami do San Francisco - w odwiedziny do naszego biura macierzystego.</p>
 			</div>
-			<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
-				<div class="benefit-header">
-					<span class="feature-icon-03"></span>
-					<h3>Rodzina</h3>
-				</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
+			<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4 benefit-item">
+				<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>benefits3.jpg" alt="Rozwój" />
+				<h3>Rodzina</h3>
+				<p>Wikia organizuje wiele eventów rodzinnych - pikniki, imprezy, "wikilie" - jesteśmy family friendly.</p>
 			</div>
-			<div class="col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4">
-				<div class="benefit-header">
-					<span class="feature-icon-04"></span>
-					<h3>Dbamy o Ciebie</h3>
-				</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum pharetra dolor, eu pharetra magna consectetur a. Nullam vestibulum viverra sapien, quis ultrices diam hendrerit eu. Etiam ultricies eu eros vitae hendrerit. Ut consectetur, lorem facilisis pretium iaculis.</p>
+			<div class="col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4 benefit-item">
+				<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>benefits4.jpg" alt="Rozwój" />
+				<h3>Dbamy o Ciebie</h3>
+				<p>W trakcie pracy dbamy o Twoje sampoczucie - w naszej zawsze pełnej spiżarni znajdziesz owoce, przekąski, słodycze, napoje, by się pożywić i orzeźwić.</p>
 			</div>
 		</div>
 	</div>

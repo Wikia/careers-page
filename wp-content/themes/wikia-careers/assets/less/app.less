@@ -264,57 +264,30 @@ html, body {
 
 /* Benefits section */
 
-@benefits-icon-height: 118px;
-@benefits-icon-width: 98px;
-@space-for-image: @benefits-icon-width + @grid-gutter-width;
-
-.benefit-header {
-  padding-left: @space-for-image;
-  padding-top: 4em;
-  position: relative;
-}
-
 .benefits-description {
   background-color: @gray-superlight;
   padding-bottom: 64px;
   padding-top: 44px;
 
-  p {
-    margin-left: @space-for-image;
+  .benefit-item {
+    margin-top: 5em;
+
+    &:nth-child(2n) {
+      clear: both;
+    }
+  }
+
+  img {
+    max-width: 100%;
   }
 
   h2 {
-    font-weight: bold;
+    .strong;
     text-align: center;
   }
 
   h3 {
     color: @brand-secondary;
-    margin-bottom: 1em;
-  }
-
-  [class*="feature-icon-"] {
-    .alignleft;
-    background: url('../img/features-icons.jpg') no-repeat;
-    display: inline-block;
-    height: @benefits-icon-height;
-    left: 0;
-    margin-bottom: auto;
-    position: absolute;
-    top: 3em;
-    width: @benefits-icon-width;
-  }
-
-  .feature-icon-02 {
-    background-position: -98px 0;
-  }
-
-  .feature-icon-03 {
-    background-position: 0 -118px;
-  }
-
-  .feature-icon-04 {
-    background-position: -98px -118px;
   }
 }
 
