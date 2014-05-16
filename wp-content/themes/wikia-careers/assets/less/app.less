@@ -439,20 +439,38 @@ html, body {
   background: #f2f2f2;
   padding-bottom: 30px;
   padding-top: 30px;
-}
 
-.quick-contact form {
-  margin-top: 2em;
+  form {
+    margin-top: 2em;
+  }
 }
 
 .submit-group  {
   margin-top: 13px;
-}
-.submit-group button[type="submit"] {
-  float: right;
+
+  button[type="submit"],
+  input[type="submit"] {
+    .icon-chevron-gray;
+    background-position: calc(~"100% - 12px") 50%;
+    background-size: 9px;
+    float: right;
+    padding: 0 33px 0 15px;
+  }
 }
 
 .submit-group .help-block {
+  color: @brand-teritary;
+  font-size: @font-size-xsmall;
+}
+
+div.wpcf7 img.ajax-loader {
+  float: right;
+  margin-right: 20px;
+  margin-top: 13px;
+  vertical-align: middle;
+}
+
+span.wpcf7-not-valid-tip {
   color: @brand-teritary;
   font-size: @font-size-xsmall;
 }

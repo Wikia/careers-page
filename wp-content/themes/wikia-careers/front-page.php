@@ -151,27 +151,7 @@
 				</div>
 				<div class="col-xxs-4 col-xs-4 col-sm-4 col-md-8 col-lg-8">
 
-					<form role="form">
-						<div class="form-group col-xxs-4 col-xs-2 col-sm-3 col-md-5 col-lg-5">
-							<label for="qcSenderName">Tell us Your name</label>
-							<input type="text" class="form-control" id="qcSenderName" name="qcSenderName">
-						</div>
-						<div class="form-group col-xxs-4 col-xs-2 col-sm-3 col-md-7 col-lg-7">
-							<label for="qcEmail">Provide an e-mail</label>
-							<input type="email" class="form-control" id="qcEmail" name="qcEmail">
-						</div>
-						<div class="form-group col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-12">
-							<label for="qcCv">Link to Your CV</label>
-							<input type="url" class="form-control" id="qcCv" name="qcCv">
-						</div>
-						<div class="form-group col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-12">
-							<label for="qcMessage"></label>
-							<textarea class="form-control" id="qcMessage" name="qcMessage" placeholder="Tell us what opportunities you're interested in"></textarea>
-						</div>
-						<div class="form-group col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-12 submit-group">
-							<button type="submit" class="btn-wikia-regular btn-arrow"><span>Send</span></button><span class="help-block">* These fields are required</span>
-						</div>
-					</form>
+					<?php if ( dynamic_sidebar('quick_contact_form') )  : endif; ?>
 
 				</div>
 			</div>

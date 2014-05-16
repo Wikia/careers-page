@@ -78,10 +78,11 @@ add_action('customize_register', 'wikia_careers_theme_customizer');
 
 
 /**
- * Register main widgetized area.
+ * Register widgets areas.
  *
  */
 function arphabet_widgets_init() {
+	/* Register main widgetized area */
 	register_sidebar( array(
 		'name' => 'Home main area',
 		'id' => 'home_main_widget',
@@ -90,9 +91,23 @@ function arphabet_widgets_init() {
 		'before_title' => '<h2 class="rounded">',
 		'after_title' => '</h2>',
 	) );
+
+	/* Register quick contact form area*/
+	register_sidebar( array(
+		'name' => 'Quick contact form',
+		'id' => 'quick_contact_form',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="rounded">',
+		'after_title' => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
+
+/**
+ * Add excerpts to pages
+ */
 add_action( 'init', 'my_add_excerpts_to_pages' );
 function my_add_excerpts_to_pages() {
 	add_post_type_support( 'page', 'excerpt' );
