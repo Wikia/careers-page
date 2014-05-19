@@ -88,11 +88,12 @@ html, body {
   }
 
   .btn-wikia-light {
+    .btn-arrow;
     margin-top:23px;
     margin-right: 13px;
     float: right;
     height: auto;
-    padding: 0;
+//    padding: 0;
     text-transform: none;
 
     &:hover {
@@ -128,24 +129,43 @@ html, body {
 }
 
 .btn-arrow {
-  padding:0;
-}
-.btn-arrow span {
-  .icon-chevron-gray;
-  display: block;
+  .icon-chevron-brand_prim;
   background-position: calc(~"100% - 12px") 50%;
   background-size: 9px;
   padding: 0 33px 0 15px;
+
+  &.btn-wikia-white {
+    .icon-chevron-white;
+  }
+
+  &.btn-wikia-gray-blue,
+  &.btn-wikia-regular {
+    .icon-chevron-gray;
+  }
+
+  &.btn-wikia-light {
+    .icon-chevron-gray_light;
+  }
+
+  &.btn-wikia-white {
+    .icon-chevron-white;
+  }
+
+  /* Arrow hovers */
+
+  &:hover {
+    .icon-chevron-white;
+  }
+
+  &.btn-wikia:hover,
+  &.btn-wikia-gray-blue:hover,
+  &.btn-wikia-light:hover,
+  &.btn-wikia-regular:hover {
+    .icon-chevron-white;
+  }
 }
 
-.btn-arrow span:hover {
-  .icon-chevron-white;
-}
-
-.btn-arrow.btn-wikia-white span {
-  .icon-chevron-white;
-}
-
+/* Contact button */
 .btn-envelope {
   .icon-icon-envelope-white;
   background-position: 10px 50%;
@@ -173,31 +193,6 @@ html, body {
   color: @brand-secondary;
   transition: all .2s linear;
 }
-
-.btn-arrow.btn-wikia span {
-  .icon-chevron-brand_prim;
-}
-
-.btn-arrow.btn-wikia-white span {
-  .icon-chevron-white;
-}
-
-.btn-wikia-gray-blue.btn-arrow span,
-.btn-wikia-regular.btn-arrow span {
-  .icon-chevron-gray;
-}
-
-.btn-wikia.btn-arrow:hover span,
-.btn-wikia-gray-blue.btn-arrow:hover span,
-.btn-wikia-light.btn-arrow:hover span,
-.btn-wikia-regular.btn-arrow:hover span {
-  .icon-chevron-white;
-}
-
-.btn-wikia-light.btn-arrow span {
-  .icon-chevron-gray_light;
-}
-
 
 
 
@@ -1056,7 +1051,8 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     float: none;
   }
 
-  #navigation-nav-ul-a {
+  /* Mobile navigation links mixins */
+  .mobile-nav-link() {
     .icon-chevron-gray;
     background-position:248px 50%;
     border-left: 5px solid #fff;
@@ -1065,19 +1061,21 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     line-height: (@line-height-computed-sm * 2);
   }
 
-  .navigation nav ul a {
-    #navigation-nav-ul-a;
-  }
-
-  #navigation-nav-ul-a-hover {
+  .mobile-nav-link-hover() {
     border-left: 5px solid @brand-secondary;
     border-bottom: 0;
     font-weight: bold;
   }
 
+  .navigation nav ul a {
+    .mobile-nav-link;
+  }
+
+
+
   .navigation nav ul a:hover,
   .navigation nav ul .active a {
-    #navigation-nav-ul-a-hover;
+    .mobile-nav-link-hover;
   }
 
     .navigation .menu-button {
@@ -1095,7 +1093,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
   .navigation nav a.btn-wikia-light {
     border: 0;
-    #navigation-nav-ul-a;
+    .mobile-nav-link;
     background-color: transparent;
     border-radius: 0;
     color: @brand-secondary;
@@ -1107,13 +1105,9 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     transition: none;
   }
 
-  .navigation .btn-wikia-light:hover {
-    #navigation-nav-ul-a-hover;
-  }
-
-  .navigation .btn-wikia-light.btn-arrow span{
-    background:transparent;
-    padding: 0;
+  .navigation .btn-wikia-light.btn-arrow:hover {
+    .icon-chevron-gray;
+    .mobile-nav-link-hover;
   }
 
   .modal.job-offer-modal {

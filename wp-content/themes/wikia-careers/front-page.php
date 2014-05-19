@@ -5,17 +5,17 @@
 		<div class="col-xs-4 col-sm-6 col-md-4 col-lg-4 page-item-47">
 			<h2>Advertising Software Engineer</h2>
 			<p>We're striving to understand not only this world, but also every fictional world, game setting and movie universe. That's a lot of data to handle. </p>
-			<div class="btn-container"><a href="advertising-software-engineer" class="btn-wikia btn-arrow"><span>Poczytaj więcej</span></a></div>
+			<div class="btn-container"><a href="advertising-software-engineer" class="btn-wikia btn-arrow">Poczytaj więcej</a></div>
 		</div>
 		<div class="col-xs-4 col-sm-6 col-md-4 col-lg-4 page-item-19">
 			<h2>Technical Operations Team Leader</h2>
 			<p>Wikia is running one of the most visited websites in the US, the go-to destination for information about anything you're passionate about.</p>
-			<div class="btn-container"><a href="technical-operations-team-leader" class="btn-wikia btn-arrow"><span>Poczytaj więcej</span></a></div>
+			<div class="btn-container"><a href="technical-operations-team-leader" class="btn-wikia btn-arrow">Poczytaj więcej</a></div>
 		</div>
 		<div class="col-xs-4 col-sm-6 col-md-4 col-lg-4 page-item-13">
 			<h2>Mobile Web Developer</h2>
 			<p>As the mobile web grows, Wikia grows with it, and with an ever-growing portion of our users going mobile we push.</p>
-			<div class="btn-container"><a href="" class="btn-wikia btn-arrow"><span>Poczytaj więcej</span></a></div>
+			<div class="btn-container"><a href="" class="btn-wikia btn-arrow">Poczytaj więcej</a></div>
 		</div>
 	</div>
 </section>
@@ -58,7 +58,7 @@
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
 						<h3>Jakub</h3>
 						<p>Knows how to get along with people. Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do dolores eos qui ratione voluptatem.</p>
-						<a href="" class="btn-wikia-gray-blue btn-arrow"><span>See his path</span></a>
+						<a href="" class="btn-wikia-gray-blue btn-arrow">See his path</a>
 					</div>
 				</li>
 				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>federico.jpg">
@@ -66,7 +66,7 @@
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
 						<h3>Federico</h3>
 						<p>Knows how to get along with people. Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do dolores eos qui  sed do dolores eos qui ratione voluptatem.</p>
-						<a href="" class="btn-wikia-gray-blue btn-arrow"><span>See his path</span></a>
+						<a href="" class="btn-wikia-gray-blue btn-arrow">See his path</a>
 					</div>
 				</li>
 				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubk.jpg">
@@ -74,7 +74,7 @@
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
 						<h3>Jakub</h3>
 						<p>Knows how to get along with people. Conse ctetur adipisicing elit, sed do dolores eos qui ratione voluptatem.</p>
-						<a href="" class="btn-wikia-gray-blue btn-arrow"><span>See his path</span></a>
+						<a href="" class="btn-wikia-gray-blue btn-arrow">See his path</a>
 					</div>
 				</li>
 			</ul>
@@ -134,7 +134,7 @@
 		<div class="col-sm-6 col-lg-12">
 		<div class="middled">
 			<h2 class="site-header-message">Are you ready to join?</h2>
-			<div class="btn-wikia-white btn-arrow"><span>View our current openings</span></div>
+			<div class="btn-wikia-white btn-arrow">View our current openings</div>
 		</div>
 		</div>
 	</div>
@@ -147,7 +147,7 @@
 				<div class="col-xxs-4 col-xs-4 col-sm-2 col-md-4 col-lg-4">
 					<h2>Quick form for sending your CV</h2>
 					<p>Apply using your</p>
-					<div class="btn-wikia-regular btn-arrow"><span><strong>LinkedIn</strong> account</span></div>
+					<div class="btn-wikia-regular btn-arrow"><strong>LinkedIn</strong> account</div>
 				</div>
 				<div class="col-xxs-4 col-xs-4 col-sm-4 col-md-8 col-lg-8">
 

@@ -42,7 +42,7 @@ Template Name: Parent page template
 							<div class="modal-content">
 															<button type="button" class="go-back" data-dismiss="modal" aria-hidden="true">Powrót</button>
 								<div class="modal-header">
-									<button class="btn-wikia btn-arrow alignright"><span>Aplikuj</span></button>
+									<button class="btn-wikia btn-arrow alignright">Aplikuj</button>
 									<h2 class="modal-title" id="myModalLabel">$post_title</h2>
 									<p class="short-descr">Lokalizacja lub nazwa zespołu</p>
 								</div>
@@ -77,7 +77,7 @@ HTML;
 				<h2><strong>nAndy</strong> - pierwszoligowy gracz</h2>
 				<p>Lus aspedi volo qui cullanis dolo tenim rest liquodicia nonsernam veleseque
 					soluptaque volupta dus doluptas debit, autescientur asitisq uatibus dandelit.</p>
-				<a href="" class="btn-wikia-regular btn-arrow"><span>Zobacz jego ścieżkę</span></a>
+				<a href="" class="btn-wikia-regular btn-arrow">Zobacz jego ścieżkę</a>
 			</div>
 		</div>
 	</div>

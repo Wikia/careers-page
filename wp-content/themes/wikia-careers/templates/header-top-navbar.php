@@ -9,7 +9,7 @@
 								wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
 							endif;
 							?>
-							<a href="http://wikia.com/" class="btn-wikia-light btn-arrow"><span>Zobacz wikia.com</span></a>
+							<a href="http://wikia.com/" class="btn-wikia-light btn-arrow">Zobacz wikia.com</a>
 						</nav>
 					</div>
 				</div>
@@ -51,7 +51,7 @@
 				<?php if ( get_theme_mod( 'wikia_careers_header_button' ) ) : ?>
 					<!-- header background message -->
 				<?php endif; ?>
-					<div class="btn-wikia-white btn-arrow"><span><?php echo get_theme_mod( 'wikia_careers_header_button' ); ?></span></div>
+					<div class="btn-wikia-white btn-arrow"><?php echo get_theme_mod( 'wikia_careers_header_button' ); ?></div>
 					</div>
 				</div>
 			</div>
