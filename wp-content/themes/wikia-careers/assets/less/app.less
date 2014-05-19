@@ -454,6 +454,8 @@ html, body {
     background-position: calc(~"100% - 12px") 50%;
     background-size: 9px;
     float: right;
+    height: @btn-default-height;
+    margin-bottom: 2rem;
     padding: 0 33px 0 15px;
   }
 }
@@ -463,6 +465,7 @@ html, body {
   font-size: @font-size-xsmall;
 }
 
+/* Adjusting styles for contact 7 from plugin generated form */
 div.wpcf7 img.ajax-loader {
   float: right;
   margin-right: 20px;
@@ -473,6 +476,20 @@ div.wpcf7 img.ajax-loader {
 span.wpcf7-not-valid-tip {
   color: @brand-teritary;
   font-size: @font-size-xsmall;
+}
+
+span.wpcf7-form-control-wrap {
+  width: 100%;
+}
+
+div.wpcf7-mail-sent-ok,
+div.wpcf7-validation-errors {
+  border: 0;
+}
+
+div.wpcf7-response-output {
+  margin-top: 0;
+  text-align: center;
 }
 
 
