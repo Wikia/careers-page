@@ -103,6 +103,19 @@
   );
 }
 
+.btn-wikia-regular {
+  .btn;
+  .button-wikia(
+    @gray,
+    @btn-wikia-light-colorhover,
+    @btn-wikia-light-bg,
+    @gray,
+    @gray,
+    @btn-wikia-light-borderhover,
+    @btn-wikia-light-border-width
+  );
+}
+
 .btn-wikia-white {
   .btn;
   .button-wikia(
@@ -111,6 +124,19 @@
     transparent,
     @brand-secondary,
     #fff,
+    @brand-secondary,
+    1px
+  );
+}
+
+.btn-wikia-gray-blue {
+  .btn;
+  .button-wikia(
+    @gray,
+    #fff,
+    transparent,
+    @brand-secondary,
+    @gray,
     @brand-secondary,
     1px
   );
@@ -169,7 +195,7 @@
   .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
 }
 .btn-xs {
-  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-xsmall; @line-height-small; @border-radius-small);
 }
 
 

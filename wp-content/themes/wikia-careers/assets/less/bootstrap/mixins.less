@@ -554,7 +554,7 @@
   background-color: @background;
   border-width: @borderwidth;
   border-color: @border;
-  transition: all .2s linear;
+  transition: background-color .2s linear;
 
   &:hover,
   &:focus,
@@ -562,7 +562,7 @@
   &.active,
   .open .dropdown-toggle& {
     color: @colorhover;
-    background-color: rgba(red(@backgroundhover), green(@backgroundhover), blue(@backgroundhover), 1);;
+    background-color: rgba(red(@backgroundhover), green(@backgroundhover), blue(@backgroundhover), 1);
     border-color: @borderhover;
   }
   &:active,
