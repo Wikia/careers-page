@@ -127,11 +127,9 @@
 
 <section class="container-fluid join-us">
 	<div class="row">
-		<div class="col-sm-6 col-lg-12">
-		<div class="middled">
+		<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-12">
 			<h2 class="site-header-message">Are you ready to join?</h2>
 			<a href="<?php echo home_url(); ?>/kariera" class="btn-wikia-white btn-arrow">View our current openings</a>
-		</div>
 		</div>
 	</div>
 </section>
