@@ -325,28 +325,63 @@ html, body {
   padding-bottom: 70px;
   padding-top: 50px;
   text-align: center;
+
+  h2 {
+    font-family: @font-family-base;
+    font-size: @font-size-h3;
+    line-height: @line-height-computed-h3;
+  }
+
+  .btn-container {
+    padding: 2.5rem 0;
+  }
 }
 
-.job-offers .row {
-  display: flex;
+@media (min-width: @screen-md-min) {
+
+  .job-offers {
+    padding-top: 80px;
+
+    h2 {
+      align-items: flex-end;
+      display: flex;
+      height: @line-height-computed-h3 * 2;
+      justify-content: space-around;
+      margin-top: 0;
+      overflow: hidden;
+    }
+
+    .offers-paper {
+      -moz-column-count: 3;
+      -moz-column-gap: @grid-md-gutter-width;
+      -webkit-column-count: 3;
+      -webkit-column-gap:@grid-md-gutter-width;
+      column-count: 3;
+      column-gap: @grid-md-gutter-width;
+      margin: 0;
+    }
+
+    p {
+      -moz-column-break-inside:avoid;
+      -ms-column-break-inside:avoid;
+      -o-column-break-inside:avoid;
+      -webkit-column-break-inside:avoid;
+      column-break-inside:avoid;
+      height: @line-height-computed * 4;
+      overflow: hidden;
+    }
+
+    .btn-container {
+      -moz-column-break-after:always;
+      -ms-column-break-after:always;
+      -o-column-break-after:always;
+      -webkit-column-break-after:always;
+      column-break-after:always;
+      margin-top: auto;
+    }
+  }
+
 }
-
-.job-offers [class*="col-"] {
-  display: flex;
-  flex-flow: column;
-}
-
-
-.job-offers h2 {
-  font-family: @font-family-base;
-  font-size: @font-size-h3;
-  line-height: @line-height-computed-h3;
-}
-
-.btn-container {
-  margin-top: auto;
-}
-
 
 /* ==========================================================================
    Stats section
