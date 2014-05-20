@@ -21,7 +21,7 @@ module.exports = function(grunt) {
           cwd: 'assets/img/svg/raw',
           src: ['*.svg'],
           dest: 'assets/img/svg/compressed',
-          ext: '.colors-light-danger-success-white-gray-gray_light.svg'
+          ext: '.colors-light-brand_prim-white-gray-gray_light.svg'
       }
     },
     grunticon: { //makes SVG icons into a CSS file
@@ -36,8 +36,7 @@ module.exports = function(grunt) {
               cssprefix: '.icon-',
               colors: {
                   light: '#ccc',
-                  danger: '#ed3921',
-                  success: '#8DC63F',
+                  brand_prim: '#0a5fa3',
                   white: '#fff',
                   gray: '#555',
                   gray_light: '#9b9b9b'
@@ -88,6 +87,7 @@ module.exports = function(grunt) {
             'assets/js/plugins/bootstrap/scrollspy.js',
             'assets/js/plugins/bootstrap/tab.js',
             'assets/js/plugins/bootstrap/affix.js',
+            'assets/js/plugins/flexslider/jquery.flexslider.js',
             'assets/js/plugins/*.js',
             'assets/js/_*.js'
           ]

@@ -4,6 +4,8 @@
 
 @import "bootstrap/bootstrap.less";
 @import "../img/svg/output/icons.data.svg.less";
+@import "../css/flexslider/flexslider.css";
+@import "../css/flexslider/flexslider-wikia-custom.less";
 
 /* ==========================================================================
    Base
@@ -36,7 +38,7 @@ html, body {
 
 .navigation {
   background-color: #fff;
-  box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.15);
+  box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.08);
   display: table;
   height: @line-height-computed;
   position: relative;
@@ -54,6 +56,7 @@ html, body {
 
   .logo {
     .icon-wikia-logo;
+    .user-select(none);
     background-position: 50% 50%;
     background-size: contain;
     display: block;
@@ -78,45 +81,44 @@ html, body {
 
     &:hover {
       .icon-menu-icon-white;
-	  background-color: @brand-secondary;
+      background-color: @brand-secondary;
     }
 
     fill: @brand-secondary;
   }
 
   .btn-wikia-light {
+    .btn-arrow;
     margin-top:23px;
     margin-right: 13px;
     float: right;
     height: auto;
-    padding: 0;
+//    padding: 0;
     text-transform: none;
 
     &:hover {
-	  border-bottom-width: 1px;
+      border-bottom-width: 1px;
+      border-bottom-color: @btn-wikia-light-bghover;
     }
   }
 
   nav {
-	clear: none;
-	float: right;
-	font-size: 1.063em;
-	min-height: @line-height-computed * 3;
+    clear: none;
+    float: right;
+    min-height: @line-height-computed * 3;
 
-	ul {
-	  margin-right: 20px;
-	}
+    ul {
+      margin-right: 20px;
+    }
 
     a {
       line-height: (@line-height-computed * 3);
       height: (@line-height-computed * 3);
       padding: 0 20px;
-      text-transform: uppercase;
 
       &:hover,
       &.active {
         border-bottom: 5px solid @brand-secondary ;
-        background-color: transparent;
       }
 
       &.btn-wikia-light {
@@ -127,70 +129,81 @@ html, body {
 }
 
 .btn-arrow {
-  padding:0;
-}
-.btn-arrow span {
-  .icon-chevron-gray;
-  display: block;
-  background-position: 100% 50%;
-  background-size: 24px;
-  padding: 0 30px 0 15px;
+  .icon-chevron-brand_prim;
+  background-position: calc(~"100% - 12px") 50%;
+  background-size: 9px;
+  padding: 0 33px 0 15px;
+
+  &.btn-wikia-white {
+    .icon-chevron-white;
+  }
+
+  &.btn-wikia-gray-blue,
+  &.btn-wikia-regular {
+    .icon-chevron-gray;
+  }
+
+  &.btn-wikia-light {
+    .icon-chevron-gray_light;
+  }
+
+  &.btn-wikia-white {
+    .icon-chevron-white;
+  }
+
+  /* Arrow hovers */
+
+  &:hover {
+    .icon-chevron-white;
+  }
+
+  &.btn-wikia:hover,
+  &.btn-wikia-gray-blue:hover,
+  &.btn-wikia-light:hover,
+  &.btn-wikia-regular:hover {
+    .icon-chevron-white;
+  }
 }
 
-.btn-arrow span:hover {
-  .icon-chevron-white;
-}
-
-.btn-arrow.btn-wikia-white span {
-  .icon-chevron-white;
-}
-
+/* Contact button */
 .btn-envelope {
-  .icon-icon-envelope-white;
-  background-position: 10px 50%;
-  background-repeat: no-repeat;
   margin-bottom: @line-height-computed;
   margin-left: 60px;
   margin-top: @line-height-computed;
-  padding:0;
-  vertical-align: top;
-}
-
-.btn-envelope span {
-  border-left: 1px solid #fff;
-  display: block;
-  margin-left: 42px;
-  padding: 0 15px 0 15px;
-}
-
-.btn-envelope:hover {
-  border-color: #fff;
-}
-
-.btn-envelope:hover span {
-  background-color: #fff;
-  color: @brand-secondary;
+  padding: 0 15px 0 60px;
+  position: relative;
   transition: all .2s linear;
-}
+  vertical-align: top;
 
-.btn-arrow.btn-wikia-white span {
-  .icon-chevron-white;
-}
+  &::before {
+    .icon-icon-envelope-white;
+    background-color: @brand-secondary;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    border-bottom-left-radius: @border-radius-base;
+    border-right: 1px solid #fff;
+    border-top-left-radius: @border-radius-base;
+    content:"";
+    display: block;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0 30px 0 15px;
+    position: absolute;
+    top: 0;
+    transition: background-size .1s linear;
+  }
 
-.btn-wikia-regular.btn-arrow span {
-  .icon-chevron-gray;
-}
+  &:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: @brand-secondary;
 
-.btn-wikia-regular.btn-arrow:hover span {
-  .icon-chevron-white;
-}
-
-.btn-wikia-light.btn-arrow span {
-  .icon-chevron-gray_light;
-}
-
-.btn-wikia-light.btn-arrow:hover span {
-  .icon-chevron-white;
+    &::before {
+      background-size: 60%;
+    }
+  }
 }
 
 
@@ -199,8 +212,9 @@ html, body {
    Mainpage sections
    ========================================================================== */
 
-.dim {
-  background-color: rgba(0, 0, 0, 0.4);
+/* Dim background to cover photos behind text */
+.dim() {
+  background-color: rgba(0, 0, 0, 0.45);
 }
 
 /* Main header section */
@@ -218,14 +232,14 @@ html, body {
   text-align: center;
 }
 
-.site-header>.row {
+.site-header > .row {
   .dim;
   height: 100%;
   position: absolute;
   width: 100%;
 }
 
-.site-header>.row>div {
+.site-header > .row > div {
   display: table;
   height: 100%;
 }
@@ -239,12 +253,15 @@ html, body {
 .site-header-message,
 .site-header-sub-message {
   color: #fff;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
   text-align: center;
 }
 
+.site-header-message {
+  font-weight: bold;
+}
+
 .site-header-sub-message {
-  font-size: @font-size-h3;
+  font-size: @font-size-h4;
   margin-bottom: 35px;
 }
 
@@ -255,56 +272,31 @@ html, body {
 
 /* Benefits section */
 
-.benefits-banner {
-  background: url("../img/wikia-benefits.jpg") no-repeat 0 50%;
-  background-size: cover;
-  height: 260px;
-}
-
-.benefits-banner .row {
-  height: 100%;
-}
-
-.benefits-banner>.row>div {
-  display: table;
-  height: 100%;
-}
-
-.benefits-banner .middled {
-  display: table-cell;
-  height: 100%;
-  vertical-align: middle;
-}
-
 .benefits-description {
+  background-color: @gray-superlight;
   padding-bottom: 64px;
   padding-top: 44px;
-  text-align: center;
-}
 
-.benefits-description h3 {
-  color: @brand-secondary;
-  margin-top: 0;
-}
+  .benefit-item {
+    margin-top: 5em;
 
-.benefits-description [class*="feature-icon-"] {
-  background: url('../img/features-icons.jpg') no-repeat;
-  display: inline-block;
-  height: 53px;
-  margin-top: 1em;
-  width: 43px;
-}
+    &:nth-child(2n) {
+      clear: both;
+    }
+  }
 
-.benefits-description .feature-icon-02 {
-  background-position: -43px 0;
-}
+  img {
+    max-width: 100%;
+  }
 
-.benefits-description .feature-icon-03 {
-  background-position: -43px -53px;
-}
+  h2 {
+    .strong;
+    text-align: center;
+  }
 
-.benefits-description .feature-icon-04 {
-  background-position: 0 -53px;
+  h3 {
+    color: @brand-secondary;
+  }
 }
 
 
@@ -313,25 +305,22 @@ html, body {
 .join-us {
   background: url("../img/qaga.jpg") no-repeat 50% 50%;
   background-size: cover;
-  height: 345px;
+  height: 400px;
   text-align: center;
-}
 
-.join-us .row {
-  height: 100%;
-}
+  h2 {
+    .h1;
+    .site-header-message;
+    margin-bottom: 30px;
+  }
 
-.join-us>.row>div {
-  display: table;
-  height: 100%;
+  .row {
+    .dim;
+    align-items: center;
+    display: flex;
+    height: 100%;
+  }
 }
-
-.join-us .middled {
-  display: table-cell;
-  height: 100%;
-  vertical-align: middle;
-}
-
 
 
 /* ==========================================================================
@@ -341,26 +330,63 @@ html, body {
   padding-bottom: 70px;
   padding-top: 50px;
   text-align: center;
+
+  h2 {
+    font-family: @font-family-base;
+    font-size: @font-size-h3;
+    line-height: @line-height-computed-h3;
+  }
+
+  .btn-container {
+    padding: 2.5rem 0;
+  }
 }
 
-.job-offers .row {
-  display: flex;
+@media (min-width: @screen-md-min) {
+
+  .job-offers {
+    padding-top: 80px;
+
+    h2 {
+      align-items: flex-end;
+      display: flex;
+      height: @line-height-computed-h3 * 2;
+      justify-content: space-around;
+      margin-top: 0;
+      overflow: hidden;
+    }
+
+    .offers-paper {
+      -moz-column-count: 3;
+      -moz-column-gap: @grid-md-gutter-width;
+      -webkit-column-count: 3;
+      -webkit-column-gap:@grid-md-gutter-width;
+      column-count: 3;
+      column-gap: @grid-md-gutter-width;
+      margin: 0;
+    }
+
+    p {
+      -moz-column-break-inside:avoid;
+      -ms-column-break-inside:avoid;
+      -o-column-break-inside:avoid;
+      -webkit-column-break-inside:avoid;
+      column-break-inside:avoid;
+      height: @line-height-computed * 4;
+      overflow: hidden;
+    }
+
+    .btn-container {
+      -moz-column-break-after:always;
+      -ms-column-break-after:always;
+      -o-column-break-after:always;
+      -webkit-column-break-after:always;
+      column-break-after:always;
+      margin-top: auto;
+    }
+  }
+
 }
-
-.job-offers [class*="col-"] {
-  display: flex;
-  flex-flow: column;
-}
-
-
-.job-offers h2 {
-  font-family: @font-family-base;
-}
-
-.btn-container {
-  margin-top: auto;
-}
-
 
 /* ==========================================================================
    Stats section
@@ -368,90 +394,77 @@ html, body {
 .stats {
   background: @brand-secondary;
   color: #fff;
-  padding-top: 0;
+  padding-top: 1.11em;
+  padding-bottom: 3.6em;
   text-align: center;
+
+  .number-col {
+
+    &::after{
+      background: #fff;
+      bottom: 0;
+      content:"";
+      height: 80%;
+      position: absolute;
+      right: 0;
+      width: 1px;
+    }
+
+    &:last-child::after{
+      width: 0px;
+    }
+  }
+
+  .number {
+    display: block;
+    font-size: @font-size-h3;
+  }
 }
 
 .stats h2 {
+  font-size: @font-size-h1;
+  font-weight: bold;
   margin-bottom: 36px;
 }
 
 .stats h3 {
-  border-bottom: 1px solid #fff;
   display: inline-block;
   font-size: floor(@font-size-base * 0.9);
-  margin-bottom: 3em;
-  margin-top: 1.6em;
-  padding-bottom: 1.25em;
+  line-height: 1em;
+  margin-top: 1em;
+  margin-bottom: 0;
   text-transform: uppercase;
 }
-
-.stats .number {
-  display: block;
-  font-family: open_sanslight;
-  font-size: @font-size-h2;
-}
-
 
 
 /* ==========================================================================
    Career-paths section
    ========================================================================== */
 .career-paths {
-  padding-bottom: @line-height-computed * 3;
+  padding-bottom: 0;
   padding-top: @line-height-computed * 3;
+
+  h2 {
+    .h1;
+    font-weight: bold;
+    margin-bottom: 1.2em;
+    text-align: center;
+  }
+
+  h3 {
+    .h1;
+    color: @brand-secondary;
+    font-weight: bold;
+  }
 }
 
-.avatars-map-container {
-  text-align: center;
-}
 
-.avatars-map-container svg {
-  max-height: 420px;
-  max-width: 420px;
-}
-
-.avatars-map a {
-  text-decoration: none;
-}
-
-.avatars-map a circle {
-  transition: all .2s linear;
-}
-
-.avatars-map a circle {
-  box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.15);
-
-}
-
-.avatars-map a .hover-color {
-  fill: rgba(red(@brand-secondary), green(@brand-secondary), blue(@brand-secondary), 0);
-}
-.avatars-map a:hover .hover-color {
-  fill: rgba(red(@brand-secondary), green(@brand-secondary), blue(@brand-secondary), 1);
-}
-
-.avatars-map .name-container {
-  position: relative;
-  display: none;
-}
-
-.avatars-map a:hover .name-container {
-  display: block;
-}
-
-.avatars-map .name {
-  .h5;
-  color: #fff;
-  display: table-cell;
-  height: 200px;
-  padding: 10px;
-  width: 200px;
-  vertical-align: middle;
-}
-
-.avatars-map p {
-  margin: 0;
+/* career paths short - on subpages */
+.career-paths-short {
+  margin-bottom: 77px;
+  .avatar img {
+    width: 202px;
+  }
 }
 
 
@@ -461,22 +474,57 @@ html, body {
   background: #f2f2f2;
   padding-bottom: 30px;
   padding-top: 30px;
-}
 
-.quick-contact form {
-  margin-top: 2em;
+  form {
+    margin-top: 2em;
+  }
 }
 
 .submit-group  {
   margin-top: 13px;
-}
-.submit-group button[type="submit"] {
-  float: right;
+
+  button[type="submit"],
+  input[type="submit"] {
+    .icon-chevron-gray;
+    background-position: calc(~"100% - 12px") 50%;
+    background-size: 9px;
+    float: right;
+    height: @btn-default-height;
+    margin-bottom: 2rem;
+    padding: 0 33px 0 15px;
+  }
 }
 
 .submit-group .help-block {
   color: @brand-teritary;
-  font-size: @font-size-small;
+  font-size: @font-size-xsmall;
+}
+
+/* Adjusting styles for contact 7 from plugin generated form */
+div.wpcf7 img.ajax-loader {
+  float: right;
+  margin-right: 20px;
+  margin-top: 13px;
+  vertical-align: middle;
+}
+
+span.wpcf7-not-valid-tip {
+  color: @brand-teritary;
+  font-size: @font-size-xsmall;
+}
+
+span.wpcf7-form-control-wrap {
+  width: 100%;
+}
+
+div.wpcf7-mail-sent-ok,
+div.wpcf7-validation-errors {
+  border: 0;
+}
+
+div.wpcf7-response-output {
+  margin-top: 0;
+  text-align: center;
 }
 
 
@@ -489,42 +537,34 @@ html, body {
   line-height: @line-height-computed-sm;
   padding-bottom: 70px;
   padding-top: 35px;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.news-feed h2 {
+  .strong;
+	margin-bottom: 2rem;
 }
 
 .news-feed h3 {
-  font-size: @font-size-h3 * 0.7;
-  margin-bottom: 0.5em;
-  margin-top: 1em;
+  .h4;
+  .strong;
 }
 
 .news-feed .post-date {
   display: block;
-}
-
-.news-feed .date {
+  font-size: @font-size-small;
   font-weight: bold;
 }
 
-.news-feed .post-author img {
-  height: 1.5em;
-  vertical-align: middle;
+.news-feed .date {
+  font-weight: normal;
 }
 
-.news-feed .news-item {
-  background-size:cover;
-  background-repeat: no-repeat;
-  height: auto;
-  margin-bottom: 2em;
-  padding-bottom: 0;
-  position: relative;
-  overflow: hidden;
-  width:100%;
-}
+.news-item-container {
+  margin-top: 4rem;
 
-.news-feed .dim-xs-min>div {
-  .dim;
-  padding-bottom: 1em;
+  img {
+    max-width: 100%;
+  }
 }
 
 /* Contact for help section */
@@ -536,6 +576,7 @@ html, body {
 
 .contact-for-help h2 {
   display: inline-block;
+  font-size: @font-size-h3;
   margin-bottom: @line-height-computed;
   margin-top: @line-height-computed;
 }
@@ -548,6 +589,14 @@ html, body {
 
 .content { }
 
+.no-image-header {
+  background-color: @brand-secondary;
+}
+
+.strong,
+strong {
+  font-weight: bold;
+}
 
 
 /* ==========================================================================
@@ -567,6 +616,217 @@ html, body {
 
 .sidebar { }
 
+
+
+/* ==========================================================================
+   Parent page styles
+   ========================================================================== */
+.page-parent .content {
+
+  h1 {
+    font-size: @font-size-h4;
+    text-align: center;
+  }
+}
+
+.short-descr {
+  color: @btn-wikia-light-color;
+  font-size: @font-size-small;
+  margin-bottom: 0;
+}
+
+h1+.offer-item{
+  border-top: 1px solid @nav-tabs-border-color;
+  margin-top: 30px;
+}
+
+.offer-item {
+  border-bottom: 1px solid @nav-tabs-border-color;
+  cursor: pointer;
+  padding-top: 55px;
+  padding-bottom: 40px;
+  transition: all .5s linear;
+
+  &:hover {
+    background-color: @brand-secondary;
+  }
+
+  &:hover h2 {
+    color: #fff;
+  }
+
+  .container {
+    background: url('../img/arrow-right-offer.svg') no-repeat 100% 50%;
+    background-size: 22px;
+  }
+
+  h2 {
+    color: @brand-secondary;
+    font-size: @font-size-h3;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    transition: all .5s linear;
+  }
+}
+
+.modal-tab {
+  @modal-top-space: @line-height-computed * 3;
+  .container-fixed();
+  background: #fff;
+  display: none;
+  height: calc(~"100% - @{modal-top-space}");
+  overflow: auto;
+  padding: 25px;
+  position: fixed;
+  right: 0;
+  top: @modal-top-space;
+  width: 75%;
+}
+
+.modal-dim {
+  background-color: rgba(0,0,0,0.1);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.modal.job-offer-modal {
+  @line-height-computed-menu: @line-height-computed * 3;
+  height: calc(~"100% - @{line-height-computed-menu}");
+  margin-top: @line-height-computed-menu;
+  overflow-x: hidden;
+}
+
+.modal-backdrop.in {
+  filter: alpha(opacity=10);
+  opacity: .1;
+}
+
+.modal-content {
+  .gutter-left;
+  .gutter-right;
+  border: 0;
+  border-radius: 0;
+  min-height: 100%;
+  padding-top: 20px;
+}
+
+.modal-dialog {
+  margin: 0px 0 0 auto;
+  width: 75%;
+  min-height: 100%;
+  height: 100%;
+}
+
+.modal-header {
+  padding: 0;
+}
+
+.modal-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.go-back {
+  -webkit-appearance: none;
+  background: url('../img/arrow-left-offer.svg') no-repeat 0 0;
+  background-size: 23px;
+  border: 0;
+  color: @gray-light;
+  cursor: pointer;
+  font-size: @font-size-base;
+  padding: 0;
+  padding-left: 30px;
+
+  &:hover {
+    background-position: 0 -30px;
+    color: @gray;
+  }
+}
+
+
+/* ==========================================================================
+   Single Job Offer
+   ========================================================================== */
+
+.apply-bar {
+  border-bottom: 1px solid @nav-tabs-border-color;
+  line-height: 70px;
+  text-align: center;
+}
+
+.prev-next-nav {
+  height: 38px;
+  text-align: right;
+
+  &+section {
+    clear: both;
+  }
+
+  button {
+    background: #fff;
+    border: 0;
+    border-right: 1px solid @nav-tabs-border-color;
+    display: block;
+    float: right;
+    height: 38px;
+    width: 38px;
+
+    &:first-child {
+      border-right: 0;
+    }
+  }
+
+  .prev-next-buttons {
+    border: 1px solid @nav-tabs-border-color;
+    border-top: 0;
+    display: inline-block;
+    margin-left: -3 * 38px - 2;
+    z-index: @zindex-subnavbar-fixed;
+
+    &.affix {
+      float: none;
+      top: @line-height-computed * 3 - 1;
+
+      button {
+        border-top-width: 1px;
+        display: block;
+        float: right;
+      }
+      @media(max-width: @screen-sm-max) {
+        top: @line-height-computed-sm * 2 - 1;
+      }
+    }
+    &.affix-bottom {
+      position: absolute;
+    }
+  }
+}
+
+.tags {
+  margin-bottom: 2em;
+  padding: 0;
+
+  a {
+    color: @gray-light;
+  }
+  a:hover {
+    color: @brand-secondary;
+    text-decoration: none;
+  }
+  li {
+    display: inline-block;
+    padding-right: @grid-gutter-width;
+
+    &::before {
+      content: "• ";
+      color: @brand-secondary;
+    }
+  }
+}
 
 
 /* ==========================================================================
@@ -611,7 +871,6 @@ html, body {
 .footer-nav li {
   display: inline-block;
   list-style: none;
-
 }
 
 .footer-nav a {
@@ -664,8 +923,24 @@ html, body {
    ========================================================================== */
 
 .aligncenter { display: block; margin: 0 auto; }
-.alignleft {
-  float: left;
+
+.gutter-right {
+  padding-right: @grid-xxs-gutter-width;
+  @media (min-width: @screen-xs-min) {
+    padding-right: @grid-xs-gutter-width;
+  }
+  @media (min-width: @screen-sm-min) {
+    padding-right: @grid-sm-gutter-width;
+  }
+  @media (min-width: @screen-md-min) {
+    padding-right: @grid-md-gutter-width;
+  }
+  @media (min-width: @screen-lg-min) {
+    padding-right: @grid-lg-gutter-width;
+  }
+}
+
+.margin-right {
   margin-right: @grid-xxs-gutter-width;
   @media (min-width: @screen-xs-min) {
     margin-right: @grid-xs-gutter-width;
@@ -680,8 +955,24 @@ html, body {
     margin-right: @grid-lg-gutter-width;
   }
 }
-.alignright {
-  float: right;
+
+.gutter-left {
+  padding-left: @grid-xxs-gutter-width;
+  @media (min-width: @screen-xs-min) {
+    padding-left: @grid-xs-gutter-width;
+  }
+  @media (min-width: @screen-sm-min) {
+    padding-left: @grid-sm-gutter-width;
+  }
+  @media (min-width: @screen-md-min) {
+    padding-left: @grid-md-gutter-width;
+  }
+  @media (min-width: @screen-lg-min) {
+    padding-left: @grid-lg-gutter-width;
+  }
+}
+
+.margin-left {
   margin-left: @grid-xxs-gutter-width;
   @media (min-width: @screen-xs-min) {
     margin-left: @grid-xs-gutter-width;
@@ -696,6 +987,17 @@ html, body {
     margin-left: @grid-lg-gutter-width;
   }
 }
+
+.alignleft {
+  .margin-right;
+  float: left;
+}
+
+.alignright {
+  .margin-left;
+  float: right;
+}
+
 figure.alignnone { margin-left: 0; margin-right: 0; }
 
 
@@ -713,7 +1015,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 /* ==========================================================================
    Media @screen-md-min
    ========================================================================== */
-@media (max-width: @screen-md-max) {
+@media (max-width: @screen-sm-max) {
 
   .job-offers .row {
     flex-flow: wrap;
@@ -726,11 +1028,6 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     min-height: -webkit-calc(~"100% - @{site-header-lineheight-sm}");
   }
 
-  .avatars-map-container svg {
-    max-height: 320px;
-    max-width: 320px;
-  }
-
 /* ==========================================================================
    Navigation
    ========================================================================== */
@@ -741,8 +1038,9 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   }
 
   .navigation .nav-wrapper {
-    float: left;
     height: (@line-height-computed-sm * 2);
+    margin-top: (@line-height-computed-sm * 2);
+    position: fixed;
   }
 
   .navigation {
@@ -793,29 +1091,31 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     float: none;
   }
 
-  #navigation-nav-ul-a {
+  /* Mobile navigation links mixins */
+  .mobile-nav-link() {
     .icon-chevron-gray;
     background-position:248px 50%;
-    background-size: 24px;
     border-left: 5px solid #fff;
     display: block;
     height: (@line-height-computed-sm * 2);
     line-height: (@line-height-computed-sm * 2);
   }
 
-  .navigation nav ul a {
-    #navigation-nav-ul-a;
-  }
-
-  #navigation-nav-ul-a-hover {
+  .mobile-nav-link-hover() {
     border-left: 5px solid @brand-secondary;
     border-bottom: 0;
-    font-family: open_sansbold;
+    font-weight: bold;
   }
 
+  .navigation nav ul a {
+    .mobile-nav-link;
+  }
+
+
+
   .navigation nav ul a:hover,
-  .navigation nav ul a.active {
-    #navigation-nav-ul-a-hover;
+  .navigation nav ul .active a {
+    .mobile-nav-link-hover;
   }
 
     .navigation .menu-button {
@@ -831,9 +1131,9 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     width: 57px;
   }
 
-  .navigation a.btn-wikia-light {
+  .navigation nav a.btn-wikia-light {
     border: 0;
-    #navigation-nav-ul-a;
+    .mobile-nav-link;
     background-color: transparent;
     border-radius: 0;
     color: @brand-secondary;
@@ -842,17 +1142,18 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     margin-top: 35px;
     padding: 0 20px;
     text-align: left;
-    text-transform: uppercase;
     transition: none;
   }
 
-  .navigation .btn-wikia-light:hover {
-    #navigation-nav-ul-a-hover;
+  .navigation .btn-wikia-light.btn-arrow:hover {
+    .icon-chevron-gray;
+    .mobile-nav-link-hover;
   }
 
-  .navigation .btn-wikia-light.btn-arrow span{
-    background:transparent;
-    padding: 0;
+  .modal.job-offer-modal {
+    @line-height-computed-menu: @line-height-computed-sm * 2;
+    margin-top: @line-height-computed-menu;
+    height: calc(~"100% - @{line-height-computed-menu}");
   }
 
 }
@@ -887,35 +1188,17 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 }
 
+@media (max-width: @screen-xs-max) {
+
+  .career-paths {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+
+}
+
 
 @media (min-width: @screen-xs-min) {
-
-  .news-feed {
-    font-size: 0.8em;
-  }
-
-  .news-feed h3 {
-    margin-top: 1em;
-    font-size: @font-size-h3 * 0.8;
-  }
-
-  .news-feed .news-item {
-    background-size:100%;
-    height:0;
-    padding-bottom:40%;
-  }
-
-  .news-feed .dim-xs-min {
-    .dim;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  .news-feed .dim-xs-min>div {
-    background: transparent;
-  }
-
 
 }
 
@@ -925,21 +1208,19 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     margin-top: 0;
   }
 
-  .news-feed {
-    font-size: 0.8em;
-  }
+  /* career paths short - on subpages */
+  .career-paths-short {
+    display: table;
 
-  .news-feed .news-item {
-    margin-bottom: 0;
-    line-height: 1.6em;
-  }
+    .description, .avatar {
+      display: table-cell;
+      vertical-align: top;
+    }
 
-  .news-feed h3 {
-    font-size: @font-size-h3 * 0.8;
-    margin-bottom: 0.5em;
-    margin-top: 0.7em;
+    .avatar {
+      .gutter-right;
+    }
   }
-
 
 }
 
@@ -949,27 +1230,9 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     display: none;
   }
 
-  .news-feed {
-    font-size: 0.9em;
-    line-height: @line-height-computed;
-  }
-
-  .news-feed h3 {
-    font-size: @font-size-h3 * 0.9;
-    margin-top: 1.1em;
-  }
-
 }
 
 @media (min-width: @screen-lg-min) {
-
-  .news-feed {
-    font-size: 1em;
-  }
-
-  .news-feed h3 {
-    font-size: @font-size-h3;
-  }
 
   .navigation .nav-animation-wrapper {
     height: auto!important;
