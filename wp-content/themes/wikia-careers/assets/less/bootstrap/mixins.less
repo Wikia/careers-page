@@ -113,6 +113,14 @@
      border-top-left-radius: @radius;
 }
 
+// Border radius
+.border-radius(@radius) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -khtml-border-radius: @radius;
+  border-radius: @radius;
+}
+
 // Drop shadows
 //
 // Note: Deprecated `.box-shadow()` as of v3.1.0 since all of Bootstrap's
@@ -344,6 +352,13 @@
     background-image: -webkit-linear-gradient(@angle, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
     background-image: linear-gradient(@angle, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
   }
+  .hard-two-colors(@start-color: @brand-secondary; @end-color: rgba(0,0,0,0); @color-begin: 50%; @color-stop: 0px){
+    background-image: -webkit-linear-gradient(bottom, @start-color @color-begin, @end-color @color-stop);
+    background-image: -moz-linear-gradient(bottom, @start-color @color-begin, @end-color @color-stop);
+    background-image: -o-linear-gradient(bottom, @start-color @color-begin, @end-color @color-stop);
+    background-image: -ms-linear-gradient(bottom, @start-color @color-begin, @end-color @color-stop);
+    background-image: linear-gradient(bottom, @start-color @color-begin, @end-color @color-stop);
+  }
 }
 
 // Reset filters for IE
@@ -525,6 +540,45 @@
     &.active {
       background-color: @background;
           border-color: @border;
+    }
+  }
+
+  .badge {
+    color: @background;
+    background-color: @color;
+  }
+}
+
+.button-wikia(@color; @colorhover; @background; @backgroundhover; @border; @borderhover; @borderwidth) {
+  color: @color;
+  background-color: @background;
+  border-width: @borderwidth;
+  border-color: @border;
+  transition: background-color .2s linear;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    color: @colorhover;
+    background-color: rgba(red(@backgroundhover), green(@backgroundhover), blue(@backgroundhover), 1);
+    border-color: @borderhover;
+  }
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: @background;
     }
   }
 

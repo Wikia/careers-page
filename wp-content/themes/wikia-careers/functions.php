@@ -61,15 +61,28 @@ function wikia_careers_theme_customizer( $wp_customize ) {
 		'section'  => 'wikia_careers_header_desc_section',
 		'settings' => 'wikia_careers_header_desc',
 	) ) );
+	$wp_customize->add_setting( 'wikia_careers_header_desc_sub' );
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wikia_careers_header_desc_sub', array(
+		'label'    => __( 'Header sub message', 'wikia_careers' ),
+		'section'  => 'wikia_careers_header_desc_section',
+		'settings' => 'wikia_careers_header_desc_sub',
+	) ) );
+	$wp_customize->add_setting( 'wikia_careers_header_button' );
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'wikia_careers_header_button', array(
+		'label'    => __( 'Header button text', 'wikia_careers' ),
+		'section'  => 'wikia_careers_header_desc_section',
+		'settings' => 'wikia_careers_header_button',
+	) ) );
 }
 add_action('customize_register', 'wikia_careers_theme_customizer');
 
 
 /**
- * Register main widgetized area.
+ * Register widgets areas.
  *
  */
 function arphabet_widgets_init() {
+	/* Register main widgetized area */
 	register_sidebar( array(
 		'name' => 'Home main area',
 		'id' => 'home_main_widget',
@@ -78,9 +91,23 @@ function arphabet_widgets_init() {
 		'before_title' => '<h2 class="rounded">',
 		'after_title' => '</h2>',
 	) );
+
+	/* Register quick contact form area*/
+	register_sidebar( array(
+		'name' => 'Quick contact form',
+		'id' => 'quick_contact_form',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="rounded">',
+		'after_title' => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
+
+/**
+ * Add excerpts to pages
+ */
 add_action( 'init', 'my_add_excerpts_to_pages' );
 function my_add_excerpts_to_pages() {
 	add_post_type_support( 'page', 'excerpt' );
@@ -172,3 +199,10 @@ function show_paging_nav() {
 	<?php
 	endif;
 }
+
+// Allow uploads of svg files
+function cc_mime_types( $mimes ){
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter( 'upload_mimes', 'cc_mime_types' );
