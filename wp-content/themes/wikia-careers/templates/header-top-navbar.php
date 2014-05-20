@@ -51,7 +51,7 @@
 				<?php if ( get_theme_mod( 'wikia_careers_header_button' ) ) : ?>
 					<!-- header background message -->
 				<?php endif; ?>
-					<div class="btn-wikia-white btn-arrow"><?php echo get_theme_mod( 'wikia_careers_header_button' ); ?></div>
+					<a href="<?php echo home_url(); ?>/kariera" class="btn-wikia-white btn-arrow"><?php echo get_theme_mod( 'wikia_careers_header_button' ); ?></a>
 					</div>
 				</div>
 			</div>

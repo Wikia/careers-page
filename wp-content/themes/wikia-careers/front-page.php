@@ -130,7 +130,7 @@
 		<div class="col-sm-6 col-lg-12">
 		<div class="middled">
 			<h2 class="site-header-message">Are you ready to join?</h2>
-			<div class="btn-wikia-white btn-arrow">View our current openings</div>
+			<a href="<?php echo home_url(); ?>/kariera" class="btn-wikia-white btn-arrow">View our current openings</a>
 		</div>
 		</div>
 	</div>
@@ -143,7 +143,7 @@
 				<div class="col-xxs-4 col-xs-4 col-sm-2 col-md-4 col-lg-4">
 					<h2>Quick form for sending your CV</h2>
 					<p>Apply using your</p>
-					<div class="btn-wikia-regular btn-arrow"><strong>LinkedIn</strong> account</div>
+					<a class="btn-wikia-regular btn-arrow"><strong>LinkedIn</strong> account</a>
 				</div>
 				<div class="col-xxs-4 col-xs-4 col-sm-4 col-md-8 col-lg-8">
 

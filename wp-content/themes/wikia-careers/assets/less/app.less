@@ -167,31 +167,43 @@ html, body {
 
 /* Contact button */
 .btn-envelope {
-  .icon-icon-envelope-white;
-  background-position: 10px 50%;
-  background-repeat: no-repeat;
   margin-bottom: @line-height-computed;
   margin-left: 60px;
   margin-top: @line-height-computed;
-  padding:0;
-  vertical-align: top;
-}
-
-.btn-envelope span {
-  border-left: 1px solid #fff;
-  display: block;
-  margin-left: 42px;
-  padding: 0 15px 0 15px;
-}
-
-.btn-envelope:hover {
-  border-color: #fff;
-}
-
-.btn-envelope:hover span {
-  background-color: #fff;
-  color: @brand-secondary;
+  padding: 0 15px 0 60px;
+  position: relative;
   transition: all .2s linear;
+  vertical-align: top;
+
+  &::before {
+    .icon-icon-envelope-white;
+    background-color: @brand-secondary;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    border-bottom-left-radius: @border-radius-base;
+    border-right: 1px solid #fff;
+    border-top-left-radius: @border-radius-base;
+    content:"";
+    display: block;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0 30px 0 15px;
+    position: absolute;
+    top: 0;
+    transition: background-size .1s linear;
+  }
+
+  &:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: @brand-secondary;
+
+    &::before {
+      background-size: 60%;
+    }
+  }
 }
 
 
@@ -395,7 +407,7 @@ html, body {
 
   .number-col {
 
-    &:after{
+    &::after{
       background: #fff;
       bottom: 0;
       content:"";
@@ -405,7 +417,7 @@ html, body {
       width: 1px;
     }
 
-    &:last-child:after{
+    &:last-child::after{
       width: 0px;
     }
   }
@@ -816,7 +828,7 @@ h1+.offer-item{
     display: inline-block;
     padding-right: @grid-gutter-width;
 
-    &:before {
+    &::before {
       content: "• ";
       color: @brand-secondary;
     }
