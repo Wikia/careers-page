@@ -206,3 +206,10 @@ function cc_mime_types( $mimes ){
 	return $mimes;
 }
 add_filter( 'upload_mimes', 'cc_mime_types' );
+
+
+// Disable roots sidebar for all pages
+function disable_sidebar_for_theme () {
+	return false;
+}
+add_action( 'roots_display_sidebar', 'disable_sidebar_for_theme' );
