@@ -21,7 +21,7 @@ module.exports = function(grunt) {
           cwd: 'assets/img/svg/raw',
           src: ['*.svg'],
           dest: 'assets/img/svg/compressed',
-          ext: '.colors-light-brand_prim-white-gray-gray_light.svg'
+          ext: '.colors-light-brand_pri-brand_sec-white-gray-gray_light.svg'
       }
     },
     grunticon: { //makes SVG icons into a CSS file
@@ -36,7 +36,8 @@ module.exports = function(grunt) {
               cssprefix: '.icon-',
               colors: {
                   light: '#ccc',
-                  brand_prim: '#0a5fa3',
+                  brand_pri: '#002e54',
+                  brand_sec: '#0a5fa3',
                   white: '#fff',
                   gray: '#555',
                   gray_light: '#9b9b9b'
@@ -112,7 +113,8 @@ module.exports = function(grunt) {
       less: {
         files: [
           'assets/less/*.less',
-          'assets/less/bootstrap/*.less'
+          'assets/less/bootstrap/*.less',
+          'assets/less/wikia-careers/*.less'
         ],
         tasks: ['less', 'version']
       },

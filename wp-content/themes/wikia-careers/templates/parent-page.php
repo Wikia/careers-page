@@ -82,3 +82,5 @@ HTML;
 		</div>
 	</div>
 </section>
+
+<?php include new Roots_Wrapping('templates/contact-section.php'); ?>
