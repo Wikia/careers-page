@@ -35,7 +35,7 @@ Template Name: Job offer Lead Ops
 			<ul class="tags">
 				<?php foreach (get_the_tags($post->ID) as $tag) : ?>
 					<li>
-						<a href="<?php  echo get_tag_link($tag->term_id) ?>"><?php echo $tag->name ?></a>
+						<a href="<?php //echo get_tag_link($tag->term_id) ?>"><?php echo $tag->name ?></a>
 					</li>
 				<?php endforeach; ?>
 			</ul>

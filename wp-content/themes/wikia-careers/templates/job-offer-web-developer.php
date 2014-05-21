@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Job offer JavaScript Engineer
+Template Name: Job offer Web Developer
 */
 
 ?>
@@ -35,7 +35,7 @@ Template Name: Job offer JavaScript Engineer
 			<ul class="tags">
 				<?php foreach (get_the_tags($post->ID) as $tag) : ?>
 					<li>
-						<a href="<?php  echo get_tag_link($tag->term_id) ?>"><?php echo $tag->name ?></a>
+						<span><?php echo $tag->name ?></span>
 					</li>
 				<?php endforeach; ?>
 			</ul>
