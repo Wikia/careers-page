@@ -6,8 +6,8 @@ Template Name: Parent page template
 ?>
 
 <ul class="nav nav-tabs container spaced-container">
-	<li class="active"><a href="#job-offers" data-toggle="tab">Job offers</a></li>
-	<li><a href="#recruitment-process" data-toggle="tab">Recruitment process</a></li>
+	<li class="active"><a href="#job-offers" data-toggle="tab">Oferty pracy</a></li>
+<!--	<li><a href="#recruitment-process" data-toggle="tab">Proces rekrutacji</a></li>-->
 </ul>
 
 
@@ -15,7 +15,7 @@ Template Name: Parent page template
 <div class="tab-content">
 
 
-	<section class="tab-pane active job-offers-list" id="job-offers">
+	<section class="tab-pane active container job-offers-list" id="job-offers">
 
 				<h1>Otwarte stanowiska</h1>
 
@@ -32,7 +32,7 @@ Template Name: Parent page template
 					<div class="offer-item">
 						<a href="$page_link" class="container spaced-container">
 							<h2>$post_title</h2>
-							<p class="short-descr">Lokalizacja lub nazwa zespołu</p>
+							<p class="short-descr">Poznań, Polska</p>
 						</a>
 					</div>
 HTML;

@@ -3,13 +3,17 @@
 Template Name: Job offer template
 */
 
+$parent_title = get_the_title($post->post_parent);
+$parent = get_page_by_title($parent_title);
+$parent_link = get_page_link($parent->ID);
 ?>
+
 
 <div class="job-offer-apply-bar">
 	<div class="container">
 		<div class="row">
 			<div class="col-xxs-1 col-xs-1 col-sm-2 col-md-4 col-lg-3 col-lg-offset-1">
-				<a href="" class="go-back">Powrót do ofert</a>
+				<a href="<?php echo $parent_link?>" class="go-back">Powrót do ofert</a>
 			</div>
 			<div class="col-xxs-2 col-xs-2 col-sm-2 col-md-4 col-lg-4">
 				<button class="btn-wikia">Aplikuj</button>
@@ -171,19 +175,16 @@ Template Name: Job offer template
 
 
 <section class="container-fluid stats contact-for-help job-offer-apply-bar spaced-container">
-<!--		<a href="mailto:hr-pl@wikia-inc.com" class="btn-wikia-white btn-envelope">Send e-mail</a>-->
-<!--		<div class="job-offer-apply-bar">-->
 			<div class="container">
 		<h2>Aplikuj teraz</h2>
 				<div class="row">
-					<div class="col-xxs-4 col-xs-4 col-sm-3 col-md-4 col-lg-3 col-lg-offset-1">
-						<a href="" class="go-back">Powrót do ofert</a>
+					<div class="col-xxs-1 col-xs-1 col-sm-2 col-md-4 col-lg-3 col-lg-offset-1">
+						<a href="<?php echo $parent_link?>" class="go-back">Powrót do ofert</a>
 					</div>
-					<div class="col-xxs-4 col-xs-4 col-sm-3 col-md-4 col-lg-4">
+					<div class="col-xxs-2 col-xs-2 col-sm-2 col-md-4 col-lg-4">
 						<button class="btn-wikia-white-white">Aplikuj</button>
 					</div>
 				</div>
 			</div>
-<!--		</div>-->
 
 </section>
