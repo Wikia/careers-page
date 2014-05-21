@@ -30,7 +30,7 @@
 //** Background color for `<body>`.
 @body-bg:               #fff;
 //** Global text color on `<body>`.
-@text-color:            #454545;
+@text-color:            #555;
 
 //** Global textual link color.
 @link-color:            @brand-secondary;
@@ -51,7 +51,9 @@
 
 @font-size-base:          18px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
-@font-size-small:         floor((@font-size-base * 0.84)); // 15px
+@font-size-subtext:       floor((@font-size-base * 0.84)); // 15px
+@font-size-blockquote:    floor((@font-size-base * 1.23)); // 22px
+@font-size-small:         floor((@font-size-base * 0.84)); // 15px @TODO change to subtext and remove
 @font-size-xsmall:        floor((@font-size-base * 0.78)); // 14px
 
 @font-size-h1:            floor((@font-size-base * 3.12)); // 56px
@@ -65,8 +67,9 @@
 @line-height-base:        1.67; // 30/18
 @line-height-base-sm:     1.5625; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-@line-height-computed:    floor((@font-size-base * @line-height-base)); // 35px
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // 30px
 @line-height-computed-sm:    floor((@font-size-base * @line-height-base-sm)); // 25px
+@line-height-computed-subtext:    floor((@font-size-base * 1.23)); // 22px
 
 @line-height-computed-h1:            floor((@font-size-base * 3.34)); // 60px
 @line-height-computed-h2:            floor((@font-size-base * 2.8)); // 50px

@@ -3,6 +3,8 @@
  */
 
 @import "bootstrap/bootstrap.less";
+@import "wikia-careers/type.less";
+@import "wikia-careers/mixins.less";
 @import "../img/svg/output/icons.data.svg.less";
 @import "../css/flexslider/flexslider.css";
 @import "../css/flexslider/flexslider-wikia-custom.less";
@@ -129,7 +131,7 @@ html, body {
 }
 
 .btn-arrow {
-  .icon-chevron-brand_prim;
+  .icon-chevron-brand_sec;
   background-position: calc(~"100% - 12px") 50%;
   background-size: 9px;
   padding: 0 33px 0 15px;
@@ -572,6 +574,11 @@ div.wpcf7-response-output {
 .contact-for-help {
   padding-bottom: 14px;
   padding-top: 14px;
+
+  .go-back {
+    .icon-arrow-left-white;
+    color: #fff;
+  }
 }
 
 .contact-for-help h2 {
@@ -656,7 +663,8 @@ h1+.offer-item{
   }
 
   .container {
-    background: url('../img/arrow-right-offer.svg') no-repeat 100% 50%;
+    .icon-arrow-right-gray_light;
+    background-position: 100% 50%;
     background-size: 22px;
   }
 
@@ -731,9 +739,9 @@ h1+.offer-item{
 }
 
 .go-back {
+  .icon-arrow-left-gray;
   -webkit-appearance: none;
-  background: url('../img/arrow-left-offer.svg') no-repeat 0 0;
-  background-size: 23px;
+  background-position: 0 50%;
   border: 0;
   color: @gray-light;
   cursor: pointer;
@@ -742,89 +750,10 @@ h1+.offer-item{
   padding-left: 30px;
 
   &:hover {
-    background-position: 0 -30px;
-    color: @gray;
-  }
-}
+    .icon-arrow-left-brand_sec;
 
-
-/* ==========================================================================
-   Single Job Offer
-   ========================================================================== */
-
-.apply-bar {
-  border-bottom: 1px solid @nav-tabs-border-color;
-  line-height: 70px;
-  text-align: center;
-}
-
-.prev-next-nav {
-  height: 38px;
-  text-align: right;
-
-  &+section {
-    clear: both;
-  }
-
-  button {
-    background: #fff;
-    border: 0;
-    border-right: 1px solid @nav-tabs-border-color;
-    display: block;
-    float: right;
-    height: 38px;
-    width: 38px;
-
-    &:first-child {
-      border-right: 0;
-    }
-  }
-
-  .prev-next-buttons {
-    border: 1px solid @nav-tabs-border-color;
-    border-top: 0;
-    display: inline-block;
-    margin-left: -3 * 38px - 2;
-    z-index: @zindex-subnavbar-fixed;
-
-    &.affix {
-      float: none;
-      top: @line-height-computed * 3 - 1;
-
-      button {
-        border-top-width: 1px;
-        display: block;
-        float: right;
-      }
-      @media(max-width: @screen-sm-max) {
-        top: @line-height-computed-sm * 2 - 1;
-      }
-    }
-    &.affix-bottom {
-      position: absolute;
-    }
-  }
-}
-
-.tags {
-  margin-bottom: 2em;
-  padding: 0;
-
-  a {
-    color: @gray-light;
-  }
-  a:hover {
     color: @brand-secondary;
     text-decoration: none;
-  }
-  li {
-    display: inline-block;
-    padding-right: @grid-gutter-width;
-
-    &::before {
-      content: "• ";
-      color: @brand-secondary;
-    }
   }
 }
 
@@ -1239,3 +1168,6 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   }
 
 }
+
+
+@import "wikia-careers/job-offer-single.less";
