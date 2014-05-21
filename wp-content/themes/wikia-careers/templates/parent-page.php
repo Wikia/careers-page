@@ -29,28 +29,11 @@ Template Name: Parent page template
 					$content = apply_filters('the_content', $page->post_content);
 
 					$HTML =<<<HTML
-					<div class="offer-item" data-target="#jobModal{$page->ID}" data-toggle="modal">
-						<div class="container spaced-container">
+					<div class="offer-item">
+						<a href="$page_link" class="container spaced-container">
 							<h2>$post_title</h2>
 							<p class="short-descr">Lokalizacja lub nazwa zespołu</p>
-						</div>
-					</div>
-
-					<!-- Modal -->
-					<div class="modal fade job-offer-modal" id="jobModal{$page->ID}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-															<button type="button" class="go-back" data-dismiss="modal" aria-hidden="true">Powrót</button>
-								<div class="modal-header">
-									<button class="btn-wikia btn-arrow alignright">Aplikuj</button>
-									<h2 class="modal-title" id="myModalLabel">$post_title</h2>
-									<p class="short-descr">Lokalizacja lub nazwa zespołu</p>
-								</div>
-								<div class="modal-body">
-									$content
-								</div>
-							</div>
-						</div>
+						</a>
 					</div>
 HTML;
 
