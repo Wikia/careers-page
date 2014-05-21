@@ -31,6 +31,7 @@
 
 
 </section>
+
 <?php if ( is_front_page() ) : ?>
 
 	<?php if ( get_header_image() ) : ?>
@@ -72,8 +73,8 @@
 			</div>
 		</div>
 
-<?php elseif ( get_post_meta( $wp_query->post->ID, '_wp_page_template', true ) == 'templates/job-offer-single.php' ): ?>
-		<!-- header background image -->
+<?php else: ?>
+	<!-- header background image -->
 		<div id="site-header" class="container-fluid site-header job-offer-header">
 			<div class="row">
 				<div class="col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
@@ -86,19 +87,5 @@
 			</div>
 		</div>
 
-<?php else: ?>
-
-		<!-- header background image -->
-		<div id="site-header" class="no-image-header container-fluid site-header fixed-height">
-			<div class="row">
-				<div class="col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
-					<div class="middled">
-					<!-- header background message -->
-						<h1 class="site-header-message"><?php the_title() ?></h1>
-					<p class="site-header-sub-message">Wikia</p>
-					</div>
-				</div>
-			</div>
-		</div>
 
 <?php endif; ?>
