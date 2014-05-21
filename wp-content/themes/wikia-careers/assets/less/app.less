@@ -462,9 +462,21 @@ html, body {
 
 /* career paths short - on subpages */
 .career-paths-short {
-  margin-bottom: 77px;
-  .avatar img {
-    width: 202px;
+  margin-bottom: @line-height-computed * 2;
+  overflow: hidden;
+  text-align: center;
+
+  .avatar {
+    height: 250px;
+    overflow: hidden;
+    img {
+      margin-left: -66px;
+      max-width: 100%;
+    }
+  }
+
+  h2 {
+    color: @brand-secondary;
   }
 }
 
@@ -1166,7 +1178,20 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 }
 
+
 @media (min-width: @screen-sm-min) {
+
+  /* career paths short - on subpages */
+  .career-paths-short {
+    .avatar {
+      height: 320px;
+    }
+  }
+
+}
+
+
+@media (min-width: @screen-md-min) {
 
   .quick-contact form {
     margin-top: 0;
@@ -1174,15 +1199,30 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
   /* career paths short - on subpages */
   .career-paths-short {
-    display: table;
+    margin-bottom: 0;
+    text-align: left;
 
-    .description, .avatar {
-      display: table-cell;
-      vertical-align: top;
+    & > .row {
+      display: flex;
     }
 
     .avatar {
-      .gutter-right;
+      overflow: visible;
+      height: auto;
+
+      img {
+        bottom: 0;
+        margin-left: 0;
+        max-width: 100%;
+        position: absolute;
+      }
+    }
+
+    .description {
+      align-content: center;
+      display: flex;
+      flex-flow: row wrap;
+      min-height: 400px;
     }
   }
 
