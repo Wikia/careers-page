@@ -140,8 +140,8 @@
 			<div class="row">
 				<div class="col-xxs-4 col-xs-4 col-sm-2 col-md-4 col-lg-4">
 					<h2>Wypełnij formularz i wyślij CV</h2>
-					<p>Aplikuj przez</p>
-					<a class="btn-wikia-regular btn-arrow"><strong>LinkedIn</strong> account</a>
+<!--					<p>Aplikuj przez</p>-->
+<!--					<a class="btn-wikia-regular btn-arrow"><strong>LinkedIn</strong></a>-->
 				</div>
 				<div class="col-xxs-4 col-xs-4 col-sm-4 col-md-8 col-lg-8">
 
