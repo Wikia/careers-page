@@ -213,3 +213,15 @@ function disable_sidebar_for_theme () {
 	return false;
 }
 add_action( 'roots_display_sidebar', 'disable_sidebar_for_theme' );
+
+
+// Define thumbnails
+add_image_size( 'container-md-thumb', 924, 300, 'soft' );
+
+
+// Get attributes from img html tag
+function get_the_post_thumbnail_data($markup) {
+	$objDom = new SimpleXMLElement($markup);
+	$arrDom = (array)$objDom;
+	return (array)$arrDom['@attributes'];
+}

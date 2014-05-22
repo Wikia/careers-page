@@ -72,6 +72,20 @@
 			</div>
 		</div>
 
+<?php elseif ( get_post_meta( $wp_query->post->ID, '_wp_page_template', true ) == 'templates/parent-page-life-in-wikia.php' ): ?>
+		<!-- header background image -->
+		<div id="site-header" style="background-image:url('<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>play-with-us-banner.jpg')" class="container-fluid site-header list-page-header">
+			<div class="row">
+				<div class="col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
+					<div class="middled">
+					<!-- header background message -->
+					<h1 class="site-header-message">Podejmij wyzwanie Wikia</h1>
+					<p class="site-header-sub-message">Kariera w Wikia</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
 <?php else: ?>
 	<!-- header background image -->
 		<div id="site-header" class="container-fluid site-header job-offer-header">
