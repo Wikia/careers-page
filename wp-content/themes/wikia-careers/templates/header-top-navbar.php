@@ -92,7 +92,8 @@
 	// Get link to post featured image if one exists
 	$post_thumb_id = get_post_thumbnail_id( get_the_ID(), 'full' );
 	if ($post_thumb_id) {
-		$post_thumb_link = wp_get_attachment_image_src( $post_thumb_id, 'container-md-thumb' )[0];
+		$post_thumb_link = wp_get_attachment_image_src( $post_thumb_id, 'container-md-thumb' );
+		$post_thumb_link = $post_thumb_link[0];
 		$header_class = 'post-header';
 		$background_style = "style=\"background-image:url('$post_thumb_link')";
 	} else {

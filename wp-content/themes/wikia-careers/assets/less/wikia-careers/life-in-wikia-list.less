@@ -17,6 +17,7 @@
 
   .play-with-us-list-item {
     text-align: center;
+
     .item-title {
       background-size: cover;
       background-repeat: no-repeat;
@@ -25,16 +26,16 @@
       margin-bottom: @line-height-computed;
 
       h3 {
-      .h1;
-      .strong;
-  .dim;
-  margin-top: floor(@line-height-computed * 3.34);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-height: 100%;
-}
+        .dim;
+        .h1;
+        .strong;
+        align-items: center;
+        color: #fff;
+        display: flex;
+        height: 100%;
+        justify-content: space-around;
+        margin-top: floor(@line-height-computed * 3.34);
+      }
     }
 
     .btn-wikia {
@@ -43,4 +44,41 @@ height: 100%;
       margin-right: auto;
     }
   }
+
+  .wide-img-narrow-p {
+    @wn-space: floor(@line-height-computed * 4.84);
+
+    h2 {
+      width: 66.66%;
+      margin: @wn-space auto @line-height-computed * 1.5;
+      text-align: left;
+      max-width: 676px;
+
+      &:nth-of-type(3n+1) {
+        color: @brand-teritary;
+      }
+
+      &:nth-of-type(3n+2) {
+        color: #11b4e3;
+      }
+
+      &:nth-of-type(3n+3) {
+        color: #8da03b;
+      }
+    }
+
+    p {
+      width: 66.66%;
+      margin: 0 auto @line-height-computed * 1.5;
+      text-align: left;
+      max-width: 676px;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      margin: @wn-space auto 0;
+    }
+  }
+
 }

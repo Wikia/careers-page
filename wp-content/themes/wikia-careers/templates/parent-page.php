@@ -21,7 +21,12 @@ Template Name: Parent page template
 
 				<?php
 				//show list of all subpages
-				$pages = get_pages("child_of=".get_the_ID()."&sort_column={$sort_column}&sort_order={$sort_order}" );
+				$pages = get_pages( array(
+					'child_of' =>  get_the_ID(),
+					'parent' =>  get_the_ID(),
+//					'sort_column' => 'post_date',
+//					'sort_order' => 'ASC'
+				) );
 				foreach ( $pages as $page ) {
 
 					$page_link = get_page_link( $page->ID );

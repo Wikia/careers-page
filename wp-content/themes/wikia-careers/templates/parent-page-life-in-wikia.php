@@ -10,22 +10,22 @@ Template Name: Parent page Life in Wikia
 
 /* Get list of direct subpages */
 
-$pages = get_pages( [
+$pages = get_pages( array(
 	'child_of' => get_the_ID(),
 	'parent' => get_the_ID()
 //	'sort_column' => $sort_column,
 //	'sort_order' => $sort_order
-] );
+) );
 
 
 /* Show tabnav based on list of direct subpages */
 
-$tab_nav_items = [];
+$tab_nav_items = array();
 $i = 0;
 
 foreach ( $pages as $page ) {
 
-	$activeAttr = ( $i == 1 ) ? ' class="active"' : '';
+	$activeAttr = ( $i == 0 ) ? ' class="active"' : '';
 	$page_link = get_page_link( $page->ID );
 	$post_title = $page->post_title;
 	$post_name = $page->post_name;
@@ -54,27 +54,25 @@ echo $HTML_TAB_BAR;
 /* Show tabs based on list of direct subpages */
 
 
-$tab_content_items = [];
+$tab_content_items = array();
 $i = 0;
 
 foreach ( $pages as $page ) {
 
-	$activeAttrText = ( $i == 1 ) ? 'active' : '';
+	$activeAttrText = ( $i == 0 ) ? 'active' : '';
 	$page_link = get_page_link( $page->ID );
 	$post_title = $page->post_title;
 	$post_name = $page->post_name;
 	$content = apply_filters('the_content', $page->post_content);
 
-
 				//show list of all subpages
-	$sub_pages = get_pages( [
+	$sub_pages = get_pages( array(
 		'child_of' =>  $page->ID,
 		'parent' =>  $page->ID,
 		'sort_column' => 'post_date',
 		'sort_order' => 'ASC'
-	] );
-//d($sub_pages);
-				$sub_pages_items = [];
+	) );
+				$sub_pages_items = array();
 				foreach ( $sub_pages as $sub_page ) {
 
 					$sub_page_link = get_page_link( $sub_page->ID );
@@ -82,7 +80,8 @@ foreach ( $pages as $page ) {
 					$sub_post_excerpt = $sub_page->post_excerpt;
 					$sub_content = apply_filters('the_content', $sub_page->post_content);
 
-					$sub_thumb_link = wp_get_attachment_image_src( get_post_thumbnail_id( $sub_page->ID ), 'container-md-thumb' )[0];
+					$sub_thumb_link = wp_get_attachment_image_src( get_post_thumbnail_id( $sub_page->ID ), 'container-md-thumb' );
+					$sub_thumb_link = $sub_thumb_link[0];
 
 					$sub_pages_items[] = <<<HTML
 					<div class="play-with-us-list-item">
@@ -101,13 +100,27 @@ HTML;
 	$HTML_SUB_PAGES_ITEMS = implode( "\n", $sub_pages_items );
 
 
+	if ( get_post_meta( $page->ID, '_wp_page_template', true ) == 'templates/wide-img-narrow-p.php' ) {
 
-	$tab_content_items[] = <<<HTML
+		$tab_content_items[] = <<<HTML
+	<section class="tab-pane wide-img-narrow-p regular-article $activeAttrText" id="$post_name">
+		$content
+		$HTML_SUB_PAGES_ITEMS
+	</section>
+HTML;
+
+	} else {
+
+		$tab_content_items[] = <<<HTML
 	<section class="tab-pane container $activeAttrText" id="$post_name">
 		$content
 		$HTML_SUB_PAGES_ITEMS
 	</section>
 HTML;
+
+	}
+
+
 	$i++;
 
 }
