@@ -57,17 +57,17 @@ Template Name: Job offer JavaScript Engineer
 			<p class="text-center">Tutaj wymieniliśmy kilka z tych, z którymi spotkasz się w ciągu pierwszych 6 miesięcy pracy</p>
 
 			<h3 class="text-center">Interaktywne Mapy</h3>
-			<p class="text-center">Zbuduj narzędzia, które pozwolą społecznościom Wikii na tworzenie interaktywnych map z dowolnych plików graficznych. Stwórz serwis i klienta API na przeglądarki/urzadzenia mobilne. Technologie, jakie stosujemy: Javascript, node.js, MySQL, Redis, HTML5, PHP, CSS.</p>
+			<p class="text-center">Zbuduj narzędzia, które pozwolą społecznościom Wikii na tworzenie interaktywnych map z dowolnych plików graficznych. Stwórz serwis i klienta API na przeglądarki/urzadzenia mobilne. Technologie, jakie stosujemy: JavaScript, node.js, MySQL, Redis, HTML5, PHP, CSS.</p>
 
 			<h3 class="text-center">Wyścig z czasem </h3>
-			<p class="text-center">ko część małego zespołu, stwórz nowy skin na urządzenia mobilne, ze zwróceniem szczególnej uwagi na szybkość ładowania strony - naszym celem jest ładowanie stron w czasie poniżej 1 sekundy. Chcemy też, by nasze rozwiązania były w 100% testowalne. Co Ci się przyda? HTML5, CSS, JavaScript i dokładny stoper.</p>
+			<p class="text-center">Jako część małego zespołu, stwórz nowy skin na urządzenia mobilne, ze zwróceniem szczególnej uwagi na szybkość ładowania strony - naszym celem jest ładowanie stron w czasie poniżej 1 sekundy. Chcemy też, by nasze rozwiązania były w 100% testowalne. Co Ci się przyda? HTML5, CSS, JavaScript i dokładny stoper.</p>
 
 			<h3 class="text-center">Nawigacja strony</h3>
-			<p class="text-center">Przebuduj nawigację User Interface, żeby bardziej odpowiadał potrzebom użytkowników oraz strukturze i treści stron Wikii. Tutaj używamy Javascript i PHP.</p>
+			<p class="text-center">Przebuduj nawigację User Interface, żeby bardziej odpowiadał potrzebom użytkowników oraz strukturze i treści stron Wikii. Tutaj używamy JavaScript i PHP.</p>
 
 			<h2>Czego potrzebujesz, żeby być członkiem Teamu Mobile w Wikia?</h2>
 			<ul>
-				<li>umiejętności pisania zwięzłego, czystego, testowalnego kodu w obiektowym javascript</li>
+				<li>umiejętności pisania zwięzłego, czystego, testowalnego kodu w obiektowym JavaScript</li>
 				<li>umiejętności projektowania i kodowania aplikacji przeglądarkowych/mobilnych</li>
 				<li>bycia ukierunkowanym na wydajność aplikacji</li>
 				<li>znajomości różnic i podobieństw w zakresie różnych przeglądarek</li>
@@ -78,10 +78,10 @@ Template Name: Job offer JavaScript Engineer
 				<h2>Co zyskujesz, będąc Wikianinem?</h2>
 				<div class="columns">
 					<ul>
-						<li>Wikia dba o Twój rozwój - wybierz dwie konferencje w ciągu roku, a firma sfinansuje Twoje w niej uczestnictwo, przejazd i zakwaterowanie</li>
-						<li>Raz w roku wybierzesz się z nami do San Francisco - w odwiedziny do naszego biura macierzystego</li>
+						<li>Wikia dba o Twój rozwój - wybierz dwie konferencje w ciągu roku, a firma sfinansuje Twoje uczestnictwo, przejazd i zakwaterowanie</li>
+						<li>Raz w roku wybierzesz się z nami do San Francisco w odwiedziny do naszego biura macierzystego</li>
 						<li>Wikia organizuje wiele eventów rodzinnych - pikniki, imprezy, "wikilie" - jesteśmy family friendly</li>
-						<li>W trakcie pracy dbamy o Twoje sampoczucie - w naszej zawsze pełnej spiżarni znajdziesz owoce, przekąski, słodycze, napoje.</li>
+						<li>W trakcie pracy dbamy o Twoje sampoczucie - w naszej zawsze pełnej spiżarni znajdziesz owoce, przekąski, słodycze i napoje.</li>
 					</ul>
 				</div>
 			</section>

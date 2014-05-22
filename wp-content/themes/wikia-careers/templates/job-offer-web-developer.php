@@ -106,10 +106,10 @@ Template Name: Job offer Web Developer
 				<h2>Co zyskujesz, będąc Wikianinem?</h2>
 				<div class="columns">
 					<ul>
-						<li>Wikia dba o Twój rozwój - wybierz dwie konferencje w ciągu roku, a firma sfinansuje Twoje w niej uczestnictwo, przejazd i zakwaterowanie</li>
-						<li>Raz w roku wybierzesz się z nami do San Francisco - w odwiedziny do naszego biura macierzystego</li>
+						<li>Wikia dba o Twój rozwój - wybierz dwie konferencje w ciągu roku, a firma sfinansuje Twoje uczestnictwo, przejazd i zakwaterowanie</li>
+						<li>Raz w roku wybierzesz się z nami do San Francisco w odwiedziny do naszego biura macierzystego</li>
 						<li>Wikia organizuje wiele eventów rodzinnych - pikniki, imprezy, "wikilie" - jesteśmy family friendly</li>
-						<li>W trakcie pracy dbamy o Twoje sampoczucie - w naszej zawsze pełnej spiżarni znajdziesz owoce, przekąski, słodycze, napoje.</li>
+						<li>W trakcie pracy dbamy o Twoje sampoczucie - w naszej zawsze pełnej spiżarni znajdziesz owoce, przekąski, słodycze i napoje.</li>
 					</ul>
 				</div>
 			</section>
