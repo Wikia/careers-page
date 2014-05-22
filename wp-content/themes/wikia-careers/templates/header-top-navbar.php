@@ -65,7 +65,7 @@
 				<div class="col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
 					<div class="middled">
 					<!-- header background message -->
-					<h1 class="site-header-message">All we need is empathy</h1>
+					<h1 class="site-header-message">Podejmij wyzwanie Wikia</h1>
 					<p class="site-header-sub-message">Kariera w Wikia</p>
 					</div>
 				</div>
