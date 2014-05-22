@@ -60,7 +60,7 @@
 
 <?php elseif ( get_post_meta( $wp_query->post->ID, '_wp_page_template', true ) == 'templates/parent-page.php' ): ?>
 		<!-- header background image -->
-		<div id="site-header" style="background-image:url('<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>recruitment-banner.jpg')" class="container-fluid site-header">
+		<div id="site-header" style="background-image:url('<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>recruitment-banner.jpg')" class="container-fluid site-header list-page-header">
 			<div class="row">
 				<div class="col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
 					<div class="middled">

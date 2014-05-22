@@ -231,6 +231,12 @@ html, body {
   min-height: -webkit-calc(~"100% - @{site-header-lineheight}");
   position: relative;
   text-align: center;
+
+  &.list-page-header {
+    @height-of-tab-nav: 70px;
+    min-height: calc(~"100% - @{site-header-lineheight} - @{height-of-tab-nav}");
+    min-height: -webkit-calc(~"100% - @{site-header-lineheight} - @{height-of-tab-nav}");
+  }
 }
 
 .site-header > .row {
@@ -1002,6 +1008,12 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     margin-top: @site-header-lineheight-sm;
     min-height: calc(~"100% - @{site-header-lineheight-sm}");
     min-height: -webkit-calc(~"100% - @{site-header-lineheight-sm}");
+
+    &.list-page-header {
+      @height-of-tab-nav: 70px;
+      min-height: calc(~"100% - @{site-header-lineheight-sm} - @{height-of-tab-nav}");
+      min-height: -webkit-calc(~"100% - @{site-header-lineheight-sm} - @{height-of-tab-nav}");
+    }
   }
 
 /* ==========================================================================
