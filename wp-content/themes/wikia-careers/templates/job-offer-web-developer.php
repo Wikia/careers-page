@@ -66,6 +66,7 @@ Template Name: Job offer Web Developer
 					<li>rozumiesz co znaczy i jak stosować LAMP stack</li>
 				</ul>
 				<p>...to ścieżka dla Ciebie!</p>
+				<p>&nbsp;</p>
 
 				<div class="featured-block">
 					<h3>Zespół Ad Engineering</h3>
@@ -89,6 +90,7 @@ Template Name: Job offer Web Developer
 					<li>masz podstawową wiedzę na temat zabezpieczeń webowych i skalowania</li>
 				</ul>
 				<p>...to jest team dla Ciebie!</p>
+				<p>&nbsp;</p>
 			</section>
 
 			<h2>Niezależnie od wyboru ścieżki, otrzymujesz punkty bonusowe za</h2>
