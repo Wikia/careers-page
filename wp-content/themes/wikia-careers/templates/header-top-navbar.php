@@ -87,8 +87,22 @@
 		</div>
 
 <?php else: ?>
-	<!-- header background image -->
-		<div id="site-header" class="container-fluid site-header job-offer-header">
+	<?php
+
+	// Get link to post featured image if one exists
+	$post_thumb_id = get_post_thumbnail_id( get_the_ID(), 'full' );
+	if ($post_thumb_id) {
+		$post_thumb_link = wp_get_attachment_image_src( $post_thumb_id, 'container-md-thumb' )[0];
+		$header_class = 'post-header';
+		$background_style = "style=\"background-image:url('$post_thumb_link')";
+	} else {
+		$header_class = 'job-offer-header';
+		$background_style = '';
+	}
+	?>
+
+		<!-- header background image -->
+		<div id="site-header" class="container-fluid site-header <?php echo $header_class; ?>" <?php echo $background_style; ?>">
 			<div class="row">
 				<div class="col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
 					<div class="middled">

@@ -237,6 +237,11 @@ html, body {
     min-height: calc(~"100% - @{site-header-lineheight} - @{height-of-tab-nav}");
     min-height: -webkit-calc(~"100% - @{site-header-lineheight} - @{height-of-tab-nav}");
   }
+
+  &.post-header {
+    background-color:#000;
+    height: 400px;
+  }
 }
 
 .site-header > .row {
@@ -276,6 +281,10 @@ html, body {
   color:#fff
 }
 
+.nav-bar-under-banner-post {
+  .nav-bar-under-banner;
+  margin-bottom: floor(@line-height-computed * 2.34);
+}
 
 /* Benefits section */
 
@@ -620,6 +629,25 @@ div.wpcf7-response-output {
 .strong,
 strong {
   font-weight: bold;
+}
+
+.regular-article {
+  p {
+    margin-bottom: @line-height-computed * 1.5;
+    margin-left: auto;
+    margin-right: auto;
+    width: 83.33%;
+
+  }
+  img {
+    margin-bottom: @line-height-computed;
+    max-width: 100%;
+    @media (min-width: @screen-sm-min) {
+      &.alignleft {
+        max-width: 60%;
+      }
+    }
+  }
 }
 
 

@@ -17,14 +17,8 @@
 /* Navigation / Apply / Share bar */
 
 .job-offer-apply-bar {
-  border-bottom: 1px solid @nav-tabs-border-color;
-  line-height: @line-height-computed * 3;
-  text-align: center;
+  .nav-bar-under-banner;
 
-  .go-back {
-    display: inline-block;
-    text-indent: -1000px;
-  }
   &.contact-for-help {
     border-bottom: 0;
 
@@ -44,22 +38,7 @@
     }
   }
 
-  .row {
-    & > div {
 
-      &:first-child {
-        text-align: left;
-      }
-
-      &:nth-child(2) {
-        text-align: center;
-      }
-
-      &:nth-child(3) {
-        text-align: right;
-      }
-    }
-  }
 
 }
 
@@ -291,13 +270,6 @@ ul.tags {
 
 @media (min-width: @screen-sm-min) {
 
-  .job-offer-apply-bar {
-
-    .go-back {
-      text-indent: 0;
-    }
-  }
-
   .featured-block {
 
     .columns {
@@ -309,6 +281,7 @@ ul.tags {
       }
     }
   }
+
 }
 
 

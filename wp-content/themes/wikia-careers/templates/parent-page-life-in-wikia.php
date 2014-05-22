@@ -82,12 +82,7 @@ foreach ( $pages as $page ) {
 					$sub_post_excerpt = $sub_page->post_excerpt;
 					$sub_content = apply_filters('the_content', $sub_page->post_content);
 
-					$sub_thumb = get_the_post_thumbnail( $sub_page->ID, 'container-md-thumb' );
-
-
-					$sub_thumb_data =  get_the_post_thumbnail_data($sub_thumb);
-					$sub_thumb_link = $sub_thumb_data['src'];
-
+					$sub_thumb_link = wp_get_attachment_image_src( get_post_thumbnail_id( $sub_page->ID ), 'container-md-thumb' )[0];
 
 					$sub_pages_items[] = <<<HTML
 					<div class="play-with-us-list-item">

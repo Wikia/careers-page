@@ -219,9 +219,11 @@ add_action( 'roots_display_sidebar', 'disable_sidebar_for_theme' );
 add_image_size( 'container-md-thumb', 924, 300, 'soft' );
 
 
-// Get attributes from img html tag
-function get_the_post_thumbnail_data($markup) {
-	$objDom = new SimpleXMLElement($markup);
-	$arrDom = (array)$objDom;
-	return (array)$arrDom['@attributes'];
+// Remove auto adding width and height attributes to img tags
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+	$html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+	return $html;
 }

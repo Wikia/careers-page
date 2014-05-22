@@ -33,3 +33,42 @@
 	-webkit-column-gap:@gap;
 	column-gap: @gap;
 }
+
+
+.nav-bar-under-banner {
+  border-bottom: 1px solid @nav-tabs-border-color;
+  line-height: @line-height-computed * 3;
+  text-align: center;
+
+  .go-back {
+    display: inline-block;
+    text-indent: -10000px;
+  }
+
+  .row {
+    & > div {
+
+      &:first-child {
+        text-align: left;
+      }
+
+      &:nth-child(2) {
+        text-align: center;
+      }
+
+      &:nth-child(3) {
+        text-align: right;
+      }
+    }
+  }
+
+  @media (min-width: @screen-sm-min) {
+
+      .go-back {
+        text-indent: 0;
+      }
+
+  }
+
+}
+
