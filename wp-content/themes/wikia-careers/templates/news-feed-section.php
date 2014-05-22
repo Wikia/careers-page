@@ -1,7 +1,7 @@
 <section class="container-fluid spaced-container news-feed">
 	<div class="row">
 		<div class="container">
-			<h2>Wikia news</h2>
+			<h2>WikiNewsy</h2>
 
 			<div class="row">
 				<div class="col-xxs-4 col-xs-4 col-sm-3 col-md-6 col-lg-6 news-item-container">

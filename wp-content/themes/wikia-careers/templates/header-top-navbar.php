@@ -37,7 +37,6 @@
 	<?php if ( get_header_image() ) : ?>
 		<!-- header background image -->
 		<div id="site-header" style="background-image:url('<?php header_image(); ?>')" class="container-fluid site-header">
-	<!--	<div id="site-header" style="background-image:url('http://kariera.wikia.com/wp-content/uploads/2014/04/wikia-team1.jpg')" class="container-fluid site-header">-->
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 					<div class="middled">

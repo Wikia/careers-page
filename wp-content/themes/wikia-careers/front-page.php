@@ -2,8 +2,8 @@
 
 <section class="container job-offers">
 	<div class="offers-paper">
-			<h2>Advertising Software Engineer</h2>
-			<p>We're striving to understand not only this world, but also every fictional world, game setting and movie universe. That's a lot of data to handle. </p>
+			<h2>Administrator Baz Danych</h2>
+			<p>Szukamy pełnoetatowego geeka do naszego Development Centre w Poznaniu!</p>
 			<div class="btn-container"><a href="advertising-software-engineer" class="btn-wikia btn-arrow">Poczytaj więcej</a></div>
 
 			<h2>Technical Operations Team Leader</h2>
@@ -21,22 +21,22 @@
 	<div class="row">
 		<div class="container">
 			<div class="row">
-				<h2>For Fans, by Fans</h2>
+				<h2>Od Fanów. Dla Fanów.</h2>
 				<div class="col-md-3 col-lg-3 number-col">
 					<span class="number">108,718,176</span>
-					<h3>Monthly visitors</h3>
+					<h3>miesięcznych odwiedzin</h3>
 				</div>
 				<div class="col-md-3 col-lg-3 number-col">
 					<span class="number">33,052,302</span>
-					<h3>Total pages</h3>
+					<h3>wszystkich stron</h3>
 				</div>
 				<div class="col-md-3 col-lg-3 number-col">
 					<span class="number">411,620</span>
-					<h3>Total communities</h3>
+					<h3>wszystkich społeczności </h3>
 				</div>
 				<div class="col-md-3 col-lg-3 number-col">
 					<span class="number">371,351</span>
-					<h3>Changes today</h3>
+					<h3>edycji dzisiaj</h3>
 				</div>
 			</div>
 		</div>
@@ -46,31 +46,31 @@
 <section class="container career-paths">
 	<div class="row">
 
-		<h2>Meet our coworkers</h2>
+		<h2>Poznaj naszą załogę</h2>
 		<div class="flexslider">
 			<ul class="slides">
 				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubo.jpg">
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4"><img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubo.jpg" alt="jakubo" class="person-picture" /></div>
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
 						<h3>Jakub</h3>
-						<p>Knows how to get along with people. Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do dolores eos qui ratione voluptatem.</p>
-						<a href="" class="btn-wikia-gray-blue btn-arrow">See his path</a>
+						<p>Wcześniej - stażysta w Wikia. Dzisiaj - nasz spec od mobilnych rozwiązań.</p>
+						<a href="" class="btn-wikia-gray-blue btn-arrow">Poznaj</a>
 					</div>
 				</li>
 				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>federico.jpg">
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4"><img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>federico.jpg" alt="federico" class="person-picture" /></div>
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
 						<h3>Federico</h3>
-						<p>Knows how to get along with people. Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do dolores eos qui  sed do dolores eos qui ratione voluptatem.</p>
-						<a href="" class="btn-wikia-gray-blue btn-arrow">See his path</a>
+						<p>Architekt aplikacji, budowniczy zespołów programistów.</p>
+						<a href="" class="btn-wikia-gray-blue btn-arrow">Poznaj</a>
 					</div>
 				</li>
 				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubk.jpg">
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4"><img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubk.jpg" alt="jakubk" class="person-picture" /></div>
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
 						<h3>Jakub</h3>
-						<p>Knows how to get along with people. Conse ctetur adipisicing elit, sed do dolores eos qui ratione voluptatem.</p>
-						<a href="" class="btn-wikia-gray-blue btn-arrow">See his path</a>
+						<p>Inżynier z zacięciem biznesowym.</p>
+						<a href="" class="btn-wikia-gray-blue btn-arrow">Poznaj</a>
 					</div>
 				</li>
 			</ul>
@@ -100,7 +100,7 @@
 <section class="benefits-description">
 	<div class="container">
 		<div class="row">
-			<h2>Korzyści z pracy w Wikia</h2>
+			<h2>Praca w Wikia to nie tylko praca</h2>
 			<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4 benefit-item">
 				<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>benefits1.jpg" alt="Rozwój" />
 				<h3>Rozwój w Wikia</h3>
@@ -128,8 +128,8 @@
 <section class="container-fluid join-us">
 	<div class="row">
 		<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-12">
-			<h2 class="site-header-message">Are you ready to join?</h2>
-			<a href="<?php echo home_url(); ?>/kariera" class="btn-wikia-white btn-arrow">View our current openings</a>
+			<h2 class="site-header-message">Jesteś gotów, by dołączyć do zespołu?</h2>
+			<a href="<?php echo home_url(); ?>/kariera" class="btn-wikia-white btn-arrow">Zobacz, kogo szukamy</a>
 		</div>
 	</div>
 </section>
@@ -139,8 +139,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xxs-4 col-xs-4 col-sm-2 col-md-4 col-lg-4">
-					<h2>Quick form for sending your CV</h2>
-					<p>Apply using your</p>
+					<h2>Wypełnij formularz i wyślij CV</h2>
+					<p>Aplikuj przez</p>
 					<a class="btn-wikia-regular btn-arrow"><strong>LinkedIn</strong> account</a>
 				</div>
 				<div class="col-xxs-4 col-xs-4 col-sm-4 col-md-8 col-lg-8">
