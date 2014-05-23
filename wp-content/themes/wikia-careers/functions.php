@@ -227,3 +227,17 @@ function remove_width_attribute( $html ) {
 	$html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
 	return $html;
 }
+
+/**
+ * Determine whether current post child of provided root post
+ * Looks through whole tree
+ * @param int $pid Post ID - The ID of the page we're looking for pages underneath
+ * @return boolean
+ */
+function is_tree($pid) {
+	global $post;         // load details about this page
+	if(is_page()&&($post->post_parent==$pid||is_page($pid)))
+		return true;
+	else
+		return false;
+};

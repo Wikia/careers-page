@@ -242,6 +242,13 @@ html, body {
     background-color:#000;
     height: 400px;
   }
+
+  &.career-path-header {
+    background-color:#000;
+    height: 400px;
+    min-height: 0;
+    min-height: 0;
+  }
 }
 
 .site-header > .row {
@@ -612,6 +619,59 @@ div.wpcf7-response-output {
   font-size: @font-size-h3;
   margin-bottom: @line-height-computed;
   margin-top: @line-height-computed;
+}
+
+
+
+/* ==========================================================================
+   Career paths page
+   ========================================================================== */
+.career-path-content {
+  border-top: 1px solid @nav-tabs-border-color;
+  padding-bottom: @line-height-computed * 8;
+  padding-top: @line-height-computed * 2;
+
+  .featured-image {
+
+    img {
+      max-width: 100%;
+      margin-left: -20px;
+    }
+  }
+
+  @media( min-width: @screen-xs-min ) {
+
+    .featured-image {
+      height: 330px;
+      overflow: hidden;
+
+      img {
+        margin-left: -60px;
+      }
+    }
+  }
+
+  @media( min-width: @screen-md-min ) {
+
+    .featured-image {
+      height: 420px;
+    }
+  }
+
+  h2 {
+    color: @brand-secondary;
+    .strong;
+  }
+
+  h5 {
+    .subtext;
+    color: @gray-light;
+    margin-bottom: @line-height-computed * 1.5;
+  }
+
+  p {
+    margin-bottom: @line-height-computed * 1.5;
+  }
 }
 
 

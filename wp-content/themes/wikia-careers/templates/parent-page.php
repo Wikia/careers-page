@@ -5,10 +5,7 @@ Template Name: Parent page template
 
 ?>
 
-<ul class="nav nav-tabs container spaced-container">
-	<li class="active"><a href="#job-offers" data-toggle="tab">Oferty pracy</a></li>
-<!--	<li><a href="#recruitment-process" data-toggle="tab">Proces rekrutacji</a></li>-->
-</ul>
+<?php include new Roots_Wrapping('templates/career-paths-parent-menu.php'); ?>
 
 
 

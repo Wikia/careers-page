@@ -87,19 +87,39 @@
 		</div>
 
 <?php else: ?>
+
 	<?php
+
+	// Default data for header
+	$post_header_title = get_the_title();
+	$post_header_message = 'Poznań, Polska';
 
 	// Get link to post featured image if one exists
 	$post_thumb_id = get_post_thumbnail_id( get_the_ID(), 'full' );
+
+	// Post has featured image
 	if ($post_thumb_id) {
 		$post_thumb_link = wp_get_attachment_image_src( $post_thumb_id, 'container-md-thumb' );
 		$post_thumb_link = $post_thumb_link[0];
 		$header_class = 'post-header';
-		$background_style = "style=\"background-image:url('$post_thumb_link')";
+		$background_style = "style=\"background-image:url('$post_thumb_link')\"";
+
+		// Career path template
+		if (  get_post_meta( $wp_query->post->ID, '_wp_page_template', true ) == 'templates/career-path.php' ) {
+			$post_thumb_id = get_post_thumbnail_id( $post->post_parent, 'full' );
+			$post_thumb_link = wp_get_attachment_image_src( $post_thumb_id, 'container-md-thumb' );
+			$post_thumb_link = $post_thumb_link[0];
+			$header_class = 'career-path-header';
+			$background_style = "style=\"background-image:url('$post_thumb_link')\"";
+			$post_header_title = "Ścieżki rozwoju";
+			$post_header_message = '';
+		}
+
 	} else {
 		$header_class = 'job-offer-header';
 		$background_style = '';
 	}
+
 	?>
 
 		<!-- header background image -->
@@ -108,8 +128,8 @@
 				<div class="col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
 					<div class="middled">
 					<!-- header background message -->
-					<h1 class="site-header-message"><?php the_title() ?></h1>
-					<p class="site-header-sub-message">Poznań, Polska</p>
+					<h1 class="site-header-message"><?php echo $post_header_title ?></h1>
+					<p class="site-header-sub-message"><?php echo $post_header_message ?></p>
 					</div>
 				</div>
 			</div>
