@@ -2,17 +2,35 @@
 
 <section class="container job-offers">
 	<div class="offers-paper">
-			<h2>Administrator Baz Danych</h2>
-			<p>Szukamy pełnoetatowego geeka do naszego Development Centre w Poznaniu!</p>
-			<div class="btn-container"><a href="advertising-software-engineer" class="btn-wikia btn-arrow">Poczytaj więcej</a></div>
+<?php
+		$job_offers_parent = get_pages( array(
+			'meta_key' => '_wp_page_template',
+			'meta_value' => 'templates/parent-page.php',
+			'sort_column' => 'post_date',
+			'sort_order' => 'ASC'
+		) );
 
-			<h2>Technical Operations Team Leader</h2>
-			<p>Wikia is running one of the most visited websites in the US, the go-to destination for information about anything you're passionate about.</p>
-			<div class="btn-container"><a href="technical-operations-team-leader" class="btn-wikia btn-arrow">Poczytaj więcej</a></div>
+		if ( !empty( $job_offers_parent ) ) :
+			$job_offers_parent = $job_offers_parent[0];
 
-			<h2>Mobile Web Developer</h2>
-			<p>As the mobile web grows, Wikia grows with it, and with an ever-growing portion of our users going mobile we push.</p>
-			<div class="btn-container"><a href="" class="btn-wikia btn-arrow">Poczytaj więcej</a></div>
+			$job_offers = get_pages( array(
+				'child_of' =>  $job_offers_parent->ID,
+				'parent' =>  $job_offers_parent->ID,
+				'sort_column' => 'post_date',
+				'sort_order' => 'DESC',
+				'number' => 3
+			) );
+
+			foreach( $job_offers as $job_offer) :
+				$job_offer_link = get_page_link( $job_offer->ID );
+				?>
+				<h2><?php echo $job_offer->post_title ?></h2>
+				<p><?php echo $job_offer->post_excerpt ?></p>
+				<div class="btn-container"><a href="<?php echo $job_offer_link ?>" class="btn-wikia btn-arrow">Poczytaj więcej</a></div>
+				<?php
+			endforeach;
+		endif;
+?>
 	</div>
 </section>
 
