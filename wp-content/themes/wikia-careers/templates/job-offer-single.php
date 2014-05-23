@@ -56,7 +56,7 @@ $parent_link = get_page_link($parent->ID);
 			<ul class="tags">
 				<?php foreach (get_the_tags(108) as $tag) : ?>
 					<li>
-						<a href="<?php  //echo get_tag_link($tag->term_id) ?>"><?php echo $tag->name ?></a>
+						<span><?php echo $tag->name ?><span>
 					</li>
 				<?php endforeach; ?>
 			</ul>

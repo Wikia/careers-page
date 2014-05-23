@@ -23,19 +23,18 @@ Template Name: Job offer Lead Ops
 				<span class="name">Mateusz Szumała</span>
 				<span class="function">Rekruter</span>
 			</div>
-			<h2>Few benefits:</h2>
-			<ul class="">
-				<li>Salary of <strong>11&nbsp;000 – 14&nbsp;000 zł</strong>
-			(per month, gross)</li>
-				<li>One visit to San Francisco
-			office per year</li>
-				<li>2+ paid conferences per year</li>
-				</ul>
+			<h2>Wikia proponuje:</h2>
+			<ul>
+				<li><strong>11&nbsp;000 – 14&nbsp;000 zł</strong> (brutto, na miesiąc)</li>
+				<li>w pełni opłacony wyjazd na 2 konferencje rocznie</li>
+				<li>raz w roku wizyta w San Francisco</li>
+				<li>benefit plan</li>
+			</ul>
 
 			<ul class="tags">
 				<?php foreach (get_the_tags($post->ID) as $tag) : ?>
 					<li>
-						<a href="<?php //echo get_tag_link($tag->term_id) ?>"><?php echo $tag->name ?></a>
+						<span><?php echo $tag->name ?></span>
 					</li>
 				<?php endforeach; ?>
 			</ul>
