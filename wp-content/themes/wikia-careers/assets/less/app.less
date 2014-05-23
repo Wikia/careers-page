@@ -634,8 +634,34 @@ div.wpcf7-response-output {
   .featured-image {
 
     img {
-      max-width: 100%;
       margin-left: -20px;
+      max-width: 100%;
+    }
+  }
+
+  .rail-col {
+
+    h2 {
+      .subtext;
+      color: @text-color;
+      margin-bottom: @line-height-computed;
+    }
+
+    .side-nav {
+      list-style: none;
+      padding: 0;
+
+      a {
+        color: @text-color;
+
+        &:hover {
+          color: @brand-secondary;
+        }
+      }
+
+      .active a {
+        color: @brand-secondary;
+      }
     }
   }
 
