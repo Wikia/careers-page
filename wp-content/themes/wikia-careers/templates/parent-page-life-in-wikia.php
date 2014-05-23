@@ -21,6 +21,7 @@ $pages = get_pages( array(
 /* Show tabnav based on list of direct subpages */
 
 $tab_nav_items = array();
+$post_banner_links = array();
 $i = 0;
 
 foreach ( $pages as $page ) {
@@ -30,6 +31,11 @@ foreach ( $pages as $page ) {
 	$post_title = $page->post_title;
 	$post_name = $page->post_name;
 	$content = apply_filters('the_content', $page->post_content);
+
+	$post_banner_link = wp_get_attachment_image_src( get_post_thumbnail_id( $page->ID ), 'full' );
+	$post_banner_link = $post_banner_link[0];
+	$post_banner_links[$post_name] = $post_banner_link;
+
 	$tab_nav_items[] = '<li' . $activeAttr .'><a href="#' . $post_name . '" data-toggle="tab">' . $post_title . '</a></li>';
 	$i++;
 
@@ -137,9 +143,18 @@ echo $HTML_TABS;
 
 ?>
 
-
-
-
+<script type="text/javascript">
+	var switchBanner = function(e) {
+		var banners = {};
+		var activetedId = $(e.target).attr('href').substring(1);
+		<?php
+		foreach ($post_banner_links as $key => $value) :?>
+		banners['<?php echo $key ?>'] = '<?php echo $value; ?>';
+		<?php endforeach; ?>
+		$("#site-header").css( {'background-image' : "url('"+banners[activetedId]+"')"});
+	}
+	$('a[data-toggle="tab"]').on('show.bs.tab', switchBanner);
+</script>
 
 <?php include new Roots_Wrapping('templates/career-paths-section.php'); ?>
 
