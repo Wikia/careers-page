@@ -194,17 +194,12 @@ html, body {
     padding: 0 30px 0 15px;
     position: absolute;
     top: 0;
-    transition: background-size .1s linear;
   }
 
   &:hover {
     background-color: #fff;
     border-color: #fff;
     color: @brand-secondary;
-
-    &::before {
-      background-size: 60%;
-    }
   }
 }
 
@@ -999,7 +994,7 @@ h1+.offer-item {
 }
 
 .social-icons a:hover {
-  background-color: @brand-secondary;
+  background-color: #fff;
 }
 
 .social-icons {
@@ -1016,6 +1011,18 @@ h1+.offer-item {
 .social-icons li {
   display: table-cell;
 }
+
+.social-icons {
+
+  .icon-fb-icon:hover {
+    .icon-fb-icon-brand_pri;
+  }
+
+  .icon-github-icon:hover {
+    .icon-github-icon-brand_pri;
+  }
+}
+
 
 
 
