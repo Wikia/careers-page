@@ -6,7 +6,7 @@
 						<a href="<?php echo $parent_link?>" class="go-back">Powrót do ofert</a>
 					</div>
 					<div class="col-xxs-2 col-xs-2 col-sm-2 col-md-4 col-lg-4">
-						<button class="btn-wikia-white-white">Aplikuj</button>
+						<button class="btn-wikia-white-white" data-target="#jobApplyModal" data-toggle="modal">Aplikuj</button>
 					</div>
 				</div>
 			</div>
