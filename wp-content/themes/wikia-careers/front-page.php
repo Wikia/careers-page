@@ -46,7 +46,7 @@
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
 						<h3>Jakub</h3>
 						<p>Wcześniej - stażysta w Wikia. Dzisiaj - nasz spec od mobilnych rozwiązań.</p>
-						<a href="" class="btn-wikia-gray-blue btn-arrow">Poznaj</a>
+						<a href="kariera/sciezki-rozwoju/jakub/" class="btn-wikia-gray-blue btn-arrow">Poznaj</a>
 					</div>
 				</li>
 				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>federico.jpg">
@@ -54,7 +54,7 @@
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
 						<h3>Federico</h3>
 						<p>Architekt aplikacji, budowniczy zespołów programistów.</p>
-						<a href="" class="btn-wikia-gray-blue btn-arrow">Poznaj</a>
+						<a href="kariera/sciezki-rozwoju/federico/" class="btn-wikia-gray-blue btn-arrow">Poznaj</a>
 					</div>
 				</li>
 				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubk.jpg">
@@ -62,7 +62,7 @@
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
 						<h3>Jakub</h3>
 						<p>Inżynier z zacięciem biznesowym.</p>
-						<a href="" class="btn-wikia-gray-blue btn-arrow">Poznaj</a>
+						<a href="kariera/sciezki-rozwoju/jakub-szeryf/" class="btn-wikia-gray-blue btn-arrow">Poznaj</a>
 					</div>
 				</li>
 			</ul>
