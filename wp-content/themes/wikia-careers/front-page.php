@@ -2,35 +2,9 @@
 
 <section class="container job-offers">
 	<div class="offers-paper">
-<?php
-		$job_offers_parent = get_pages( array(
-			'meta_key' => '_wp_page_template',
-			'meta_value' => 'templates/parent-page.php',
-			'sort_column' => 'post_date',
-			'sort_order' => 'ASC'
-		) );
 
-		if ( !empty( $job_offers_parent ) ) :
-			$job_offers_parent = $job_offers_parent[0];
+		<?php if ( dynamic_sidebar('second_section_mainpage') ) : endif; ?>
 
-			$job_offers = get_pages( array(
-				'child_of' =>  $job_offers_parent->ID,
-				'parent' =>  $job_offers_parent->ID,
-				'sort_column' => 'post_date',
-				'sort_order' => 'DESC',
-				'number' => 3
-			) );
-
-			foreach( $job_offers as $job_offer) :
-				$job_offer_link = get_page_link( $job_offer->ID );
-				?>
-				<h2><?php echo $job_offer->post_title ?></h2>
-				<p><?php echo $job_offer->post_excerpt ?></p>
-				<div class="btn-container"><a href="<?php echo $job_offer_link ?>" class="btn-wikia btn-arrow">Poczytaj więcej</a></div>
-				<?php
-			endforeach;
-		endif;
-?>
 	</div>
 </section>
 

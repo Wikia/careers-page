@@ -86,19 +86,19 @@ function flexipages_init()
 			return;
 		
 		$pagelist = "";
-		
+
 		foreach($page_array as $page) {
-			
-			$date = "";			
+
+			$date = "";
 			if(isset($page['date']) && $page['date']) $date = " ".$page['date'];
 			
-			$pagelist .= str_repeat("\t", $level+1).'<li class="'.$page['class'].'"><a href="'.$page['link'].'" title="'.$page['title'].'">'.$page['title'].'</a>'.$date;
+			$pagelist .='<h2>'. $page['title']."</h2>\n";
+			$pagelist .='<p>'.$page['excerpt']."</p>\n";
+			$pagelist .='<div class="btn-container"><a href="'. $page['link'] .'" class="btn-wikia btn-arrow">Poczytaj więcej</a></div>'."\n";
 			if($page['children'])
 				$pagelist .= flexipages_list($page['children'], $level+1);
 			$pagelist.= "</li>\n";
 		}
-		if($pagelist)
-			$pagelist = str_repeat("\t", $level)."<ul>\n{$pagelist}".str_repeat("\t", $level)."</ul>";
 		return $pagelist;
 	}
 	
@@ -199,7 +199,8 @@ function flexipages_init()
 					'link' => get_page_link($page->ID),
 					'date' => $date,
 					'children' => $children,
-					'class' => $class
+					'class' => $class,
+					'excerpt' => $page->post_excerpt
 				);
 			}
 		}

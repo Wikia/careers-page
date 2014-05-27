@@ -92,7 +92,17 @@ function arphabet_widgets_init() {
 		'after_title' => '</h2>',
 	) );
 
-	/* Register quick contact form area*/
+	/* Register Second secion on mainpage - area */
+	register_sidebar( array(
+		'name' => 'Second section - mainpage',
+		'id' => 'second_section_mainpage',
+		'before_widget' => '',
+		'after_widget' => "\n",
+		'before_title' => '<h2 class="text-center">',
+		'after_title' => '</h2>',
+	) );
+
+	/* Register quick contact form area */
 	register_sidebar( array(
 		'name' => 'Quick contact form',
 		'id' => 'quick_contact_form',
