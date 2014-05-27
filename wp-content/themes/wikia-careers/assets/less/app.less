@@ -115,7 +115,8 @@ html, body {
     a {
       line-height: (@line-height-computed * 3);
       height: (@line-height-computed * 3);
-      padding: 0 20px;
+      padding: 0 25px;
+      text-transform: uppercase;
 
       &:hover,
       &.active {
@@ -1144,58 +1145,63 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     margin-top: -(@line-height-computed-sm * 2);
   }
 
-  .navigation .nav-wrapper {
-    height: (@line-height-computed-sm * 2);
-    margin-top: (@line-height-computed-sm * 2);
-    position: fixed;
-  }
-
   .navigation {
+
+    &.spaced-container {
+      padding: 0;
+    }
+
+    .nav-wrapper {
+      height: (@line-height-computed-sm * 2);
+      margin-top: (@line-height-computed-sm * 2);
+      position: fixed;
+    }
+
     .logo {
       height: (@line-height-computed-sm * 2);
       line-height: (@line-height-computed-sm * 2);
       width: 100px;
     }
-  }
 
-  .navigation .logo img {
-    height: 28px;
-    margin-top: 11px;
-  }
+    .logo img {
+      height: 28px;
+      margin-top: 11px;
+    }
 
-  .navigation nav, .navbar-collapse.collapse {
-    display: block;
-    float:left;
-    padding-top:5px;
-    width: 284px;
-    z-index: @zindex-navbar;
-  }
+    nav, .navbar-collapse.collapse {
+      display: block;
+      float:left;
+      padding-top:5px;
+      width: 284px;
+      z-index: @zindex-navbar;
+    }
 
-  .navigation .nav-animation-wrapper {
-    background: #fff;
-    box-shadow: inset -14px 0 17px -4px #d9d9d9;
-    height: auto;
-    overflow: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    transition-duration: 0.2s;
-    transition-property: width;
-    width: 0;
-  }
+    .nav-animation-wrapper {
+      background: #fff;
+      box-shadow: inset -14px 0 17px -4px #d9d9d9;
+      height: auto;
+      overflow: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      transition-duration: 0.2s;
+      transition-property: width;
+      width: 0;
+    }
 
-  .navigation .nav-animation-wrapper.active {
-    width: 284px;
-  }
+    .nav-animation-wrapper.active {
+      width: 284px;
+    }
 
-  .navigation nav ul {
-    float: none;
-    margin: 0;
-  }
+    nav ul {
+      float: none;
+      margin: 0;
+    }
 
-  .navigation nav li {
-    margin-top: @line-height-computed;
-    display: block;
-    float: none;
+    nav li {
+      margin-top: @line-height-computed;
+      display: block;
+      float: none;
+    }
   }
 
   /* Mobile navigation links mixins */
@@ -1249,6 +1255,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     margin-top: 35px;
     padding: 0 20px;
     text-align: left;
+    text-transform: uppercase;
     transition: none;
   }
 

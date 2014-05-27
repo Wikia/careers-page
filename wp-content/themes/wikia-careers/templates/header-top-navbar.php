@@ -1,6 +1,6 @@
 <section class="navigation-top-container container-fluid">
 	<div class="row">
-		<div class="navigation">
+		<div class="navigation container-fluid spaced-container">
 				<div class="nav-wrapper">
 					<div class="nav-animation-wrapper">
 						<nav class="collapse navbar-collapse" role="navigation">
