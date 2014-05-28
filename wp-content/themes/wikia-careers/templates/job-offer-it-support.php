@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Job offer Lead Ops
+Template Name: Job offer IT Support
 */
 
 ?>
@@ -11,10 +11,9 @@ Template Name: Job offer Lead Ops
 <article class="container spaced-container job-offer-content">
 	<div class="row">
 		<div class="col-xxs-4 col-xs-4 col-sm-4 col-md-8 col-lg-offset-1 col-lg-6 excerpt-col">
-			<h2>Wikia</h2>
-			<p>Wikia to jedna z 30 największych stron na świecie. Jej największa siła tkwi w dawaniu pasjonatom miejsca dla twórczej ekspresji, jakiej nie znajdą w innych, tradycyjnych mediach. Na całym świecie szukamy bystrych, kreatywnych profesjonalistów, by pomogli nam jeszcze bardziej rozwinąć skrzydła.</p>
+			<p><strong>W Wikia pracujemy na wysokich obrotach.</strong> Kodowanie mamy we krwi. Czasami krew w żyłach mrozi nam Czarny Ekran. Czasami napada na nas klątwa “Nie Znaleziono Sieci Bezprzewodowych ”. Czasem z niewyjaśnionych przyczyn nie mamy dostępu do internala. Albo mysz nie działa. W tych trudnych chwilach jest tylko jeden człowiek, który może nam pomóc. Tym człowiekiem jest nasz IT Support.</p>
 
-			<div class="featured-statement">Szukamy pełnoetatowego geeka do naszego Development Centre w Poznaniu!</div>
+			<div class="featured-statement">Bądź superbohaterem w naszym biurze!</div>
 
 		</div>
 		<div class="col-xxs-4 col-xs-4 col-sm-2 col-md-4 col-lg-4 rail-col">
@@ -25,7 +24,7 @@ Template Name: Job offer Lead Ops
 			</div>
 			<h2>Wikia proponuje:</h2>
 			<ul>
-				<li><strong>11&nbsp;000 – 14&nbsp;000 zł</strong> (brutto, na miesiąc)</li>
+				<li><strong>3&nbsp;000 – 5&nbsp;000 zł</strong> (brutto, na miesiąc)</li>
 				<li>w pełni opłacony wyjazd na 2 konferencje rocznie</li>
 				<li>raz w roku wizyta w San Francisco</li>
 				<li>benefit plan</li>
@@ -44,32 +43,35 @@ Template Name: Job offer Lead Ops
 		<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-10 col-lg-offset-1 job-offer-details">
 
 			<section class="featured-block">
-				<h2>Jeżeli chcesz uczestniczyć w</h2>
+				<h2>Twoją odpowiedzialnością byłoby</h2>
 				<div class="columns">
 					<ul>
-						<li>szukaniu pomysłów na jeszcze lepsze wykorzystanie naszego backup data center</li>
-						<li>podnoszeniu efektywności naszego CDN</li>
-						<li>szukaniu nowych rozwiązań w zakresie monitoringu systemów</li>
-						<li>testowaniu pojemności serwisu</li>
+						<li>onboarding nowych pracowników (zakładanie kont, VPNów, itd.)</li>
+						<li>wybieranie, zamawianie i konfiguracja sprzętu</li>
+						<li>wprowadzenie programu do inwentury</li>
+						<li>przygotowywanie zapytań ofertowych</li>
+						<li>obsługa sieci przewodowych i bezprzewodowych w biurze</li>
+						<li>wszystko to, co przerasta naszych developerów ;)</li>
 					</ul>
 				</div>
-				<p class="text-center">...to praca dla Ciebie!</p>
 			</section>
 
 
-			<h2>Czego potrzebujesz, aby dołączyć do Ops-Teamu w Wikia?</h2>
+			<h2>Czego potrzebujesz, aby dołączyć do Wikia?</h2>
 			<ul>
-				<li>znajomości arkanów Linuxa</li>
-				<li>znajomości baz danych, takich jak: MySQL, Hadoop</li>
-				<li>znajomości takich języków jak Ruby, Python, Perl, Bash (lub poddobnych)</li>
-				<li>doświadczenia w korzystaniu z frameworków typu Chef lub Puppet</li>
+				<li>niezłej orientacji w nowościach technologicznych - zarówno komputerów osobistych, jak i stacji dokujących, laptopów, Mac’ów, przedłużek, drukarek, złączek, routerów… itd.</li>
+				<li>dużej samodzielności</li>
+				<li>umiejętności ogarniania dużej ilości sprzętu na raz</li>
+				<li>znajomości języka angielskiego (we are a part of international company based in San Francisco, so English is a must here)</li>
 			</ul>
 
-			<h2>Przyznajemy dodatkowe punkty za</h2>
+			<h2>Otrzymasz bonusowe punkty, jeżeli</h2>
 			<ul>
-				<li>doświadczenie w pracy z dużymi, skalowalnymi systemami</li>
-				<li>doświadczenie w pracy z technologiami open source</li>
-				<li>szeroką wiedzę na temat najnowszych technologii administracji bazami danych</li>
+				<li>pracowałeś już kiedyś na podobnym stanowisku</li>
+				<li>masz konto na Wikii i jesteś aktywnym użytkownikiem</li>
+				<li>grasz w piłkarzyki i/lub bilard</li>
+				<li>wiesz, jak postawić Linuxa na Mac’u ;)</li>
+				</li>
 			</ul>
 
 			<section class="featured-block">

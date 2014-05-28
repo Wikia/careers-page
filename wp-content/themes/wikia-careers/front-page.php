@@ -101,7 +101,7 @@
 			<div class="col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4 benefit-item">
 				<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>benefits2.jpg" alt="Rozwój" />
 				<h3>Wyjazd do San Francisco</h3>
-				<p>Raz w roku wybierzesz się z nami do San Francisco w odwiedziny do naszego biura macierzystego.</p>
+				<p>Raz w roku wybierzesz się z nami do San Francisco w odwiedziny do naszej siedziby głównej.</p>
 			</div>
 			<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4 benefit-item">
 				<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>benefits3.jpg" alt="Rozwój" />
