@@ -14,7 +14,7 @@ Template Name: Job offer Lead Ops
 			<h2>Wikia</h2>
 			<p>Wikia to jedna z 30 największych stron na świecie. Jej największa siła tkwi w dawaniu pasjonatom miejsca dla twórczej ekspresji, jakiej nie znajdą w innych, tradycyjnych mediach. Na całym świecie szukamy bystrych, kreatywnych profesjonalistów, by pomogli nam jeszcze bardziej rozwinąć skrzydła.</p>
 
-			<div class="featured-statement">Szukamy pełnoetatowego geeka do naszego Development Centre w Poznaniu!</div>
+			<div class="featured-statement">Szukamy pełnoetatowego geeka do naszego Development Center w Poznaniu!</div>
 
 		</div>
 		<div class="col-xxs-4 col-xs-4 col-sm-2 col-md-4 col-lg-4 rail-col">
@@ -79,7 +79,7 @@ Template Name: Job offer Lead Ops
 						<li>Wikia dba o Twój rozwój - wybierz dwie konferencje w ciągu roku, a firma sfinansuje Twoje uczestnictwo, przejazd i zakwaterowanie</li>
 						<li>Raz w roku wybierzesz się z nami do San Francisco w odwiedziny do naszej siedziby głównej</li>
 						<li>Wikia organizuje wiele eventów rodzinnych - pikniki, imprezy, "wikilie" - jesteśmy family friendly</li>
-						<li>W trakcie pracy dbamy o Twoje sampoczucie - w naszej zawsze pełnej spiżarni znajdziesz owoce, przekąski, słodycze i napoje.</li>
+						<li>W trakcie pracy dbamy o Twoje samopoczucie - w naszej zawsze pełnej spiżarni znajdziesz owoce, przekąski, słodycze i napoje.</li>
 					</ul>
 				</div>
 			</section>

@@ -11,7 +11,8 @@ Template Name: Job offer IT Support
 <article class="container spaced-container job-offer-content">
 	<div class="row">
 		<div class="col-xxs-4 col-xs-4 col-sm-4 col-md-8 col-lg-offset-1 col-lg-6 excerpt-col">
-			<p><strong>W Wikia pracujemy na wysokich obrotach.</strong> Kodowanie mamy we krwi. Czasami krew w żyłach mrozi nam Czarny Ekran. Czasami napada na nas klątwa “Nie Znaleziono Sieci Bezprzewodowych ”. Czasem z niewyjaśnionych przyczyn nie mamy dostępu do internala. Albo mysz nie działa. W tych trudnych chwilach jest tylko jeden człowiek, który może nam pomóc. Tym człowiekiem jest nasz IT Support.</p>
+			<h2>W Wikia pracujemy na wysokich obrotach.</h2>
+			<p>Kodowanie mamy we krwi. Czasami krew w żyłach mrozi nam Czarny Ekran. Czasami napada na nas klątwa “Nie Znaleziono Sieci Bezprzewodowych ”. Czasem z niewyjaśnionych przyczyn nie mamy dostępu do internala. Albo mysz nie działa. W tych trudnych chwilach jest tylko jeden człowiek, który może nam pomóc. Tym człowiekiem jest nasz IT Support.</p>
 
 			<div class="featured-statement">Bądź superbohaterem w naszym biurze!</div>
 
@@ -81,7 +82,7 @@ Template Name: Job offer IT Support
 						<li>Wikia dba o Twój rozwój - wybierz dwie konferencje w ciągu roku, a firma sfinansuje Twoje uczestnictwo, przejazd i zakwaterowanie</li>
 						<li>Raz w roku wybierzesz się z nami do San Francisco w odwiedziny do naszej siedziby głównej</li>
 						<li>Wikia organizuje wiele eventów rodzinnych - pikniki, imprezy, "wikilie" - jesteśmy family friendly</li>
-						<li>W trakcie pracy dbamy o Twoje sampoczucie - w naszej zawsze pełnej spiżarni znajdziesz owoce, przekąski, słodycze i napoje.</li>
+						<li>W trakcie pracy dbamy o Twoje samopoczucie - w naszej zawsze pełnej spiżarni znajdziesz owoce, przekąski, słodycze i napoje.</li>
 					</ul>
 				</div>
 			</section>

@@ -111,7 +111,7 @@
 			<div class="col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4 benefit-item">
 				<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>benefits4.jpg" alt="Rozwój" />
 				<h3>Dbamy o Ciebie</h3>
-				<p>W trakcie pracy dbamy o Twoje sampoczucie - w naszej zawsze pełnej spiżarni znajdziesz owoce, przekąski, słodycze, napoje, by się pożywić i orzeźwić.</p>
+				<p>W trakcie pracy dbamy o Twoje samopoczucie - w naszej zawsze pełnej spiżarni znajdziesz owoce, przekąski, słodycze, napoje, by się pożywić i orzeźwić.</p>
 			</div>
 		</div>
 	</div>
