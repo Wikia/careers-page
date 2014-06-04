@@ -92,7 +92,8 @@
 
 	// Default data for header
 	$post_header_title = get_the_title();
-	$post_header_message = 'Poznań, Polska';
+	$custom_fields = get_post_custom();
+	$post_header_message = isset($custom_fields['post_subtitle']) ? $custom_fields['post_subtitle'][0] : '';
 
 	// Get link to post featured image if one exists
 	$post_thumb_id = get_post_thumbnail_id( get_the_ID(), 'full' );
