@@ -5,12 +5,10 @@
 class Akismet_Widget extends WP_Widget {
 
 	function __construct() {
-		load_plugin_textdomain( 'akismet' );
-		
 		parent::__construct(
 			'akismet_widget',
-			__( 'Akismet Widget' , 'akismet'),
-			array( 'description' => __( 'Display the number of spam comments Akismet has caught' , 'akismet') )
+			__( 'Akismet Widget' ),
+			array( 'description' => __( 'Display the number of spam comments Akismet has caught' ) )
 		);
 
 		if ( is_active_widget( false, false, $this->id_base ) ) {
@@ -25,7 +23,7 @@ class Akismet_Widget extends WP_Widget {
 .a-stats {
 	width: auto;
 }
-.a-stats a {
+.a-stats a { 
 	background: #7CA821;
 	background-image:-moz-linear-gradient(0% 100% 90deg,#5F8E14,#7CA821);
 	background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#7CA821),to(#5F8E14));
@@ -43,7 +41,7 @@ class Akismet_Widget extends WP_Widget {
 	-webkit-border-radius:3px;
 	width: 100%;
 }
-.a-stats a:hover {
+.a-stats a:hover { 
 	text-decoration: none;
 	background-image:-moz-linear-gradient(0% 100% 90deg,#6F9C1B,#659417);
 	background-image:-webkit-gradient(linear,0% 0,0% 100%,from(#659417),to(#6F9C1B));
@@ -63,19 +61,19 @@ class Akismet_Widget extends WP_Widget {
 
 	function form( $instance ) {
 		if ( $instance ) {
-			$title = $instance['title'];
+			$title = esc_attr( $instance['title'] );
 		}
 		else {
-			$title = __( 'Spam Blocked' , 'akismet');
+			$title = __( 'Spam Blocked' );
 		}
 ?>
 
 		<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' , 'akismet'); ?></label>
-		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
 		</p>
 
-<?php
+<?php 
 	}
 
 	function update( $new_instance, $old_instance ) {
@@ -95,7 +93,7 @@ class Akismet_Widget extends WP_Widget {
 ?>
 
 	<div class="a-stats">
-		<a href="http://akismet.com" target="_blank" title=""><?php printf( _n( '<strong class="count">%1$s spam</strong> blocked by <strong>Akismet</strong>', '<strong class="count">%1$s spam</strong> blocked by <strong>Akismet</strong>', $count , 'akismet'), number_format_i18n( $count ) ); ?></a>
+		<a href="http://akismet.com" target="_blank" title=""><?php printf( _n( '<strong class="count">%1$s spam</strong> blocked by <strong>Akismet</strong>', '<strong class="count">%1$s spam</strong> blocked by <strong>Akismet</strong>', $count ), number_format_i18n( $count ) ); ?></a>
 	</div>
 
 <?php
