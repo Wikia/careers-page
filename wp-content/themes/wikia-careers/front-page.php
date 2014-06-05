@@ -50,24 +50,24 @@
 		<div class="flexslider">
 			<ul class="slides">
 				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubo.jpg">
-					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4"><img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubo.jpg" alt="jakubo" class="person-picture" /></div>
-					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
+					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4 avatar"><img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubo.jpg" alt="jakubo" class="person-picture" /></div>
+					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4 description">
 						<h3>Jakub</h3>
 						<p>Knows how to get along with people. Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do dolores eos qui ratione voluptatem.</p>
 						<a href="" class="btn-wikia-gray-blue btn-arrow">See his path</a>
 					</div>
 				</li>
 				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>federico.jpg">
-					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4"><img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>federico.jpg" alt="federico" class="person-picture" /></div>
-					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
+					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4 avatar"><img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>federico.jpg" alt="federico" class="person-picture" /></div>
+					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4 description">
 						<h3>Federico</h3>
 						<p>Knows how to get along with people. Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do dolores eos qui  sed do dolores eos qui ratione voluptatem.</p>
 						<a href="" class="btn-wikia-gray-blue btn-arrow">See his path</a>
 					</div>
 				</li>
 				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubk.jpg">
-					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4"><img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubk.jpg" alt="jakubk" class="person-picture" /></div>
-					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
+					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4 avatar"><img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubk.jpg" alt="jakubk" class="person-picture" /></div>
+					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4 description">
 						<h3>Jakub</h3>
 						<p>Knows how to get along with people. Conse ctetur adipisicing elit, sed do dolores eos qui ratione voluptatem.</p>
 						<a href="" class="btn-wikia-gray-blue btn-arrow">See his path</a>

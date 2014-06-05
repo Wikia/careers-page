@@ -126,8 +126,8 @@
 
 .flexslider {
 	background: transparent;
-	border: 0px solid #fff;
-	border-radius: 0px;
+	border: 0;
+	border-radius: 0;
 	box-shadow: none;
 	height: 100%;
 	margin: 0;
@@ -140,14 +140,15 @@
 			width: auto;
 		}
 
-		& > li {
+		li {
 			display: table;
 			height: 600px;
 			overflow: hidden;
 			position: relative;
 			table-layout: fixed;
 
-			& > div {
+			.avatar,
+			.description {
 				display: table-cell;
 				float: none;
 				height: 600px;
@@ -185,10 +186,11 @@
 	.flexslider .slides {
 		padding-bottom: 135px;
 
-		& > li {
+		li {
 			height: auto;
 
-			& > div {
+			.avatar,
+			.description {
 				display: block;
 				height: auto;
 
@@ -223,10 +225,11 @@
 
 	.flexslider .slides {
 
-		& > li {
+		li {
 			height: 450px;
 
-			& > div {
+			.avatar,
+			.description {
 				height: 450px;
 
 				&:last-child {
