@@ -213,7 +213,7 @@
 		  if (slider.pagingCount > 1) {
 			for (var i = 0; i < slider.pagingCount; i++) {
 			  slide = slider.slides.eq(i);
-			  item = (slider.vars.controlNav === "thumbnails") ? '<span style="background-image: url(\'' + slide.attr( 'data-thumb' ) + '\')"></span><!--<img src="' + slide.attr( 'data-thumb' ) + '"/>-->' : '<a>' + j + '</a>';
+			  item = (slider.vars.controlNav === "thumbnails") ? '<span class="img-circle" style="background-image: url(\'' + slide.attr( 'data-thumb' ) + '\')"></span>' : '<a>' + j + '</a>';
 			  if ( 'thumbnails' === slider.vars.controlNav && true === slider.vars.thumbCaptions ) {
 				var captn = slide.attr( 'data-thumbcaption' );
 				if ( '' != captn && undefined != captn ) item += '<span class="' + namespace + 'caption">' + captn + '</span>';
