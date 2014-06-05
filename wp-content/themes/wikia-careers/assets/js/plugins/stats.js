@@ -75,9 +75,9 @@ var statsAnimation = (function($) {
 	 */
 	var visible = function($el, partial) {
 
-		var $w            = $(window),
-			viewTop       = $w.scrollTop(),
-			viewBottom    = viewTop + $w.height(),
+		var $window       = $(window),
+			viewTop       = $window.scrollTop(),
+			viewBottom    = viewTop + $window.height(),
 			_top          = $el.offset().top,
 			_bottom       = _top + $el.height(),
 			compareTop    = partial === true ? _bottom : _top,
