@@ -76,23 +76,6 @@
 			</ul>
 		</div>
 
-		<script>
-			$(document).ready(function(){
-				$('.flexslider').flexslider({
-					animation: "slide",
-					controlNav: "thumbnails",
-					nextText: '',
-					prevText: '',
-					slideshow: false,
-					start: function(slider){
-						$('body').removeClass('loading');
-					}
-				});
-			});
-		</script>
-
-
-
 	</div>
 </section>
 
