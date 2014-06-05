@@ -2,17 +2,17 @@
 
 <section class="container job-offers">
 	<div class="offers-paper">
-			<h2>Advertising Software Engineer</h2>
-			<p>We're striving to understand not only this world, but also every fictional world, game setting and movie universe. That's a lot of data to handle. </p>
-			<div class="btn-container"><a href="advertising-software-engineer" class="btn-wikia btn-arrow">Poczytaj więcej</a></div>
+		<h2>Advertising Software Engineer</h2>
+		<p>We're striving to understand not only this world, but also every fictional world, game setting and movie universe. That's a lot of data to handle. </p>
+		<div class="btn-container"><a href="advertising-software-engineer" class="btn-wikia btn-arrow">Poczytaj więcej</a></div>
 
-			<h2>Technical Operations Team Leader</h2>
-			<p>Wikia is running one of the most visited websites in the US, the go-to destination for information about anything you're passionate about.</p>
-			<div class="btn-container"><a href="technical-operations-team-leader" class="btn-wikia btn-arrow">Poczytaj więcej</a></div>
+		<h2>Technical Operations Team Leader</h2>
+		<p>Wikia is running one of the most visited websites in the US, the go-to destination for information about anything you're passionate about.</p>
+		<div class="btn-container"><a href="technical-operations-team-leader" class="btn-wikia btn-arrow">Poczytaj więcej</a></div>
 
-			<h2>Mobile Web Developer</h2>
-			<p>As the mobile web grows, Wikia grows with it, and with an ever-growing portion of our users going mobile we push.</p>
-			<div class="btn-container"><a href="" class="btn-wikia btn-arrow">Poczytaj więcej</a></div>
+		<h2>Mobile Web Developer</h2>
+		<p>As the mobile web grows, Wikia grows with it, and with an ever-growing portion of our users going mobile we push.</p>
+		<div class="btn-container"><a href="" class="btn-wikia btn-arrow">Poczytaj więcej</a></div>
 	</div>
 </section>
 
