@@ -4,6 +4,7 @@
 
 @import "bootstrap/bootstrap.less";
 @import "../img/svg/output/icons.data.svg.less";
+@import "prefixes-mixins.less";
 @import "../css/flexslider/flexslider.css";
 @import "../css/flexslider/flexslider-wikia-custom.less";
 
@@ -214,7 +215,6 @@ html, body {
   background-size: cover;
   margin-top: @site-header-lineheight;
   min-height: calc(~"100% - @{site-header-lineheight}");
-  min-height: -webkit-calc(~"100% - @{site-header-lineheight}");
   position: relative;
   text-align: center;
 }
@@ -344,31 +344,19 @@ html, body {
     }
 
     .offers-paper {
-      -moz-column-count: 3;
-      -moz-column-gap: @grid-md-gutter-width;
-      -webkit-column-count: 3;
-      -webkit-column-gap:@grid-md-gutter-width;
-      column-count: 3;
-      column-gap: @grid-md-gutter-width;
+      .column-gap(@grid-md-gutter-width);
+      .column-count(3);
       margin: 0;
     }
 
     p {
-      -moz-column-break-inside:avoid;
-      -ms-column-break-inside:avoid;
-      -o-column-break-inside:avoid;
-      -webkit-column-break-inside:avoid;
-      column-break-inside:avoid;
+      .column-break-inside(avoid);
       height: @line-height-computed * 4;
       overflow: hidden;
     }
 
     .btn-container {
-      -moz-column-break-after:always;
-      -ms-column-break-after:always;
-      -o-column-break-after:always;
-      -webkit-column-break-after:always;
-      column-break-after:always;
+      .column-break-after(always);
       margin-top: auto;
     }
   }
@@ -1011,7 +999,6 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     @site-header-lineheight-sm: @line-height-computed-sm * 2;
     margin-top: @site-header-lineheight-sm;
     min-height: calc(~"100% - @{site-header-lineheight-sm}");
-    min-height: -webkit-calc(~"100% - @{site-header-lineheight-sm}");
   }
 
 /* ==========================================================================
