@@ -91,12 +91,19 @@
 	<?php
 
 	// Default data for header
-	$post_header_title = get_the_title();
-	$custom_fields = get_post_custom();
+	if( is_home() ) { // News list page
+		$posts_page_id = get_option( 'page_for_posts' );
+		$post = get_post( $posts_page_id );
+		$post_header_title = $post->post_title;
+	} else {
+		$post_header_title = get_the_title();
+		$posts_page_id = get_the_ID();
+	}
+	$custom_fields = get_post_custom( $posts_page_id );
 	$post_header_message = isset($custom_fields['post_subtitle']) ? $custom_fields['post_subtitle'][0] : '';
 
 	// Get link to post featured image if one exists
-	$post_thumb_id = get_post_thumbnail_id( get_the_ID(), 'full' );
+	$post_thumb_id = get_post_thumbnail_id( $posts_page_id, 'full' );
 
 	// Post has featured image
 	if ($post_thumb_id) {

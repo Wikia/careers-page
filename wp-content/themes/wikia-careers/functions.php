@@ -227,6 +227,7 @@ add_action( 'roots_display_sidebar', 'disable_sidebar_for_theme' );
 
 // Define thumbnails
 add_image_size( 'container-md-thumb', 924, 300, 'soft' );
+add_image_size( 'news-section-thumb', 578, 321, 'soft' );
 
 
 // Remove auto adding width and height attributes to img tags

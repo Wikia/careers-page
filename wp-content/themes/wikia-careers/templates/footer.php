@@ -1,3 +1,9 @@
+<?php
+if( is_front_page() ):
+	include new Roots_Wrapping('templates/news-feed-section.php');
+endif;
+?>
+
 <footer class="container-fluid footer spaced-container">
 	<div class="row">
 		<div class="container">
