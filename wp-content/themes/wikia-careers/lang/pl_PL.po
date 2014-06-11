@@ -12,28 +12,21 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: 404.php:5
-msgid ""
-"The page you are looking for might have been removed, had its name changed, "
-"or is temporarily unavailable."
-msgstr ""
-"Strona której szukasz nie istnieje, została przeniesiona lub jest tymczasowo "
-"niedostępna."
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr "Strona, którą próbujesz wyświetlić nie istnieje"
 
-#: 404.php:8
-msgid "Please try the following:"
-msgstr "Spróbuj następujących czynności:"
+#: 404.php:7
+msgid "It looks like this was the result of either:"
+msgstr "Wygląda na to że przyczyną był:"
 
-#: 404.php:10
-msgid "Check your spelling"
-msgstr "Sprawdź poprawność pisowni"
+#: 404.php:7
+msgid "a mistyped address"
+msgstr "nieprawidłowo wpisany adres"
 
-#: 404.php:11
-msgid "Return to the <a href=\"%s\">home page</a>"
-msgstr "Powrót do <a href=\"%s\">strony głównej</a>"
+#: 404.php:7
+msgid "an out-of-date link"
+msgstr "nieaktualny link"
 
-#: 404.php:12
-msgid "Click the <a href=\"javascript:history.back()\">Back</a> button"
-msgstr "Kliknij <a href=\"javascript:history.back()\">Powrót</a>"
 
 #: lib/activation.php:31 lib/activation.php:32
 msgid "Theme Activation"

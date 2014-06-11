@@ -91,11 +91,14 @@
 	<?php
 
 	// Default data for header
-	if( is_home() ) { // News list page
+	if( is_404() ) { // 404 page
+		$post_header_title = translate('Sorry, but the page you were trying to view does not exist.', 'roots');
+		$posts_page_id = 0;
+	} elseif( is_home() ) { // News list page
 		$posts_page_id = get_option( 'page_for_posts' );
 		$post = get_post( $posts_page_id );
 		$post_header_title = $post->post_title;
-	} else {
+	} else { // Other
 		$post_header_title = get_the_title();
 		$posts_page_id = get_the_ID();
 	}

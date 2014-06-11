@@ -721,13 +721,14 @@ strong {
 }
 
 .regular-article {
-  p {
+  p,
+  ul {
     margin-bottom: @line-height-computed * 1.5;
     margin-left: auto;
     margin-right: auto;
     width: 83.33%;
-
   }
+
   img {
     margin-bottom: @line-height-computed;
     max-width: 100%;
@@ -749,7 +750,10 @@ strong {
 /* Gallery Shortcode */
 .gallery-row { padding: 15px 0; }
 
-
+.error404 .message {
+  margin-top: @line-height-computed * 2;
+  margin-bottom: @line-height-computed * 2;
+}
 
 /* ==========================================================================
    Sidebar
