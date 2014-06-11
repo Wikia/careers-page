@@ -13,7 +13,7 @@ $pages = get_pages( array(
 
 if ( !empty($pages) ) {
 	$page_link = get_page_link( $pages[0]->ID );
-	header("Location: $page_link");
+	wp_redirect( $page_link );
 	exit;
 }
 ?>

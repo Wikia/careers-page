@@ -252,3 +252,13 @@ function is_tree($pid) {
 	else
 		return false;
 };
+
+
+/**
+ * Buffer the output except headers to send as a whole at the end
+ * It allows late redirect to a different page
+ */
+function app_output_buffer() {
+	ob_start();
+}
+add_action('init', 'app_output_buffer');
