@@ -19,6 +19,6 @@ var mainMenu = (function($) {
 
 	return {
 		initClickEvent : initClickEvent
-	}
+	};
 
 })(jQuery);

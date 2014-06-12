@@ -14,7 +14,7 @@ Template Name: Parent page template
 
 	<section class="tab-pane active container job-offers-list" id="job-offers">
 
-				<h1>Otwarte stanowiska</h1>
+				<?php echo $post->post_content ?>
 
 				<?php
 				//show list of all subpages

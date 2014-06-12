@@ -27,8 +27,7 @@
 		}
 
 		&.flex-prev {
-			-webkit-transform: scaleX(-1);
-			transform: scaleX(-1);
+			.transform-scale-x(-1);
 		}
 
 		&.flex-next:before {
@@ -73,22 +72,14 @@
 		transition: all 0.15s linear;
 		width: 66px;
 
-		img {
-			.img-circle;
-			width: 80%;
-			margin: auto;
-			transition: all 0.5s linear;
-		}
-
 		&:hover {
 
 			span {
-				top:45%;
+				top: 45%;
 			}
 		}
 
 		span {
-			.img-circle;
 			background-color: #fff;
 			.box-shadow(0 6px 12px rgba(0,0,0,.175));
 			background-repeat: no-repeat;
@@ -100,7 +91,7 @@
 			margin-left: -25px;
 			margin-top: -25px;
 			position: absolute;
-			top:50%;
+			top: 50%;
 			transition: all 0.15s linear;
 			width: 50px;
 		}
@@ -112,9 +103,12 @@
 				margin-top: -33px;
 				margin-left: -33px;
 				width: 66px;
+			}
 
-				&:hover {
-					top:50%;
+			&:hover {
+
+				span {
+					top: 50%;
 				}
 			}
 		}
@@ -126,8 +120,8 @@
 
 .flexslider {
 	background: transparent;
-	border: 0px solid #fff;
-	border-radius: 0px;
+	border: 0;
+	border-radius: 0;
 	box-shadow: none;
 	height: 100%;
 	margin: 0;
@@ -140,14 +134,15 @@
 			width: auto;
 		}
 
-		& > li {
+		li {
 			display: table;
 			height: 600px;
 			overflow: hidden;
 			position: relative;
 			table-layout: fixed;
 
-			& > div {
+			.avatar,
+			.description {
 				display: table-cell;
 				float: none;
 				height: 600px;
@@ -189,10 +184,11 @@
 	.flexslider .slides {
 		padding-bottom: 135px;
 
-		& > li {
+		li {
 			height: auto;
 
-			& > div {
+			.avatar,
+			.description {
 				display: block;
 				height: auto;
 
@@ -227,10 +223,11 @@
 
 	.flexslider .slides {
 
-		& > li {
+		li {
 			height: 450px;
 
-			& > div {
+			.avatar,
+			.description {
 				height: 450px;
 
 				&:last-child {

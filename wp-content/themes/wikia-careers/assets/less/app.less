@@ -6,6 +6,7 @@
 @import "wikia-careers/type.less";
 @import "wikia-careers/mixins.less";
 @import "../img/svg/output/icons.data.svg.less";
+@import "prefixes-mixins.less";
 @import "../css/flexslider/flexslider.css";
 @import "../css/flexslider/flexslider-wikia-custom.less";
 
@@ -40,7 +41,7 @@ html, body {
 
 .navigation {
   background-color: #fff;
-  box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.08);
+  box-shadow: 0 2px 5px 0 rgba(50, 50, 50, 0.08);
   display: table;
   height: @line-height-computed;
   position: relative;
@@ -115,8 +116,7 @@ html, body {
     a {
       line-height: (@line-height-computed * 3);
       height: (@line-height-computed * 3);
-      padding: 0 25px;
-      text-transform: uppercase;
+      padding: 0 20px;
 
       &:hover,
       &.active {
@@ -136,10 +136,6 @@ html, body {
   background-size: 9px;
   padding: 0 33px 0 15px;
 
-  &.btn-wikia-white {
-    .icon-chevron-white;
-  }
-
   &.btn-wikia-gray-blue,
   &.btn-wikia-regular {
     .icon-chevron-gray;
@@ -149,16 +145,8 @@ html, body {
     .icon-chevron-gray_light;
   }
 
-  &.btn-wikia-white {
-    .icon-chevron-white;
-  }
-
-  /* Arrow hovers */
-
-  &:hover {
-    .icon-chevron-white;
-  }
-
+  &.btn-wikia-white,
+  &:hover,
   &.btn-wikia:hover,
   &.btn-wikia-gray-blue:hover,
   &.btn-wikia-light:hover,
@@ -224,7 +212,6 @@ html, body {
   background-size: cover;
   margin-top: @site-header-lineheight;
   min-height: calc(~"100% - @{site-header-lineheight}");
-  min-height: -webkit-calc(~"100% - @{site-header-lineheight}");
   position: relative;
   text-align: center;
 
@@ -377,31 +364,19 @@ html, body {
     }
 
     .offers-paper {
-      -moz-column-count: 3;
-      -moz-column-gap: @grid-md-gutter-width;
-      -webkit-column-count: 3;
-      -webkit-column-gap:@grid-md-gutter-width;
-      column-count: 3;
-      column-gap: @grid-md-gutter-width;
+      .column-gap(@grid-md-gutter-width);
+      .column-count(3);
       margin: 0;
     }
 
     p {
-      -moz-column-break-inside:avoid;
-      -ms-column-break-inside:avoid;
-      -o-column-break-inside:avoid;
-      -webkit-column-break-inside:avoid;
-      column-break-inside:avoid;
+      .column-break-inside(avoid);
       height: @line-height-computed * 4;
       overflow: hidden;
     }
 
     .btn-container {
-      -moz-column-break-after:always;
-      -ms-column-break-after:always;
-      -o-column-break-after:always;
-      -webkit-column-break-after:always;
-      column-break-after:always;
+      .column-break-after(always);
       margin-top: auto;
     }
   }
@@ -431,7 +406,7 @@ html, body {
     }
 
     &:last-child::after{
-      width: 0px;
+      width: 0;
     }
   }
 
@@ -755,6 +730,7 @@ strong {
   margin-bottom: @line-height-computed * 2;
 }
 
+
 /* ==========================================================================
    Sidebar
    ========================================================================== */
@@ -812,9 +788,6 @@ h1+.offer-item {
   padding-top: 55px;
   padding-bottom: 40px;
 
-
-
-
   &:hover {
     .container {
       .icon-arrow-right-gray_light;
@@ -846,6 +819,9 @@ h1+.offer-item {
   h2 {
     color: @brand-secondary;
     font-size: @font-size-h3;
+    margin-bottom: 0;
+    margin-top: 0;
+    transition: all .5s linear;
     margin-bottom: 0px;
     margin-top: 0px;
   }
@@ -883,7 +859,6 @@ h1+.offer-item {
 }
 
 .modal-backdrop.in {
-  filter: alpha(opacity=10);
   opacity: .1;
 }
 
@@ -897,7 +872,7 @@ h1+.offer-item {
 }
 
 .modal-dialog {
-  margin: 0px 0 0 auto;
+  margin: 0 0 0 auto;
   width: 75%;
   min-height: 100%;
   height: 100%;
@@ -1021,18 +996,6 @@ h1+.offer-item {
 .social-icons li {
   display: table-cell;
 }
-
-.social-icons {
-
-  .icon-fb-icon:hover {
-    .icon-fb-icon-brand_pri;
-  }
-
-  .icon-github-icon:hover {
-    .icon-github-icon-brand_pri;
-  }
-}
-
 
 
 
@@ -1179,36 +1142,32 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
       height: (@line-height-computed-sm * 2);
       line-height: (@line-height-computed-sm * 2);
       width: 100px;
+
     }
 
-    .logo img {
-      height: 28px;
-      margin-top: 11px;
-    }
+  .navigation nav, .navbar-collapse.collapse {
+    display: block;
+    float:left;
+    padding-top:5px;
+    width: 284px;
+    z-index: @zindex-navbar;
+  }
 
-    nav, .navbar-collapse.collapse {
-      display: block;
-      float:left;
-      padding-top:5px;
-      width: 284px;
-      z-index: @zindex-navbar;
-    }
+  .navigation .nav-animation-wrapper {
+    background: #fff;
+    box-shadow: inset -14px 0 17px -4px #d9d9d9;
+    height: auto;
+    overflow: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    transition-duration: 0.2s;
+    transition-property: width;
+    width: 0;
+  }
 
-    .nav-animation-wrapper {
-      background: #fff;
-      box-shadow: inset -14px 0 17px -4px #d9d9d9;
-      height: auto;
-      overflow: auto;
-      overflow-x: hidden;
-      -webkit-overflow-scrolling: touch;
-      transition-duration: 0.2s;
-      transition-property: width;
-      width: 0;
-    }
-
-    .nav-animation-wrapper.active {
-      width: 284px;
-    }
+  .navigation .nav-animation-wrapper.active {
+    width: 284px;
+  }
 
     nav ul {
       float: none;
@@ -1302,9 +1261,6 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
   .footer .text-links {
     float: none;
-  }
-
-  .footer .text-links {
     padding: 0;
   }
 
@@ -1326,11 +1282,6 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
     padding-bottom: 30px;
     padding-top: 30px;
   }
-
-}
-
-
-@media (min-width: @screen-xs-min) {
 
 }
 

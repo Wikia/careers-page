@@ -556,35 +556,10 @@
   border-color: @border;
   transition: background-color .2s linear;
 
-  &:hover,
-  &:focus,
-  &:active,
-  &.active,
-  .open .dropdown-toggle& {
+  &:hover {
     color: @colorhover;
     background-color: rgba(red(@backgroundhover), green(@backgroundhover), blue(@backgroundhover), 1);
     border-color: @borderhover;
-  }
-  &:active,
-  &.active,
-  .open .dropdown-toggle& {
-    background-image: none;
-  }
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    &,
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-      background-color: @background;
-    }
-  }
-
-  .badge {
-    color: @background;
-    background-color: @color;
   }
 }
 
