@@ -58,7 +58,7 @@
 		</div>
 	<?php endif; ?>
 
-<?php elseif ( get_post_meta( $wp_query->post->ID, '_wp_page_template', true ) == 'templates/parent-page.php' ): ?>
+<?php elseif ( isset( $wp_query->post ) && get_post_meta( $wp_query->post->ID, '_wp_page_template', true ) == 'templates/parent-page.php' ): ?>
 		<!-- header background image -->
 		<div id="site-header" style="background-image:url('<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>recruitment-banner.jpg')" class="container-fluid site-header list-page-header">
 			<div class="row">
@@ -72,7 +72,7 @@
 			</div>
 		</div>
 
-<?php elseif ( get_post_meta( $wp_query->post->ID, '_wp_page_template', true ) == 'templates/parent-page-life-in-wikia.php' ): ?>
+<?php elseif ( isset( $wp_query->post ) && get_post_meta( $wp_query->post->ID, '_wp_page_template', true ) == 'templates/parent-page-life-in-wikia.php' ): ?>
 		<!-- header background image -->
 		<div id="site-header" style="background-image:url('<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>fandom-banner.jpg')" class="container-fluid site-header list-page-header">
 			<div class="row">
