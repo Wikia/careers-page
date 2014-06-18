@@ -10,14 +10,35 @@
 .container {
   .container-fixed();
 
+  @media (min-width: @screen-xs-min) {
+    width: @screen-xs-min - @browser-scrollbar-width;
+  }
   @media (min-width: @screen-sm-min) {
-    width: @container-sm;
+    width: @screen-sm-min - @browser-scrollbar-width;
   }
   @media (min-width: @screen-md-min) {
-    width: @container-md;
+    width: @screen-md-min - @browser-scrollbar-width;
   }
   @media (min-width: @screen-lg-min) {
-    width: @container-lg;
+    width: @screen-lg-min - @browser-scrollbar-width;
+  }
+}
+
+// reduce width of container while placed within spaced container
+.spaced-container .container,
+.spaced-container.container {
+
+  @media (min-width: @screen-xs-min) {
+    width: @screen-xs-min - @browser-scrollbar-width - @page-xs-side-margins * 2;
+  }
+  @media (min-width: @screen-sm-min) {
+    width: @screen-sm-min - @browser-scrollbar-width - @page-sm-side-margins * 2;
+  }
+  @media (min-width: @screen-md-min) {
+    width: @screen-md-min - @browser-scrollbar-width - @page-md-side-margins * 2;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @screen-lg-min - @browser-scrollbar-width - @page-lg-side-margins * 2;
   }
 }
 
@@ -43,9 +64,13 @@
 
 // Columns
 //
-// Common styles for small and large grid columns
+// Common styles (mainly applying specific gutters as paddings) for xs, small, medium and large grid columns
 
-.make-grid-columns();
+.make-grid-column(xxs,@grid-xxs-columns,@grid-xxs-gutter-width);
+.make-grid-column(xs,@grid-xs-columns,@grid-xs-gutter-width);
+.make-grid-column(sm,@grid-sm-columns,@grid-sm-gutter-width);
+.make-grid-column(md,@grid-md-columns,@grid-md-gutter-width);
+.make-grid-column(lg,@grid-lg-columns,@grid-lg-gutter-width);
 
 
 // Extra small grid
@@ -53,8 +78,17 @@
 // Columns, offsets, pushes, and pulls for extra small devices like
 // smartphones.
 
-.make-grid(xs);
+.make-grid(xxs, @grid-xxs-columns);
 
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from small phones
+// to phones.
+
+@media (min-width: @screen-xs-min) {
+  .make-grid(xs, @grid-xs-columns);
+}
 
 // Small grid
 //
@@ -62,7 +96,7 @@
 // to tablets.
 
 @media (min-width: @screen-sm-min) {
-  .make-grid(sm);
+  .make-grid(sm, @grid-sm-columns);
 }
 
 
@@ -71,7 +105,7 @@
 // Columns, offsets, pushes, and pulls for the desktop device range.
 
 @media (min-width: @screen-md-min) {
-  .make-grid(md);
+  .make-grid(md, @grid-md-columns);
 }
 
 
@@ -80,5 +114,12 @@
 // Columns, offsets, pushes, and pulls for the large desktop device range.
 
 @media (min-width: @screen-lg-min) {
-  .make-grid(lg);
+  .make-grid(lg, @grid-lg-columns);
 }
+
+
+// Page margins
+//
+// .spaced-container class that adds side margins to container specific to screen size
+
+.make-spaced-container();

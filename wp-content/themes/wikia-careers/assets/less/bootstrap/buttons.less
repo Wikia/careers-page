@@ -16,7 +16,7 @@
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   white-space: nowrap;
-  .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
+  .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @btn-default-height; @border-radius-base);
   .user-select(none);
 
   &,
@@ -77,6 +77,71 @@
   .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
 }
 
+.btn-wikia {
+  .btn;
+  .button-wikia(
+    @brand-secondary,
+    #fff,
+    @btn-wikia-light-bg,
+    @brand-secondary,
+    @brand-secondary,
+    @brand-secondary,
+    @btn-wikia-light-border-width
+  );
+}
+
+.btn-wikia-light {
+  .btn;
+  .button-wikia(
+    @btn-wikia-light-color,
+    @btn-wikia-light-colorhover,
+    @btn-wikia-light-bg,
+    @btn-wikia-light-bghover,
+    @btn-wikia-light-border,
+    @btn-wikia-light-borderhover,
+    @btn-wikia-light-border-width
+  );
+}
+
+.btn-wikia-regular {
+  .btn;
+  .button-wikia(
+    @gray,
+    @btn-wikia-light-colorhover,
+    @btn-wikia-light-bg,
+    @gray,
+    @gray,
+    @btn-wikia-light-borderhover,
+    @btn-wikia-light-border-width
+  );
+}
+
+.btn-wikia-white {
+  .btn;
+  .button-wikia(
+    #fff,
+    #fff,
+    transparent,
+    @brand-secondary,
+    #fff,
+    @brand-secondary,
+    1px
+  );
+}
+
+.btn-wikia-gray-blue {
+  .btn;
+  .button-wikia(
+    @gray,
+    #fff,
+    transparent,
+    @brand-secondary,
+    @gray,
+    @brand-secondary,
+    1px
+  );
+}
+
 
 // Link buttons
 // -------------------------
@@ -130,7 +195,7 @@
   .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
 }
 .btn-xs {
-  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-xsmall; @line-height-small; @border-radius-small);
 }
 
 

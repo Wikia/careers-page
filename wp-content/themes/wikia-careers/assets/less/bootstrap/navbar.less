@@ -67,10 +67,10 @@
     box-shadow: none;
 
     &.collapse {
-      display: block !important;
-      height: auto !important;
+      display: block;
+      height: auto;
       padding-bottom: 0; // Override default setting
-      overflow: visible !important;
+      overflow: visible;
     }
 
     &.in {
@@ -116,7 +116,7 @@
 
 // Static top (unfixed, but 100% wide) navbar
 .navbar-static-top {
-  z-index: @zindex-navbar;
+  z-index: @zindex-navbar-fixed;
   border-width: 0 0 1px;
 
   @media (min-width: @grid-float-breakpoint) {
