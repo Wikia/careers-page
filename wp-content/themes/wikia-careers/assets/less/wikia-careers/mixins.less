@@ -72,3 +72,23 @@
 
 }
 
+/* Text formatting */
+.font-size-base() {
+	font-size: @font-size-base;
+
+	@media (min-width: @screen-sm) {
+		font-size: @font-size-small;
+	}
+
+	@media (min-width: @screen-lg) {
+		font-size: @font-size-large;
+	}
+}
+
+.line-hieght-base() {
+	line-height: @line-height-computed;
+
+	@media (min-width: @screen-lg) {
+		line-height: @line-height-computed-lg;
+	}
+}

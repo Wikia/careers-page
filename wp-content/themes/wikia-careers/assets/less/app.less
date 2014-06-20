@@ -92,8 +92,7 @@ html, body {
 
 	.btn-wikia-light {
 		.btn-arrow;
-		margin-top:23px;
-		margin-right: 13px;
+		margin: auto 13px auto 0;
 		float: right;
 		height: auto;
 		text-transform: none;
@@ -106,6 +105,9 @@ html, body {
 
 	nav {
 		clear: none;
+		&.collapse {
+			display: flex;
+		}
 		float: right;
 		min-height: @line-height-computed * 3;
 
@@ -131,7 +133,7 @@ html, body {
 }
 
 .btn-arrow {
-	.icon-chevron-brand_prim;
+	.icon-chevron-brand_pri;
 	background-position: calc(~"100% - 12px") 50%;
 	background-size: 9px;
 	padding: 0 33px 0 15px;
@@ -1256,7 +1258,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 			}
 
 			li {
-				margin-top: @line-height-computed;
+				margin-top: @line-height-computed-sm;
 				display: block;
 				float: none;
 			}
@@ -1276,7 +1278,6 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 	.mobile-nav-link-hover() {
 		border-left: 5px solid @brand-secondary;
 		border-bottom: 0;
-		font-weight: bold;
 	}
 
 	.navigation nav ul a {
@@ -1285,9 +1286,16 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 
 
-	.navigation nav ul a:hover,
-	.navigation nav ul .active a {
-		.mobile-nav-link-hover;
+	.navigation nav ul {
+
+		a:hover,
+		.active a {
+			.mobile-nav-link-hover;
+		}
+
+		.active a {
+			.strong;
+		}
 	}
 
 	.navigation .menu-button {
@@ -1311,7 +1319,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 		color: @brand-secondary;
 		font-size: 1em;
 		float: none;
-		margin-top: 35px;
+		margin-top: @line-height-computed-sm;
 		padding: 0 20px;
 		text-align: left;
 		transition: none;

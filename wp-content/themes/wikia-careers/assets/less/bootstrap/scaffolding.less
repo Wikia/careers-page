@@ -20,13 +20,13 @@
 // Body reset
 
 html {
-	font-size: 62.5%;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 body {
 	font-family: @font-family-base;
-	font-size: @font-size-base;
+	.font-size-base();
+	.line-hieght-base();
 	line-height: @line-height-computed;
 	color: @text-color;
 	background-color: @body-bg;

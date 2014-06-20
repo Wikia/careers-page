@@ -38,7 +38,7 @@
 		<!-- header background image -->
 		<div id="site-header" style="background-image:url('<?php header_image(); ?>')" class="container-fluid site-header">
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
+				<div class="col-md-6 col-md-offset-3 col-sm-6 col-xs-4 col-xxs-4">
 					<div class="middled">
 				<?php if ( get_theme_mod( 'wikia_careers_header_desc' ) ) : ?>
 					<!-- header background message -->
@@ -62,7 +62,7 @@
 		<!-- header background image -->
 		<div id="site-header" style="background-image:url('<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>recruitment-banner.jpg')" class="container-fluid site-header list-page-header">
 			<div class="row">
-				<div class="col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
+				<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
 					<div class="middled">
 					<!-- header background message -->
 					<h1 class="site-header-message">Dołącz do nas!</h1>

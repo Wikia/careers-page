@@ -47,31 +47,63 @@ h6, .h6 {
 h1, .h1 {
 	font-size: @font-size-h1;
 	line-height: @line-height-computed-h1;
+
+	@media (min-width: @screen-sm) {
+		font-size: @font-size-h1-sm;
+		line-height: @line-height-computed-h1-sm;
+	}
+
+	@media (min-width: @screen-lg) {
+		font-size: @font-size-h1-lg;
+		line-height: @line-height-computed-h1-lg;
+	}
 }
 
 h2, .h2 {
 	font-size: @font-size-h2;
 	line-height: @line-height-computed-h2;
+
+	@media (min-width: @screen-sm) {
+		font-size: @font-size-h2-sm;
+		line-height: @line-height-computed-h2-sm;
+	}
+
+	@media (min-width: @screen-lg) {
+		font-size: @font-size-h2-lg;
+		line-height: @line-height-computed-h2-lg;
+	}
 }
 
 h3, .h3 {
 	font-size: @font-size-h3;
 	line-height: @line-height-computed-h3;
+
+	@media (min-width: @screen-sm) {
+		font-size: @font-size-h3-sm;
+		line-height: @line-height-computed-h3-sm;
+	}
+
+	@media (min-width: @screen-lg) {
+		font-size: @font-size-h3-lg;
+		line-height: @line-height-computed-h3-lg;
+	}
 }
 
-h4, .h4 {
+h4, .h4,
+h5, .h5,
+h6, .h6 {
 	font-size: @font-size-h4;
 	line-height: @line-height-computed-h4;
-}
 
-h5, .h5 {
-	font-size: @font-size-h5;
-	line-height: @line-height-computed-h5;
-}
+	@media (min-width: @screen-sm) {
+		font-size: @font-size-h4-sm;
+		line-height: @line-height-computed-h4-sm;
+	}
 
-h6, .h6 {
-	font-size: @font-size-h6;
-	line-height: @line-height-computed-h6;
+	@media (min-width: @screen-lg) {
+		font-size: @font-size-h4-lg;
+		line-height: @line-height-computed-h4-lg;
+	}
 }
 
 .bold-titles {
