@@ -55,8 +55,20 @@
 @font-size-small:         18px;
 @font-size-medium:        @font-size-small;
 @font-size-large:         20px;
-@font-size-subtext:       floor((@font-size-base * 0.84)); // 15px
-@font-size-blockquote:    floor((@font-size-base * 1.23)); // 22px
+
+// subtext
+@font-size-subtext:            13px;
+@font-size-subtext-xs:         @font-size-subtext;
+@font-size-subtext-sm:         15px;
+@font-size-subtext-md:         @font-size-subtext-sm;
+@font-size-subtext-lg:         18px;
+
+// blockquote
+@font-size-blockquote:            20px;
+@font-size-blockquote-xs:         @font-size-blockquote;
+@font-size-blockquote-sm:         22px;
+@font-size-blockquote-md:         @font-size-blockquote-sm;
+@font-size-blockquote-lg:         28px;
 
 // h1
 @font-size-h1:            32px;
@@ -95,7 +107,20 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // 24px
 @line-height-computed-sm:    @line-height-computed;
 @line-height-computed-lg:    floor((@font-size-base * @line-height-lg)); // 30px
-@line-height-computed-subtext:    floor((@font-size-base * 1.23)); // 22px
+
+// subtext
+@line-height-computed-subtext:       18px;
+@line-height-computed-subtext-xs:    @line-height-computed-subtext;
+@line-height-computed-subtext-sm:    20px;
+@line-height-computed-subtext-md:    @line-height-computed-subtext-sm;
+@line-height-computed-subtext-lg:    30px;
+
+// blockquote
+@line-height-computed-blockquote:       26px;
+@line-height-computed-blockquote-xs:    @line-height-computed-blockquote;
+@line-height-computed-blockquote-sm:    @line-height-computed-blockquote;
+@line-height-computed-blockquote-md:    @line-height-computed-blockquote-sm;
+@line-height-computed-blockquote-lg:    34px;
 
 // h1
 @line-height-h1:            1.25;
