@@ -4,6 +4,8 @@ if( is_front_page() ):
 endif;
 ?>
 
+<?php include new Roots_Wrapping('templates/contact-section.php'); ?>
+
 <footer class="container-fluid footer spaced-container">
 	<div class="row">
 		<div class="container">

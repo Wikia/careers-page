@@ -85,10 +85,78 @@
 	}
 }
 
+/* Mixins for building responsive line-heights, paddings and margins */
+
 .line-hieght-base() {
 	line-height: @line-height-computed;
 
 	@media (min-width: @screen-lg) {
 		line-height: @line-height-computed-lg;
+	}
+}
+
+.line-hieght-custom(@line-height-base: @line-height-computed, @line-height-sm: @line-height-computed-sm, @line-height-lg: @line-height-computed-lg) {
+	line-height: @line-height-base;
+
+	@media (min-width: @screen-sm) {
+		line-height: @line-height-sm;
+	}
+
+	@media (min-width: @screen-lg) {
+		line-height: @line-height-lg;
+	}
+}
+
+
+.margin-bottom-section-vertical(@margin: @margin-section-vertical, @margin-sm: @margin-section-vertical-sm, @margin-lg: @margin-section-vertical-lg) {
+	margin-bottom: @margin;
+
+	@media (min-width: @screen-sm) {
+		margin-bottom: @margin-sm;
+	}
+
+	@media (min-width: @screen-lg) {
+		margin-bottom: @margin-lg;
+	}
+}
+
+.margin-top-section-vertical(@margin: @margin-section-vertical, @margin-sm: @margin-section-vertical-sm, @margin-lg: @margin-section-vertical-lg) {
+	margin-top: @margin;
+
+	@media (min-width: @screen-sm) {
+		margin-top: @margin-sm;
+	}
+
+	@media (min-width: @screen-lg) {
+		margin-top: @margin-lg;
+	}
+}
+
+.padding-section-vertical() {
+	.padding-bottom-section-vertical(@padding-section-vertical, @padding-section-vertical-sm, @padding-section-vertical-lg);
+	.padding-top-section-vertical(@padding-section-vertical, @padding-section-vertical-sm, @padding-section-vertical-lg);
+}
+
+.padding-top-section-vertical(@padding: @padding-section-vertical, @padding-sm: @padding-section-vertical-sm, @padding-lg: @padding-section-vertical-lg) {
+	padding-top: @padding;
+
+	@media (min-width: @screen-sm) {
+		padding-top: @padding-sm;
+	}
+
+	@media (min-width: @screen-lg) {
+		padding-top: @padding-lg;
+	}
+}
+
+.padding-bottom-section-vertical(@padding: @padding-section-vertical, @padding-sm: @padding-section-vertical-sm, @padding-lg: @padding-section-vertical-lg) {
+	padding-bottom: @padding;
+
+	@media (min-width: @screen-sm) {
+		padding-bottom: @padding-sm;
+	}
+
+	@media (min-width: @screen-lg) {
+		padding-bottom: @padding-lg;
 	}
 }

@@ -159,29 +159,28 @@ html, body {
 
 /* Contact button */
 .btn-envelope {
-	margin-bottom: @line-height-computed;
-	margin-left: 60px;
-	margin-top: @line-height-computed;
-	padding: 0 15px 0 60px;
+	font-weight: normal;
+	margin: 0 35px;
+	padding: 0 60px 0 15px;
 	position: relative;
 	transition: all .2s linear;
 	vertical-align: top;
 
-	&::before {
+	&::after {
 		.icon-icon-envelope-white;
 		background-color: @brand-secondary;
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		background-size: 50%;
-		border-bottom-left-radius: @border-radius-base;
-		border-right: 1px solid #fff;
-		border-top-left-radius: @border-radius-base;
+		border-bottom-right-radius: @border-radius-base;
+		border-left: 1px solid #fff;
+		border-top-right-radius: @border-radius-base;
 		content:"";
 		display: block;
 		height: 100%;
-		left: 0;
+		right: 0;
 		margin: 0;
-		padding: 0 30px 0 15px;
+		padding: 0 15px 0 30px;
 		position: absolute;
 		top: 0;
 	}
@@ -232,7 +231,6 @@ html, body {
 		background-color:#000;
 		height: 400px;
 		min-height: 0;
-		min-height: 0;
 	}
 }
 
@@ -265,8 +263,9 @@ html, body {
 }
 
 .site-header-sub-message {
-	font-size: @font-size-h4;
-	margin-bottom: 35px;
+	.subtext;
+	margin-bottom: @line-height-computed;
+	margin-top: @line-height-computed / 2;
 }
 
 .site-header .scroll-down {
@@ -281,12 +280,11 @@ html, body {
 /* Benefits section */
 
 .benefits-description {
+	.padding-section-vertical();
 	background-color: @gray-superlight;
-	padding-bottom: 64px;
-	padding-top: 44px;
 
 	.benefit-item {
-		margin-top: 5em;
+		.margin-top-section-vertical(@line-height-computed * 2, @line-height-computed-sm * 2, @line-height-computed-lg * 2 );
 
 		&:nth-child(2n) {
 			clear: both;
@@ -320,7 +318,6 @@ html, body {
 	h2 {
 		.h1;
 		.site-header-message;
-		margin-bottom: 30px;
 	}
 
 	.row {
@@ -336,30 +333,24 @@ html, body {
 	 Job offers section
 	 ========================================================================== */
 .job-offers {
-	padding-bottom: 70px;
-	padding-top: 50px;
+	.padding-section-vertical();
 	text-align: center;
 
 	h2 {
-		font-family: @font-family-base;
-		font-size: @font-size-h3;
-		line-height: @line-height-computed-h3;
 	}
 
 	.btn-container {
-		padding: 2.5rem 0;
+		.padding-top-section-vertical(@line-height-computed, @line-height-computed-sm, @line-height-computed-lg);
 	}
 }
 
 @media (min-width: @screen-md-min) {
 
 	.job-offers {
-		padding-top: 80px;
 
 		h2 {
 			align-items: flex-end;
 			display: flex;
-			height: @line-height-computed-h3 * 2;
 			justify-content: space-around;
 			margin-top: 0;
 			overflow: hidden;
@@ -373,7 +364,6 @@ html, body {
 
 		p {
 			.column-break-inside(avoid);
-			height: @line-height-computed * 4;
 			overflow: hidden;
 		}
 
@@ -389,10 +379,9 @@ html, body {
 	 Stats section
 	 ========================================================================== */
 .stats {
+	.padding-section-vertical();
 	background: @brand-secondary;
 	color: #fff;
-	padding-top: 1.11em;
-	padding-bottom: 3.6em;
 	text-align: center;
 
 	.number-col {
@@ -413,15 +402,17 @@ html, body {
 	}
 
 	.number {
+		.h2;
 		display: block;
-		font-size: @font-size-h3;
+		.strong;
 	}
 }
 
 .stats h2 {
-	font-size: @font-size-h1;
+	.h1;
 	font-weight: bold;
 	margin-bottom: 36px;
+	margin-top: 0;
 }
 
 .stats h3 {
@@ -431,6 +422,7 @@ html, body {
 	margin-top: 1em;
 	margin-bottom: 0;
 	text-transform: uppercase;
+	.subtext;
 }
 
 
@@ -438,12 +430,13 @@ html, body {
 	 Career-paths section
 	 ========================================================================== */
 .career-paths {
+	.padding-top-section-vertical();
 	padding-bottom: 0;
-	padding-top: @line-height-computed * 3;
 
 	h2 {
 		.h1;
 		font-weight: bold;
+		.margin-top-section-vertical(0.5 * @line-height-computed, 0.5 * @line-height-computed-sm, 0.5 * @line-height-computed-lg);
 		margin-bottom: 1.2em;
 		text-align: center;
 	}
@@ -498,8 +491,6 @@ html, body {
 		background-position: calc(~"100% - 12px") 50%;
 		background-size: 9px;
 		float: right;
-		height: @btn-default-height;
-		margin-bottom: 2rem;
 		padding: 0 33px 0 15px;
 	}
 }
@@ -546,11 +537,13 @@ div.wpcf7-response-output {
 	line-height: @line-height-computed-sm;
 	padding-bottom: 70px;
 	padding-top: 35px;
+	.padding-section-vertical();
 }
 
 .news-feed h2 {
 	.strong;
 	margin-bottom: 2rem;
+	text-align: center;
 }
 
 .news-feed a {
@@ -566,9 +559,9 @@ div.wpcf7-response-output {
 }
 
 .news-feed .post-date {
+	.strong;
+	.subtext;
 	display: block;
-	font-size: @font-size-small;
-	font-weight: bold;
 }
 
 .news-feed .date {
@@ -586,20 +579,38 @@ div.wpcf7-response-output {
 /* Contact for help section */
 
 .contact-for-help {
-	padding-bottom: 14px;
-	padding-top: 14px;
+	.padding-bottom-section-vertical(@line-height-computed * 2, @line-height-computed-sm * 2, @line-height-computed-lg * 2);
+	.padding-top-section-vertical(@line-height-computed * 2, @line-height-computed-sm * 2, @line-height-computed-lg * 2);
+	background: @brand-secondary;
+	color: #fff;
+	text-align: center;
 
 	.go-back {
 		.icon-arrow-left-white;
 		color: #fff;
 	}
+
+	.btn-envelope {
+	.margin-bottom-section-vertical(@line-height-computed, @line-height-computed-sm, @line-height-computed-lg);
+	.margin-top-section-vertical(@line-height-computed, @line-height-computed-sm, @line-height-computed-lg);
+	}
 }
 
 .contact-for-help h2 {
-		display: inline-block;
+	.line-hieght-custom(@line-height-computed * 1.5, @line-height-computed-sm * 1.5, @line-height-computed-lg * 1.5 );
+	.margin-bottom-section-vertical(@line-height-computed, @line-height-computed-sm, @line-height-computed-lg);
+	.margin-top-section-vertical(@line-height-computed, @line-height-computed-sm, @line-height-computed-lg);
+	.strong;
+	display: inline-block;
 	font-size: @font-size-h3;
-	margin-bottom: @line-height-computed;
-	margin-top: @line-height-computed;
+
+	@media (min-width: @screen-sm) {
+		font-size: @font-size-h3-sm;
+	}
+
+	@media (min-width: @screen-lg) {
+		font-size: @font-size-h3-lg;
+	}
 }
 
 

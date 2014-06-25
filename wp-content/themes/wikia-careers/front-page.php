@@ -127,7 +127,3 @@
 		</div>
 	</div>
 </section>
-
-
-<?php //include new Roots_Wrapping('templates/news-feed-section.php');//disabled for now ?>
-<?php include new Roots_Wrapping('templates/contact-section.php'); ?>
