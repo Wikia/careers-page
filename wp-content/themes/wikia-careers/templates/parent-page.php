@@ -51,5 +51,3 @@ Template Name: Parent page template
 
 
 <?php include new Roots_Wrapping('templates/career-paths-section.php'); ?>
-
-<?php include new Roots_Wrapping('templates/contact-section.php'); ?>
