@@ -1,3 +1,9 @@
+<?php
+	$templates_with_tabs = array(
+		'templates/play-with-us.php',
+		'templates/wide-img-narrow-p.php',
+	);
+?>
 <section class="navigation-top-container container-fluid">
 	<div class="row">
 		<div class="navigation container-fluid spaced-container">
@@ -72,24 +78,12 @@
 			</div>
 		</div>
 
-<?php elseif ( isset( $wp_query->post ) && get_post_meta( $wp_query->post->ID, '_wp_page_template', true ) == 'templates/parent-page-life-in-wikia.php' ): ?>
-		<!-- header background image -->
-		<div id="site-header" style="background-image:url('<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>fandom-banner.jpg')" class="container-fluid site-header list-page-header">
-			<div class="row">
-				<div class="col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
-					<div class="middled">
-					<!-- header background message -->
-					<h1 class="site-header-message">Dołącz do nas!</h1>
-					<p class="site-header-sub-message">Kariera w Wikia</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
 <?php else: ?>
 
 	<?php
 
+	// Classes for header
+	$header_class = array();
 	// Default data for header
 	if( is_404() ) { // 404 page
 		$post_header_title = translate('Sorry, but the page you were trying to view does not exist.', 'roots');
@@ -102,6 +96,12 @@
 		$post_header_title = get_the_title();
 		$posts_page_id = get_the_ID();
 	}
+
+	if ( in_array( get_post_meta( $wp_query->post->ID, '_wp_page_template', true ), $templates_with_tabs) ) {
+		$header_class[] = "list-page-header";
+	}
+
+
 	$custom_fields = get_post_custom( $posts_page_id );
 	$post_header_message = isset($custom_fields['post_subtitle']) ? $custom_fields['post_subtitle'][0] : '';
 
@@ -112,7 +112,7 @@
 	if ($post_thumb_id) {
 		$post_thumb_link = wp_get_attachment_image_src( $post_thumb_id, 'container-md-thumb' );
 		$post_thumb_link = $post_thumb_link[0];
-		$header_class = 'post-header';
+		$header_class[] = 'post-header';
 		$background_style = "style=\"background-image:url('$post_thumb_link')\"";
 
 		// Career path template
@@ -120,21 +120,24 @@
 			$post_thumb_id = get_post_thumbnail_id( $post->post_parent, 'full' );
 			$post_thumb_link = wp_get_attachment_image_src( $post_thumb_id, 'container-md-thumb' );
 			$post_thumb_link = $post_thumb_link[0];
-			$header_class = 'career-path-header';
+			$header_class[] = 'career-path-header';
 			$background_style = "style=\"background-image:url('$post_thumb_link')\"";
 			$post_header_title = "Ścieżki rozwoju";
 			$post_header_message = '';
 		}
 
 	} else {
-		$header_class = 'job-offer-header';
+		$header_class[] = 'job-offer-header';
 		$background_style = '';
 	}
+
+	$post_header_title = isset($custom_fields['post_title']) ? $custom_fields['post_title'][0] : $post_header_title;
+
 
 	?>
 
 		<!-- header background image -->
-		<div id="site-header" class="container-fluid site-header <?php echo $header_class; ?>" <?php echo $background_style; ?>">
+		<div id="site-header" class="container-fluid site-header <?php echo implode( ' ', $header_class ); ?>" <?php echo $background_style; ?>">
 			<div class="row">
 				<div class="col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
 					<div class="middled">

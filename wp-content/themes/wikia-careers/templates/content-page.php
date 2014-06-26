@@ -4,11 +4,9 @@
 
 	// Prepare link to root parent page
 	if ( $post->post_parent ) {
-		$ancestors = get_post_ancestors( $post->ID );
-		$root = count( $ancestors ) - 1;
-		$parent_id = $ancestors[$root];
-		$parent_title = get_the_title($parent_id);
-		$parent_link = get_page_link($parent_id);
+		$parent_title = get_the_title($post->post_parent);
+		$parent = get_page_by_title($parent_title);
+		$parent_link = get_page_link($parent->ID);
 	}
 
 	?>

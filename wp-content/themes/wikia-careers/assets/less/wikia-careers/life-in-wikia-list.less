@@ -3,11 +3,12 @@
 	 ========================================================================== */
 
 .life-in-wikia {
+	.padding-section-vertical();
 
 	h2 {
-		.h1;
 		.strong;
 		color: @brand-secondary;
+		margin-top: 0;
 		text-align: center;
 	}
 
@@ -44,42 +45,43 @@
 			margin-right: auto;
 		}
 	}
+}
 
-	.wide-img-narrow-p {
-		@wn-space: floor(@line-height-computed * 4.84);
+.wide-img-narrow-p {
+	@wn-space: floor(@line-height-computed * 4.84);
 
-		h2 {
-			width: 66.66%;
-			margin: @wn-space auto @line-height-computed * 1.5;
-			text-align: left;
-			max-width: 676px;
+	h2 {
+		.h1;
+		.strong;
+		width: 66.66%;
+		margin: @wn-space auto @line-height-computed * 1.5;
+		text-align: left;
+		max-width: 676px;
 
-			&:nth-of-type(3n+1) {
-				color: @brand-teritary;
-			}
-
-			&:nth-of-type(3n+2) {
-				color: #11b4e3;
-			}
-
-			&:nth-of-type(3n+3) {
-				color: #8da03b;
-			}
+		&:nth-of-type(3n+1) {
+			color: @brand-teritary;
 		}
 
-		p {
-			width: 66.66%;
-			margin: 0 auto @line-height-computed * 1.5;
-			text-align: left;
-			max-width: 676px;
+		&:nth-of-type(3n+2) {
+			color: #11b4e3;
 		}
 
-		img {
-			width: 100%;
-			height: auto;
-			display: block;
-			margin: @wn-space auto 0;
+		&:nth-of-type(3n+3) {
+			color: #8da03b;
 		}
 	}
 
+	p {
+		width: 66.66%;
+		margin: 0 auto @line-height-computed * 1.5;
+		text-align: left;
+		max-width: 676px;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+		margin: @wn-space auto 0;
+	}
 }
