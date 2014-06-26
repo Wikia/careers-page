@@ -120,14 +120,14 @@ html, body {
 			height: (@line-height-computed * 3);
 			padding: 0 20px;
 
-			&:hover,
-			&.active {
-				border-bottom: 5px solid @brand-secondary ;
-			}
-
 			&.btn-wikia-light {
 				line-height: @btn-default-height;
 			}
+		}
+
+		li.active a,
+		a:hover {
+			border-bottom: 5px solid @brand-secondary;
 		}
 	}
 }
