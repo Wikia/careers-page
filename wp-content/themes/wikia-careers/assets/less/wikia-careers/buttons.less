@@ -57,3 +57,26 @@
 		color: @brand-secondary;
 	}
 }
+
+.scroll-down {
+	width: 100px;
+	height: 50px;
+	background-position: 50% 50%;
+	background-color: transparent;
+	border: 0;
+	transition: all .2s linear;
+
+	.icon-chevron-double-white;
+	&:hover {
+		background-position: 50% 60%;
+	}
+	&:focus,
+	&:active,
+	&:visited {
+		border: 0;
+		outline: none;
+	}
+	.scroll-down::-moz-focus-inner {
+		border: 0;
+	}
+}

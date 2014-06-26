@@ -73,6 +73,7 @@
 					<!-- header background message -->
 					<h1 class="site-header-message">Dołącz do nas!</h1>
 					<p class="site-header-sub-message">Kariera w Wikia</p>
+						<button class="scroll-down"></button>
 					</div>
 				</div>
 			</div>
@@ -139,11 +140,12 @@
 		<!-- header background image -->
 		<div id="site-header" class="container-fluid site-header <?php echo implode( ' ', $header_class ); ?>" <?php echo $background_style; ?>">
 			<div class="row">
-				<div class="col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
+				<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
 					<div class="middled">
 					<!-- header background message -->
 					<h1 class="site-header-message"><?php echo $post_header_title ?></h1>
 					<p class="site-header-sub-message"><?php echo $post_header_message ?></p>
+					<button class="scroll-down"></button>
 					</div>
 				</div>
 			</div>
