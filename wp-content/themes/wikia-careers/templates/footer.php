@@ -11,7 +11,7 @@ endif;
 		<div class="container">
 			<div class="row">
 				<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-3 col-lg-3">
-					<a class="logo image-logo" href="<?php echo home_url(); ?>/" rel='home'>
+					<a class="logo image-logo icon-wikia-logo-white" href="<?php echo home_url(); ?>/" rel='home'>
 
 					</a>
 				</div>

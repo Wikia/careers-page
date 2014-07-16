@@ -94,7 +94,7 @@ function flexipages_init()
 
 			$pagelist .='<h2>'. $page['title']."</h2>\n";
 			$pagelist .='<p>'.$page['excerpt']."</p>\n";
-			$pagelist .='<div class="btn-container"><a href="'. $page['link'] .'" class="btn-wikia btn-arrow">Poczytaj więcej</a></div>'."\n";
+			$pagelist .='<div class="btn-container"><a href="'. $page['link'] .'" class="btn-wikia btn-arrow icon-chevron-brand_pri">Poczytaj więcej</a></div>'."\n";
 			if($page['children'])
 				$pagelist .= flexipages_list($page['children'], $level+1);
 			$pagelist.= "</li>\n";

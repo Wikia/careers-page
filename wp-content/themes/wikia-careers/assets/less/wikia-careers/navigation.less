@@ -29,7 +29,6 @@
 .navigation{
 
 	.logo {
-		.icon-wikia-logo;
 		.user-select(none);
 		background-position: 50% 50%;
 		background-size: contain;
@@ -177,8 +176,13 @@
 	}
 
 	/* Mobile navigation links mixins */
+	.navigation nav ul a,
+	.navigation .btn-wikia-light.btn-arrow:hover {
+		.icon-chevron-gray_light;
+	}
+
+
 	.mobile-nav-link() {
-		.icon-chevron-gray;
 		background-position:248px 50%;
 		border-left: 5px solid #fff;
 		display: block;
@@ -192,7 +196,7 @@
 	}
 
 	.navigation nav ul a {
-		.mobile-nav-link;
+		.mobile-nav-link();
 	}
 
 
@@ -237,7 +241,6 @@
 	}
 
 	.navigation .btn-wikia-light.btn-arrow:hover {
-		.icon-chevron-gray;
 		.mobile-nav-link-hover;
 	}
 }
