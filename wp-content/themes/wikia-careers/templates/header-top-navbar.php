@@ -15,7 +15,7 @@
 								wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
 							endif;
 							?>
-							<a href="http://wikia.com/" class="btn-wikia-light btn-arrow">Zobacz wikia.com</a>
+							<a href="http://wikia.com/" class="btn-wikia-light btn-arrow icon-chevron-gray_light">Zobacz wikia.com</a>
 						</nav>
 					</div>
 				</div>
@@ -24,12 +24,12 @@
 				<!-- logo -->
 				<!--
 					<?php if ( get_theme_mod( 'wikia_careers_logo' ) ) : ?>
-						<a class="logo image-logo" href="<?php echo home_url(); ?>/" rel='home'><img src='<?php echo esc_url( get_theme_mod( 'wikia_careers_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+						<a class="logo image-logo icon-wikia-logo" href="<?php echo home_url(); ?>/" rel='home'><img src='<?php echo esc_url( get_theme_mod( 'wikia_careers_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
 					<?php else : ?>
-						<a class="logo" href="<?php echo home_url(); ?>/" title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a>
+						<a class="logo icon-wikia-logo" href="<?php echo home_url(); ?>/" title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a>
 					<?php endif; ?>
 					-->
-				<a class="logo image-logo" href="<?php echo home_url(); ?>/" rel='home'></a>
+				<a class="logo image-logo icon-wikia-logo" href="<?php echo home_url(); ?>/" rel='home'></a>
 
 		</div>
 	</div>
@@ -73,6 +73,7 @@
 					<!-- header background message -->
 					<h1 class="site-header-message">Dołącz do nas!</h1>
 					<p class="site-header-sub-message">Kariera w Wikia</p>
+						<button class="scroll-down icon-chevron-double-white"></button>
 					</div>
 				</div>
 			</div>
@@ -139,11 +140,12 @@
 		<!-- header background image -->
 		<div id="site-header" class="container-fluid site-header <?php echo implode( ' ', $header_class ); ?>" <?php echo $background_style; ?>">
 			<div class="row">
-				<div class="col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
+				<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
 					<div class="middled">
 					<!-- header background message -->
 					<h1 class="site-header-message"><?php echo $post_header_title ?></h1>
 					<p class="site-header-sub-message"><?php echo $post_header_message ?></p>
+					<button class="scroll-down icon-chevron-double-white"></button>
 					</div>
 				</div>
 			</div>

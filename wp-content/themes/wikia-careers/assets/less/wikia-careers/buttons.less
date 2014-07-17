@@ -1,17 +1,7 @@
 .btn-arrow {
-	.icon-chevron-brand_pri;
 	background-position: calc(~"100% - 12px") 50%;
 	background-size: 9px;
 	padding: 0 33px 0 15px;
-
-	&.btn-wikia-gray-blue,
-	&.btn-wikia-regular {
-		.icon-chevron-gray;
-	}
-
-	&.btn-wikia-light {
-		.icon-chevron-gray_light;
-	}
 
 	&.btn-wikia-white,
 	&:hover,
@@ -55,5 +45,27 @@
 		background-color: #fff;
 		border-color: #fff;
 		color: @brand-secondary;
+	}
+}
+
+.scroll-down {
+	width: 100px;
+	height: 50px;
+	background-position: 50% 50%;
+	background-color: transparent;
+	border: 0;
+	transition: all .2s linear;
+
+	&:hover {
+		background-position: 50% 60%;
+	}
+	&:focus,
+	&:active,
+	&:visited {
+		border: 0;
+		outline: none;
+	}
+	.scroll-down::-moz-focus-inner {
+		border: 0;
 	}
 }
