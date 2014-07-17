@@ -9,7 +9,7 @@ Template Name: Play with us
 
 
 <div class="tab-content">
-	<section class="container life-in-wikia">
+	<section class="container life-in-wikia padding-section-vertical">
 
 	<?php
 	/* Show content of parent page at the top */

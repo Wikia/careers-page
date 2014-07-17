@@ -1,6 +1,6 @@
 <?php //if ( dynamic_sidebar('home_main_widget') ) : else : endif; ?>
 
-<section class="container job-offers">
+<section class="container job-offers padding-section-vertical">
 	<div class="offers-paper">
 
 		<?php if ( dynamic_sidebar('second_section_mainpage') ) : endif; ?>
@@ -9,7 +9,7 @@
 </section>
 
 
-<section class="container-fluid stats">
+<section class="container-fluid stats padding-section-vertical">
 	<div class="row">
 		<div class="container">
 			<div class="row">
@@ -72,7 +72,7 @@
 </section>
 
 
-<section class="benefits-description">
+<section class="benefits-description padding-section-vertical">
 	<div class="container">
 		<div class="row">
 			<h2>Praca w Wikia to nie tylko praca</h2>

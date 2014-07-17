@@ -1,4 +1,4 @@
-<section class="container-fluid stats contact-for-help job-offer-apply-bar spaced-container">
+<section class="container-fluid stats contact-for-help job-offer-apply-bar spaced-container padding-section-vertical">
 	<div class="container">
 		<h2 class="h1">Aplikuj teraz</h2>
 		<div class="row">

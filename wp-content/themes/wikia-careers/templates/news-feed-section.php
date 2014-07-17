@@ -12,7 +12,7 @@ $posts_array = get_posts( $args );
 if( !empty( $posts_array ) ):
 ?>
 
-<section class="container-fluid spaced-container news-feed">
+<section class="container-fluid spaced-container news-feed padding-section-vertical">
 	<div class="row">
 		<div class="container">
 			<h2>Wiki Newsy</h2>

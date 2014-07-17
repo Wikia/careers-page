@@ -12,7 +12,7 @@ Template Name: Parent page template
 <div class="tab-content">
 
 
-	<section class="tab-pane active container job-offers-list" id="job-offers">
+	<section class="tab-pane active container job-offers-list padding-section-vertical" id="job-offers">
 
 				<?php echo $post->post_content ?>
 

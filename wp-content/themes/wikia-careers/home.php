@@ -2,7 +2,7 @@
 
 <?php include new Roots_Wrapping('templates/career-paths-parent-menu.php');?>
 
-<div class="life-in-wikia tab-content">
+<div class="life-in-wikia tab-content padding-section-vertical">
 <section>
 	<?php
 
