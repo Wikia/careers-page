@@ -46,18 +46,19 @@
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 col-sm-6 col-xs-4 col-xxs-4">
 					<div class="middled">
-				<?php if ( get_theme_mod( 'wikia_careers_header_desc' ) ) : ?>
-					<!-- header background message -->
-					<h1 class="site-header-message"><?php echo get_theme_mod( 'wikia_careers_header_desc' ); ?></h1>
-				<?php endif; ?>
-				<?php if ( get_theme_mod( 'wikia_careers_header_desc_sub' ) ) : ?>
-					<!-- header background message -->
-					<p class="site-header-sub-message"><?php echo get_theme_mod( 'wikia_careers_header_desc_sub' ); ?></p>
-				<?php endif; ?>
-				<?php if ( get_theme_mod( 'wikia_careers_header_button' ) ) : ?>
-					<!-- header background message -->
-				<?php endif; ?>
-					<a href="<?php echo home_url(); ?>/kariera" class="btn-wikia-white btn-arrow"><?php echo get_theme_mod( 'wikia_careers_header_button' ); ?></a>
+					<?php if ( get_theme_mod( 'wikia_careers_header_desc' ) ) : ?>
+						<!-- header background message -->
+						<h1 class="site-header-message"><?php echo get_theme_mod( 'wikia_careers_header_desc' ); ?></h1>
+					<?php endif; ?>
+					<?php if ( get_theme_mod( 'wikia_careers_header_desc_sub' ) ) : ?>
+						<!-- header background message -->
+						<p class="site-header-sub-message"><?php echo get_theme_mod( 'wikia_careers_header_desc_sub' ); ?></p>
+					<?php endif; ?>
+					<?php if ( get_theme_mod( 'wikia_careers_header_button' ) ) : ?>
+						<!-- header background message -->
+					<?php endif; ?>
+						<a href="<?php echo home_url(); ?>/kariera" class="btn-wikia-white btn-arrow"><?php echo get_theme_mod( 'wikia_careers_header_button' ); ?></a>
+						<button class="scroll-down icon-chevron-double-white"></button>
 					</div>
 				</div>
 			</div>
@@ -71,8 +72,8 @@
 				<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-8 col-md-offset-2">
 					<div class="middled">
 					<!-- header background message -->
-					<h1 class="site-header-message">Dołącz do nas!</h1>
-					<p class="site-header-sub-message">Kariera w Wikia</p>
+						<h1 class="site-header-message">Dołącz do nas!</h1>
+						<p class="site-header-sub-message">Kariera w Wikia</p>
 						<button class="scroll-down icon-chevron-double-white"></button>
 					</div>
 				</div>
