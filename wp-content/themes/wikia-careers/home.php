@@ -1,6 +1,8 @@
 <?php get_template_part('templates/page', 'header'); ?>
 
-<div class="life-in-wikia tab-content">
+<?php include new Roots_Wrapping('templates/career-paths-parent-menu.php');?>
+
+<div class="life-in-wikia tab-content padding-section-vertical">
 <section>
 	<?php
 
@@ -34,12 +36,12 @@
 
 		<div class="play-with-us-list-item">
 			<div class="item-title" style="background-image: url('<?php echo $sub_thumb_link ?>')">
-				<h3><?php echo $sub_post_title ?></h3>
+				<h3 class="h1"><?php echo $sub_post_title ?></h3>
 			</div>
 			<p class="item-description">
 				<?php echo $sub_post_excerpt ?>
 			</p>
-			<a href="<?php echo $sub_page_link ?>" class="btn-wikia btn-arrow">Przeczytaj artykuł</a>
+			<a href="<?php echo $sub_page_link ?>" class="btn-wikia btn-arrow icon-chevron-brand_pri">Przeczytaj artykuł</a>
 		</div>
 
 

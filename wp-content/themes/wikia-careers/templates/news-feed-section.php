@@ -12,7 +12,7 @@ $posts_array = get_posts( $args );
 if( !empty( $posts_array ) ):
 ?>
 
-<section class="container-fluid spaced-container news-feed">
+<section class="container-fluid spaced-container news-feed padding-section-vertical">
 	<div class="row">
 		<div class="container">
 			<h2>Wiki Newsy</h2>
@@ -31,7 +31,7 @@ if( !empty( $posts_array ) ):
 				?>
 				<div class="col-xxs-4 col-xs-4 col-sm-3 col-md-6 col-lg-6 news-item-container">
 					<a href="<?php echo $post_link ?>"><img src="<?php echo $thumb_link ?>" alt="News 2" />
-					<h3><?php echo $post_title ?></h3></a>
+					<h3 class="h4"><?php echo $post_title ?></h3></a>
 					<span class="post-date">Opublikowano: <span class="date"><?php echo $post_date ?></span></span>
 				</div>
 			<?php endforeach; ?>

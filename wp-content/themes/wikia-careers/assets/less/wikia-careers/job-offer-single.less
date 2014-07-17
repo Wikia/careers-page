@@ -95,7 +95,6 @@
       .strong;
       .subtext;
       color: @text-color;
-
     }
 
     li {
@@ -103,9 +102,6 @@
     }
   }
 
-  /* Content - detailed job description */
-  .job-offer-details {
-  }
 }
 
 /* Sticky previous-next navigation */
@@ -162,7 +158,6 @@
 
 ul.tags {
   border-top: 1px @gray-lighter solid;
-  font-size: @font-size-small;
   margin-bottom: 2em;
   margin-top: @line-height-computed;
   padding: @line-height-computed 0 0;
@@ -178,8 +173,8 @@ ul.tags {
 
   li {
     display: inline-block;
-    padding-left: 10px;
-    padding-right: 12px;
+    padding-left: 15px;
+    padding-right: @grid-gutter-width;
 
     &::before {
       color: @brand-secondary;

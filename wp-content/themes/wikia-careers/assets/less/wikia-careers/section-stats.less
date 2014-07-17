@@ -1,0 +1,46 @@
+/* ==========================================================================
+	 Stats section
+	 ========================================================================== */
+.stats {
+	background: @brand-secondary;
+	color: #fff;
+	text-align: center;
+
+	.number-col {
+
+		&::after{
+			background: #fff;
+			bottom: 0;
+			content:"";
+			height: 80%;
+			position: absolute;
+			right: 0;
+			width: 1px;
+		}
+
+		&:last-child::after{
+			width: 0;
+		}
+	}
+
+	.number {
+		display: block;
+		.strong;
+	}
+}
+
+.stats h2 {
+	font-weight: bold;
+	margin-bottom: 36px;
+	margin-top: 0;
+}
+
+.stats h3 {
+	display: inline-block;
+	font-size: floor(@font-size-base * 0.9);
+	line-height: 1em;
+	margin-top: 1em;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	.subtext;
+}

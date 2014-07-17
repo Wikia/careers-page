@@ -1,85 +1,85 @@
 /* ==========================================================================
-   Life in wikia list page
-   ========================================================================== */
+	 Life in wikia list page
+	 ========================================================================== */
 
 .life-in-wikia {
 
-  h2 {
-    .h1;
-    .strong;
-    color: @brand-secondary;
-    text-align: center;
-  }
+	h2 {
+		.strong;
+		color: @brand-secondary;
+		margin-top: 0;
+		text-align: center;
+	}
 
-  p {
-    text-align: center;
-  }
+	p {
+		text-align: center;
+	}
 
-  .play-with-us-list-item {
-    text-align: center;
+	.play-with-us-list-item {
+		text-align: center;
 
-    .item-title {
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      height: 300px;
-      margin-bottom: @line-height-computed;
+		.item-title {
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			height: 300px;
+			margin-bottom: @line-height-computed;
 
-      h3 {
-        .dim;
-        .h1;
-        .strong;
-        align-items: center;
-        color: #fff;
-        display: flex;
-        height: 100%;
-        justify-content: space-around;
-        margin-top: floor(@line-height-computed * 3.34);
-      }
-    }
+			h3 {
+				.dim;
+				.strong;
+				align-items: center;
+				color: #fff;
+				display: flex;
+				height: 100%;
+				justify-content: space-around;
+				margin-top: floor(@line-height-computed * 3.34);
+			}
+		}
 
-    .btn-wikia {
-      display: inline-block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
+		.btn-wikia {
+			display: inline-block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
 
-  .wide-img-narrow-p {
-    @wn-space: floor(@line-height-computed * 4.84);
+.wide-img-narrow-p {
+	@wn-space: floor(@line-height-computed * 4.84);
 
-    h2 {
-      width: 66.66%;
-      margin: @wn-space auto @line-height-computed * 1.5;
-      text-align: left;
-      max-width: 676px;
+	h2 {
+		.h1;
+		.strong;
+		width: 66.66%;
+		margin: @wn-space auto @line-height-computed * 1.5;
+		text-align: left;
+		max-width: 676px;
 
-      &:nth-of-type(3n+1) {
-        color: @brand-teritary;
-      }
+		&:nth-of-type(3n+1) {
+			color: @brand-teritary;
+		}
 
-      &:nth-of-type(3n+2) {
-        color: #11b4e3;
-      }
+		&:nth-of-type(3n+2) {
+			color: #11b4e3;
+		}
 
-      &:nth-of-type(3n+3) {
-        color: #8da03b;
-      }
-    }
+		&:nth-of-type(3n+3) {
+			color: #8da03b;
+		}
+	}
 
-    p {
-      width: 66.66%;
-      margin: 0 auto @line-height-computed * 1.5;
-      text-align: left;
-      max-width: 676px;
-    }
+	p {
+		width: 66.66%;
+		margin: 0 auto @line-height-computed * 1.5;
+		text-align: left;
+		max-width: 676px;
+	}
 
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: @wn-space auto 0;
-    }
-  }
-
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+		margin: @wn-space auto 0;
+	}
 }

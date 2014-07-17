@@ -4,12 +4,14 @@ if( is_front_page() ):
 endif;
 ?>
 
+<?php include new Roots_Wrapping('templates/contact-section.php'); ?>
+
 <footer class="container-fluid footer spaced-container">
 	<div class="row">
 		<div class="container">
 			<div class="row">
 				<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-3 col-lg-3">
-					<a class="logo image-logo" href="<?php echo home_url(); ?>/" rel='home'>
+					<a class="logo image-logo icon-wikia-logo-white" href="<?php echo home_url(); ?>/" rel='home'>
 
 					</a>
 				</div>

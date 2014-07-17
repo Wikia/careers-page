@@ -247,10 +247,13 @@ function remove_width_attribute( $html ) {
  */
 function is_tree($pid) {
 	global $post;         // load details about this page
-	if(is_page()&&($post->post_parent==$pid||is_page($pid)))
+	if( is_page() && ( $post->post_parent == $pid || is_page($pid) )
+		|| ( $pid==$post->ID )
+	) {
 		return true;
-	else
+	} else {
 		return false;
+	}
 };
 
 

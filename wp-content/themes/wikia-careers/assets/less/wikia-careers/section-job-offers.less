@@ -1,0 +1,63 @@
+/* ==========================================================================
+	 Job offers section
+	 ========================================================================== */
+.job-offers {
+	text-align: center;
+
+	h2 {
+	}
+
+	.btn-container {
+		.padding-top-section-vertical(@line-height-computed, @line-height-computed-sm, @line-height-computed-lg);
+	}
+}
+
+
+/* ==========================================================================
+	 Media Queries
+	 ========================================================================== */
+
+@media (min-width: @screen-md-min) {
+
+	.job-offers {
+
+		h2 {
+			align-items: flex-end;
+			display: flex;
+			justify-content: space-around;
+			margin-top: 0;
+			overflow: hidden;
+		}
+
+		.offers-paper {
+			.column-gap(@grid-md-gutter-width);
+			.column-count(3);
+			margin: 0;
+		}
+
+		p {
+			.column-break-inside(avoid);
+			overflow: hidden;
+		}
+
+		.btn-container {
+			.column-break-after(always);
+			margin-top: auto;
+		}
+	}
+
+}
+
+@media (max-width: @screen-sm-max) {
+
+	.job-offers .row {
+		flex-flow: wrap;
+	}
+
+	.modal.job-offer-modal {
+		@line-height-computed-menu: @line-height-computed-sm * 2;
+		margin-top: @line-height-computed-menu;
+		height: calc(~"100% - @{line-height-computed-menu}");
+	}
+
+}

@@ -1,0 +1,50 @@
+/* ==========================================================================
+	 Content
+	 ========================================================================== */
+
+
+/* Dim background to cover photos behind text */
+.dim() {
+	background-color: rgba(0, 0, 0, 0.45);
+}
+
+.no-image-header {
+	background-color: @brand-secondary;
+}
+
+.strong,
+strong {
+	font-weight: bold;
+}
+
+.regular-article {
+	p,
+	ul {
+		margin-bottom: @line-height-computed * 1.5;
+		margin-left: auto;
+		margin-right: auto;
+		width: 83.33%;
+	}
+
+	img {
+		margin-bottom: @line-height-computed;
+		max-width: 100%;
+		@media (min-width: @screen-sm-min) {
+			&.alignleft {
+				max-width: 60%;
+			}
+		}
+	}
+}
+
+.aligncenter { display: block; margin: 0 auto; }
+
+.alignleft {
+	.margin-right;
+	float: left;
+}
+
+.alignright {
+	.margin-left;
+	float: right;
+}

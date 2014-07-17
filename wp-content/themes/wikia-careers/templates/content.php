@@ -11,6 +11,6 @@
 		<p class="item-description">
 			<?php the_excerpt(); ?>
 		</p>
-		<a href="<?php the_permalink(); ?>" class="btn-wikia btn-arrow">Przeczytaj artykuł</a>
+		<a href="<?php the_permalink(); ?>" class="btn-wikia btn-arrow icon-chevron-brand_pri">Przeczytaj artykuł</a>
 	</div>
 </article>

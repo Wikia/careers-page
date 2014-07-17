@@ -1,15 +1,30 @@
 .subtext {
-  font-size: @font-size-subtext;
-  line-height: @line-height-computed-subtext;
-  margin: 0 0 (@line-height-computed-subtext / 2);
+	font-size: @font-size-subtext;
+	line-height: @line-height-computed-subtext;
+	margin: 0 0 (@line-height-computed / 2);
+
+	@media (min-width: @screen-sm) {
+		font-size: @font-size-subtext-sm;
+		line-height: @line-height-computed-subtext-sm;
+	}
+
+	@media (min-width: @screen-lg) {
+		font-size: @font-size-subtext-lg;
+		line-height: @line-height-computed-subtext-lg;
+	}
 }
 
 .blockquote {
-  font-size: @font-size-blockquote;
-  line-height: @line-height-computed;
-  margin: 0 0 (@line-height-computed / 2);
-}
+	font-size: @font-size-blockquote;
+	line-height: @line-height-computed-blockquote;
+	margin: 0 0 (@line-height-computed / 2);
 
-li {
-  margin-bottom: @line-height-computed / 6;
+	@media (min-width: @screen-sm) {
+		font-size: @font-size-blockquote-sm;
+	}
+
+	@media (min-width: @screen-lg) {
+		font-size: @font-size-blockquote-lg;
+		line-height: @line-height-computed-blockquote-lg;
+	}
 }

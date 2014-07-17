@@ -12,7 +12,7 @@ Template Name: Parent page template
 <div class="tab-content">
 
 
-	<section class="tab-pane active container job-offers-list" id="job-offers">
+	<section class="tab-pane active container job-offers-list padding-section-vertical" id="job-offers">
 
 				<?php echo $post->post_content ?>
 
@@ -32,7 +32,7 @@ Template Name: Parent page template
 					$post_header_message = isset($custom_fields['post_subtitle']) ? $custom_fields['post_subtitle'][0] : '';
 					?>
 					<div class="offer-item">
-						<a href="<?php echo $page_link ?>" class="container spaced-container">
+						<a href="<?php echo $page_link ?>" class="container spaced-container icon-arrow-right-gray_light">
 							<h2><?php echo $post_title ?></h2>
 							<p class="short-descr"><?php echo $post_header_message ?></p>
 						</a>
@@ -51,5 +51,3 @@ Template Name: Parent page template
 
 
 <?php include new Roots_Wrapping('templates/career-paths-section.php'); ?>
-
-<?php include new Roots_Wrapping('templates/contact-section.php'); ?>
