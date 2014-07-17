@@ -36,7 +36,7 @@
 
 		<div class="play-with-us-list-item">
 			<div class="item-title" style="background-image: url('<?php echo $sub_thumb_link ?>')">
-				<h3><?php echo $sub_post_title ?></h3>
+				<h3 class="h1"><?php echo $sub_post_title ?></h3>
 			</div>
 			<p class="item-description">
 				<?php echo $sub_post_excerpt ?>

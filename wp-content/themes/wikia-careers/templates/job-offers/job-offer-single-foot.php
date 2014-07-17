@@ -1,6 +1,6 @@
 <section class="container-fluid stats contact-for-help job-offer-apply-bar spaced-container">
 	<div class="container">
-		<h2>Aplikuj teraz</h2>
+		<h2 class="h1">Aplikuj teraz</h2>
 		<div class="row">
 			<div class="col-xxs-1 col-xs-1 col-sm-2 col-md-4 col-lg-3 col-lg-offset-1">
 				<a href="<?php echo $parent_link?>" class="go-back icon-arrow-left-white">Powrót do ofert</a>
