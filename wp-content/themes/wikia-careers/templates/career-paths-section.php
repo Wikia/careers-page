@@ -47,7 +47,7 @@ $featured_page = get_page_by_path('kariera/sciezki-rozwoju/jakub/');
 		<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-7 col-lg-7 description">
 			<h2><?php echo $featured_page->post_title ?></h2>
 			<p><?php echo $featured_page->post_excerpt ?></p>
-			<a href="<?php echo  get_page_link($featured_page->ID) ?>" class="btn-wikia-regular btn-arrow">Zobacz jego ścieżkę</a>
+			<a href="<?php echo  get_page_link($featured_page->ID) ?>" class="btn-wikia-regular btn-arrow icon-chevron-gray">Zobacz jego ścieżkę</a>
 		</div>
 	</div>
 </section>
