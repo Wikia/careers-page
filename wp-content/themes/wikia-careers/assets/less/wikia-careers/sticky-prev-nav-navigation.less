@@ -1,0 +1,47 @@
+.prev-next-nav {
+	height: 38px;
+	text-align: right;
+
+	&+section {
+		clear: both;
+	}
+
+	button {
+		background: #fff;
+		border: 0;
+		border-right: 1px solid @nav-tabs-border-color;
+		display: block;
+		float: right;
+		height: 38px;
+		width: 38px;
+
+		&:first-child {
+			border-right: 0;
+		}
+	}
+
+	.prev-next-buttons {
+		border: 1px solid @nav-tabs-border-color;
+		border-top: 0;
+		display: inline-block;
+		margin-left: -3 * 38px - 2;
+		z-index: @zindex-subnavbar-fixed;
+
+		&.affix {
+			float: none;
+			top: @line-height-computed * 3 - 1;
+
+			button {
+				border-top-width: 1px;
+				display: block;
+				float: right;
+			}
+			@media(max-width: @screen-sm-max) {
+				top: @line-height-computed-sm * 2 - 1;
+			}
+		}
+		&.affix-bottom {
+			position: absolute;
+		}
+	}
+}

@@ -1,0 +1,90 @@
+/* ==========================================================================
+	 Career-paths section
+	 ========================================================================== */
+.career-paths {
+	.padding-top-section-vertical();
+	padding-bottom: 0;
+
+	h2 {
+		.h1;
+		font-weight: bold;
+		.margin-top-section-vertical(0.5 * @line-height-computed, 0.5 * @line-height-computed-sm, 0.5 * @line-height-computed-lg);
+		margin-bottom: 1.2em;
+		text-align: center;
+	}
+
+	h3 {
+		.h1;
+		color: @brand-secondary;
+		font-weight: bold;
+	}
+}
+
+
+/* career paths short - on subpages */
+.career-paths-short {
+	margin-bottom: @line-height-computed * 2;
+	overflow: hidden;
+	text-align: center;
+
+	.avatar {
+		height: 250px;
+		overflow: hidden;
+		img {
+			margin-left: -66px;
+			max-width: 100%;
+		}
+	}
+
+	h2 {
+		.strong;
+		color: @brand-secondary;
+	}
+}
+
+
+/* ==========================================================================
+	 Media Queries
+	 ========================================================================== */
+
+@media (max-width: @screen-xs-max) {
+
+	.career-paths {
+		padding-bottom: 30px;
+		padding-top: 30px;
+	}
+
+}
+
+@media (min-width: @screen-sm-min) {
+
+	/* career paths short - on subpages */
+	.career-paths-short {
+		margin-bottom: 0;
+		text-align: left;
+
+		& > .row {
+			display: flex;
+		}
+
+		.avatar {
+			overflow: visible;
+			height: auto;
+
+			img {
+				top: 0;
+				margin-left: 0;
+				max-width: 100%;
+				position: absolute;
+			}
+		}
+
+		.description {
+			align-content: center;
+			display: flex;
+			flex-flow: row wrap;
+			min-height: 400px;
+		}
+	}
+
+}

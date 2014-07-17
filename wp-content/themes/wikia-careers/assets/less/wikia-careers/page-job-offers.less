@@ -1,0 +1,91 @@
+/* ==========================================================================
+	 Job offers parent page styles
+	 ========================================================================== */
+.arrowsAnimation() {
+	@-webkit-keyframes webkitAnimatedBackground {
+		0%   {background-position:100% 50%;}
+		35%  {background-position:96% 50%;}
+		60% {background-position:100% 50%;}
+		85%  {background-position:98% 50%;}
+		100% {background-position:100% 50%;}
+	}
+
+	@keyframes animatedBackground {
+		0%   {background-position:100% 50%;}
+		35%  {background-position:96% 50%;}
+		60% {background-position:100% 50%;}
+		85%  {background-position:98% 50%;}
+		100% {background-position:100% 50%;}
+	}
+
+	-webkit-animation: webkitAnimatedBackground .5s linear;
+	animation: animatedBackground .5s linear;
+}
+
+.page-parent .content {
+
+	h1 {
+		font-size: @font-size-h4;
+		text-align: center;
+	}
+}
+
+.short-descr {
+	color: @btn-wikia-light-color;
+	font-size: @font-size-small;
+	margin-bottom: 0;
+}
+
+h1+.offer-item{
+	border-top: 1px solid @nav-tabs-border-color;
+	margin-top: 30px;
+	.margin-top-section-vertical();
+}
+
+.offer-item {
+	border-bottom: 1px solid @nav-tabs-border-color;
+	cursor: pointer;
+	padding-top: 55px;
+	padding-bottom: 40px;
+
+	&:hover {
+		.container {
+			.icon-arrow-right-brand_sec;
+			.arrowsAnimation;
+		}
+		h2 {
+			color: @brand-secondary;
+		}
+	}
+
+	.container {
+		background-position: 100% 50%;
+		background-size: 22px;
+	}
+
+	a {
+		display: block;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	h2 {
+		.strong;
+		color: @gray;
+		font-size: @font-size-h3;
+		margin-bottom: 0;
+		margin-top: 0;
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+}
+
+.job-offers-list {
+	.padding-section-vertical();
+	h1 {
+		margin: 0;
+	}
+
+}

@@ -24,6 +24,7 @@ var Roots = {
 		init: function() {
 			// JavaScript to be fired on all pages
 			mainMenu.initClickEvent();
+            scrollToContent.initClickEvent();
             wikiaCareersTextFormatting.formatArticle();
         }
 	},
