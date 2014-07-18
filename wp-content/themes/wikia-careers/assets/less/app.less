@@ -56,24 +56,3 @@ html, body {
 @import "wikia-careers/page-job-offers.less";
 @import "wikia-careers/job-offer-single.less";
 @import "wikia-careers/life-in-wikia-list.less";
-
-
-
-/* ==========================================================================
-	 Media Queries
-	 ========================================================================== */
-
-@media (max-width: @screen-sm-max) {
-
-	.site-header {
-		@site-header-lineheight-sm: @line-height-computed-sm * 2;
-		margin-top: @site-header-lineheight-sm;
-		min-height: calc(~"100% - @{site-header-lineheight-sm}");
-
-		&.list-page-header {
-			@height-of-tab-nav: 70px;
-			min-height: calc(~"100% - @{site-header-lineheight-sm} - @{height-of-tab-nav}");
-		}
-	}
-
-}

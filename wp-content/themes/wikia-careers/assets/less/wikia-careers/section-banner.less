@@ -1,30 +1,24 @@
 /* Main header section */
 
 .site-header {
-	@site-header-lineheight: @line-height-computed * 3;
+	@site-header-lineheight-sm: @line-height-computed-sm * 2;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	margin-top: @site-header-lineheight;
-	min-height: calc(~"100% - @{site-header-lineheight}");
+	margin-top: @site-header-lineheight-sm;
+	height: @default-banner-height;
 	position: relative;
 	text-align: center;
 
-	&.list-page-header {
-		@height-of-tab-nav: 70px;
-		min-height: calc(~"100% - @{site-header-lineheight} - @{height-of-tab-nav}");
-		min-height: -webkit-calc(~"100% - @{site-header-lineheight} - @{height-of-tab-nav}");
-	}
-
+	&.post-header {
 	&.post-header {
 		background-color:#000;
-		height: 400px;
+		height: auto;
+		min-height: calc(~"100% - @{site-header-lineheight-sm}");
 	}
 
 	&.career-path-header {
 		background-color:#000;
-		height: 400px;
-		min-height: 0;
 	}
 
 	.btn-wikia-white {
@@ -101,4 +95,25 @@
 	h3 {
 		color: @brand-secondary;
 	}
+}
+
+@media (min-width: @screen-md-min) {
+
+	.site-header {
+		@site-header-lineheight: @line-height-computed * 3;
+		margin-top: @site-header-lineheight;
+
+		&.post-header {
+			min-height: calc(~"100% - @{site-header-lineheight}");
+		}
+	}
+
+}
+
+@media (min-width: @screen-lg-min) {
+
+	.site-header {
+		height: @default-banner-height * 1.45;
+	}
+
 }

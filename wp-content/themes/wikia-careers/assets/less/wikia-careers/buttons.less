@@ -68,7 +68,40 @@
 		border: 0;
 		outline: none;
 	}
-	.scroll-down::-moz-focus-inner {
+	&::-moz-focus-inner {
 		border: 0;
 	}
+}
+
+.post-header .scroll-down {
+	display: block;
+}
+
+
+@screen-sm-height-min: ((@default-banner-height + (@line-height-computed-sm * 2)) * 1.1);
+@media (min-height: @screen-sm-height-min) {
+
+	.scroll-down {
+		display: none;
+	}
+
+}
+
+
+@media (min-width: @screen-lg-min) {
+
+	.scroll-down {
+		display: block;
+		width: @screen-lg-height-min;
+	}
+
+	@screen-lg-height-min: (((@default-banner-height * 1.45) + (@line-height-computed * 3)) * 1.1);
+	@media (min-height: @screen-lg-height-min) {
+
+		.scroll-down {
+			display: none;
+		}
+
+	}
+
 }

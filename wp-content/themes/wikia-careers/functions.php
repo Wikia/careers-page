@@ -256,6 +256,37 @@ function is_tree($pid) {
 	}
 };
 
+/**
+ * Determine whether page should use full height banner of fixed height
+ * Following pages should have full height banner
+ * - posts
+ * - child pages of pages using play-with-us.php template
+ * @return bool
+ */
+function has_full_height_banner() {
+	global $post;
+
+	if (is_single()) {
+		return true;
+	}
+
+	$pages = get_posts(
+		array(
+			'meta_key' => '_wp_page_template',
+			'meta_value' => 'templates/play-with-us.php',
+			'post_type' => 'page'
+		)
+	);
+
+	foreach($pages as $pageParent){
+		if( $post->post_parent == $pageParent->ID ) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
 
 /**
  * Buffer the output except headers to send as a whole at the end
