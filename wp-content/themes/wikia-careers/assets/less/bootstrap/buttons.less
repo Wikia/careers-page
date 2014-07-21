@@ -211,14 +211,14 @@
 
 .btn-lg {
 	// line-height: ensure even-numbered height of button next to large input
-	.button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-computed-lg * 1.5 - 2; @border-radius-large);
+	.button-size(0; @padding-large-horizontal; @font-size-large; @line-height-computed-lg * 1.5 - 2; @border-radius-large);
 }
 .btn-sm {
 	// line-height: ensure proper height of button next to small input
-	.button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-computed-sm * 1.5 - 2; @border-radius-small);
+	.button-size(0; @padding-small-horizontal; @font-size-small; @line-height-computed-sm * 1.5 - 2; @border-radius-small);
 }
 .btn-xs {
-	.button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-base; @line-height-computed * 1.5 - 2; @border-radius-small);
+	.button-size(0; @padding-xs-horizontal; @font-size-base; @line-height-computed * 1.5 - 2; @border-radius-small);
 }
 
 
