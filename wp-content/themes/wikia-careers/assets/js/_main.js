@@ -24,9 +24,10 @@ var Roots = {
 		init: function() {
 			// JavaScript to be fired on all pages
 			mainMenu.initClickEvent();
-            scrollToContent.initClickEvent();
-            wikiaCareersTextFormatting.formatArticle();
-        }
+			scrollToContent.initClickEvent();
+			wikiaCareersTextFormatting.formatArticle();
+			popoverTrigger.setupPopover();
+		}
 	},
 	// Home page
 	home: {
