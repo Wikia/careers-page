@@ -546,3 +546,42 @@ address {
   font-style: normal;
   line-height: 1.428571429;
 }
+/* Process styles */
+body {
+	counter-reset:section;
+}
+
+.process-title {
+	font-size: 36px;
+	line-height: 40px;
+	margin: 0;
+	padding: 0px 0 10px 120px;
+	position: relative;
+}
+
+.process-title::before {
+	background-color: #fff;
+	border-radius: 20px;
+	border: 1px solid #000;
+	content: "Etap " counter(section);
+	counter-increment:section;
+	font-size: 12px;
+	font-weight: normal;
+	left: 0;
+	line-height: 40px;
+	margin-top: -3px;
+	padding: 3px 0;
+	position: absolute;
+	text-align: center;
+	width: 100px;
+}
+
+.process-paragraph {
+	border-left: 1px solid #000;
+	margin: 0 0 0 50px;
+	padding: 0 0 10px 70px;
+}
+
+.process-paragraph-last {
+	padding-left: 120px;
+}

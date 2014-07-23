@@ -1,0 +1,70 @@
+.process {
+
+	h1 {
+		.h2;
+		color: @brand-secondary;
+		counter-reset:section;
+		font-weight: bold;
+	}
+}
+
+.process-title {
+	.padding-bottom-section-vertical(@line-height-computed, @line-height-computed-sm, @line-height-computed-lg);
+	.padding-top-section-vertical(@line-height-computed, @line-height-computed-sm, @line-height-computed-lg);
+	border-left: 1px solid @brand-secondary;
+	color: @brand-secondary;
+	font-weight: bold;
+	margin: 0;
+	padding-left: 120px;
+	position: relative;
+
+	&::before {
+		background-color: #fff;
+		border-radius: 20px;
+		border: 1px solid @brand-secondary;
+		color: @brand-secondary;
+		content: "Etap " counter(section);
+		counter-increment:section;
+		font-size: @font-size-base;
+		font-weight: normal;
+		left: -50px;
+		line-height: @line-height-computed-h2;
+		margin-top: -3px;
+		padding: 3px 0;
+		position: absolute;
+		text-align: center;
+		width: 100px;
+
+		@media (min-width: @screen-sm) {
+			font-size: @font-size-small;
+			line-height: @line-height-computed-h2-sm;
+		}
+
+		@media (min-width: @screen-lg) {
+			font-size: @font-size-large;
+			line-height: @line-height-computed-h2-lg;
+		}
+	}
+
+	&:first-of-type {
+		.margin-top-section-vertical(@line-height-computed, @line-height-computed-sm, @line-height-computed-lg);
+		padding-top: 0;
+	}
+
+	&:last-of-type {
+		.margin-bottom-section-vertical(@line-height-computed, @line-height-computed-sm, @line-height-computed-lg);
+		padding-bottom: 0;
+	}
+}
+
+.process-paragraph {
+	.padding-bottom-section-vertical(@line-height-computed / 2, @line-height-computed-sm / 2, @line-height-computed-lg / 2);
+	border-left: 1px solid @brand-secondary;
+	margin: 0;
+	padding-left: 120px;
+}
+
+.process-paragraph-last {
+	.margin-bottom-section-vertical(@line-height-computed / 2, @line-height-computed-sm / 2, @line-height-computed-lg / 2);
+	padding-left: 120px;
+}
