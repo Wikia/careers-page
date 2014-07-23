@@ -585,3 +585,9 @@ body {
 .process-paragraph-last {
 	padding-left: 120px;
 }
+
+.right-float-comment {
+	float: right;
+	width:100px;
+	text-align: right;
+}
