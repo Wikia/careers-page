@@ -15,9 +15,17 @@ $parent_link = get_page_link($parent->ID);
 			<div class="col-xxs-2 col-xs-2 col-sm-2 col-md-4 col-lg-4">
 				<button class="btn-wikia" data-target="#jobApplyModal" data-toggle="modal">Aplikuj</button>
 			</div>
+			<div class="col-xxs-1 col-xs-1 col-sm-2 col-md-4 col-lg-3">
+				<div class="share-wrapper icon-share-gray_light">
+					<div class="share-icons-row">
+						<a href="http://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>" class="icon-fb-icon-gray_light" target="_blank">&nbsp;</a><a href="https://www.linkedin.com/shareArticle?summary=&url=<?php echo get_permalink(); ?>&title=<?php echo get_the_title(); ?>" class="icon-linkedin-gray_light" target="_blank">&nbsp;</a><a href="https://twitter.com/intent/tweet?url=<?php echo get_permalink(); ?>&text=<?php echo get_the_title(); ?>&hashtags=karierawikia" class="icon-twitter-gray_light" target="_blank">&nbsp;</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
+
 <!--<div class="container prev-next-nav">-->
 <!--	<div class="prev-next-buttons" id="stickyHandNav">-->
 <!--		<button class="prev"></button>-->

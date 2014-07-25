@@ -208,17 +208,20 @@
 
 // Button Sizes
 // --------------------------------------------------
+@btn-height-lg: @line-height-computed-lg * 1.5 - 2;
+@btn-height-sm: @line-height-computed-sm * 1.5 - 2;
+@btn-height-xs: @line-height-computed * 1.5 - 2;
 
 .btn-lg {
 	// line-height: ensure even-numbered height of button next to large input
-	.button-size(0; @padding-large-horizontal; @font-size-large; @line-height-computed-lg * 1.5 - 2; @border-radius-large);
+	.button-size(0; @padding-large-horizontal; @font-size-large; @btn-height-lg; @border-radius-large);
 }
 .btn-sm {
 	// line-height: ensure proper height of button next to small input
-	.button-size(0; @padding-small-horizontal; @font-size-small; @line-height-computed-sm * 1.5 - 2; @border-radius-small);
+	.button-size(0; @padding-small-horizontal; @font-size-small; @btn-height-sm; @border-radius-small);
 }
 .btn-xs {
-	.button-size(0; @padding-xs-horizontal; @font-size-base; @line-height-computed * 1.5 - 2; @border-radius-small);
+	.button-size(0; @padding-xs-horizontal; @font-size-base; @btn-height-xs; @border-radius-small);
 }
 
 
