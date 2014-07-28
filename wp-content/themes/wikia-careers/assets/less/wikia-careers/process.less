@@ -86,11 +86,6 @@
 
 @media (min-width: @screen-sm-min) {
 
-	.process-title::before {
-		left: -50px;
-		width: 100px;
-	}
-
 	.process-paragraph,
 	.process-paragraph-last,
 	.process-title {
@@ -108,7 +103,7 @@
 	.process-paragraph,
 	.process-paragraph-last,
 	.process-title {
-		padding-left: 120px;
+		padding-left: 79px;
 	}
 
 	.process-paragraph,
@@ -116,4 +111,18 @@
 		width: percentage((9 / 12));
 	}
 
+}
+
+
+@media (min-width: @screen-lg-min) {
+	.process-paragraph,
+	.process-paragraph-last,
+	.process-title {
+		padding-left: 122px;
+	}
+
+	.process-title::before {
+		left: -54px;
+		width: 108px;
+	}
 }
