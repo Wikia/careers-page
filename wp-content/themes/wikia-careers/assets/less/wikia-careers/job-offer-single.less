@@ -15,7 +15,6 @@
 /* Navigation / Apply / Share bar */
 
 .job-offer-apply-bar {
-	.nav-bar-under-banner;
 
 	&.contact-for-help {
 		border-bottom: 0;
@@ -36,7 +35,18 @@
 		}
 	}
 
+	.row {
+		& > div {
 
+			&:nth-child(2) {
+				text-align: center;
+			}
+
+			&:nth-child(3) {
+				text-align: right;
+			}
+		}
+	}
 
 }
 

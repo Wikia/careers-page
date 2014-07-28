@@ -12,7 +12,7 @@
 				<?php endif; ?>
 			</div>
 			<div class="col-xxs-2 col-xs-2 col-sm-3 col-md-6 col-lg-5">
-				<!-- placeholder for share icon -->
+				<?php echo ShareButtons::get_share_buttons(); ?>
 			</div>
 		</div>
 	</div>

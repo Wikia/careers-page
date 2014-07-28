@@ -17,6 +17,7 @@ require_once locate_template('/lib/relative-urls.php');                    // Ro
 require_once locate_template('/lib/widgets.php');                          // Sidebars and widgets
 require_once locate_template('/lib/scripts.php');                          // Scripts and stylesheets
 require_once locate_template('/lib/custom.php');                           // Custom functions
+require_once locate_template('/lib/share-buttons.php');                    // Share buttons
 require_once locate_template('/lib/tinymce-custom-features.php');          // TinyMCE editor custom features
 
 
