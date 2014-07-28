@@ -2,21 +2,37 @@
 
 .share-wrapper {
 	background-position: 50% 50%;
-	border-radius: @border-radius-small;
-	border: 1px solid @gray-light;
 	display: inline-block;
 	height: @btn-height-xs;
-	overflow: hidden;
 	position: relative;
 	transition: width .2s linear;
 	vertical-align: middle;
 	width: @btn-height-xs;
 
-	&:hover {
+	&::before {
+		border-radius: @btn-height-lg;
+		border: 1px solid @gray-light;
+		content: '';
+		height: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: @btn-height-sm;
+	}
+
+
+	&:hover,
+	&:focus {
 		background: transparent;
-		width: 3 * @btn-height-xs + 2;
+		border: 0;
+		width: 100%;
+
+		&::before {
+			border: 0;
+		}
 
 		a {
+			background-color: #fff;
 			margin-top: 0;
 			opacity: 1;
 		}
@@ -24,19 +40,19 @@
 
 	a {
 		background-position: 50% 50%;
-		border-right: 1px solid @gray-light;
+		border-radius: @btn-height-lg;
+		border: 1px solid @gray-light;
 		display: inline-block;
 		height: 100%;
+		margin-left: 15px;
 		opacity: 0;
 		transition: background-color .2s linear;
 		width: @btn-height-sm;
 
 		&:hover {
-			text-decoration: none;
 			background-color: @brand-secondary;
-		}
-		&:last-child {
-			border-right: 0;
+			border-color: @brand-secondary;
+			text-decoration: none;
 		}
 	}
 
@@ -54,11 +70,11 @@
 }
 
 .share-icons-row {
-	height: @btn-height-xs - 2;
+	height: @btn-height-xs;
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 3 * @btn-height-xs + 2;
+	width: 3 * ( @btn-height-xs + 15 ) + 2;
 }
 
 
@@ -68,18 +84,14 @@
 		height: @btn-height-sm;
 		width: @btn-height-sm;
 
-		&:hover {
-			width: 3 * @btn-height-sm + 2;
-		}
-
 		a {
 			width: @btn-height-sm;
 		}
 	}
 
 	.share-icons-row {
-		height: @btn-height-sm - 2;
-		width: 3 * @btn-height-sm + 2;
+		height: @btn-height-sm;
+		width: 3 * ( @btn-height-sm + 15 ) + 2;
 	}
 
 }
@@ -87,21 +99,17 @@
 
 @media (min-width: @screen-lg-min) {
 	.share-wrapper {
-		border-radius: @border-radius-large;
 		height: @btn-height-lg;
 		width: @btn-height-lg;
 
-		&:hover {
-			width: 3 * @btn-height-lg + 2;
-		}
-
+		&::before,
 		a {
 			width: @btn-height-lg;
 		}
 	}
 
 	.share-icons-row {
-		height: @btn-height-lg - 2;
-		width: 3 * @btn-height-lg + 2;
+		height: @btn-height-lg;
+		width: 500px;
 	}
 }
