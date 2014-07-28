@@ -18,8 +18,8 @@ endif;
 				<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-9 col-lg-9">
 					<div class="footer-nav">
 						<ul class="social-icons">
-							<li><a href="https://www.facebook.com/wikiapl" class="icon-fb-icon"></a></li>
-							<li><a href="https://github.com/Wikia/" class="icon-github-icon"></a></li>
+							<li><a href="https://www.facebook.com/wikiapl" class="icon-fb-icon-white"></a></li>
+							<li><a href="https://github.com/Wikia/" class="icon-github-icon-white"></a></li>
 						</ul>
 						<ul class="text-links">
 							<li><a href="<?php echo home_url(); ?>/">Witaj</a></li>

@@ -1,7 +1,11 @@
 .subtext {
+	.subtext-font-size;
+	margin: 0 0 (@line-height-computed / 2);
+}
+
+.subtext-font-size {
 	font-size: @font-size-subtext;
 	line-height: @line-height-computed-subtext;
-	margin: 0 0 (@line-height-computed / 2);
 
 	@media (min-width: @screen-sm) {
 		font-size: @font-size-subtext-sm;
