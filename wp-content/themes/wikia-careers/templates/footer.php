@@ -21,12 +21,11 @@ endif;
 							<li><a href="https://www.facebook.com/wikiapl" class="icon-fb-icon-white"></a></li>
 							<li><a href="https://github.com/Wikia/" class="icon-github-icon-white"></a></li>
 						</ul>
-						<ul class="text-links">
-							<li><a href="<?php echo home_url(); ?>/">Witaj</a></li>
-							<li><a href="<?php echo home_url(); ?>/zycie-w-wikia">Życie w Wikia</a></li>
-							<li><a href="<?php echo home_url(); ?>/kariera">Kariera</a></li>
-						</ul>
-
+						<?php
+						if (has_nav_menu('primary_navigation')) :
+							wp_nav_menu(array('theme_location' => 'footer_navigation', 'menu_class' => 'text-links'));
+						endif;
+						?>
 					</div>
 				</div>
 			</div>
