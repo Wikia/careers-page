@@ -4,12 +4,15 @@
 	background-position: 50% 50%;
 	display: inline-block;
 	height: @btn-height-xs;
+	overflow: hidden;
 	position: relative;
-	transition: width .2s linear;
 	vertical-align: middle;
 	width: @btn-height-xs;
 
 	&::before {
+		.icon-share-gray_light;
+		background-position: 50% 50%;
+		background-size: 55%;
 		border-radius: @btn-height-lg;
 		border: 1px solid @gray-light;
 		content: '';
@@ -20,11 +23,10 @@
 		width: @btn-height-sm;
 	}
 
-
 	&:hover,
 	&:focus {
-		background: transparent;
 		border: 0;
+		overflow: visible;
 		width: 100%;
 
 		&::before {
@@ -40,13 +42,15 @@
 
 	a {
 		background-position: 50% 50%;
+		background-size: 55%;
 		border-radius: @btn-height-lg;
 		border: 1px solid @gray-light;
 		display: inline-block;
 		height: 100%;
 		margin-left: 15px;
 		opacity: 0;
-		transition: background-color .2s linear;
+		transition-property: background-color, opacity;
+		transition: all .2s linear;
 		width: @btn-height-sm;
 
 		&:hover {
@@ -99,6 +103,7 @@
 
 @media (min-width: @screen-lg-min) {
 	.share-wrapper {
+		background-size: auto;
 		height: @btn-height-lg;
 		width: @btn-height-lg;
 

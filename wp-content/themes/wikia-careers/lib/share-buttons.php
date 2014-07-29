@@ -11,7 +11,7 @@ class ShareButtons {
 		$shareButtonsHtml .= self::get_twitter_share_button( $permalink, $title );
 
 		$shareButtonsHtml = <<<HTML
-<div class="share-wrapper icon-share-gray_light">
+<div class="share-wrapper">
 	<div class="share-icons-row">
 		$shareButtonsHtml
 	</div>
