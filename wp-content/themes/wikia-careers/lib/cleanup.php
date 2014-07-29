@@ -203,7 +203,7 @@ function roots_remove_self_closing_tags($input) {
 }
 add_filter('get_avatar',          'roots_remove_self_closing_tags'); // <img />
 add_filter('comment_id_fields',   'roots_remove_self_closing_tags'); // <input />
-add_filter('post_thumbnail_html', 'roots_remove_self_closing_tags'); // <img />
+//add_filter('post_thumbnail_html', 'roots_remove_self_closing_tags'); // <img />
 
 /**
  * Don't return the default description in the RSS feed if it hasn't been changed

@@ -46,7 +46,7 @@ function flexipages_init()
 		'show_subpages_check' => 'on', 
 		'show_subpages' => -2,
 		'limit' => 0,
-		'show_home_check' => 'on',
+		'show_home_check' => 'off',
 		'show_home' => __('Home', 'flexipages'),
 		'show_parent_link' => 'off',
 		'show_date' => 'off',
@@ -64,7 +64,7 @@ function flexipages_init()
 		else if( is_page() ) {
 			global $wp_query;
 			if($curr_page_id = $wp_query->get_queried_object_id())
-				$curr_page = &get_post($curr_page_id);
+				$curr_page = get_post($curr_page_id);
 		}
 		else
 			return array();
@@ -74,7 +74,7 @@ function flexipages_init()
 		$hierarchy[] = $curr_page->ID;
 	
 		while($curr_page->post_parent) {
-			$curr_page = &get_post($curr_page->post_parent);
+			$curr_page = get_post($curr_page->post_parent);
 			$hierarchy[] = $curr_page->ID;
 		}
 		return $hierarchy;
@@ -86,19 +86,19 @@ function flexipages_init()
 			return;
 		
 		$pagelist = "";
-		
+
 		foreach($page_array as $page) {
-			
-			$date = "";			
+
+			$date = "";
 			if(isset($page['date']) && $page['date']) $date = " ".$page['date'];
-			
-			$pagelist .= str_repeat("\t", $level+1).'<li class="'.$page['class'].'"><a href="'.$page['link'].'" title="'.$page['title'].'">'.$page['title'].'</a>'.$date;
+
+			$pagelist .='<h2>'. $page['title']."</h2>\n";
+			$pagelist .='<p>'.$page['excerpt']."</p>\n";
+			$pagelist .='<div class="btn-container"><a href="'. $page['link'] .'" class="btn-wikia btn-arrow icon-chevron-brand_pri">Poczytaj więcej</a></div>'."\n";
 			if($page['children'])
 				$pagelist .= flexipages_list($page['children'], $level+1);
 			$pagelist.= "</li>\n";
 		}
-		if($pagelist)
-			$pagelist = str_repeat("\t", $level)."<ul>\n{$pagelist}".str_repeat("\t", $level)."</ul>";
 		return $pagelist;
 	}
 	
@@ -134,10 +134,9 @@ function flexipages_init()
 		extract($options);
 
 		$page_array = array();
-
-		if($show_home && $show_home != 'off') {
+		if(isset($show_home) && ($show_home != 'off' && !empty($show_home))) {
 			$class = "home_page";
-			$class .= is_home()?" current_page_item":"";			
+			$class .= is_home()?" current_page_item":"";
 			$page_array[] = array(
 				'ID' => 'home', 
 				'title' => $show_home, 
@@ -199,12 +198,13 @@ function flexipages_init()
 					'link' => get_page_link($page->ID),
 					'date' => $date,
 					'children' => $children,
-					'class' => $class
+					'class' => $class,
+					'excerpt' => $page->post_excerpt
 				);
 			}
 		}
 		
-		
+
 		return $page_array;
 		
 	}
@@ -428,9 +428,27 @@ function flexipages_init()
 		}
 		
 		$title = esc_attr($options[$number]['title']);
+		$sort_column_select = array(
+			'post_title' => '',
+			'menu_order' => '',
+			'post_date' => '',
+			'post_modified' => '',
+			'ID' => '',
+			'post_author' => '',
+			'post_name' => ''
+		);
 		$sort_column_select[$options[$number]['sort_column']] = " selected=\"selected\"";
+		$sort_order_select = array(
+			'ASC' => '',
+			"DESC" => ''
+		);
 		$sort_order_select[$options[$number]['sort_order']] = " selected=\"selected\"";
 		$show_subpages_check_check = ($options[$number]['show_subpages_check'] == 'on')?' checked="checked"':'';
+		$show_subpages_select = array(
+			0 => '',
+			-2 => '',
+			-3 => ''
+		);
 		if($options[$number]['depth'] == -2)
 			$show_subpages_select[-2] = ' selected="selected"';
 		else if($options[$number]['depth'] == -3)
@@ -469,7 +487,7 @@ function flexipages_init()
 					<option value="menu_order"<?php echo $sort_column_select['menu_order']; ?>><?php _e('Menu order', 'flexipages'); ?></option>
 					<option value="post_date"<?php echo $sort_column_select['post_date']; ?>><?php _e('Date created', 'flexipages'); ?></option>
 					<option value="post_modified"<?php echo $sort_column_select['post_modified']; ?>><?php _e('Date modified', 'flexipages'); ?></option>
-					<option value="ID"<?php echo $sort_column_select['ID']; ?>><?php _e('Page ID', 'flexipages'); ?></option>	
+					<option value="ID"<?php echo $sort_column_select['ID']; ?>><?php _e('Page ID', 'flexipages'); ?></option>
 					<option value="post_author"<?php echo $sort_column_select['post_author']; ?>><?php _e('Page author ID', 'flexipages'); ?></option>
 					<option value="post_name"<?php echo $sort_column_select['post_name']; ?>><?php _e('Page slug', 'flexipages'); ?></option>
 				</select>
@@ -501,9 +519,9 @@ function flexipages_init()
 				<td>
 					<select<?php echo $depth_display; ?> class="widefat" id="flexipages-depth-<?php echo $number; ?>" name="flexipages_widget[<?php echo $number; ?>][depth]">
 					<?php for($i=2;$i<=5;$i++) { ?>
-						<option value="<?php echo $i; ?>"<?php echo $depth_select[$i]; ?>><?php printf(__('%d levels deep', 'flexipages'), $i); ?></option>
+						<option value="<?php echo $i; ?>"<?php echo isset($depth_select[$i]) ? $depth_select[$i] : ''; ?>><?php printf(__('%d levels deep', 'flexipages'), $i); ?></option>
 					<?php } ?>
-					<option value="0"<?php echo $depth_select[0]; ?>><?php _e('Unlimited depth', 'flexipages'); ?></option>
+						<option value="0"<?php  echo isset($depth_select[0]) ? $depth_select[0] : ''; ?>><?php _e('Unlimited depth', 'flexipages'); ?></option>
 					</select>
 				</td>
 			</tr>
@@ -526,7 +544,7 @@ function flexipages_init()
 			<td><select<?php echo $date_format_display; ?> class="widefat" id="flexipages-date_format-<?php echo $number; ?>" name="flexipages_widget[<?php echo $number; ?>][date_format]" text="Select format">
 				<option value=""><?php _e('Choose Format', 'flexipages'); ?></option>
 				<?php foreach($date_format_options as $date_format_option) { ?>
-					<option value="<?php echo $date_format_option; ?>"<?php echo $date_format_select[$date_format_option]; ?>><?php echo date($date_format_option); ?></option>
+					<option value="<?php echo $date_format_option; ?>"<?php echo isset($date_format_select[$date_format_option]) ? $date_format_select[$date_format_option] : ''; ?>><?php echo date($date_format_option); ?></option>
 				<?php } ?>
 			</select>
 			</td>

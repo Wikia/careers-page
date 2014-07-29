@@ -1,0 +1,102 @@
+/* ==========================================================================
+	 Footer
+	 ========================================================================== */
+
+.footer {
+	background-color: @brand-primary;
+	padding: 32px 0;
+
+	.logo {
+		width: 143px;
+		height: 40px;
+		background-size: contain;
+		display: inline-block;
+	}
+}
+
+.footer-nav {
+	text-align: right;
+
+	.text-links {
+		float: right;
+		margin-top: 0.35em;
+	}
+
+	li {
+		display: inline-block;
+		list-style: none;
+	}
+
+	a {
+		border-right: 1px solid #fff;
+		color: #fff;
+		line-height: 1em;
+		padding: 0 21px 0 18px;
+	}
+
+	li:last-child a {
+		border: 0;
+		padding-right: 0;
+	}
+}
+
+.social-icons {
+	border: 1px solid #fff;
+	float: right;
+	margin-left: 32px;
+	padding: 0;
+
+	a {
+		background-position: 50% 50%;
+		display: block;
+		height: 40px;
+		line-height: 40px;
+		padding: 0;
+		text-align: center;
+		width: 40px;
+	}
+
+	 a:hover {
+		background-color: #fff;
+	}
+
+	 ul {
+		display: table;
+	}
+
+	 li {
+		display: table-cell;
+	}
+}
+
+
+/* ==========================================================================
+	 Media Queries
+	 ========================================================================== */
+
+@media (max-width: @screen-sm-max) {
+
+	.footer-nav {
+		margin-top: 0.5em;
+	}
+
+	footer, .footer-nav {
+		text-align: center;
+	}
+
+	.footer .text-links {
+		float: none;
+		padding: 0;
+	}
+
+	.footer-nav .text-links li:last-child a {
+		padding-right: 21px;
+	}
+
+	.social-icons {
+		display: inline-block;
+		float: none;
+		margin: 0;
+	}
+
+}

@@ -1,0 +1,118 @@
+/* Main header section */
+
+.site-header {
+	@site-header-lineheight-sm: @line-height-computed-sm * 2;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top: @site-header-lineheight-sm;
+	height: @default-banner-height;
+	position: relative;
+	text-align: center;
+
+	&.post-header {
+		background-color:#000;
+		height: auto;
+		min-height: calc(~"100% - @{site-header-lineheight-sm}");
+	}
+
+	&.career-path-header {
+		background-color:#000;
+	}
+
+	.btn-wikia-white {
+		margin-bottom: @line-height-computed;
+	}
+}
+
+.site-header > .row {
+	.dim;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
+.site-header > .row > div {
+	display: table;
+	height: 100%;
+}
+
+.site-header .middled {
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.site-header-message,
+.site-header-sub-message {
+	color: #fff;
+	text-align: center;
+}
+
+.site-header-message {
+	font-weight: bold;
+}
+
+.site-header-sub-message {
+	.subtext;
+	margin-bottom: @line-height-computed;
+	margin-top: @line-height-computed / 2;
+}
+
+.site-header .scroll-down {
+	color:#fff
+}
+
+.nav-bar-under-banner-post {
+	.nav-bar-under-banner;
+	margin-bottom: floor(@line-height-computed * 2.34);
+}
+
+/* Benefits section */
+
+.benefits-description {
+	background-color: @gray-superlight;
+
+	.benefit-item {
+		.margin-top-section-vertical(@line-height-computed * 2, @line-height-computed-sm * 2, @line-height-computed-lg * 2 );
+
+		&:nth-child(2n) {
+			clear: both;
+		}
+	}
+
+	img {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	h2 {
+		.strong;
+		text-align: center;
+	}
+
+	h3 {
+		color: @brand-secondary;
+	}
+}
+
+@media (min-width: @screen-md-min) {
+
+	.site-header {
+		@site-header-lineheight: @line-height-computed * 3;
+		margin-top: @site-header-lineheight;
+
+		&.post-header {
+			min-height: calc(~"100% - @{site-header-lineheight}");
+		}
+	}
+
+}
+
+@media (min-width: @screen-lg-min) {
+
+	.site-header {
+		height: @default-banner-height * 1.45;
+	}
+
+}

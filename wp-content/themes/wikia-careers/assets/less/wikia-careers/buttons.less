@@ -1,0 +1,107 @@
+.btn-arrow {
+	background-position: calc(~"100% - 12px") 50%;
+	background-size: 9px;
+	padding: 0 33px 0 15px;
+
+	&.btn-wikia-white,
+	&:hover,
+	&.btn-wikia:hover,
+	&.btn-wikia-gray-blue:hover,
+	&.btn-wikia-light:hover,
+	&.btn-wikia-regular:hover {
+		.icon-chevron-white;
+	}
+}
+
+/* Contact button */
+.btn-envelope {
+	font-weight: normal;
+	margin: 0 35px;
+	padding: 0 60px 0 15px;
+	position: relative;
+	transition: all .2s linear;
+	vertical-align: top;
+
+	&::after {
+		.icon-icon-envelope-white;
+		background-color: @brand-secondary;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: 50%;
+		border-bottom-right-radius: @border-radius-base;
+		border-left: 1px solid #fff;
+		border-top-right-radius: @border-radius-base;
+		content:"";
+		display: block;
+		height: 100%;
+		right: 0;
+		margin: 0;
+		padding: 0 15px 0 30px;
+		position: absolute;
+		top: 0;
+	}
+
+	&:hover {
+		background-color: #fff;
+		border-color: #fff;
+		color: @brand-secondary;
+	}
+}
+
+.scroll-down {
+	background-color: transparent;
+	background-position: 50% 50%;
+	border: 0;
+	display: block;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	transition: all .2s linear;
+	width: 100px;
+
+	&:hover {
+		background-position: 50% 60%;
+	}
+	&:focus,
+	&:active,
+	&:visited {
+		border: 0;
+		outline: none;
+	}
+	&::-moz-focus-inner {
+		border: 0;
+	}
+}
+
+.post-header .scroll-down {
+	display: block;
+}
+
+
+@screen-sm-height-min: ((@default-banner-height + (@line-height-computed-sm * 2)) * 1.1);
+@media (min-height: @screen-sm-height-min) {
+
+	.scroll-down {
+		display: none;
+	}
+
+}
+
+
+@media (min-width: @screen-lg-min) {
+
+	.scroll-down {
+		display: block;
+		width: @screen-lg-height-min;
+	}
+
+	@screen-lg-height-min: (((@default-banner-height * 1.45) + (@line-height-computed * 3)) * 1.1);
+	@media (min-height: @screen-lg-height-min) {
+
+		.scroll-down {
+			display: none;
+		}
+
+	}
+
+}

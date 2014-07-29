@@ -2,3 +2,12 @@
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 node_modules
 assets/css/main.min.css.map
+
+#ignore unused grunt-icon task leftovers
+assets/img/svg/compressed
+assets/img/svg/output/png
+assets/img/svg/output/preview.html
+assets/img/svg/output/icons.fallback.css
+assets/img/svg/output/icons.data.png.css
+assets/img/svg/output/grunticon.loader.js
+

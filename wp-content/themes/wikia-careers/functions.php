@@ -92,7 +92,17 @@ function arphabet_widgets_init() {
 		'after_title' => '</h2>',
 	) );
 
-	/* Register quick contact form area*/
+	/* Register Second secion on mainpage - area */
+	register_sidebar( array(
+		'name' => 'Second section - mainpage',
+		'id' => 'second_section_mainpage',
+		'before_widget' => '',
+		'after_widget' => "\n",
+		'before_title' => '<h2 class="text-center">',
+		'after_title' => '</h2>',
+	) );
+
+	/* Register quick contact form area */
 	register_sidebar( array(
 		'name' => 'Quick contact form',
 		'id' => 'quick_contact_form',
@@ -206,3 +216,83 @@ function cc_mime_types( $mimes ){
 	return $mimes;
 }
 add_filter( 'upload_mimes', 'cc_mime_types' );
+
+
+// Disable roots sidebar for all pages
+function disable_sidebar_for_theme () {
+	return false;
+}
+add_action( 'roots_display_sidebar', 'disable_sidebar_for_theme' );
+
+
+// Define thumbnails
+add_image_size( 'container-md-thumb', 924, 300, 'soft' );
+add_image_size( 'news-section-thumb', 578, 321, 'soft' );
+
+
+// Remove auto adding width and height attributes to img tags
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+	$html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+	return $html;
+}
+
+/**
+ * Determine whether current post child of provided root post
+ * Looks through whole tree
+ * @param int $pid Post ID - The ID of the page we're looking for pages underneath
+ * @return boolean
+ */
+function is_tree($pid) {
+	global $post;         // load details about this page
+	if( is_page() && ( $post->post_parent == $pid || is_page($pid) )
+		|| ( $pid==$post->ID )
+	) {
+		return true;
+	} else {
+		return false;
+	}
+};
+
+/**
+ * Determine whether page should use full height banner of fixed height
+ * Following pages should have full height banner
+ * - posts
+ * - child pages of pages using play-with-us.php template
+ * @return bool
+ */
+function has_full_height_banner() {
+	global $post;
+
+	if (is_single()) {
+		return true;
+	}
+
+	$pages = get_posts(
+		array(
+			'meta_key' => '_wp_page_template',
+			'meta_value' => 'templates/play-with-us.php',
+			'post_type' => 'page'
+		)
+	);
+
+	foreach($pages as $pageParent){
+		if( $post->post_parent == $pageParent->ID ) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+
+/**
+ * Buffer the output except headers to send as a whole at the end
+ * It allows late redirect to a different page
+ */
+function app_output_buffer() {
+	ob_start();
+}
+add_action('init', 'app_output_buffer');
