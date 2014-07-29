@@ -22,14 +22,6 @@ $parent_link = get_page_link($parent->ID);
 	</div>
 </div>
 
-<!--<div class="container prev-next-nav">-->
-<!--	<div class="prev-next-buttons" id="stickyHandNav">-->
-<!--		<button class="prev"></button>-->
-<!--		<button class="next"><span></span></button>-->
-<!--		<button class="back"></button>-->
-<!--	</div>-->
-<!--</div>-->
-
 
 <!-- Modal -->
 <div class="modal fade job-offer-modal" id="jobApplyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -38,14 +30,11 @@ $parent_link = get_page_link($parent->ID);
 			<button type="button" class="go-back icon-arrow-left-gray" data-dismiss="modal" aria-hidden="true">Powrót</button>
 			<div class="modal-header">
 				<h2 class="modal-title" id="myModalLabel"><?php echo $post->post_title ?></h2>
-<!--				<p class="short-descr">Lokalizacja lub nazwa zespołu</p>-->
 			</div>
 			<div class="modal-body">
 				<div class="row">
 					<div class="col-xxs-4 col-xs-4 col-sm-2 col-md-4 col-lg-4">
 						<h2>Wypełnij formularz i wyślij CV</h2>
-<!--						<p>Aplikuj przez</p>-->
-<!--						<a class="btn-wikia-regular btn-arrow icon-chevron-gray"><strong>LinkedIn</strong></a>-->
 					</div>
 					<div class="col-xxs-4 col-xs-4 col-sm-4 col-md-8 col-lg-8">
 

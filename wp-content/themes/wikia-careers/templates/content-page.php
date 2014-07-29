@@ -11,7 +11,6 @@
 
 	?>
 
-
 	<div class="nav-bar-under-banner-post">
 		<div class="container">
 			<div class="row">
