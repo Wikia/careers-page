@@ -236,7 +236,8 @@
 //## For each of Bootstrap's buttons, define text, background and border color.
 
 @btn-font-weight:                normal;
-@btn-default-height:             44px;
+@btn-height-factor:              1.5;
+@btn-default-height:             @line-height-computed-lg * @btn-height-factor;
 
 @btn-default-color:              #333;
 @btn-default-bg:                 @brand-secondary;

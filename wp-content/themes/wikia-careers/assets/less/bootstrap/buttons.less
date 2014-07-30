@@ -208,9 +208,9 @@
 
 // Button Sizes
 // --------------------------------------------------
-@btn-height-lg: @line-height-computed-lg * 1.5;
-@btn-height-sm: @line-height-computed-sm * 1.5;
-@btn-height-xs: @line-height-computed * 1.5;
+@btn-height-lg: @line-height-computed-lg * @btn-height-factor;
+@btn-height-sm: @line-height-computed-sm * @btn-height-factor;
+@btn-height-xs: @line-height-computed * @btn-height-factor;
 
 .btn-lg {
 	// line-height: ensure even-numbered height of button next to large input
