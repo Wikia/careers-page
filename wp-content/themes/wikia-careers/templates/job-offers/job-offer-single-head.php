@@ -16,7 +16,7 @@ $parent_link = get_page_link($parent->ID);
 				<button class="btn-wikia" data-target="#jobApplyModal" data-toggle="modal">Aplikuj</button>
 			</div>
 			<div class="col-xxs-1 col-xs-1 col-sm-2 col-md-4 col-lg-3">
-				<?php echo ShareButtons::get_share_buttons(); ?>
+				<?php include new Roots_Wrapping('templates/sections/share-buttons.php'); ?>
 			</div>
 		</div>
 	</div>
