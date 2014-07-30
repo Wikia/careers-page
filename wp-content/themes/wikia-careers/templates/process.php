@@ -10,7 +10,6 @@
 
 <?php while (have_posts()) : the_post(); ?>
 
-
 	<article class="container spaced-container padding-section-vertical process">
 		<div class="row">
 			<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-10 col-lg-offset-1">
