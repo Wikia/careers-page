@@ -49,12 +49,12 @@
 						<a href="kariera/sciezki-rozwoju/jakub/" class="btn-wikia-gray-blue btn-arrow icon-chevron-gray">Poznaj</a>
 					</div>
 				</li>
-				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>federico.jpg">
-					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4 avatar"><img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>federico.jpg" alt="federico" class="person-picture" /></div>
-					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4 description">
-						<h3 class="h1">Federico</h3>
-						<p>Architekt aplikacji, budowniczy zespołów programistów.</p>
-						<a href="kariera/sciezki-rozwoju/federico/" class="btn-wikia-gray-blue btn-arrow icon-chevron-gray">Poznaj</a>
+				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>lukasz-min.jpg">
+					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4"><img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>lukasz.jpg" alt="lukasz" class="person-picture" /></div>
+					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4">
+						<h3>Łukasz</h3>
+						<p>Specjalista zespołu Operations, pracujący m. in. nad wydajnością i skalowalnością baz danych.</p>
+						<a href="kariera/sciezki-rozwoju/lukasz/" class="btn-wikia-gray-blue btn-arrow">Poznaj</a>
 					</div>
 				</li>
 				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubk.jpg">
