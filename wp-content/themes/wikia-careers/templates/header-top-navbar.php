@@ -10,20 +10,12 @@
 								wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
 							endif;
 							?>
-							<a href="http://wikia.com/" class="btn-wikia-light btn-arrow icon-chevron-gray_light">Zobacz wikia.com</a>
 						</nav>
 					</div>
 				</div>
 				<div class="menu-button menu-icon">
 				</div>
 				<!-- logo -->
-				<!--
-					<?php if ( get_theme_mod( 'wikia_careers_logo' ) ) : ?>
-						<a class="logo image-logo icon-wikia-logo" href="<?php echo home_url(); ?>/" rel='home'><img src='<?php echo esc_url( get_theme_mod( 'wikia_careers_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
-					<?php else : ?>
-						<a class="logo icon-wikia-logo" href="<?php echo home_url(); ?>/" title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a>
-					<?php endif; ?>
-					-->
 				<a class="logo image-logo icon-wikia-logo" href="<?php echo home_url(); ?>/" rel='home'></a>
 		</div>
 	</div>
@@ -41,18 +33,15 @@ endif; ?>
 		<div class="col-md-6 col-md-offset-3 col-sm-6 col-xs-4 col-xxs-4">
 			<div class="middled">
 			<?php if ( get_theme_mod( 'wikia_careers_header_desc' ) ) : ?>
-				<!-- header background message -->
 				<h1 class="site-header-message"><?php echo get_theme_mod( 'wikia_careers_header_desc' ); ?></h1>
 			<?php endif; ?>
 			<?php if ( get_theme_mod( 'wikia_careers_header_desc_sub' ) ) : ?>
-				<!-- header background message -->
 				<p class="site-header-sub-message"><?php echo get_theme_mod( 'wikia_careers_header_desc_sub' ); ?></p>
 			<?php endif; ?>
 			<?php if ( get_theme_mod( 'wikia_careers_header_button' ) ) : ?>
-				<!-- header background message -->
-			<?php endif; ?>
 				<a href="<?php echo home_url(); ?>/kariera" class="btn-wikia-white btn-arrow"><?php echo get_theme_mod( 'wikia_careers_header_button' ); ?></a>
-				<button class="scroll-down icon-chevron-double-white"></button>
+			<?php endif; ?>
+			<button class="scroll-down icon-chevron-double-white"></button>
 			</div>
 		</div>
 	</div>

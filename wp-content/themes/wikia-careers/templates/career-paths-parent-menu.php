@@ -16,7 +16,7 @@ $root_sub_pages = get_pages( array(
 
 ?>
 
-<ul class="nav nav-tabs container spaced-container">
+<ul class="nav nav-tabs container spaced-container subtext-font-size">
 
 <?php
 

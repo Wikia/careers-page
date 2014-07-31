@@ -11,7 +11,6 @@
 
 	?>
 
-
 	<div class="nav-bar-under-banner-post">
 		<div class="container">
 			<div class="row">
@@ -21,7 +20,7 @@
 					<?php endif; ?>
 				</div>
 				<div class="col-xxs-2 col-xs-2 col-sm-3 col-md-6 col-lg-5">
-					<!-- placeholder for share icon -->
+					<?php include new Roots_Wrapping('templates/sections/share-buttons.php'); ?>
 				</div>
 			</div>
 		</div>

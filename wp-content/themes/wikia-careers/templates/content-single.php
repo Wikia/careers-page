@@ -8,11 +8,11 @@
 		<div class="row">
 			<div class="col-xxs-2 col-xs-2 col-sm-3 col-md-6 col-lg-5 col-lg-offset-1">
 				<?php if ( get_option('page_for_posts' ) ) : ?>
-					<a href="<?php  echo get_permalink( get_option('page_for_posts' ) ); ?>" class="go-back icon-arrow-left-gray">Powrót do listy aktualności</a>
+					<a href="<?php echo get_permalink( get_option('page_for_posts' ) ); ?>" class="go-back icon-arrow-left-gray">Powrót do listy aktualności</a>
 				<?php endif; ?>
 			</div>
 			<div class="col-xxs-2 col-xs-2 col-sm-3 col-md-6 col-lg-5">
-				<!-- placeholder for share icon -->
+				<?php include new Roots_Wrapping('templates/sections/share-buttons.php'); ?>
 			</div>
 		</div>
 	</div>

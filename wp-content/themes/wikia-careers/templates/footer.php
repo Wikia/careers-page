@@ -18,15 +18,14 @@ endif;
 				<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-9 col-lg-9">
 					<div class="footer-nav">
 						<ul class="social-icons">
-							<li><a href="https://www.facebook.com/wikiapl" class="icon-fb-icon"></a></li>
-							<li><a href="https://github.com/Wikia/" class="icon-github-icon"></a></li>
+							<li><a href="https://www.facebook.com/wikiapl" class="icon-fb-icon-white"></a></li>
+							<li><a href="https://github.com/Wikia/" class="icon-github-icon-white"></a></li>
 						</ul>
-						<ul class="text-links">
-							<li><a href="<?php echo home_url(); ?>/">Witaj</a></li>
-							<li><a href="<?php echo home_url(); ?>/zycie-w-wikia">Życie w Wikia</a></li>
-							<li><a href="<?php echo home_url(); ?>/kariera">Kariera</a></li>
-						</ul>
-
+						<?php
+						if (has_nav_menu('primary_navigation')) :
+							wp_nav_menu(array('theme_location' => 'footer_navigation', 'menu_class' => 'text-links'));
+						endif;
+						?>
 					</div>
 				</div>
 			</div>
