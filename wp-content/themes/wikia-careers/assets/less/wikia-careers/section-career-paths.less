@@ -81,8 +81,17 @@
 			align-content: center;
 			display: flex;
 			flex-flow: row wrap;
-			min-height: 400px;
+			min-height: 320px;
 		}
 	}
 
+}
+
+@media (min-width: @screen-md-min) {
+
+	.career-paths-short {
+		.description {
+			min-height: 400px;
+		}
+	}
 }

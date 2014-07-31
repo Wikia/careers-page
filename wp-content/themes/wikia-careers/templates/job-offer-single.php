@@ -7,14 +7,6 @@ Template Name: Job offer template
 <?php include new Roots_Wrapping('templates/job-offers/job-offer-single-head.php'); ?>
 
 
-<!--<div class="container prev-next-nav">-->
-<!--	<div class="prev-next-buttons" id="stickyHandNav">-->
-<!--		<button class="prev"></button>-->
-<!--		<button class="next"><span></span></button>-->
-<!--		<button class="back"></button>-->
-<!--	</div>-->
-<!--</div>-->
-
 <article class="container spaced-container job-offer-content">
 	<div class="row">
 		<div class="col-xxs-4 col-xs-4 col-sm-4 col-md-8 col-lg-offset-1 col-lg-6 excerpt-col">
@@ -51,11 +43,11 @@ Template Name: Job offer template
 	<div class="row">
 		<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-10 col-lg-offset-1 job-offer-details">
 
-			<?php while (have_posts()) : the_post(); ?>
-				<?php the_content(); ?>
-			<?php endwhile; ?>
-
-
+			<?php
+			while (have_posts()) : the_post();
+				the_content();
+			endwhile;
+			?>
 
 		</div>
 	</div>

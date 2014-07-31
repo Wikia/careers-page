@@ -34,30 +34,34 @@
 		padding: 0 21px 0 18px;
 	}
 
-	li:last-child a {
-		border: 0;
-		padding-right: 0;
+	.text-links {
+		li:last-child a {
+			border: 0;
+			padding-right: 0;
+		}
 	}
 }
 
 .social-icons {
-	border: 1px solid #fff;
 	float: right;
 	margin-left: 32px;
 	padding: 0;
 
 	a {
 		background-position: 50% 50%;
+		border-radius: @btn-height-lg;
+		border: 1px solid #fff;
 		display: block;
 		height: 40px;
 		line-height: 40px;
+		margin-left: 15px;
 		padding: 0;
 		text-align: center;
 		width: 40px;
-	}
 
-	 a:hover {
-		background-color: #fff;
+		 &:hover {
+			background-color: #fff;
+		}
 	}
 
 	 ul {
@@ -66,6 +70,18 @@
 
 	 li {
 		display: table-cell;
+
+		&:first-child a {
+			 margin: 0;
+		 }
+	}
+
+	.icon-fb-icon-white:hover {
+		.icon-fb-icon-brand_pri;
+	}
+
+	.icon-github-icon-white:hover {
+		.icon-github-icon-brand_pri;
 	}
 }
 

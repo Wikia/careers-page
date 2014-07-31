@@ -10,20 +10,12 @@
 								wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
 							endif;
 							?>
-							<a href="http://wikia.com/" class="btn-wikia-light btn-arrow icon-chevron-gray_light">Zobacz wikia.com</a>
 						</nav>
 					</div>
 				</div>
 				<div class="menu-button menu-icon">
 				</div>
 				<!-- logo -->
-				<!--
-					<?php if ( get_theme_mod( 'wikia_careers_logo' ) ) : ?>
-						<a class="logo image-logo icon-wikia-logo" href="<?php echo home_url(); ?>/" rel='home'><img src='<?php echo esc_url( get_theme_mod( 'wikia_careers_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
-					<?php else : ?>
-						<a class="logo icon-wikia-logo" href="<?php echo home_url(); ?>/" title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a>
-					<?php endif; ?>
-					-->
 				<a class="logo image-logo icon-wikia-logo" href="<?php echo home_url(); ?>/" rel='home'></a>
 		</div>
 	</div>

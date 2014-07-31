@@ -85,7 +85,7 @@
 			color: @nav-link-color;
 			margin-right: 2px;
 			line-height: @line-height-base;
-			padding: 20px 20px 15px;
+			padding: 20px 15px 15px;
 			text-transform: uppercase;
 			&:hover {
 				color: @nav-link-hover-color;
@@ -110,6 +110,22 @@
 		.nav-justified();
 		.nav-tabs-justified();
 	}
+
+	@media (max-width: @screen-sm-min) {
+		&.container {
+		padding-left: 0;
+		padding-right: 0;
+		}
+	}
+
+	@media (min-width: @screen-sm) {
+		> li {
+			> a {
+				padding: 20px 20px 15px;
+			}
+		}
+	}
+
 }
 
 
