@@ -41,7 +41,9 @@
 			<p class="item-description">
 				<?php echo $sub_post_excerpt ?>
 			</p>
-			<a href="<?php echo $sub_page_link ?>" class="btn-wikia btn-arrow icon-chevron-brand_pri">Przeczytaj artykuł</a>
+			<a href="<?php echo $sub_page_link ?>" class="btn-wikia btn-arrow icon-chevron-brand_pri">
+				<?php _e( 'Read more', 'wikia-careers' ); ?>
+			</a>
 		</div>
 
 
