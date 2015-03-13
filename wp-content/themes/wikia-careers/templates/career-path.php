@@ -30,7 +30,7 @@ $thumb = get_the_post_thumbnail( get_the_ID(), 'full' );
 			</div>
 
 			<div class="col-xxs-4 col-xs-4 col-sm-4 col-md-3 col-lg-4 col-md-offset-1 rail-col">
-				<h2>Zobacz inne osoby:</h2>
+				<h2><?php _e( 'See other people:', 'wikia-careers' ); ?></h2>
 				<?php include new Roots_Wrapping('templates/career-paths-items-menu.php'); ?>
 			</div>
 

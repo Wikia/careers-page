@@ -1,0 +1,495 @@
+# Copyright (C) 2015 Kamil Koterba, Ben Word
+# This file is distributed under the MIT License.
+msgid ""
+msgstr ""
+"Project-Id-Version: Wikia Careers 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/wikia-careers\n"
+"POT-Creation-Date: 2015-03-13 06:39:01+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:5
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr ""
+
+#: 404.php:8
+msgid "It looks like this was the result of either:"
+msgstr ""
+
+#: 404.php:10
+msgid "a mistyped address"
+msgstr ""
+
+#: 404.php:11
+msgid "an out-of-date link"
+msgstr ""
+
+#: base.php:6
+msgid ""
+"You are using an <strong>outdated</strong> browser. Please <a href=\"http://"
+"browsehappy.com/\">upgrade your browser</a> to improve your experience."
+msgstr ""
+
+#: front-page.php:16
+msgid "By fans. For fans."
+msgstr ""
+
+#: front-page.php:19
+msgid "monthly visits"
+msgstr ""
+
+#: front-page.php:23
+msgid "pages"
+msgstr ""
+
+#: front-page.php:27
+msgid "communities"
+msgstr ""
+
+#: front-page.php:31
+msgid "edits today"
+msgstr ""
+
+#: front-page.php:48
+msgid "Initially – a Wikia intern. Currently – our mobile solutions expert."
+msgstr ""
+
+#: front-page.php:56
+msgid "Application architect and team builder"
+msgstr ""
+
+#: front-page.php:64
+msgid "An engineer with a business touch"
+msgstr ""
+
+#: front-page.php:78
+msgid "Working at Wikia is more than just work"
+msgstr ""
+
+#: front-page.php:81
+msgid "Development at Wikia"
+msgstr ""
+
+#: front-page.php:82
+msgid ""
+"Wikia cares about your development – choose to attend two conferences a year "
+"and the company will cover your registration fees, as well as travel and "
+"accommodation costs."
+msgstr ""
+
+#: front-page.php:86
+msgid "Travel to San Francisco"
+msgstr ""
+
+#: front-page.php:87
+msgid ""
+"Once a year you will get an opportunity to visit our headquarters in San "
+"Francisco."
+msgstr ""
+
+#: front-page.php:91
+msgid "Family"
+msgstr ""
+
+#: front-page.php:92
+msgid ""
+"Wikia organizes many social family events – picnics, parties, "
+"“Wikilias” (our Wikia Christmas parties) – we are family friendly."
+msgstr ""
+
+#: front-page.php:96
+msgid "We care about you"
+msgstr ""
+
+#: front-page.php:97
+msgid ""
+"We care about your well-being at work – our pantry is always filled with "
+"nourishing and refreshing fruits, snacks, sweets and drinks."
+msgstr ""
+
+#: front-page.php:106
+msgid "Ready to join us?"
+msgstr ""
+
+#: front-page.php:108
+msgid "Check out who we're looking for"
+msgstr ""
+
+#: front-page.php:118
+msgid "Fill in the form and send your CV"
+msgstr ""
+
+#: functions.php:43 functions.php:49
+msgid "Logo"
+msgstr ""
+
+#: functions.php:56 functions.php:62
+msgid "Header message"
+msgstr ""
+
+#: functions.php:68
+msgid "Header sub message"
+msgstr ""
+
+#: functions.php:74
+msgid "Header button text"
+msgstr ""
+
+#: functions.php:198
+msgid "&larr; Previous"
+msgstr ""
+
+#: functions.php:199
+msgid "Next &rarr;"
+msgstr ""
+
+#: functions.php:206
+msgid "Posts navigation"
+msgstr ""
+
+#: home.php:20 index.php:5
+msgid "Sorry, no results were found."
+msgstr ""
+
+#: home.php:45 templates/content.php:15 templates/play-with-us.php:45
+msgid "Read more"
+msgstr ""
+
+#: home.php:57 index.php:17
+msgid "&larr; Older posts"
+msgstr ""
+
+#: home.php:58 index.php:18
+msgid "Newer posts &rarr;"
+msgstr ""
+
+#: lib/activation.php:28 lib/activation.php:29
+msgid "Theme Activation"
+msgstr ""
+
+#: lib/activation.php:50
+msgid "%s Theme Activation"
+msgstr ""
+
+#: lib/activation.php:52
+msgid ""
+"These settings are optional and should usually be used only on a fresh "
+"installation"
+msgstr ""
+
+#: lib/activation.php:59 lib/activation.php:62
+msgid "Create static front page?"
+msgstr ""
+
+#: lib/activation.php:64 lib/activation.php:76 lib/activation.php:88
+#: lib/activation.php:100
+msgid "Yes"
+msgstr ""
+
+#: lib/activation.php:65 lib/activation.php:77 lib/activation.php:89
+#: lib/activation.php:101
+msgid "No"
+msgstr ""
+
+#: lib/activation.php:67
+msgid "Create a page called Home and set it to be the static front page"
+msgstr ""
+
+#: lib/activation.php:71
+msgid "Change permalink structure?"
+msgstr ""
+
+#: lib/activation.php:74
+msgid "Update permalink structure?"
+msgstr ""
+
+#: lib/activation.php:79
+msgid "Change permalink structure to /&#37;postname&#37;/"
+msgstr ""
+
+#: lib/activation.php:83 lib/activation.php:86
+msgid "Create navigation menu?"
+msgstr ""
+
+#: lib/activation.php:91
+msgid "Create the Primary Navigation menu and set the location"
+msgstr ""
+
+#: lib/activation.php:95 lib/activation.php:98
+msgid "Add pages to menu?"
+msgstr ""
+
+#: lib/activation.php:103
+msgid "Add all current published pages to the Primary Navigation"
+msgstr ""
+
+#: lib/cleanup.php:193
+msgid "Continued"
+msgstr ""
+
+#: lib/init.php:11
+msgid "Primary Navigation"
+msgstr ""
+
+#: lib/init.php:12
+msgid "Footer Navigation"
+msgstr ""
+
+#: lib/titles.php:10
+msgid "Latest Posts"
+msgstr ""
+
+#: lib/titles.php:19
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: lib/titles.php:21
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: lib/titles.php:23
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: lib/titles.php:26
+msgid "Author Archives: %s"
+msgstr ""
+
+#: lib/titles.php:31
+msgid "Search Results for %s"
+msgstr ""
+
+#: lib/titles.php:33
+msgid "Not Found"
+msgstr ""
+
+#: lib/widgets.php:8
+msgid "Primary"
+msgstr ""
+
+#: lib/widgets.php:17
+msgid "Footer"
+msgstr ""
+
+#: lib/widgets.php:45
+msgid "Use this widget to add a vCard"
+msgstr ""
+
+#: lib/widgets.php:47
+msgid "Roots: vCard"
+msgstr ""
+
+#: lib/widgets.php:74
+msgid "vCard"
+msgstr ""
+
+#: templates/career-path.php:33
+msgid "See other people:"
+msgstr ""
+
+#: templates/comment.php:4
+msgid "%1$s"
+msgstr ""
+
+#: templates/comment.php:5
+msgid "(Edit)"
+msgstr ""
+
+#: templates/comment.php:9
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: templates/comments.php:8
+msgid "One Response to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Responses to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/comments.php:18
+msgid "&larr; Older comments"
+msgstr ""
+
+#: templates/comments.php:21
+msgid "Newer comments &rarr;"
+msgstr ""
+
+#: templates/comments.php:29 templates/comments.php:38
+msgid "Comments are closed."
+msgstr ""
+
+#: templates/comments.php:45
+msgid "Leave a Reply"
+msgstr ""
+
+#: templates/comments.php:45
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: templates/comments.php:48
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: templates/comments.php:53
+msgid "Logged in as <a href=\"%s/wp-admin/profile.php\">%s</a>."
+msgstr ""
+
+#: templates/comments.php:54
+msgid "Log out of this account"
+msgstr ""
+
+#: templates/comments.php:54
+msgid "Log out &raquo;"
+msgstr ""
+
+#: templates/comments.php:58
+msgid "Name"
+msgstr ""
+
+#: templates/comments.php:58 templates/comments.php:62
+msgid " (required)"
+msgstr ""
+
+#: templates/comments.php:62
+msgid "Email (will not be published)"
+msgstr ""
+
+#: templates/comments.php:66
+msgid "Website"
+msgstr ""
+
+#: templates/comments.php:71
+msgid "Comment"
+msgstr ""
+
+#: templates/comments.php:74
+msgid "Submit Comment"
+msgstr ""
+
+#: templates/contact-section.php:3
+msgid "Want to ask a question? Go for it!"
+msgstr ""
+
+#: templates/contact-section.php:5
+msgid "Send us an e-mail"
+msgstr ""
+
+#: templates/content-none.php:4
+msgid "Sorry, no results to show."
+msgstr ""
+
+#: templates/content-none.php:7
+msgid "Look into list of caregories:"
+msgstr ""
+
+#: templates/content-single.php:11
+msgid "Back to news listing"
+msgstr ""
+
+#: templates/entry-meta.php:2
+msgid "By"
+msgstr ""
+
+#: templates/job-offers/job-offer-single-foot.php:3
+msgid "Apply now"
+msgstr ""
+
+#: templates/job-offers/job-offer-single-foot.php:7
+#: templates/job-offers/job-offer-single-head.php:14
+msgid "Back to job offers"
+msgstr ""
+
+#: templates/job-offers/job-offer-single-foot.php:12
+#: templates/job-offers/job-offer-single-head.php:19
+msgid "Apply"
+msgstr ""
+
+#: templates/job-offers/job-offer-single-head.php:35
+msgid "Back"
+msgstr ""
+
+#: templates/job-offers/job-offer-single-head.php:43
+msgid "Fill out this form and send us your CV"
+msgstr ""
+
+#: templates/news-feed-section.php:18
+msgid "Wiki News"
+msgstr ""
+
+#: templates/news-feed-section.php:35
+msgid "Published:"
+msgstr ""
+
+#: templates/searchform.php:3 templates/searchform.php:6
+msgid "Search"
+msgstr ""
+
+#: templates/searchform.php:4
+msgid "Search for:"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Wikia Careers"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://roots.io/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Wikia Careers Wordpress theme based on Roots starter theme based on HTML5 "
+"Boilerplate & Bootstrap. <a href=\"https://github.com/roots/roots/"
+"contributors\">Contribute on GitHub</a>"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Kamil Koterba, Ben Word"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://benword.com/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Custom Template"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Career Path"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "First child redirect"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Footer data template"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Grid article"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Job offer template"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Parent page template"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Play with us"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Process"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Wide Images Narrow Paragraphs"
+msgstr ""

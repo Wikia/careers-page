@@ -10,6 +10,7 @@
 								wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
 							endif;
 							?>
+							<?php echo do_shortcode( '[bogo]' ); ?>
 						</nav>
 					</div>
 				</div>
@@ -33,18 +34,15 @@ endif; ?>
 		<div class="col-md-6 col-md-offset-3 col-sm-6 col-xs-4 col-xxs-4">
 			<div class="middled">
 			<?php if ( get_theme_mod( 'wikia_careers_header_desc' ) ) : ?>
-				<!-- header background message -->
 				<h1 class="site-header-message"><?php echo get_theme_mod( 'wikia_careers_header_desc' ); ?></h1>
 			<?php endif; ?>
 			<?php if ( get_theme_mod( 'wikia_careers_header_desc_sub' ) ) : ?>
-				<!-- header background message -->
 				<p class="site-header-sub-message"><?php echo get_theme_mod( 'wikia_careers_header_desc_sub' ); ?></p>
 			<?php endif; ?>
 			<?php if ( get_theme_mod( 'wikia_careers_header_button' ) ) : ?>
-				<!-- header background message -->
-			<?php endif; ?>
 				<a href="<?php echo home_url(); ?>/kariera" class="btn-wikia-white btn-arrow"><?php echo get_theme_mod( 'wikia_careers_header_button' ); ?></a>
-				<button class="scroll-down icon-chevron-double-white"></button>
+			<?php endif; ?>
+			<button class="scroll-down icon-chevron-double-white"></button>
 			</div>
 		</div>
 	</div>
