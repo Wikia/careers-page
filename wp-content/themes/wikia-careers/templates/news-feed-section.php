@@ -15,7 +15,7 @@ if( !empty( $posts_array ) ):
 <section class="container-fluid spaced-container news-feed padding-section-vertical">
 	<div class="row">
 		<div class="container">
-			<h2><?php _e( 'Wiki News', 'wikia-careers' ); ?></h2>
+			<h2><?php _e( 'Wiki Blog', 'wikia-careers' ); ?></h2>
 
 			<div class="row">
 			<?php
