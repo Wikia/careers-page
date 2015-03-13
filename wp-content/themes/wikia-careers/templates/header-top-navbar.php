@@ -10,6 +10,7 @@
 								wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
 							endif;
 							?>
+							<?php echo do_shortcode( '[bogo]' ); ?>
 						</nav>
 					</div>
 				</div>

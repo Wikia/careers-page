@@ -31,7 +31,7 @@ function bogo_languages() {
 		'de_CH' => __( 'German (Switzerland)', 'bogo' ),
 		'dv' => __( 'Dhivehi', 'bogo' ),
 		'el' => __( 'Greek', 'bogo' ),
-		'en_US' => __( 'English (United States)', 'bogo' ),
+		'en_US' => __( 'English', 'bogo' ),
 		'en_AU' => __( 'English (Australia)', 'bogo' ),
 		'en_CA' => __( 'English (Canada)', 'bogo' ),
 		'en_GB' => __( 'English (UK)', 'bogo' ),
