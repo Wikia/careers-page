@@ -1,0 +1,72 @@
+fieldset.bogo-locale-options {
+	margin: 0px 12px 10px 0;
+	padding: 4px 4px 8px 8px;
+	border: 1px solid #dfdfdf;
+}
+
+#your-profile fieldset.bogo-locale-options {
+	margin: 0;
+	padding: 4px 0 0;
+	border: none;
+}
+
+.widget-content fieldset.bogo-locale-options {
+	margin-right: 0;
+}
+
+fieldset.bogo-locale-options legend {
+	font-style: italic;
+	color: #666666;
+}
+
+fieldset.bogo-locale-options label.bogo-locale-option {
+	display: inline-block;
+	white-space: nowrap;
+	margin: 6px 0.4em 0 0;
+	border: 1px solid #a7a7a7;
+	border-radius: 4px;
+	padding: 1px 4px 1px 2px;
+	background: #f1f1f1;
+}
+
+fieldset.bogo-locale-options label.bogo-locale-option.checked {
+	border: 1px solid #0074a2;
+	background: #d4eefe;
+}
+
+fieldset.bogo-locale-options label.bogo-locale-option input[type="checkbox"] {
+	width: 16px;
+}
+
+/* Bogo Tools */
+
+#translations th {
+	width: 2em;
+}
+
+#translations th, #translations td {
+	box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+	padding: 8px 10px 4px;
+}
+
+#translations td p {
+	margin: 4px 0 8px;
+}
+
+#translations td strong {
+	font-size: 110%;
+}
+
+#translations a.install {
+	border: 1px solid #0074a2;
+	background: #d4eefe;
+	border-radius: 4px;
+	padding: 0 4px;
+	text-decoration: none;
+	font-size: 90%;
+	margin-left: .4em;
+}
+
+#translations a.install:active, #translations a.install:hover {
+	border: 1px solid #2ea2cc;
+}
