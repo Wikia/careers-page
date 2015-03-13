@@ -1,276 +1,487 @@
+# Copyright (C) 2015 Kamil Koterba, Ben Word
+# This file is distributed under the MIT License.
 msgid ""
 msgstr ""
+"Project-Id-Version: careers-page\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/wikia-careers\n"
+"POT-Creation-Date: 2015-03-13 06:39:01+00:00\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: Kazik <netboy@netboy.pl>\n"
-"Language-Team: \n"
-"MIME-Version: 1.0\n"
-"X-Generator: Poedit 1.5.5\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"PO-Revision-Date: 2015-03-13 03:11-0400\n"
+"Last-Translator: wikia <daniel+crowdin@wikia-inc.com>\n"
+"Language-Team: Polish\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: careers-page\n"
+"X-Crowdin-Language: pl\n"
+"X-Crowdin-File: wikia-careers.pot\n"
+"Language: pl_PL\n"
 
 #: 404.php:5
 msgid "Sorry, but the page you were trying to view does not exist."
 msgstr "Strona, którą próbujesz wyświetlić nie istnieje"
 
-#: 404.php:7
+#: 404.php:8
 msgid "It looks like this was the result of either:"
 msgstr "Wygląda na to że przyczyną był:"
 
-#: 404.php:7
+#: 404.php:10
 msgid "a mistyped address"
 msgstr "nieprawidłowo wpisany adres"
 
-#: 404.php:7
+#: 404.php:11
 msgid "an out-of-date link"
 msgstr "nieaktualny link"
 
+#: base.php:6
+msgid "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/\">upgrade your browser</a> to improve your experience."
+msgstr "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/\">upgrade your browser</a> to improve your experience."
 
-#: lib/activation.php:31 lib/activation.php:32
+#: front-page.php:16
+msgid "By fans. For fans."
+msgstr "Od Fanów. Dla Fanów."
+
+#: front-page.php:19
+msgid "monthly visits"
+msgstr "miesięcznych odwiedzin"
+
+#: front-page.php:23
+msgid "pages"
+msgstr "wszystkich stron"
+
+#: front-page.php:27
+msgid "communities"
+msgstr "wszystkich społeczności"
+
+#: front-page.php:31
+msgid "edits today"
+msgstr "edycji dzisiaj"
+
+#: front-page.php:48
+msgid "Initially – a Wikia intern. Currently – our mobile solutions expert."
+msgstr "Wcześniej - stażysta w Wikia. Dzisiaj - nasz spec od mobilnych rozwiązań."
+
+#: front-page.php:56
+msgid "Application architect and team builder"
+msgstr "Architekt aplikacji, budowniczy zespołów."
+
+#: front-page.php:64
+msgid "An engineer with a business touch"
+msgstr "Inżynier z zacięciem biznesowym"
+
+#: front-page.php:78
+msgid "Working at Wikia is more than just work"
+msgstr "Praca w Wikia to nie tylko praca"
+
+#: front-page.php:81
+msgid "Development at Wikia"
+msgstr "Rozwój w Wikia"
+
+#: front-page.php:82
+msgid "Wikia cares about your development – choose to attend two conferences a year and the company will cover your registration fees, as well as travel and accommodation costs."
+msgstr "Wikia dba o Twój rozwój - wybierz dwie konferencje w ciągu roku, a firma sfinansuje Twoje uczestnictwo, przejazd i zakwaterowanie."
+
+#: front-page.php:86
+msgid "Travel to San Francisco"
+msgstr "Wyjazd do San Francisco"
+
+#: front-page.php:87
+msgid "Once a year you will get an opportunity to visit our headquarters in San Francisco."
+msgstr "Raz w roku wybierzesz się z nami do San Francisco w odwiedziny do naszej siedziby głównej."
+
+#: front-page.php:91
+msgid "Family"
+msgstr "Rodzina"
+
+#: front-page.php:92
+msgid "Wikia organizes many social family events – picnics, parties, “Wikilias” (our Wikia Christmas parties) – we are family friendly."
+msgstr "Wikia organizuje wiele eventów rodzinnych - pikniki, imprezy, \"wikilie\" - jesteśmy family friendly."
+
+#: front-page.php:96
+msgid "We care about you"
+msgstr "Dbamy o Ciebie"
+
+#: front-page.php:97
+msgid "We care about your well-being at work – our pantry is always filled with nourishing and refreshing fruits, snacks, sweets and drinks."
+msgstr "W trakcie pracy dbamy o Twoje samopoczucie - w naszej zawsze pełnej spiżarni znajdziesz owoce, przekąski, słodycze, napoje, by się pożywić i orzeźwić."
+
+#: front-page.php:106
+msgid "Ready to join us?"
+msgstr "Jesteś gotów, by dołączyć do zespołu?"
+
+#: front-page.php:108
+msgid "Check out who we're looking for"
+msgstr "Zobacz, kogo szukamy"
+
+#: front-page.php:118
+msgid "Fill in the form and send your CV"
+msgstr "Wypełnij formularz i wyślij CV"
+
+#: functions.php:43 functions.php:49
+msgid "Logo"
+msgstr "Logo"
+
+#: functions.php:56 functions.php:62
+msgid "Header message"
+msgstr "Header message"
+
+#: functions.php:68
+msgid "Header sub message"
+msgstr "Header sub message"
+
+#: functions.php:74
+msgid "Header button text"
+msgstr "Header button text"
+
+#: functions.php:198
+msgid "&larr; Previous"
+msgstr "&larr; Previous"
+
+#: functions.php:199
+msgid "Next &rarr;"
+msgstr "Next &rarr;"
+
+#: functions.php:206
+msgid "Posts navigation"
+msgstr "Posts navigation"
+
+#: home.php:20 index.php:5
+msgid "Sorry, no results were found."
+msgstr "Przepraszamy, brak rezultatów wyszukiwania."
+
+#: home.php:45 templates/content.php:15 templates/play-with-us.php:45
+msgid "Read more"
+msgstr "Przeczytaj artykuł"
+
+#: home.php:57 index.php:17
+msgid "&larr; Older posts"
+msgstr "&larr; Starsze posty"
+
+#: home.php:58 index.php:18
+msgid "Newer posts &rarr;"
+msgstr "Nowsze posty &rarr;"
+
+#: lib/activation.php:28 lib/activation.php:29
 msgid "Theme Activation"
 msgstr "Aktywacja szablonu"
 
-#: lib/activation.php:68
+#: lib/activation.php:50
 msgid "%s Theme Activation"
 msgstr "%s Aktywacja szablonu"
 
-#: lib/activation.php:83 lib/activation.php:85
+#: lib/activation.php:52
+msgid "These settings are optional and should usually be used only on a fresh installation"
+msgstr "These settings are optional and should usually be used only on a fresh installation"
+
+#: lib/activation.php:59 lib/activation.php:62
 msgid "Create static front page?"
 msgstr "Czy stworzyć statyczną stronę główną?"
 
-#: lib/activation.php:87 lib/activation.php:100 lib/activation.php:113
-#: lib/activation.php:126 lib/activation.php:139
+#: lib/activation.php:64 lib/activation.php:76 lib/activation.php:88
+#: lib/activation.php:100
 msgid "Yes"
 msgstr "Tak"
 
-#: lib/activation.php:88 lib/activation.php:101 lib/activation.php:114
-#: lib/activation.php:127 lib/activation.php:140
+#: lib/activation.php:65 lib/activation.php:77 lib/activation.php:89
+#: lib/activation.php:101
 msgid "No"
 msgstr "Nie"
 
-#: lib/activation.php:91
+#: lib/activation.php:67
 msgid "Create a page called Home and set it to be the static front page"
 msgstr "Stwórz stronę o nazwie Home i ustaw ją jako statyczną stronę główną"
 
-#: lib/activation.php:96
+#: lib/activation.php:71
 msgid "Change permalink structure?"
 msgstr "Czy zmienić strukturę permalinków?"
 
-#: lib/activation.php:98
+#: lib/activation.php:74
 msgid "Update permalink structure?"
 msgstr "Czy zaktualizować strukturę permalinków?"
 
-#: lib/activation.php:104
+#: lib/activation.php:79
 msgid "Change permalink structure to /&#37;postname&#37;/"
 msgstr "Zmień strukturę permalinków: /&#37;postname&#37;/"
 
-#: lib/activation.php:109
-msgid "Change uploads folder?"
-msgstr "Czy zmienić folder z plikami?"
-
-#: lib/activation.php:111
-msgid "Update uploads folder?"
-msgstr "Czy dostosować folder z plikami?"
-
-#: lib/activation.php:117
-msgid "Change uploads folder to /assets/ instead of /wp-content/uploads/"
-msgstr "Zmień nazwę folderu z plikami na /assets/ zamiast /wp-content/uploads/"
-
-#: lib/activation.php:122 lib/activation.php:124
+#: lib/activation.php:83 lib/activation.php:86
 msgid "Create navigation menu?"
 msgstr "Czy stworzyć menu?"
 
-#: lib/activation.php:130
+#: lib/activation.php:91
 msgid "Create the Primary Navigation menu and set the location"
 msgstr "Stwórz główne menu i ustaw jego pozycję"
 
-#: lib/activation.php:135 lib/activation.php:137
+#: lib/activation.php:95 lib/activation.php:98
 msgid "Add pages to menu?"
 msgstr "Czy dodać strony do menu?"
 
-#: lib/activation.php:143
+#: lib/activation.php:103
 msgid "Add all current published pages to the Primary Navigation"
 msgstr "Dodaj wszystkie aktualnie opublikowane strony do głównego menu"
 
-#: lib/cleanup.php:388
+#: lib/cleanup.php:193
 msgid "Continued"
 msgstr "Kontynuuj"
 
-#: lib/htaccess.php:25
-msgid "Please make sure your <a href=\"%s\">.htaccess</a> file is writable "
-msgstr ""
-"Proszę upewnij się, że plik <a href=\"%s\">.htaccess</a> jest dostępny do "
-"zapisu "
-
-#: lib/init.php:13
+#: lib/init.php:11
 msgid "Primary Navigation"
 msgstr "Główna nawigacja"
 
-#: lib/utils.php:14
+#: lib/init.php:12
+msgid "Footer Navigation"
+msgstr "Footer Navigation"
+
+#: lib/titles.php:10
 msgid "Latest Posts"
 msgstr "Ostatnie posty"
 
-#: lib/utils.php:23
+#: lib/titles.php:19
 msgid "Daily Archives: %s"
 msgstr "Dzienne archiwa: %s"
 
-#: lib/utils.php:25
+#: lib/titles.php:21
 msgid "Monthly Archives: %s"
 msgstr "Miesięczne archiwa: %s"
 
-#: lib/utils.php:27
+#: lib/titles.php:23
 msgid "Yearly Archives: %s"
 msgstr "Roczne archiwa: %s"
 
-#: lib/utils.php:31
+#: lib/titles.php:26
 msgid "Author Archives: %s"
 msgstr "Archiwa autora: %s"
 
-#: lib/utils.php:36
+#: lib/titles.php:31
 msgid "Search Results for %s"
 msgstr "Wyniki wyszukiwania: %s"
 
-#: lib/utils.php:38
-msgid "File Not Found"
-msgstr "Nie znaleziono pliku"
+#: lib/titles.php:33
+msgid "Not Found"
+msgstr "Not Found"
 
-#: lib/widgets.php:6
-msgid "Primary Sidebar"
-msgstr "Główny sidebar"
+#: lib/widgets.php:8
+msgid "Primary"
+msgstr "Primary"
 
-#: lib/widgets.php:15
+#: lib/widgets.php:17
 msgid "Footer"
 msgstr "Stopka"
 
-#: lib/widgets.php:41
+#: lib/widgets.php:45
 msgid "Use this widget to add a vCard"
 msgstr "Użyj tego widgetu do dodania karty (vCard)"
 
-#: lib/widgets.php:43
+#: lib/widgets.php:47
 msgid "Roots: vCard"
 msgstr "Roots: vCard"
 
-#: lib/widgets.php:70
+#: lib/widgets.php:74
 msgid "vCard"
 msgstr "vCard"
 
-#: templates/comments.php:7
-msgid "<cite class=\"fn\">%s</cite>"
-msgstr "<cite class=\"fn\">%s</cite>"
+#: templates/career-path.php:33
+msgid "See other people:"
+msgstr "See other people:"
 
-#: templates/comments.php:8
+#: templates/comment.php:4
 msgid "%1$s"
 msgstr "%1$s"
 
-#: templates/comments.php:9
+#: templates/comment.php:5
 msgid "(Edit)"
 msgstr "(Edytuj)"
 
-#: templates/comments.php:15
+#: templates/comment.php:9
 msgid "Your comment is awaiting moderation."
 msgstr "Twój komentarz oczekuje na moderację."
 
-#: templates/comments.php:32
-msgid "This post is password protected. Enter the password to view comments."
-msgstr ""
-"Ten artykuł jest chroniony hasłem. Podaj hasło aby zobaczyć komentarze."
-
-#: templates/comments.php:39
+#: templates/comments.php:8
 msgid "One Response to &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s Responses to &ldquo;%2$s&rdquo;"
 msgstr[0] "Jedna odpowiedź na &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s Odpowiedzi na &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s Responses to &ldquo;%2$s&rdquo;"
 
-#: templates/comments.php:49 templates/comments.php:51
+#: templates/comments.php:18
 msgid "&larr; Older comments"
 msgstr "&larr; Starsze komentarze"
 
-#: templates/comments.php:54 templates/comments.php:56
+#: templates/comments.php:21
 msgid "Newer comments &rarr;"
 msgstr "Nowsze komentarze &rarr;"
 
-#: templates/comments.php:66 templates/comments.php:76
+#: templates/comments.php:29 templates/comments.php:38
 msgid "Comments are closed."
 msgstr "Komentarze są zamknięte."
 
-#: templates/comments.php:83
+#: templates/comments.php:45
 msgid "Leave a Reply"
 msgstr "Pozostaw odpowiedź"
 
-#: templates/comments.php:83
+#: templates/comments.php:45
 msgid "Leave a Reply to %s"
 msgstr "Pozostaw odpowiedź na %s"
 
-#: templates/comments.php:86
+#: templates/comments.php:48
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr "Musisz być <a href=\"%s\">zalogowany</a> aby wysłać komentarz."
 
-#: templates/comments.php:90
+#: templates/comments.php:53
 msgid "Logged in as <a href=\"%s/wp-admin/profile.php\">%s</a>."
 msgstr "Zalogowany jako: <a href=\"%s/wp-admin/profile.php\">%s</a>."
 
-#: templates/comments.php:90
+#: templates/comments.php:54
 msgid "Log out of this account"
 msgstr "Wyloguj się z tego konta"
 
-#: templates/comments.php:90
+#: templates/comments.php:54
 msgid "Log out &raquo;"
 msgstr "Wyloguj się &raquo;"
 
-#: templates/comments.php:92
+#: templates/comments.php:58
 msgid "Name"
 msgstr "Imię"
 
-#: templates/comments.php:92 templates/comments.php:94
+#: templates/comments.php:58 templates/comments.php:62
 msgid " (required)"
 msgstr " (wymagane)"
 
-#: templates/comments.php:94
+#: templates/comments.php:62
 msgid "Email (will not be published)"
 msgstr "E-mail (nie zostanie opublikowany)"
 
-#: templates/comments.php:96
+#: templates/comments.php:66
 msgid "Website"
 msgstr "Strona WWW"
 
-#: templates/comments.php:99
+#: templates/comments.php:71
 msgid "Comment"
 msgstr "Komentarz"
 
-#: templates/comments.php:101
+#: templates/comments.php:74
 msgid "Submit Comment"
 msgstr "Dodaj komentarz"
 
+#: templates/contact-section.php:3
+msgid "Want to ask a question? Go for it!"
+msgstr "Chcesz zadać pytanie? Napisz do nas!"
+
+#: templates/contact-section.php:5
+msgid "Send us an e-mail"
+msgstr "Wyślij e-mail"
+
+#: templates/content-none.php:4
+msgid "Sorry, no results to show."
+msgstr "Sorry, no results to show."
+
+#: templates/content-none.php:7
+msgid "Look into list of caregories:"
+msgstr "Look into list of caregories:"
+
 #: templates/content-single.php:11
-msgid "Pages:"
-msgstr "Strony:"
-
-#: templates/content.php:4
-msgid "Sorry, no results were found."
-msgstr "Przepraszamy, brak rezultatów wyszukiwania."
-
-#: templates/content.php:28 templates/content.php:30
-msgid "&larr; Older posts"
-msgstr "&larr; Starsze posty"
-
-#: templates/content.php:33 templates/content.php:35
-msgid "Newer posts &rarr;"
-msgstr "Nowsze posty &rarr;"
-
-#: templates/entry-meta.php:1
-msgid "Posted on %s at %s."
-msgstr "Wysłane %s o %s."
+msgid "Back to news listing"
+msgstr "Wróć do wieści"
 
 #: templates/entry-meta.php:2
-msgid "Written by"
-msgstr "Napisane przez"
+msgid "By"
+msgstr "By"
 
-#: templates/searchform.php:2
+#: templates/job-offers/job-offer-single-foot.php:3
+msgid "Apply now"
+msgstr "Aplikuj teraz"
+
+#: templates/job-offers/job-offer-single-foot.php:7
+#: templates/job-offers/job-offer-single-head.php:14
+msgid "Back to job offers"
+msgstr "Powrót do ofert"
+
+#: templates/job-offers/job-offer-single-foot.php:12
+#: templates/job-offers/job-offer-single-head.php:19
+msgid "Apply"
+msgstr "Aplikuj"
+
+#: templates/job-offers/job-offer-single-head.php:35
+msgid "Back"
+msgstr "Powrót"
+
+#: templates/job-offers/job-offer-single-head.php:43
+msgid "Fill out this form and send us your CV"
+msgstr "Fill out this form and send us your CV"
+
+#: templates/news-feed-section.php:18
+msgid "Wiki News"
+msgstr "Wiki News"
+
+#: templates/news-feed-section.php:35
+msgid "Published:"
+msgstr "Opublikowano:"
+
+#: templates/searchform.php:3 templates/searchform.php:6
+msgid "Search"
+msgstr "Szukaj"
+
+#: templates/searchform.php:4
 msgid "Search for:"
 msgstr "Szukaj:"
 
-#: templates/searchform.php:3 templates/searchform.php:4
-msgid "Search"
-msgstr "Szukaj"
+#. Theme Name of the plugin/theme
+msgid "Wikia Careers"
+msgstr "Wikia Careers"
+
+#. Theme URI of the plugin/theme
+msgid "http://roots.io/"
+msgstr "http://roots.io/"
+
+#. Description of the plugin/theme
+msgid "Wikia Careers Wordpress theme based on Roots starter theme based on HTML5 Boilerplate & Bootstrap. <a href=\"https://github.com/roots/roots/contributors\">Contribute on GitHub</a>"
+msgstr "Wikia Careers Wordpress theme based on Roots starter theme based on HTML5 Boilerplate & Bootstrap. <a href=\"https://github.com/roots/roots/contributors\">Contribute on GitHub</a>"
+
+#. Author of the plugin/theme
+msgid "Kamil Koterba, Ben Word"
+msgstr "Kamil Koterba, Ben Word"
+
+#. Author URI of the plugin/theme
+msgid "http://benword.com/"
+msgstr "http://benword.com/"
+
+#. Template Name of the plugin/theme
+msgid "Custom Template"
+msgstr "Custom Template"
+
+#. Template Name of the plugin/theme
+msgid "Career Path"
+msgstr "Career Path"
+
+#. Template Name of the plugin/theme
+msgid "First child redirect"
+msgstr "First child redirect"
+
+#. Template Name of the plugin/theme
+msgid "Footer data template"
+msgstr "Footer data template"
+
+#. Template Name of the plugin/theme
+msgid "Grid article"
+msgstr "Grid article"
+
+#. Template Name of the plugin/theme
+msgid "Job offer template"
+msgstr "Job offer template"
+
+#. Template Name of the plugin/theme
+msgid "Parent page template"
+msgstr "Parent page template"
+
+#. Template Name of the plugin/theme
+msgid "Play with us"
+msgstr "Play with us"
+
+#. Template Name of the plugin/theme
+msgid "Process"
+msgstr "Process"
+
+#. Template Name of the plugin/theme
+msgid "Wide Images Narrow Paragraphs"
+msgstr "Wide Images Narrow Paragraphs"
+
