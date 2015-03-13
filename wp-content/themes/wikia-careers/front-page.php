@@ -13,22 +13,22 @@
 	<div class="row">
 		<div class="container">
 			<div class="row">
-				<h2 class="h1">Od Fanów. Dla Fanów.</h2>
+				<h2 class="h1"><?php _e( 'By fans. For fans.' ); ?></h2>
 				<div class="col-md-3 col-lg-3 number-col">
 					<span class="number h2">108,718,176</span>
-					<h3>miesięcznych odwiedzin</h3>
+					<h3><?php _e( 'monthly visits', 'wikia-careers' ); ?></h3>
 				</div>
 				<div class="col-md-3 col-lg-3 number-col">
 					<span class="number h2">33,052,302</span>
-					<h3>wszystkich stron</h3>
+					<h3><?php _e( 'pages', 'wikia-careers' ); ?></h3>
 				</div>
 				<div class="col-md-3 col-lg-3 number-col">
 					<span class="number h2">411,620</span>
-					<h3>wszystkich społeczności </h3>
+					<h3><?php _e( 'communities', 'wikia-careers' ); ?></h3>
 				</div>
 				<div class="col-md-3 col-lg-3 number-col">
 					<span class="number h2">371,351</span>
-					<h3>edycji dzisiaj</h3>
+					<h3><?php _e( 'edits today', 'wikia-careers' ); ?></h3>
 				</div>
 			</div>
 		</div>
@@ -38,14 +38,14 @@
 <section class="container career-paths">
 	<div class="row">
 
-		<h2 class="h1">Poznaj naszą załogę</h2>
+		<h2 class="h1">Meet our staff</h2>
 		<div class="flexslider">
 			<ul class="slides">
 				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubo.jpg">
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4 avatar"><img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubo.jpg" alt="jakubo" class="person-picture" /></div>
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4 description">
 						<h3 class="h1">Jakub</h3>
-						<p>Wcześniej - stażysta w Wikia. Dzisiaj - nasz spec od mobilnych rozwiązań.</p>
+						<p><?php _e( 'Initially – a Wikia intern. Currently – our mobile solutions expert.', 'wikia-careers' ); ?></p>
 						<a href="kariera/sciezki-rozwoju/jakub/" class="btn-wikia-gray-blue btn-arrow icon-chevron-gray">Poznaj</a>
 					</div>
 				</li>
@@ -53,7 +53,7 @@
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4 avatar"><img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>federico.jpg" alt="federico" class="person-picture" /></div>
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4 description">
 						<h3 class="h1">Federico</h3>
-						<p>Architekt aplikacji, budowniczy zespołów programistów.</p>
+						<p><?php _e( 'Application architect and team builder', 'wikia-careers' ); ?></p>
 						<a href="kariera/sciezki-rozwoju/federico/" class="btn-wikia-gray-blue btn-arrow icon-chevron-gray">Poznaj</a>
 					</div>
 				</li>
@@ -61,7 +61,7 @@
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4 avatar"><img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubk.jpg" alt="jakubk" class="person-picture" /></div>
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4 description">
 						<h3 class="h1">Jakub</h3>
-						<p>Inżynier z zacięciem biznesowym.</p>
+						<p><?php _e( 'An engineer with a business touch', 'wikia-careers' ); ?></p>
 						<a href="kariera/sciezki-rozwoju/jakub-szeryf/" class="btn-wikia-gray-blue btn-arrow icon-chevron-gray">Poznaj</a>
 					</div>
 				</li>
@@ -75,26 +75,26 @@
 <section class="benefits-description padding-section-vertical">
 	<div class="container">
 		<div class="row">
-			<h2>Praca w Wikia to nie tylko praca</h2>
+			<h2><?php _e( 'Working at Wikia is more than just work', 'wikia-careers' ); ?></h2>
 			<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4 benefit-item">
 				<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>benefits1.jpg" alt="Rozwój" />
-				<h3>Rozwój w Wikia</h3>
-				<p>	Wikia dba o Twój rozwój - wybierz dwie konferencje w ciągu roku, a firma sfinansuje Twoje uczestnictwo, przejazd i zakwaterowanie.</p>
+				<h3><?php _e( 'Development at Wikia', 'wikia-careers' ); ?></h3>
+				<p><?php _e( 'Wikia cares about your development – choose to attend two conferences a year and the company will cover your registration fees, as well as travel and accommodation costs.', 'wikia-careers' ); ?></p>
 			</div>
 			<div class="col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4 benefit-item">
 				<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>benefits2.jpg" alt="Rozwój" />
-				<h3>Wyjazd do San Francisco</h3>
-				<p>Raz w roku wybierzesz się z nami do San Francisco w odwiedziny do naszej siedziby głównej.</p>
+				<h3><?php _e( 'Travel to San Francisco', 'wikia-careers' ); ?></h3>
+				<p><?php _e( 'Once a year you will get an opportunity to visit our headquarters in San Francisco.', 'wikia-careers' ); ?></p>
 			</div>
 			<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4 benefit-item">
 				<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>benefits3.jpg" alt="Rozwój" />
-				<h3>Rodzina</h3>
-				<p>Wikia organizuje wiele eventów rodzinnych - pikniki, imprezy, "wikilie" - jesteśmy family friendly.</p>
+				<h3><?php _e( 'Family', 'wikia-careers' ); ?></h3>
+				<p><?php _e( 'Wikia organizes many social family events – picnics, parties, “Wikilias” (our Wikia Christmas parties) – we are family friendly.', 'wikia-careers' ); ?></p>
 			</div>
 			<div class="col-lg-5 col-md-5 col-sm-3 col-xs-4 col-xxs-4 benefit-item">
 				<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>benefits4.jpg" alt="Rozwój" />
-				<h3>Dbamy o Ciebie</h3>
-				<p>W trakcie pracy dbamy o Twoje samopoczucie - w naszej zawsze pełnej spiżarni znajdziesz owoce, przekąski, słodycze, napoje, by się pożywić i orzeźwić.</p>
+				<h3><?php _e( 'We care about you', 'wikia-careers' ); ?></h3>
+				<p><?php _e( 'We care about your well-being at work – our pantry is always filled with nourishing and refreshing fruits, snacks, sweets and drinks.' , 'wikia-careers' ); ?></p>
 			</div>
 		</div>
 	</div>
@@ -103,8 +103,9 @@
 <section class="container-fluid join-us">
 	<div class="row">
 		<div class="col-xxs-4 col-xs-4 col-sm-6 col-md-12 col-lg-12">
-			<h2 class="site-header-message h1">Jesteś gotów, by dołączyć do zespołu?</h2>
-			<a href="<?php echo home_url(); ?>/kariera" class="btn-wikia-white btn-arrow">Zobacz, kogo szukamy</a>
+			<h2 class="site-header-message h1"><?php _e( 'Ready to join us?', 'wikia-careers' ); ?></h2>
+			<a href="<?php echo home_url(); ?>/kariera" class="btn-wikia-white btn-arrow">
+				<?php _e( 'Check out who we\'re looking for', 'wikia-careers' ); ?></a>
 		</div>
 	</div>
 </section>
@@ -114,7 +115,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xxs-4 col-xs-4 col-sm-2 col-md-4 col-lg-4">
-					<h2>Wypełnij formularz i wyślij CV</h2>
+					<h2><?php _e( 'Fill in the form and send your CV', 'wikia-careers' ); ?></h2>
 <!--					<p>Aplikuj przez</p>-->
 <!--					<a class="btn-wikia-regular btn-arrow icon-chevron-gray"><strong>LinkedIn</strong></a>-->
 				</div>
