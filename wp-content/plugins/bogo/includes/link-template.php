@@ -205,6 +205,7 @@ function bogo_language_switcher( $args = '' ) {
 		$class[] = bogo_lang_slug( $link['locale'] );
 
 		if ( get_locale() == $link['locale'] ) {
+			continue; // wikia change
 			$class[] = 'current';
 		}
 
@@ -231,7 +232,9 @@ function bogo_language_switcher( $args = '' ) {
 		$output .= $li . "\n";
 	}
 
-	$output = '<ul class="bogo-language-switcher">' . $output . '</ul>' . "\n";
+	// wikia change begin -- @author tor -- added classes
+	$output = '<ul class="bogo-language-switcher nav navbar-nav">' . $output . '</ul>' . "\n";
+	// wikia change end
 
 	$output = apply_filters( 'bogo_language_switcher', $output, $args );
 
