@@ -86,7 +86,7 @@ add_action('customize_register', 'wikia_careers_theme_customizer');
 function arphabet_widgets_init() {
 	/* Register main widgetized area */
 	register_sidebar( array(
-		'name' => 'Home main area',
+		'name' => 'Home main area in Polish',
 		'id' => 'home_main_widget',
 		'before_widget' => '<div>',
 		'after_widget' => '</div>',
@@ -94,9 +94,18 @@ function arphabet_widgets_init() {
 		'after_title' => '</h2>',
 	) );
 
+        register_sidebar( array(
+                'name' => 'Home main area in English',
+                'id' => 'home_main_widget_en_US',
+                'before_widget' => '<div>',
+                'after_widget' => '</div>',
+                'before_title' => '<h2 class="rounded">',
+                'after_title' => '</h2>',
+        ) );
+
 	/* Register Second secion on mainpage - area */
 	register_sidebar( array(
-		'name' => 'Second section - mainpage',
+		'name' => 'Second section - mainpage in Polish',
 		'id' => 'second_section_mainpage',
 		'before_widget' => '',
 		'after_widget' => "\n",
@@ -104,15 +113,34 @@ function arphabet_widgets_init() {
 		'after_title' => '</h2>',
 	) );
 
+	register_sidebar( array(
+                'name' => 'Second section - mainpage in English',
+                'id' => 'second_section_mainpage_en_US',
+                'before_widget' => '',
+                'after_widget' => "\n",
+                'before_title' => '<h2 class="text-center">',
+                'after_title' => '</h2>',
+	) );
+
+
 	/* Register quick contact form area */
 	register_sidebar( array(
-		'name' => 'Quick contact form',
+		'name' => 'Quick contact form in Polish',
 		'id' => 'quick_contact_form',
 		'before_widget' => '<div>',
 		'after_widget' => '</div>',
 		'before_title' => '<h2 class="rounded">',
 		'after_title' => '</h2>',
 	) );
+
+	register_sidebar( array(
+                'name' => 'Quick contact form in English',
+                'id' => 'quick_contact_form_en_US',
+                'before_widget' => '<div>',
+                'after_widget' => '</div>',
+                'before_title' => '<h2 class="rounded">',
+                'after_title' => '</h2>',
+        ) );
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 

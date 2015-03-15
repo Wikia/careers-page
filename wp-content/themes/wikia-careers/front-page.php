@@ -3,7 +3,14 @@
 <section class="container job-offers padding-section-vertical">
 	<div class="offers-paper">
 
-		<?php if ( dynamic_sidebar('second_section_mainpage') ) : endif; ?>
+		<?php
+			$sidebar_name = 'second_section_mainpage';
+			if ( get_locale() != "pl_PL" ) {
+				$sidebar_name = $sidebar_name . '_' . get_locale();
+			}
+
+			dynamic_sidebar( $sidebar_name );
+		 ?>
 
 	</div>
 </section>
@@ -13,7 +20,7 @@
 	<div class="row">
 		<div class="container">
 			<div class="row">
-				<h2 class="h1"><?php _e( 'By fans. For fans.' ); ?></h2>
+				<h2 class="h1"><?php _e( 'By fans. For fans.', 'wikia-careers' ); ?></h2>
 				<div class="col-md-3 col-lg-3 number-col">
 					<span class="number h2">108,718,176</span>
 					<h3><?php _e( 'monthly visits', 'wikia-careers' ); ?></h3>
@@ -38,7 +45,7 @@
 <section class="container career-paths">
 	<div class="row">
 
-		<h2 class="h1">Meet our staff</h2>
+		<h2 class="h1"><?php _e( 'Meet our staff', 'wikia-careers' ); ?></h2>
 		<div class="flexslider">
 			<ul class="slides">
 				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubo.jpg">
@@ -46,7 +53,7 @@
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4 description">
 						<h3 class="h1">Jakub</h3>
 						<p><?php _e( 'Initially – a Wikia intern. Currently – our mobile solutions expert.', 'wikia-careers' ); ?></p>
-						<a href="kariera/sciezki-rozwoju/jakub/" class="btn-wikia-gray-blue btn-arrow icon-chevron-gray">Poznaj</a>
+						<a href="kariera/sciezki-rozwoju/jakub/" class="btn-wikia-gray-blue btn-arrow icon-chevron-gray"><?php _e( 'See his career path', 'wikia-careers' ); ?></a>
 					</div>
 				</li>
 				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>lukasz-min.jpg">
@@ -54,7 +61,7 @@
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4 description">
 						<h3 class="h1">Łukasz</h3>
 						<p><?php _e( 'Operations team specialist, works on database performance and scalability, among other things.', 'wikia-careers' ); ?></p>
-						<a href="kariera/sciezki-rozwoju/lukasz/" class="btn-wikia-gray-blue btn-arrow icon-chevron-gray">Poznaj</a>
+						<a href="kariera/sciezki-rozwoju/lukasz/" class="btn-wikia-gray-blue btn-arrow icon-chevron-gray"><?php _e( 'See his career path', 'wikia-careers' ); ?></a>
 					</div>
 				</li>
 				<li data-thumb="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>jakubk.jpg">
@@ -62,7 +69,7 @@
 					<div class="col-lg-6 col-md-6 col-sm-3 col-xs-4 col-xxs-4 description">
 						<h3 class="h1">Jakub</h3>
 						<p><?php _e( 'An engineer with a business touch', 'wikia-careers' ); ?></p>
-						<a href="kariera/sciezki-rozwoju/jakub-szeryf/" class="btn-wikia-gray-blue btn-arrow icon-chevron-gray">Poznaj</a>
+						<a href="kariera/sciezki-rozwoju/jakub-szeryf/" class="btn-wikia-gray-blue btn-arrow icon-chevron-gray"><?php _e( 'See his career path', 'wikia-careers' ); ?></a>
 					</div>
 				</li>
 			</ul>
@@ -121,7 +128,15 @@
 				</div>
 				<div class="col-xxs-4 col-xs-4 col-sm-4 col-md-8 col-lg-8">
 
-					<?php if ( dynamic_sidebar('quick_contact_form') )  : endif; ?>
+					<?php
+						$sidebar_name = 'quick_contact_form'; 
+						if ( get_locale() != "pl_PL" ) {
+							$sidebar_name = $sidebar_name . '_' . get_locale();
+						}
+
+						dynamic_sidebar( $sidebar_name );
+
+					?>
 
 				</div>
 			</div>
