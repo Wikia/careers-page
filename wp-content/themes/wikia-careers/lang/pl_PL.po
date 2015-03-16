@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: careers-page\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/wikia-careers\n"
-"POT-Creation-Date: 2015-03-13 06:39:01+00:00\n"
+"POT-Creation-Date: 2015-03-15 23:54:08+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-03-13 03:11-0400\n"
+"PO-Revision-Date: 2015-03-15 20:14-0400\n"
 "Last-Translator: wikia <daniel+crowdin@wikia-inc.com>\n"
 "Language-Team: Polish\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
@@ -38,83 +38,91 @@ msgstr "nieaktualny link"
 msgid "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/\">upgrade your browser</a> to improve your experience."
 msgstr "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/\">upgrade your browser</a> to improve your experience."
 
-#: front-page.php:16
+#: front-page.php:23 templates/header-top-navbar.php:37
 msgid "By fans. For fans."
 msgstr "Od Fanów. Dla Fanów."
 
-#: front-page.php:19
+#: front-page.php:26
 msgid "monthly visits"
 msgstr "miesięcznych odwiedzin"
 
-#: front-page.php:23
+#: front-page.php:30
 msgid "pages"
 msgstr "wszystkich stron"
 
-#: front-page.php:27
+#: front-page.php:34
 msgid "communities"
 msgstr "wszystkich społeczności"
 
-#: front-page.php:31
+#: front-page.php:38
 msgid "edits today"
 msgstr "edycji dzisiaj"
 
 #: front-page.php:48
+msgid "Meet our staff"
+msgstr "Poznaj naszą załogę"
+
+#: front-page.php:55
 msgid "Initially – a Wikia intern. Currently – our mobile solutions expert."
 msgstr "Wcześniej - stażysta w Wikia. Dzisiaj - nasz spec od mobilnych rozwiązań."
 
-#: front-page.php:56
-msgid "Application architect and team builder"
-msgstr "Architekt aplikacji, budowniczy zespołów."
+#: front-page.php:56 front-page.php:64 front-page.php:72
+msgid "See his career path"
+msgstr "Zobacz ścieżkę kariery"
 
-#: front-page.php:64
+#: front-page.php:63
+msgid "Operations team specialist, works on database performance and scalability, among other things."
+msgstr "Nasz specjalista od wydajności baz danych i skalowalności."
+
+#: front-page.php:71
 msgid "An engineer with a business touch"
 msgstr "Inżynier z zacięciem biznesowym"
 
-#: front-page.php:78
+#: front-page.php:85
 msgid "Working at Wikia is more than just work"
 msgstr "Praca w Wikia to nie tylko praca"
 
-#: front-page.php:81
+#: front-page.php:88
 msgid "Development at Wikia"
 msgstr "Rozwój w Wikia"
 
-#: front-page.php:82
+#: front-page.php:89
 msgid "Wikia cares about your development – choose to attend two conferences a year and the company will cover your registration fees, as well as travel and accommodation costs."
 msgstr "Wikia dba o Twój rozwój - wybierz dwie konferencje w ciągu roku, a firma sfinansuje Twoje uczestnictwo, przejazd i zakwaterowanie."
 
-#: front-page.php:86
+#: front-page.php:93
 msgid "Travel to San Francisco"
 msgstr "Wyjazd do San Francisco"
 
-#: front-page.php:87
+#: front-page.php:94
 msgid "Once a year you will get an opportunity to visit our headquarters in San Francisco."
 msgstr "Raz w roku wybierzesz się z nami do San Francisco w odwiedziny do naszej siedziby głównej."
 
-#: front-page.php:91
+#: front-page.php:98
 msgid "Family"
 msgstr "Rodzina"
 
-#: front-page.php:92
+#: front-page.php:99
 msgid "Wikia organizes many social family events – picnics, parties, “Wikilias” (our Wikia Christmas parties) – we are family friendly."
 msgstr "Wikia organizuje wiele eventów rodzinnych - pikniki, imprezy, \"wikilie\" - jesteśmy family friendly."
 
-#: front-page.php:96
+#: front-page.php:103
 msgid "We care about you"
 msgstr "Dbamy o Ciebie"
 
-#: front-page.php:97
+#: front-page.php:104
 msgid "We care about your well-being at work – our pantry is always filled with nourishing and refreshing fruits, snacks, sweets and drinks."
 msgstr "W trakcie pracy dbamy o Twoje samopoczucie - w naszej zawsze pełnej spiżarni znajdziesz owoce, przekąski, słodycze, napoje, by się pożywić i orzeźwić."
 
-#: front-page.php:106
+#: front-page.php:113
 msgid "Ready to join us?"
 msgstr "Jesteś gotów, by dołączyć do zespołu?"
 
-#: front-page.php:108
+#: front-page.php:115 templates/header-top-navbar.php:39
 msgid "Check out who we're looking for"
 msgstr "Zobacz, kogo szukamy"
 
-#: front-page.php:118
+#: front-page.php:125
 msgid "Fill in the form and send your CV"
 msgstr "Wypełnij formularz i wyślij CV"
 
@@ -134,31 +142,31 @@ msgstr "Header sub message"
 msgid "Header button text"
 msgstr "Header button text"
 
-#: functions.php:198
+#: functions.php:226
 msgid "&larr; Previous"
 msgstr "&larr; Previous"
 
-#: functions.php:199
+#: functions.php:227
 msgid "Next &rarr;"
 msgstr "Next &rarr;"
 
-#: functions.php:206
+#: functions.php:234
 msgid "Posts navigation"
 msgstr "Posts navigation"
 
-#: home.php:20 index.php:5
+#: home.php:16 index.php:5
 msgid "Sorry, no results were found."
 msgstr "Przepraszamy, brak rezultatów wyszukiwania."
 
-#: home.php:45 templates/content.php:15 templates/play-with-us.php:45
+#: home.php:39 templates/content.php:15 templates/play-with-us.php:45
 msgid "Read more"
 msgstr "Przeczytaj artykuł"
 
-#: home.php:57 index.php:17
+#: home.php:49 index.php:17
 msgid "&larr; Older posts"
 msgstr "&larr; Starsze posty"
 
-#: home.php:58 index.php:18
+#: home.php:50 index.php:18
 msgid "Newer posts &rarr;"
 msgstr "Nowsze posty &rarr;"
 
@@ -282,7 +290,7 @@ msgstr "vCard"
 
 #: templates/career-path.php:33
 msgid "See other people:"
-msgstr "See other people:"
+msgstr "Zobacz inne osoby:"
 
 #: templates/comment.php:4
 msgid "%1$s"
@@ -385,7 +393,11 @@ msgstr "Wróć do wieści"
 
 #: templates/entry-meta.php:2
 msgid "By"
-msgstr "By"
+msgstr "Autor: "
+
+#: templates/header-top-navbar.php:36
+msgid "Create. Collaborate. Be original"
+msgstr "Twórz. Współpracuj. Bądź oryginalny."
 
 #: templates/job-offers/job-offer-single-foot.php:3
 msgid "Apply now"
@@ -407,11 +419,11 @@ msgstr "Powrót"
 
 #: templates/job-offers/job-offer-single-head.php:43
 msgid "Fill out this form and send us your CV"
-msgstr "Fill out this form and send us your CV"
+msgstr "Wypełnij formularz i wyślij nam CV"
 
 #: templates/news-feed-section.php:18
-msgid "Wiki News"
-msgstr "Wiki News"
+msgid "Wiki Blog"
+msgstr "Wiki Blog"
 
 #: templates/news-feed-section.php:35
 msgid "Published:"
@@ -451,7 +463,7 @@ msgstr "Custom Template"
 
 #. Template Name of the plugin/theme
 msgid "Career Path"
-msgstr "Career Path"
+msgstr "Ścieżka kariery"
 
 #. Template Name of the plugin/theme
 msgid "First child redirect"
@@ -475,11 +487,11 @@ msgstr "Parent page template"
 
 #. Template Name of the plugin/theme
 msgid "Play with us"
-msgstr "Play with us"
+msgstr "Zagraj z nami"
 
 #. Template Name of the plugin/theme
 msgid "Process"
-msgstr "Process"
+msgstr "Proces"
 
 #. Template Name of the plugin/theme
 msgid "Wide Images Narrow Paragraphs"
