@@ -62,10 +62,30 @@
 	 ========================================================================== */
 
 #app_body {
+
 	.container;
 	.spaced-container.container;
 	max-width: none;
 	width: auto;
+
+	h1 {
+		color: @brand-secondary;
+	}
+
+	#main_fields,
+	#custom_fields,
+	#eeoc_fields {
+		div.field label {
+			font-size: @font-size-xsmall;
+			width: 200px;
+		}
+	}
+
+	#custom_fields {
+		label {
+			display: inline;
+		}
+	}
 
 	#application {
 		@margin-featured-statement: @line-height-computed * 2;
@@ -73,6 +93,7 @@
 		max-width: none;
 		width: auto;
 	}
+
 	.location {
 		padding: 55px 0 55px;
 	}
