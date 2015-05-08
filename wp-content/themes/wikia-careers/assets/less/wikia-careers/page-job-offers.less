@@ -1,90 +1,85 @@
 /* ==========================================================================
 	 Job offers parent page styles
 	 ========================================================================== */
-.arrowsAnimation() {
-	@-webkit-keyframes webkitAnimatedBackground {
-		0%   {background-position:100% 50%;}
-		35%  {background-position:96% 50%;}
-		60% {background-position:100% 50%;}
-		85%  {background-position:98% 50%;}
-		100% {background-position:100% 50%;}
-	}
 
-	@keyframes animatedBackground {
-		0%   {background-position:100% 50%;}
-		35%  {background-position:96% 50%;}
-		60% {background-position:100% 50%;}
-		85%  {background-position:98% 50%;}
-		100% {background-position:100% 50%;}
-	}
-
-	-webkit-animation: webkitAnimatedBackground .5s linear;
-	animation: animatedBackground .5s linear;
-}
-
-.page-parent .content {
+#wrapper {
 
 	h1 {
 		font-size: @font-size-h4;
+		margin-top: 0;
 		text-align: center;
-	}
-}
-
-.short-descr {
-	color: @btn-wikia-light-color;
-	font-size: @font-size-small;
-	margin-bottom: 0;
-}
-
-h1+.offer-item{
-	border-top: 1px solid @nav-tabs-border-color;
-	margin-top: 30px;
-	.margin-top-section-vertical();
-}
-
-.offer-item {
-	border-bottom: 1px solid @nav-tabs-border-color;
-	cursor: pointer;
-	padding-top: 55px;
-	padding-bottom: 40px;
-
-	&:hover {
-		.container {
-			.icon-arrow-right-brand_sec;
-			.arrowsAnimation;
-		}
-		h2 {
-			color: @brand-secondary;
-		}
-	}
-
-	.container {
-		background-position: 100% 50%;
-		background-size: 22px;
-	}
-
-	a {
-		display: block;
-
-		&:hover {
-			text-decoration: none;
-		}
 	}
 
 	h2 {
-		.strong;
-		color: @gray;
-		font-size: @font-size-h3;
+		padding-top: 55px;
+	}
+
+	.location {
+		color: @btn-wikia-light-color;
+		font-size: @font-size-small;
 		margin-bottom: 0;
-		margin-top: 0;
-		margin-bottom: 0px;
-		margin-top: 0px;
+	}
+
+	.opening {
+		border-bottom: 1px solid @nav-tabs-border-color;
+		margin-bottom: 0;
+		padding-bottom: 55px;
+		padding-top: 55px;
+
+		a {
+			.strong;
+			color: @brand-secondary;
+			font-size: @font-size-h3;
+			line-height: @line-height-computed-h2;
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+			@media (min-width: @screen-sm) {
+				font-size: @font-size-h3-sm;
+				line-height: @line-height-computed-h2-sm;
+			}
+
+			@media (min-width: @screen-lg) {
+				font-size: @font-size-h3-lg;
+				line-height: @line-height-computed-h2-lg;
+			}
+		}
+	}
+
+	#logo {
+		display: none;
+		&+p {
+			display: none;
+		}
 	}
 }
 
-.job-offers-list {
-	h1 {
-		margin: 0;
-	}
 
+/* ==========================================================================
+	 Job offer view
+	 ========================================================================== */
+
+#app_body {
+	.container;
+	.spaced-container.container;
+	max-width: none;
+	width: auto;
+
+	#application {
+		@margin-featured-statement: @line-height-computed * 2;
+		margin: @margin-featured-statement auto;
+		max-width: none;
+		width: auto;
+	}
+	.location {
+		padding: 55px 0 55px;
+	}
+}
+
+#header,
+#content {
+	margin: auto;
+	width: 75%;
 }
