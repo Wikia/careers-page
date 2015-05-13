@@ -27,7 +27,7 @@ var Roots = {
 			scrollToContent.initClickEvent();
 			wikiaCareersTextFormatting.formatArticle();
 			popoverTrigger.setupPopover();
-      greenhouseJobs.init();
+			greenhouseJobs.init();
 		}
 	},
 	// Home page
