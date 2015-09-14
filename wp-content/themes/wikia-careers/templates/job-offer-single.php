@@ -21,8 +21,8 @@ Template Name: Job offer template
 		</div>
 		<div class="col-xxs-4 col-xs-4 col-sm-2 col-md-4 col-lg-4 rail-col">
 			<div class="recruiter-info">
-				<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>agnieszka-avatar.png" alt="Agnieszka"/>
-				<span class="name">Agnieszka Chojnowska</span>
+				<img src="<?php echo esc_url(get_stylesheet_directory_uri().'/assets/img/'); ?>magda-avatar.jpg" alt="Magdalena"/>
+				<span class="name">Magdalena Cellary</span>
 				<span class="function">Rekruter</span>
 			</div>
 			<?php
