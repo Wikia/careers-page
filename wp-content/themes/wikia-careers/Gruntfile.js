@@ -61,6 +61,11 @@ module.exports = function(grunt) {
         files: {
           'assets/css/main.min.css': [
             'assets/less/app.less'
+          ],
+          // Styles file for Greenhouse jobs board iframe - submit to board config in Custom CSS field
+          // in https://app.greenhouse.io/ admin panel
+          'assets/css/greenhouse_jobs.min.css': [
+            'assets/less/greenhouse_jobs.less'
           ]
         },
         options: {
@@ -96,8 +101,11 @@ module.exports = function(grunt) {
         },
         options: {
           // JS source map: to enable, uncomment the lines below and update sourceMappingURL based on your install
-          // sourceMap: 'assets/js/scripts.min.js.map',
-          // sourceMappingURL: '/app/themes/roots/assets/js/scripts.min.js.map'
+          //sourceMap: '../../scripts.min.js.map',
+          //sourceMappingURL: '',
+          compress: {
+            drop_debugger: false
+          }
         }
       }
     },

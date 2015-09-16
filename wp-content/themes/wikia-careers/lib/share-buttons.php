@@ -3,8 +3,9 @@
 class ShareButtons {
 
 	static function get_share_buttons() {
-		$permalink =  urlencode( get_permalink() );
-		$title = urlencode ( get_post_field('post_title', get_the_ID(), 'raw') );
+    $permalink = add_query_arg ( array( 'gh_jid' => $_GET['gh_jid'] ), get_permalink() );
+    $permalink = urlencode( $permalink );
+    $title = urlencode ( get_post_field('post_title', get_the_ID(), 'raw') );
 		$shareButtons = array();
 		$shareButtons[] = self::get_facebook_share_button( $permalink );
 		$shareButtons[] = self::get_linkedin_share_button( $permalink, $title );
