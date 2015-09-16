@@ -1,19 +1,19 @@
 <?php //if ( dynamic_sidebar('home_main_widget') ) : else : endif; ?>
 
-<section class="container job-offers padding-section-vertical">
-	<div class="offers-paper">
-
-		<?php
-			$sidebar_name = 'second_section_mainpage';
-			if ( get_locale() != "pl_PL" ) {
-				$sidebar_name = $sidebar_name . '_' . get_locale();
-			}
-
-			dynamic_sidebar( $sidebar_name );
-		 ?>
-
-	</div>
-</section>
+<!--<section class="container job-offers padding-section-vertical">-->
+<!--	<div class="offers-paper">-->
+<!---->
+<!--		--><?php
+//			$sidebar_name = 'second_section_mainpage';
+//			if ( get_locale() != "pl_PL" ) {
+//				$sidebar_name = $sidebar_name . '_' . get_locale();
+//			}
+//
+//			dynamic_sidebar( $sidebar_name );
+//		 ?>
+<!---->
+<!--	</div>-->
+<!--</section>-->
 
 
 <section class="container-fluid stats padding-section-vertical">
@@ -129,7 +129,7 @@
 				<div class="col-xxs-4 col-xs-4 col-sm-4 col-md-8 col-lg-8">
 
 					<?php
-						$sidebar_name = 'quick_contact_form'; 
+						$sidebar_name = 'quick_contact_form';
 						if ( get_locale() != "pl_PL" ) {
 							$sidebar_name = $sidebar_name . '_' . get_locale();
 						}
